@@ -1,0 +1,625 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Work+Sans&display=swap");
+
+@font-face {
+  font-family: "Modernist";
+  src: url(../fonts/modernist.otf);
+}
+
+*{
+  z-index: 0;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+}
+
+.section-header {
+  color: #000;
+  font-size: 3rem;
+  text-align: center;
+  margin: 2.5rem 0;
+  font-weight: bold;
+  font-family: "Work Sans", sans-serif;
+  line-height: 4rem;
+}
+
+/***********************/
+/* Main Navigation Bar */
+/***********************/
+
+#main-nav {
+  background-color: rgba(255, 255, 255, 0.9);
+  font-family: "Modernist", sans-serif;
+  position: fixed;
+  width: 100%;
+  backdrop-filter: blur(0.2rem);
+  -webkit-backdrop-filter: blur(0.2rem);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+}
+
+#main-nav-content {
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#main-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main-logo p {
+  position: absolute;
+  left: -9999%;
+}
+
+#main-logo img {
+  height: 5rem;
+  width: auto;
+  padding: 1rem;
+}
+
+#nav-links {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#nav-links li {
+  padding: 0 1rem;
+}
+
+#nav-links a {
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 1rem;
+}
+
+#nav-links a:hover {
+  color: rgb(241, 90, 36);
+}
+
+/****************/
+/* Hero Section */
+/****************/
+
+#hero-section {
+  height: 100vh;
+  background: url("../images/background.jpg") no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#hero-section-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#hero-section-content h1 {
+  font-size: 5em;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(18, 57, 128);
+  text-align: center;
+}
+
+#hero-section-content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 10px 0 20px 0;
+  color: #ccc;
+  margin-bottom: 3rem;
+}
+
+#cv-btn,
+#bewitt-btn,
+#popup-btn {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: rgb(18, 57, 128);
+  color: rgb(241, 90, 36);
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+  transition: 1s;
+  cursor: pointer;
+}
+
+#cv-btn:hover {
+  background-color: rgb(241, 90, 36);
+  color: rgb(18, 57, 128);
+}
+
+#bewitt-btn {
+  background-color: #020E42;
+  color: #8A8A52;
+}
+
+#bewitt-btn:hover {
+  background-color: #8A8A52;
+  color: #020E42;
+}
+
+#popup-btn{
+  background-color: #000;
+  color: #FFF;
+}
+
+#popup-btn:hover{
+  background-color: #FFF;
+  color: #000;
+}
+
+/*********/
+/* Popup */
+/*********/
+
+#popup-section{
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  z-index: 1;
+  overflow: auto;
+}
+
+#popup-section-content{
+  width: 80%;
+  height: auto;
+  margin: 6rem auto 0 auto;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  background-color: #CCC;
+  border-radius: 8px;
+  box-shadow: 2px 4px 20px rgba(255, 255, 255, 0.5);
+}
+
+.popup-link{
+  background-color: #000;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 1rem auto;
+  height: 3rem;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.popup-link:hover {
+  background-color: #FFF;
+  color: #000;
+}
+
+.popup-header{
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 1.5rem 0;
+}
+/***********/
+/* Núcleos */
+/***********/
+
+#nucleos-organizadores {
+  background-color: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(0.2rem);
+  -webkit-backdrop-filter: blur(0.2rem);
+}
+
+#nucleos-organizadores-content {
+  height: 15vh;
+}
+
+#nucleos-organizadores-content ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.logo-nucleo img {
+  width: 6rem;
+  height: auto;
+  padding: 0 1rem;
+}
+
+/************/
+/* Empresas */
+/************/
+
+#diamond-sponsor-header,
+#gold-sponsor-header,
+#silver-sponsor-header,
+#bronze-sponsor-header,
+#low-sponsor-header {
+  color: #000;
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+  line-height: 4rem;
+}
+
+#empresas-header {
+  color: rgb(18, 57, 128);
+}
+
+#main-sponsor-row {
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#main-sponsor {
+  width: 18.75rem;
+  height: 18.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.empresa {
+  padding: 5%;
+  border-radius: 6px;
+  border: 1px solid black;
+  box-shadow: 0px 0px 23px 0px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+
+}
+
+.empresa img {
+  width: 80%;
+  height: 80%;
+  ;
+}
+
+.empresa-name {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+#main-sponsor-name {
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+#diamond-sponsor-header {
+  font-weight: 600;
+  font-size: 2.2rem;
+  margin: 2rem 0;
+}
+
+#diamond-sponsor-row,
+#gold-sponsor-row,
+#silver-sponsor-row,
+#bronze-sponsor-row,
+#low-sponsor-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.diamond-sponsor {
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.gold-sponsor {
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#gold-sponsor-header {
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin: 1.5rem 0;
+}
+
+.silver-sponsor,
+.bronze-sponsor,
+.low-sponsor {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#silver-sponsor-header {
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+#bronze-sponsor-header {
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+#low-sponsor-header {
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+#main-sponsor img,
+.diamond-sponsor img,
+.gold-sponsor img,
+.silver-sponsor img,
+.bronze-sponsor img,
+.low-sponsor img {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+}
+
+/*************/
+/* Giveaways */
+/*************/
+
+#giveaways-header {
+  background-color: rgb(18, 57, 128);
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+#giveaway-section-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/********/
+/* Mapa */
+/********/
+
+#mapa-header {
+  background-color: rgb(18, 57, 128);
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+#mapa-section-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#map {
+  height: 500px;
+  border-radius: 5px;
+  border: 3px solid #000;
+  -webkit-box-shadow: 0px 0px 28px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 22px -10px rgba(0, 0, 0, 0.85);
+}
+
+#pontos-referencia h3 {
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: "Work Sans", sans-serif;
+  margin: 1rem 0;
+}
+
+#pontos-referencia ul li {
+  padding: 0.25rem 0;
+  font-size: 1.2rem;
+  color: rgb(18, 57, 128);
+}
+
+
+/**************/
+/* Calendário */
+/**************/
+
+#calendario-header {
+  background-color: rgb(18, 57, 128);
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+#calendario {
+  width: 100%;
+  height: auto;
+}
+
+#calendario img {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+/**********/
+/* Footer */
+/**********/
+
+footer {
+  padding: 1.5rem 0 1rem 0;
+}
+
+#footer-header {
+  text-align: center;
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+#footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.partner {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer-content img {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+}
+
+/*****************/
+/* MEDIA QUERIES */
+/*****************/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #hero-section-content h1 {
+    font-size: 5rem;
+  }
+
+  #hero-section-content h2 {
+    font-size: 3rem;
+  }
+
+  #cv-btn,
+  #bewitt-btn,
+  #popup-btn {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    padding: 1rem 1.8rem;
+    font-size: 2rem;
+  }
+
+
+  #nav-links a {
+    font-size: 1.5rem;
+  }
+
+  .logo-nucleo img {
+    width: 8rem;
+    padding: 0 1rem;
+  }
+
+  #main-sponsor {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .diamond-sponsor {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .gold-sponsor {
+    width: 8.5rem;
+    height: 8.5rem;
+  }
+
+  .silver-sponsor,
+  .bronze-sponsor,
+  .low-sponsor {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  #pontos-referencia h3 {
+    font-size: 1.5rem;
+  }
+
+  #pontos-referencia ul li a {
+    font-size: 1.5rem;
+  }
+
+  #giveaways-header,
+  #mapa-header,
+  #calendario-header {
+    font-size: 2rem;
+  }
+
+  #footer-header {
+    font-size: 2rem;
+  }
+
+  .partner {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #popup-section-content{
+    width: 50%;
+  }
+
+  #hero-section-content h1 {
+    font-size: 4rem;
+  }
+
+  #nav-links a {
+    font-size: 1.2rem;
+  }
+
+  #hero-section-content h2 {
+    font-size: 2rem;
+  }
+
+  #cv-btn,
+  #bewitt-btn,
+  #popup-btn {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  #nucleos-organizadores-content {
+    height: 7.5rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

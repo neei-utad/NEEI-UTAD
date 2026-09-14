@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#ff5c00">
+    <meta content="width=device-width,initial-scale=0.8" name="viewport" />
+    <title>Code-n-Bila</title>
+    <!-- Page Icon -->
+    <link rel="icon" type="image/x-icon" href="images/logos/favicon-code-n-bila.ico" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+    <!-- CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/@glidejs/glide@3.5.2/dist/css/glide.core.min.css" />
+    <link rel="stylesheet" href="https://uicdn.toast.com/calendar/latest/toastui-calendar.min.css" />
+    <link href="styles/reset.css" rel="stylesheet" type="text/css" />
+    <link href="styles/shared.css" rel="stylesheet" type="text/css" />
+    <link href="styles/code-timer.css" rel="stylesheet" type="text/css" />
+    <link href="styles/code-n-bila.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+</head>
+
+<body>
+    <div id="big-container">
+        <header>
+            <!-- Início da Barra de Navegação Principal -->
+            <nav id="main-nav" class="navbar navbar-expand-lg fixed-top navbar-transparent">
+                <div class="container">
+            <!-- Menu Hamburguer -->
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-target">
+                <i class="bi bi-list text-white"></i>
+            </button>
+                    <!-- Navegação -->
+                    <div id="nav-target" class="collapse navbar-collapse">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link ml-1" href="index.html">Site do NEEI &#x2192;</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Fim da Barra de Navegação Principal -->
+        </header>
+
+        <main>
+            <!-- Início secção principal -->
+            <section class="main-section">
+                <h1 id="countdown-header"><span id="header-event">Code-n-Bila </span><span
+                        id="header-second">Countdown</span></h1>
+                <div class="container">
+                    <div id="countdown">
+                        <ul>
+                            <li><span id="days"></span>Dias</li>
+                            <li><span id="hours"></span>Horas</li>
+                            <li><span id="minutes"></span>Minutos</li>
+                            <li><span id="seconds"></span>Segundos</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="btn-area">
+                    <a id="register-btn" href="https://www.meetup.com/pt-BR/code-n-bila/events/291963109/"
+                        target="_blank">Inscreve-te agora!</a>
+                </div>
+            </section>
+            <!-- Fim secção principal -->
+        </main>
+
+        <footer>
+            <!-- Início do Rodapé -->
+            <div class="subfoot">
+                <div class="container">
+                    <div class="row">
+                        <div
+                            class="col-lg-3 offset-lg-1 footer-contacts col-12 order-1 d-none d-lg-block align-self-center">
+                            <h2 class="footer-contact-header">Contactos:</h2>
+                            <a id="mail-big" class="contact-icon d-block" href="mailto:neei@utad.pt"><img
+                                    class="inverted" src="images/logos/logo-mail.png" />
+                                <span>neei@utad.pt</span></a>
+                            <i class="contact-icon d-block"><img class="inverted"
+                                    src="images/logos/logo-maps.png" /><span> Polo I da
+                                    ECT - Sala I0.1 </span></i>
+                        </div>
+                        <div class="col-lg-4 col-12 order-3 order-lg-2 align-self-center">
+                            <h3 class="copyright">
+                                &copy;Copyright <b>2022 NEEI</b>. Todos os Direitos Reservados
+                            </h3>
+                            <h3 class="credits">
+                                Originalmente desenhado por Filipe Valadares
+                            </h3>
+                            <h3 class="credits">
+                                Redesenhado por Ricardo Inácio e Patrício Simões
+                            </h3>
+                        </div>
+                        <div class="col-lg-3 footer-social col-12 order-2 order-lg-3 align-self-center">
+                            <h2 class="footer-social-header">Redes Sociais:</h2>
+                            <a href="https://www.twitch.tv/neeiutad" target="_blank">
+                                <img class="social-icon inverted" src="images/logos/logo-Twitch.png" alt="Twitch" />
+                            </a>
+                            <a href="https://www.instagram.com/neei.utad/" target="_blank">
+                                <img class="social-icon inverted" src="images/logos/logo-instagram.png"
+                                    alt="Instagram" />
+                            </a>
+                            <a href="https://www.facebook.com/neei.utad" target="_blank">
+                                <img class="social-icon inverted" src="images/logos/logo-Facebook.png" alt="Facebook" />
+                            </a>
+                            <a href="https://www.linkedin.com/company/neei/about/" target="_blank">
+                                <img class="social-icon inverted" src="images/logos/logo-LinkedIn.png" alt="LinkedIn" />
+                            </a>
+                            <img class="social-icon inverted" src="images/logos/logo-GitHub.png" alt="Github" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fim do Rodapé -->
+        </footer>
+    </div>
+    <!-- JS -->
+
+    <script type="text/javascript" src="scripts/code.timer.js"></script>
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

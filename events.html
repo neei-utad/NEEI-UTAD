@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="pt-pt" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos</title>
+  <!-- Page Icon -->
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+  <!-- Bootstrap icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="./CSS/reset.css">
+  <link rel="stylesheet" href="./CSS/palette.css">
+  <link rel="stylesheet" href="./CSS/styles.css">
+  <link rel="stylesheet" href="./CSS/events.css">
+  <!-- Calendar CSS -->
+  <link rel="stylesheet" href="https://uicdn.toast.com/calendar/latest/toastui-calendar.min.css" />
+  <!-- Glide CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/@glidejs/glide@3.5.2/dist/css/glide.core.min.css" />
+  <!-- JS -->
+  <script src="./JS/menu.js" defer></script>
+  <script src="./JS/events.js" defer></script>
+</head>
+
+<body>
+  <!-- Begin Main Navigation Bar -->
+  <header>
+    <div class="hamburger-menu">
+      <input id="menu-toggle" type="checkbox" />
+      <label class="menu__btn" for="menu-toggle">
+        <span></span>
+      </label>
+      <ul class="menu-box">
+        <div id="menu-items">
+          <li>
+            <a href="./index.html">
+              <img src="./assets/images/logos/logo.png" alt="NEEI's Logo">
+            </a>
+          </li>
+          <li class="menu-item">
+            <i class="bi bi-house-door-fill"></i>
+            <a href="./guia.html">Guia</a>
+          </li>
+          <li class="line"></li>
+          <li class="menu-item">
+            <i class="bi bi-chat-left-text-fill"></i>
+            <a href="https://forum.neei-utad.pt/" target="_blank">Fórum</a>
+          </li>
+          <li class="line"></li>
+          <li id="active-page" class="menu-item">
+            <i class="bi bi-calendar-fill"></i>
+            <a href="./events.html">Eventos</a>
+          </li>
+          <li class="line"></li>
+          <li class="menu-item">
+            <i class="bi bi-cart-fill"></i>
+            <a href="./merch.html">Merch</a>
+          </li>
+          <li class="line"></li>
+          <li class="menu-item">
+            <i class="bi bi-share-fill"></i>
+            <a href="./links.html">Links</a>
+          </li>
+          <li class="line"></li>
+          <li class="menu-item">
+            <i class="bi bi-pencil-fill"></i>
+            <a href="./notes.html">Apontamentos</a>
+          </li>
+          <li class="line"></li>
+          <li class="menu-item">
+            <i id="theme-toggle-icon" class="bi bi-brightness-high-fill"></i>
+            <button class="theme-toggle">Modo Claro</button>
+          </li>
+          <li class="line"></li>
+        </div>
+        <li>
+
+          <footer>
+            <p>Redes Sociais:</p>
+            <div id="social-icons">
+              <a href="https://www.twitch.tv/neeiutad" target="_blank">
+                <i class="bi bi-twitch"></i>
+              </a>
+              <a href="https://www.instagram.com/neei.utad/" target="_blank">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="https://www.facebook.com/neei.utad" target="_blank">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="https://www.youtube.com/@neeiutad" target="_blank">
+                <i class="bi bi-youtube"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/neei/about/" target="_blank">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+            <p id="copyright">&copy;Copyright <b>2023-2026 NEEI</b>. Todos os Direitos Reservados</p>
+            <p id="credits-main">Originalmente criado por <a href="https://www.linkedin.com/in/filipe-valadares/"
+                target="_blank">Filipe Valadares</a></p>
+            <p id="credits-secondary">Redesenhado por <a
+                href="https://www.linkedin.com/in/patr%C3%ADcio-sim%C3%B5es-668219201/" target="_blank">Patrício
+                Simões</a> e Ricardo Inácio</p>
+          </footer>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section id="events-section">
+      <article id="year-menu">
+        <button id="2025-2026" class="year-btn active-year" data-year="2025-2026">2025/2026</button>
+        <button id="2024-2025" class="year-btn" data-year="2024-2025">2024/2025</button>
+        <button id="2023-2024" class="year-btn" data-year="2023-2024">2023/2024</button>
+        <button id="2022-2023" class="year-btn" data-year="2022-2023">2022/2023</button>
+      </article>
+
+      <article id="events-2025-2026" class="events-row">
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2025-2026/event-52.jpg" alt="Workshop | Padrões de Software: Do Problema à Solução Inteligente">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Queres transformar problemas complexos em soluções simples e eficazes?
+                Nesta sessão com Diogo Guimarães, iremos aprender a aplicar padrões de criação, estrutura e comportamento de forma prática, clara e rigorosa, entendendo não só como funcionam, mas também quando usá-los para escrever software mais limpo, robusto e inteligente."
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2025-2026/event-51.jpg" alt="Torneio de FIFA">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                O NEEI e o NEUTAD juntaram-se para organizar o torneio mais aguardado da caloirada! Torneio aberto a toda a comunidade da UTAD!
+                Mostra as tuas skills no FIFA, supera os adversários e garante o lugar de campeão!
+              </p>
+              <a href="https://forms.office.com/e/q8ikp97KtL">Inscreve-te!</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2025-2026/event-50.jpg" alt="Latada 2025/2026">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Garante já o teu lugar no evento mais épico da informática! 
+                Compra o kit Latada no site do NEEI.
+              </p>
+              <a href="https://forms.gle/Dfk9RPpUe3uyzkSV9">Inscreve-te!</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2025-2026/event-49.jpg" alt="Jantar de curso 2025/2026">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Está na hora de reunir a arena! 
+                O tão esperado Jantar de Curso está a chegar, por isso prepara as tropas para uma noite épica!
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdM1pALLDjvxrb91-G9Yp3HxM69UT95y1o9U1Ym6bzdX54uSA/viewform?fbclid=PAZXh0bgNhZW0CMTEAAaeUiSMPE3OUvC743Ku1Fy1W5cTVQ3EQj7RcUojvjnxRQ7u0zJTMWYgWA85wJw_aem_5gV3x6PRCNYNzeJNjOJ8PA">Inscreve-te!</a>
+            </div>
+          </div>
+        </div>
+
+      </article>
+      
+    <template id="tpl-2024-2025">
+      <article id="events-2024-2025" class="events-row">
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2024-2025/event-48.jpeg" alt="Torneio de matraquilhos e setas">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Estás pronto para mostrar as tuas habilidades? Junta-te a nós no METROPOLIS no dia 24 de março para um torneio épico de setas e matrecos!
+              </p>
+              <a href="https://forms.gle/pSjQ87hYksSvcdd36">Inscreve-te!</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2024-2025/event-47.png" alt="Workshop Cloud Computing">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                O NEEI e a Accenture trazem-te um workshop imperdível sobre Cloud Computing! Aprende com especialistas
+                do setor e descobre como esta tecnologia pode revolucionar o futuro da informática!
+              </p>
+              <a href="https://forms.gle/2BU72v8wphgM8YZ76">Inscreve-te!</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2024-2025/event-46.png" alt="Kit Finalistas">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Está na hora de garantires o teu Kit Finalista e tornares este momento ainda mais especial!
+              </p>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_lAFnQtDvKt0J0GXq3hv8RjgQFiPjjIJZ23xyvxtnlzWpAw/viewform?usp=sharing">Inscreve-te!</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2024-2025/event-45.png" alt="Torneio CS">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Pimba na beiça! O NEEI vai organizar de 10 a 15 de fevereiro o Torneio de 
+                Counter-Strike 2! Prepara-te para uma semana de pura adrenalina, competição e diversão!
+              </p>
+              <a href="https://forms.gle/TyGMJrvfdi3jt6zL9">Inscreve-te!</a>
+            </div>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2024-2025/event-44.png" alt="Recrutamento NEEI">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Queres fazer parte de uma comunidade emergente que ajuda informática diariamente? 
+                Então junta-te ao Núcleo! O Núcleo de Estudantes de Engenharia Informática 
+                está a recrutar alunos para os seus departamentos, e queremos que tu faças parte!
+              </p>
+              <a href="https://forms.gle/mgjt66ixYNFHZPQw9">Inscreve-te!</a>
+            </div>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2024-2025/event-43.jpeg" alt="Torneio de Sueca">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Queres demonstrar os teus dotes de Sueca? Então participa no nosso torneio de Sueca! 
+                No dia 4 de Dezembro na metropolis!
+              </p>
+              <a href="https://forms.gle/FxJm61YQ13neKnnHA">Inscreve-te!</a>
+            </div>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2024-2025/event-42.jpeg" alt="Jantar de Natal">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                O espírito natalício está no ar e o NEEI convida-te para uma noite especial! Junta-te a 
+                nós no dia 5 de dezembro às 20h na Metropolis para um Jantar de Natal cheio de sabor e solidariedade.
+              </p>
+              <a href="https://docs.google.com/forms/d/1DumrnPiWPtpvq2krfaGIT3c5YTyxGQTcpXoguhaDbRE/viewform">Inscreve-te!</a>
+            </div>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2024-2025/event-41.png" alt="Latada 24/25">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Preparado para tornares-te num Super Saiyan? Vai ao site do NEEI e compra o
+                kit latada! Este inclui uma t-shirt laranja para representares o teu curso, e
+                toda a cerveja que certamente irás utilizar (não disponibilizamos paracetamol para a ressaca).
+              </p>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSd8qoaKqskKXiCgpwIuH0buOOoVPi7R76L_5TrhEKMhD20HDA/viewform?usp=sharing">Inscreve-te!</a>
+            </div>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2024-2025/event-40.png" alt="Torneio de FIFA">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Estás preparado para uma futebolada? Então prepara-te, porque o teu núcleo tem o orgulho de 
+                apresentar o Torneio de EA FC de Informática! Inscreve-te para poderes competir contra os teus 
+                amigos e teres a chance de ganhar prémios!
+              </p>
+              <a href="https://docs.google.com/forms/d/1oL7qerHzHkElbBQ4A71StpBkRg-8IelWi60ayzqH2tk/viewform">Inscreve-te!</a>
+            </div>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2024-2025/event-39.png" alt="Jantar de curso caloirada">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Ding-ding, cheiras isto? É o cheiro de uma jantarada informática! Junta-te com os teus engenheiros no jantar de curso!    
+                <br>
+                Por isso não esperes mais e reserva o teu lugar, se não a comida fica fria!
+              </p>
+              <a href="https://docs.google.com/forms/d/1qJVKHGjaSpgpp7I184N3ATKe9EbqO7avcfolAJQFyoc/viewform">Inscreve-te!</a>
+            </div>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2024-2025/event-38.png" alt="Veneravel Palestra">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                O teu núcleo organizou uma palestra com o Rui Valente para explicar melhor as tuas saídas! Convidamos toda a comunidade de engenharia informática a ver esta Valente palestra! 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2024-2025/event-37.png" alt="Kit Caloiro">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Mostra aos outro cursos a gloria de Informática, e demonstra aos teus praxadores que não são um caso perdido! Por isso vem para a UTAD cheio de convicção e compra o nosso kit, para não levares um sermão!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2024-2025/event-36.png" alt="Palestra 101">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Bem-vindo ao curso de Engenharia Informática na UTAD! Para te ajudar a assentar temos uma palestra para ti com o intuito de ficares informado de tudo que é LEI e AAUTAD. 
+              </p>
+            </div>
+          </div>
+        </div>            
+      </article>
+    </template>
+    <template id="tpl-2023-2024">
+      <article id="events-2023-2024" class="events-row">
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2023-2024/event-35.jpg" alt="Futebol 2024">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                  O NEEI FC orgulha-se de apresentar o seu Torneio de Futebol! Junta-te com os teus amigos e compete com os teus colegas para ver quem é que irá ser o próximo Ronaldo!
+              </p>
+              <a href="https://forms.gle/UeJcgJSWgCy4jy3e8">Inscreve-te!</a>
+            </div>
+          </div>
+        </div> 
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2023-2024/event-34.jpg" alt="Workshop python">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Prepara-te para brilhar nas tuas próximas entrevistas de programação! Junta-te a nós para aprender as melhores técnicas e estratégias para resolver problemas técnicos. 
+              </p>
+              <p>
+                15 de Maio as 16h00 na Sala G0.03
+              </p>
+              <a href="https://forms.gle/A3h8Cz1BEgAUhtM27">Inscreve-te!</a>
+            </div>
+          </div>
+        </div>        
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2023-2024/event-33.jpg" alt="kit cortejo 24">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Estamos a chegar cada dia mais perto á queima, por isso equipa-te com o nosso kit cortejo, representa o teu curso e mostra que a vida de informático é para ti! 
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2023-2024/event-32.jpg" alt="jantar 24">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Ding-ding, cheiras isto? É o cheiro de uma jantarada informática! Junta-te com os teus engenheiros no jantar de curso!    
+                <br>
+                Por isso não esperes mais e reserva o teu lugar, se não a comida fica fria!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2023-2024/event-31.jpg" alt="Rally Tascas de informática">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Abram alas para o Rally Tascas de informática! Põe o teu cinto de segurança pois não vai haver travão para esta diversão! Oferecemos a meio do espetáculo uma refeição para não irem de tanque vazio.
+                <br>
+                As inscrições acabam terça e a pista limita-se a 10 vagas!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2023-2024/event-30.jpg" alt="Festival da Francesinha">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Na Informática Airlines tens um voo marcado para a Francesinhalândia, população: TU. 
+                <br>
+                Junta-te com os teus estudantes de informática numa deliciosa excursão para a Metropolis!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2023-2024/event-29.jpg" alt="Torneio de FIFA">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Um torneiro de FC24 é tudo aquilo que tu estás a precisar!
+                O NEEI organizou um Torneio de FC24 que promete elevar a competição a outro nível.
+                Junta-te ao neei, e vem jogar connosco.
+                <br>
+                Esperamos por ti!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2023-2024/event-28.jpg" alt="Jantar de Natal">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                O espírito natalício está no ar e o NEEI convida-te para uma noite especial!
+                <br>
+                Junta-te a nós no dia 11 de dezembro na Metropolis para um Jantar de Natal cheio de sabor e solidariedade.
+                <br>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2023-2024/event-27.jpg" alt="Gadolândia">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                A caloirada aos montes está prestes a chegar e o NEEI deixou o gado à solta.
+                <br>
+                Vem conhecer a "Gadolândia"!
+                <br>
+                Nos dias 25 a 31 de Outubro, vem beber na tua barraca favorita.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2023-2024/event-26.png" alt="Jantar de Curso">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                A Caloirada está mesmo aí a porta, o que quer dizer que está ai a chegar o tão aguardado Jantar de Curso!!
+                <br>
+                <br>
+                - Dia 26 de Outubro
+                <br>
+                - 20h
+                <br>
+                - Quinta da Churrasqueira Ideal - Almodena
+                <br>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2023-2024/event-25.jpg" alt="Kit Latada">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Estás pronto para algo inesquecível?
+                <br>
+                A latada está aí à porta e por apenas 10€, terás a oportunidade de vivênciar um convívio incrível 
+                com direito a cerveja à pala e de obter a tua t-shirt da latada 2023/2024.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2023-2024/event-24.png" alt="Kit Caloiro">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                A camisola mais esperada do semestre está aí!
+                <br>
+                Chegou o teu kit caloiro 23/24!
+                <br>
+                Por apenas 6€, veste as cores do "curso com mais coragem"!!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2023-2024/event-23.jpeg" alt="Línguas fora da LEI">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Nesta quarta-feira, dia 11, venham ter connosco ao Jardim da Carreira a partir das 18h.
+                <br>
+                Liberta-te do mundo e aproveita o teu tempo sem restrições! Nada te vai prender nesta festa!
+                <br>
+                Não irá faltar comida, nem bebida.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2023-2024/event-22.jpeg" alt="Workshop Linux 2ª Edição">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Em parceria com o professor Emanuel Peres, o NEEI em o prazer de anunciar a 2ª edição do workshop de
+                Linux!
+
+                Limitada a 25 vagas, esta edição irá decorrer ao longo de 3 sessões todas as quartas-feiras até a semana
+                do caloiro.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2023-2024/event-21.jpeg" alt="De que cor é o teu Bugatti?">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Caloiro, já conheceste o teu café de curso?<br>
+                Apanha boleia do teu núcleo e arranca o teu ano letivo da melhor forma.<br>
+                No dia 17 de Setembro, vem até à Metropolis conhecer melhor a tua segunda casa!<br>
+                Encontra alguém com um "Bugatti" da mesma cor que a tua e recebe 1 shot!
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </article>
+    </template>  
+
+    <template id="tpl-2022-2023">
+      <article id="events-2022-2023" class="events-row">
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2022-2023/event-20.jpeg" alt="Bits D'Ouro - 4ª Gala de Informática">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Foi com enorme sentimento de orgulho que realizamos a 4ª gala de Engenharia Informática.
+                O culminar deste ano letivo resultou neste evento que se realizou no dia 29 Maio, na Quinta do
+                Paço.<br>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2022-2023/event-19.jpeg" alt="Wasted Pursuit">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                O Wasted Pursuit é um questionário fora do normal, em que só tens o direito de responder à
+                pergunta caso a tua equipa seja a primeira a beber um fino de penálti!
+                A quantas perguntas serias capaz de responder corretamente?
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2022-2023/event-18.jpg"
+                alt="Workshop - Configuração de um bom ambiente de trabalho">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Um workshop sobre como configurar um bom ambiente de trabalho.<br>Apresentado por Rui Valente,
+                engenheiro de software na Openvia.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2022-2023/event-17.jpg" alt="Torneio de futebol do NEEI">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                5 a 8 elementos, com um mínimo de 3 alunos do curso de Engenharia Informática.
+                Era esta a regra para participar no torneio organizado pelo NEEI.<br>
+                Aparece no próximo ano para mostrar quem é o rei do futebol!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2022-2023/event-16.jpg" alt="Kit Cortejo">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Queima das fitas significa cortejo!
+                Apenas por 10 bits tinhas direito a uma camisola, um suporte para copos e um protetor para o
+                telemóvel.<br>
+                Não percam o kit do próximo ano!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2022-2023/event-15.png" alt="Jantar de Curso do NEEI">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Dia 20 de Abril, realizamos mais um jantar de curso do NEEI na Diogo Cão.<br>
+                Engenharia Informática esteve presente em força e esperamos repetir a experiência muitas mais vezes!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2022-2023/event-14.png"
+                alt="Workshop - Magento para Engenheiros Informáticos">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Em resultado da colaboração com a Toogas, a empresa realizou um workshop com a temática "Magento para
+                Engenheiros
+                Informáticos: Uma Abordagem Prática".
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2022-2023/event-13.jpg" alt="Hip Hop Trap Party">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Boa música e bom ambiente.<br>O NEEI, em conjunto com o NEBE, NEEZ e o NEL organizaram esta festa
+                temática de Hip-Hop Trap no Bclub.
+                Preparem-se porque esperamos organizar eventos semelhantes no futuro!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2022-2023/event-11.png" alt="Openday - Softinsa">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                A Softinsa realizou o seu primeiro Open Day em Vila Real, em parceria com a UTAD, (Universidade de
+                Trás-os-Montes e Alto Douro).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2022-2023/event-9.png" alt="Lasertag">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                O evento mais eletrizante do ano.<br>É assim que descrevemos este evento que se realizou no Kartodromo
+                de Vila
+                Real!<br>Uma batalha épica de lasertag que deixou todos sem fôlego!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2022-2023/event-8.jpeg" alt="Festival da francesinha">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Nada como esta inigualável iguaria para te abrir o apetite para uma grande noite. O festival da
+                francesinha esteve de volta com bebida e freepass na inscrição!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2022-2023/event-7.jpg" alt="WTC LEI">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Certamente um dos momentos altos da vida académica de muitos.
+                No WTC LEI foram percorridos 10 postos, com bifanas incluídas, sendo que a equipa que mais resistiu
+                levou
+                como prémio uma besta de cerveja!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2022-2023/event-5.jpg" alt="Openday - Openvia">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Neste dia, a Openvia abriu portas para receber alunos do nosso curso.
+                Foi uma experiência inesquecível, não só pelas atividades como também pelo convívio!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2022-2023/event-4.png" alt="Torneio de CS do NEEI">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                Debatívelmente o melhor torneio de CS GO da UTAD.<br>
+                O NEEI organizou mais uma edição deste torneio que colocou à prova os nossos jogadores
+                para ver quem levava o título de vencedor para casa...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2022-2023/event-3.png" alt="Tomada de posse da Lista P">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                O NEEI convidou a comunidade académica da Universidade de Trás-os-Montes e Alto Douro
+                a assistir à tomada de posse dos novos órgãos sociais que se realizou no dia 15 de
+                Dezembro pelas 16h00 no Auditório da AAUTAD.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-inner">
+            <div class="event-card-front">
+              <img src="./assets/images/eventos/2022-2023/event-1.png" alt="Torneio FIFA 23">
+            </div>
+            <div class="event-card-back">
+              <h1>Informações</h1>
+              <p>
+                O NEEI organizou um torneiro de FIFA23 para descontrair e conviver um pouco na época de eleições<br>
+                Não faltou diversão e convívio amigável 🎮
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </article>
+    </template>
+
+    </section>
+
+  </main>
+
+  <footer id="footer-large">
+    <div id="large-contact-area">
+      <p>Contactos:</p>
+      <div>
+        <a href="https://www.twitch.tv/neeiutad" target="_blank">
+          <i class="bi bi-envelope-fill"></i>neei@utad.pt
+        </a>
+      </div>
+    </div>
+    <div id="credits">
+      <p id="large-copyright">&copy;Copyright <b>2026 NEEI</b>. Todos os Direitos Reservados</p>
+      <p id="large-credits-main">Originalmente criado por <a href="https://www.linkedin.com/in/filipe-valadares/"
+          target="_blank">Filipe Valadares</a></p>
+      <p id="large-credits-secondary">Redesenhado por <a
+          href="https://www.linkedin.com/in/patr%C3%ADcio-sim%C3%B5es-668219201/" target="_blank">Patrício Simões</a> e
+        Ricardo Inácio</p>
+    </div>
+    <div id="large-social-area">
+      <p>Redes Sociais:</p>
+      <div>
+        <a href="https://www.twitch.tv/neeiutad" target="_blank">
+          <i class="bi bi-twitch"></i>
+        </a>
+        <a href="https://www.instagram.com/neei.utad/" target="_blank">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/neei.utad" target="_blank">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://www.youtube.com/@neeiutad" target="_blank">
+          <i class="bi bi-youtube"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/neei/about/" target="_blank">
+          <i class="bi bi-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</html>

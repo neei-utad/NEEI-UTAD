@@ -1,0 +1,253 @@
+main {
+    min-height: 100vh;
+    background-image: url("../assets/images/main-bg.png") !important;
+    background-size: cover;
+}
+
+.main-merch-section {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var(--merch-bg-2);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    min-height: 50vh;
+}
+
+#events-section {
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var(--merch-bg-2);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+#year-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+}
+
+.year-btn {
+    background-image: linear-gradient(to right, #FF512F 0%, #F09819 51%, #FF512F 100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+    padding: 0.5em;
+    font-size: 1.2em;
+    border-radius: 10px;
+    display: block;
+    margin: 10px;
+    font-weight: bold;
+    color: var(--year-btn-text);
+    background-color: var(--year-btn-bg);
+    box-shadow: 0 0 5px var(--year-btn-shadow);
+}
+
+.year-btn:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.active-year{
+    color: var(--active-year-text);
+    background-color: var(--active-year-bg);
+    background-image: none;
+    box-shadow: 0 0 5px var(--active-year-text);
+}
+
+.active-year:hover{
+    color: var(--active-year-text) !important;
+    background-color: var(--active-year-bg);
+}
+
+.events-row{
+    display: flex;
+    width: 100%;
+    max-width: 1500px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+
+/* Card animations */
+
+.event-card {
+    display: inline-block;
+    width: 225px;
+    height: 225px;
+    background-color: transparent;
+    perspective: 1000px;
+    margin: 0 1em 2em 1em;
+}
+
+.event-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.event-card:hover .event-card-inner {
+    transform: rotateY(-180deg);
+}
+
+.event-card-front,
+.event-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.event-card-front,
+.event-card-back{
+    box-shadow: -1px 7px 13px 0px var(--event-card-shadow);
+    -webkit-box-shadow: -1px 7px 13px 0px var(--event-card-shadow);
+    -moz-box-shadow: -1px 7px 13px 0px var(--event-card-shadow);
+}
+
+.event-card-front {
+    background-size: cover;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.event-card-front img {
+    height: 100%;
+    width: 100%;
+}
+
+.event-card-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    transform: rotateY(180deg);
+    background-color: var(--event-card-bg);
+    border-radius: 30px;
+    color: #000;
+    padding: 5% 10%;
+    overflow: hidden;
+}
+
+.event-card h1 {
+    color: #413E66;
+    font-weight: 900;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.event-card p {
+    color: #000;
+    font-size: 0.8em;
+    text-align: justify;
+}
+
+.event-card a {
+    display: block;
+    color: #FFF;
+    font-size: 1.2em;
+    background-color: #413E66;
+    border-radius: 12px;
+    padding: 1rem 0.5rem;
+    width: 80%;
+    margin: 1rem auto 0 auto;
+    text-align: center;
+}
+
+.event-card a:hover{
+    color: #FF5C00;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .year-btn {
+        font-size: 1.5em;
+    }
+
+    .event-card {
+        width: 300px;
+        height: 300px;
+    }
+
+    .event-card h1 {
+        font-size: 1.5em;
+    }
+
+    .event-card p {
+        font-size: 1em;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .year-btn {
+        font-size: 1.8em;
+    }
+
+    .event-card {
+        width: 325px;
+        height: 325px;
+    }
+
+    .event-card h1 {
+        font-size: 2em;
+    }
+    
+    .event-card p {
+        font-size: 1.1em;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #events-section {
+        /* 65px = height do menu */
+        padding-top: 100px;
+    }
+
+    .year-btn {
+        font-size: 2em;
+    }
+
+    .event-card {
+        width: 350px;
+        height: 350px;
+    }
+
+    .event-card h1 {
+        font-size: 2.5em;
+    }
+    
+    .event-card p {
+        font-size: 1.3em;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .year-btn {
+        font-size: 2.5em;
+    }
+
+    .event-card {
+        width: 400px;
+        height: 400px;
+    }
+
+    .event-card h1 {
+        font-size: 2.5em;
+    }
+    
+    .event-card p {
+        font-size: 1.4em;
+    }
+}

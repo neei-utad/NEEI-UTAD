@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="pt-pt" class="dark">
+	
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Guia Caloiros</title>
+	<link rel="stylesheet" href="./CSS/reset.css">
+	<!-- Page Icon -->
+	<link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+	<!-- Bootstrap icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+	<!-- CSS -->
+	<link rel="stylesheet" href="./CSS/palette.css">
+	<link rel="stylesheet" href="./CSS/styles.css">
+	<link rel="stylesheet" href="./CSS/guia.css">
+	<!-- JS -->
+	<script src="./JS/menu.js" defer></script>
+	<script src="./JS/script.js" defer></script>
+  </head>
+
+  <body>
+	<!-- Begin Main Navigation Bar -->
+	<header>
+	  <div class="hamburger-menu">
+		<input id="menu-toggle" type="checkbox" />
+		<label class="menu__btn" for="menu-toggle">
+		  <span></span>
+		</label>
+		<ul class="menu-box">
+		  <div id="menu-items">
+			<li>
+				<a href="./index.html">
+				  <img src="./assets/images/logos/logo.png" alt="NEEI's Logo">
+				</a>
+			  </li>
+			<li id="active-page" class="menu-item">
+			  <i class="bi bi-house-door-fill"></i>
+			  <a href="#">Guia</a>
+			</li>
+			<li class="line"></li>
+			<li class="menu-item">
+			  <i class="bi bi-chat-left-text-fill"></i>
+			  <a href="https://forum.neei-utad.pt/" target="_blank">Fórum</a>
+			</li>
+			<li class="line"></li>
+			<li class="menu-item">
+			  <i class="bi bi-calendar-fill"></i>
+			  <a href="./events.html">Eventos</a>
+			</li>
+			<li class="line"></li>
+			<li class="menu-item">
+			  <i class="bi bi-cart-fill"></i>
+			  <a href="./merch.html">Merch</a>
+			</li>
+			<li class="line"></li>
+			<li class="menu-item">
+			  <i class="bi bi-share-fill"></i>
+			  <a href="./links.html">Links</a>
+			</li>
+			<li class="line"></li>
+			<li class="menu-item">
+			  <i class="bi bi-pencil-fill"></i>
+			  <a href="./notes.html">Apontamentos</a>
+			</li>
+			<li class="line"></li>
+			<li class="menu-item">
+			  <i id="theme-toggle-icon" class="bi bi-brightness-high-fill"></i>
+			  <button class="theme-toggle"></button>
+			</li>
+			<li class="line"></li>
+		  </div>
+		  <li>
+  
+			<footer>
+			  <p>Redes Sociais:</p>
+			  <div id="social-icons">
+				<a href="https://www.twitch.tv/neeiutad" target="_blank">
+				  <i class="bi bi-twitch"></i>
+				</a>
+				<a href="https://www.instagram.com/neei.utad/" target="_blank">
+				  <i class="bi bi-instagram"></i>
+				</a>
+				<a href="https://www.facebook.com/neei.utad" target="_blank">
+				  <i class="bi bi-facebook"></i>
+				</a>
+				<a href="https://www.youtube.com/@neeiutad" target="_blank">
+				  <i class="bi bi-youtube"></i>
+				</a>
+				<a href="https://www.linkedin.com/company/neei/about/" target="_blank">
+				  <i class="bi bi-linkedin"></i>
+				</a>
+			  </div>
+			  <p id="copyright">&copy;Copyright <b>2026 NEEI</b>. Todos os Direitos Reservados</p>
+			  <p id="credits-main">Originalmente criado por <a href="https://www.linkedin.com/in/filipe-valadares/"
+				  target="_blank">Filipe Valadares</a></p>
+			  <p id="credits-secondary">Redesenhado por <a
+				  href="https://www.linkedin.com/in/patr%C3%ADcio-sim%C3%B5es-668219201/" target="_blank">Patrício
+				  Simões</a> e Ricardo Inácio</p>
+			</footer>
+		  </li>
+		</ul>
+	  </div>
+	</header>
+
+	<main>
+	<section id="topo" class="page sans">
+        <header>
+            <h1><b>Guia Para Caloiros</b></h1>
+        </header>
+
+		<!--<section id="uc-section">
+			<h2>Unidades Curriculares 1º Semestre</h2>
+            
+
+            <ul id="uc-ul" class="toggle">
+				<h2>Matemáticas</h2>
+				
+                <li id="uc-ul-list">
+                    <details>
+                        <summary>Álgebra Linear</summary>
+						<br>
+                        <section id="uc-info" style="display:flex">
+                            <div style="font-size:1.5em">💡</div>
+                            <div>
+                                <p>Disciplina Base</p>
+								Esta unidade curricular serve de base para:
+                                <ul class="uc-info-ul" style="list-style-type:disc">
+                                    <li>Métodos Computacionais em Engenharia</li>
+                                </ul>
+                            </div>
+                        </section>
+
+						<section id="uc-info_add">
+                        	<h3 class="uc-question">Quantos Créditos?</h3>
+                        	<p class="uc-answer">6 ECTS</p>
+						
+							<h3 class="uc-question">O que vais aprender nesta unidade curricular:</h3>
+                        	<ol class="uc-info-ol" style="list-style-type: decimal;">
+                            	<li><b>Matrizes:</b> São estruturas que organizam números em tabelas e que podem ser manipuladas 
+									através de operações como adição, multiplicação e inversão. Vais aprender também a utilizar 
+									o método de eliminação de Gauss para resolver sistemas de equações e como as matrizes Hermíticas 
+									e simétricas têm propriedades especiais que simplificam certos cálculos.</li>
+
+                            	<li><b>Determinantes:</b> Estes são valores calculados a partir de matrizes que te permitem 
+									determinar, por exemplo, se um sistema de equações tem uma solução única. Vais estudar o Teorema 
+									de Laplace e aprender a usar a Regra de Cramer para resolver equações. Além disso, entenderás como 
+									os valores e vetores próprios te ajudam a simplificar transformações complexas.</li>
+
+                            	<li><b>Espaços Vetoriais:</b> Nesta parte, vais explorar conjuntos de vetores (que podem ser pensados 
+									como "direções" no espaço) e entender como podem ser combinados, dimensionados e transformados. Conceitos 
+									como subespaços, base e dimensão são fundamentais para modelar dados e optimizar cálculos.</li>
+
+                            	<li><b>Aplicações Lineares:</b> Aqui vais estudar como certas funções transformam vetores de um espaço 
+									para outro e como isso se traduz em termos de matrizes. Entenderás também o impacto da mudança de base 
+									e como diagonalizar matrizes pode simplificar muito os cálculos.</li>
+                        	</ol>
+						
+                        	<h3 class="uc-question">Para que serve isto na Engenharia Informática?</h3>
+                        	<ul class="uc-info-ul" style="list-style-type: disc;">
+                            	<li><b>Gráficos Computacionais:</b> Matrizes usadas em transformações 3D em gráficos de jogos e simulações.</li>
+                            	<li><b>Processamento de Dados e IA:</b> Espaços vetoriais e valores próprios aplicados em análise de dados e machine learning.</li>
+                        	</ul><br>
+						</section>
+                    </details>
+                </li>
+				
+                <li id="uc-ul-list">
+                    <details>
+                        <summary>Analise Matemática I</summary>
+						<br>
+                        <section id="uc-info" style="display:flex">
+                            <div style="font-size:1.5em">💡</div>
+                            <div>
+                                <p>Disciplina Base</p>
+								Esta unidade curricular serve de base para:
+                                <ul class="uc-info-ul" style="list-style-type:disc">
+                                    <li>Analise Matemática II</li>
+									<li>Metodos Estatísticos</li>
+									<li>Metodos Computacionais em Engenharia</li>
+                                </ul>
+                            </div>
+                        </section>
+
+						<section id="uc-info_add">
+                        	<h3 class="uc-question">Quantos Créditos?</h3>
+                        	<p class="uc-answer">6 ECTS</p>
+						
+							<h3 class="uc-question">O que vais aprender nesta unidade curricular:</h3>
+                        	<ol class="uc-info-ol" style="list-style-type: decimal;">
+                            	<li><b>Funções Reais de Variável Real:</b> Vais estudar funções, que são relações entre variáveis, e 
+									como elas se compõem ou se invertem. Funções como as trigonométricas (seno, cosseno) e 
+									transcendentes (como o logaritmo e a exponencial) são essenciais, pois modelam fenómenos naturais 
+									e comportamentos em sistemas informáticos.</li>
+
+                            	<li><b>Continuidade e Limite:</b> A continuidade de uma função descreve se a função tem "saltos" ou não, 
+									enquanto o limite ajuda a entender o comportamento da função em pontos específicos, mesmo que a 
+									função não esteja definida nesses pontos. Vais estudar teoremas importantes como o <b>Teorema do Valor Intermédio</b>
+									 e o <b>Teorema de Bolzano</b>, que garantem a existência de soluções em certos intervalos, e o <b>Teorema de Weierstrass</b>,
+									que te assegura que uma função contínua atinge máximos e mínimos num intervalo fechado.</li>
+
+                            	<li><b>Derivadas de Funções:</b> A derivada mede a taxa de variação de uma função, ou seja, como uma variável muda em 
+									relação a outra. Vais aprender as regras de derivação, fundamentais para resolver problemas de otimização 
+									e para a análise de algoritmos.</li>
+
+                            	<li><b>Aplicações da Derivada:</b> Usando derivadas, vais explorar como identificar onde uma função atinge os 
+									seus valores máximos e mínimos, e estudar teoremas como o Teorema de Rolle e o Teorema de Lagrange, que 
+									são importantes para compreender o comportamento das funções e para provas matemáticas que sustentam muitas 
+									teorias na informática.</li>
+
+								<li><b>Primitivas de Funções e Cálculo Integral:</b> As primitivas são o "inverso" das derivadas, e aprender 
+									a calculá-las é essencial para resolver integrais. O cálculo integral permite determinar áreas, volumes 
+									e comprimentos de curvas, que têm aplicações diretas em gráficos computacionais e em algoritmos que lidam 
+									com dados contínuos.</li>
+
+								<li><b>Sucessões e Séries Numéricas:</b> Vais estudar sucessões (sequências de números) e séries (somas de termos de sucessões), 
+									e aprender a determinar se convergem para um valor ou não. Estas técnicas são usadas, por exemplo, na análise de algoritmos 
+									numéricos e no processamento de sinais.</li>
+									
+								<li><b>Polinómio e Fórmula de Taylor:</b> A Fórmula de Taylor permite aproximar funções complexas por polinómios, o que 
+									simplifica muito os cálculos e a implementação de algoritmos em software. Isto é particularmente útil em gráficos 
+									computacionais e em simulações.</li>
+                        	</ol>
+						
+                        	<h3 class="uc-question">Para que serve isto na Engenharia Informática?</h3>
+                        	<ul class="uc-info-ul" style="list-style-type: disc;">
+                            	<li><b>Análise de Algoritmos:</b> As derivadas e integrais são fundamentais para analisar e otimizar o desempenho de algoritmos.</li>
+                            	<li><b>Simulações e Modelagem:</b> O cálculo de áreas, volumes e curvas é aplicado na criação de simulações gráficas e na 
+									modelagem de sistemas físicos.</li>
+								<li><b>Processamento de Sinais e Dados:</b> Sucessões e séries são usadas em diversas áreas como compressão de dados, 
+									onde é importante entender como os dados se acumulam ou divergem.</li>
+                        	</ul><br>
+						</section>
+                    </details>
+                </li>
+				
+                <li id="uc-ul-list">
+                    <details>
+                        <summary>Tópicos de Matemática Discreta</summary>
+						<br>
+                        <section id="uc-info" style="display:flex">
+                            <div style="font-size:1.5em">💡</div>
+                            <div>
+                                <p>Disciplina Base</p>
+								Esta unidade curricular serve de base para:
+                                <ul class="uc-info-ul" style="list-style-type:disc">
+                                    <li>Algoritmia e Estrutura de Dados</li>
+                                </ul>
+                            </div>
+                        </section>
+
+						<section id="uc-info_add">
+                        	<h3 class="uc-question">Quantos Créditos?</h3>
+                        	<p class="uc-answer">6 ECTS</p>
+						
+							<h3 class="uc-question">O que vais aprender nesta unidade curricular:</h3>
+                        	<ol class="uc-info-ol" style="list-style-type: decimal;">
+                            	<li><b>Lógica:</b> Vais estudar proposições, que são sentenças que podem ser verdadeiras ou falsas, e 
+									aprender a combiná-las usando conectivos lógicos como "e", "ou" e "não". Vais trabalhar com quantificadores
+									 (como "para todo" e "existe") e aprender a construir e avaliar argumentos lógicos. Estas habilidades 
+									são essenciais para o desenvolvimento de algoritmos corretos e para a análise de programas.</li>
+                            	<li><b>Teoria de Conjuntos:</b> Aqui, vais aprender o que são conjuntos e como operam (união, interseção, diferença), 
+									e explorar as propriedades desses conjuntos, incluindo o conceito de cardinalidade (o tamanho de um conjunto). 
+									Também vais estudar relações binárias (como relações de ordem e equivalência), que são fundamentais para 
+									organizar e relacionar dados em bases de dados e estruturas de informação.</li>
+                            	<li><b>Teoria de Grafos:</b> A teoria de grafos trata de nós e arestas que os ligam, modelando redes de comunicação, 
+									circuitos eletrónicos, ou redes sociais. Vais aprender sobre diferentes tipos de grafos 
+									(como grafos eulerianos e hamiltonianos), isomorfismos (quando dois grafos têm a mesma estrutura) 
+									e a aplicar o Teorema de Euler. Além disso, vais estudar problemas clássicos como a coloração de grafos e 
+									entender algoritmos que resolvem problemas complexos em redes.</li>
+                            	<li><b>Números Naturais:</b> Nesta parte, vais explorar os axiomas de Peano, que fundamentam os números naturais, 
+									e usar o princípio de indução para provar propriedades desses números. Vais estudar divisibilidade e aprender 
+									a resolver congruências e equações de aritmética modular, que têm aplicações diretas em criptografia e na segurança de sistemas.</li>
+                        	</ol>
+						
+                        	<h3 class="uc-question">Para que serve isto na Engenharia Informática?</h3>
+                        	<ul class="uc-info-ul" style="list-style-type: disc;">
+                            	<li><b>Desenvolvimento de Algoritmos:</b> A lógica é a base de toda a programação, ajudando a criar algoritmos que resolvem problemas de
+									 forma eficiente e correta.</li>
+                            	<li><b>Estruturas de Dados e Redes:</b> A teoria de conjuntos e de grafos é essencial para entender e desenhar estruturas de dados 
+									complexas e redes de comunicação.</li>
+								<li><b>Segurança Informática:</b> A aritmética modular e as congruências são aplicadas em sistemas de criptografia, 
+									que protegem a informação em redes e sistemas digitais.</li>
+                        	</ul><br>
+						</section>
+                    </details>
+                </li>
+				<h2>Programação</h2>
+            </ul>
+		</section> -->
+
+		<section id="location-section">
+			<h2>Onde nos encontrar</h2>
+			<img src="./assets/images/guia/mapa.svg" alt="UTAD Map" width="950" class="imagem">
+		</section>
+
+		<section id="app-section">
+			<h2 style="padding-bottom: 2rem;">Aplicação Autocarros</h2>
+			<img src="./assets/images/guia/urbvr.jpg" alt="urbVR Icon" class="imagemredonda">
+			<h3 style="padding-bottom: 2rem; padding-top: 3rem;">Faz Download:</h3>
+			<div class="icons-container">
+				<a href="https://play.google.com/store/apps/details?id=pt.eleven.tuvr" target="_blank">
+					<img src="./assets/images/guia/playstore.svg" alt="Play Store Icon" width="70" class="icons">
+				</a>
+				<a href="https://apps.apple.com/pt/app/urbvr/id1523273122" target="_blank">
+					<img src="./assets/images/guia/appstore.svg" alt="Apple Store Icon" width="70" class="icons">
+				</a>
+			</div>
+		</section>
+
+		<section id="tips-section">
+			<p class="gold">Dicas de Ouro</p>
+			<ul id="tips-ul" style="list-style-type:disc" >
+				<li>Nunca deixar matéria acumular</li>
+				<li>Evitar sair de uma aula prática com duvidas</li>
+				<li>Não ter vergonha de fazer perguntas</li>
+				<li>Nunca achar que uma disciplina é difícil porque outras pessoas o dizem</li>
+				<li>Não menosprezar as disciplinas que acham mais fáceis</li>
+				<li>Tentar ao máximo fazer tudo por avaliação continua (O curso não se faz em recurso)</li>
+			</ul>
+		</section>
+
+		<section id="faq-section">
+			<h2>Questões Que podes ter</h2>
+			<div id="questions">
+			  <ul id="question-list">
+				<!-- Questão -->
+				<li>
+				  <input type="checkbox" checked/>
+				  <i></i>
+				  <h3 class="question">O que são ECTS</h3>
+				  <p class="answer">
+					<b>ECTS</b> (European Credit Transfer and Accumulation System) são <b>créditos universitários</b>
+					usados para medir e comparar o volume de trabalho necessário para completar um curso ou programa de estudo. Cada crédito ECTS 
+					corresponde a uma carga de trabalho de cerca de 25 a 30 horas, incluindo aulas, estudo autónomo e avaliações. Este sistema facilita a 
+					<b>transferência e reconhecimento de créditos</b> entre instituições e países da União Europeia, ajudando os estudantes a planearem 
+					e ajustarem os seus estudos em diferentes universidades.
+				  </p>
+				</li>
+				<!-- Questão -->
+				<li>
+					<input type="checkbox" checked/>
+					<i></i>
+					<h3 class="question">Banco de Apontamentos</h3>
+					<p class="answer">
+						O Banco de Apontamentos do NEEI é uma ferramenta onde podes consultar materiais de estudo, como resumos, apontamentos de aulas, 
+						exercícios resolvidos, fichas, frequências e exames antigos, e outros recursos pedagógicos. Para aceder a estes materiais, 
+						basta navegares até à aba "Apontamentos" e selecionar "Google Drive". Se, ao longo do ano letivo, tiveres documentos que 
+						achas que possam ser úteis para outros alunos, encorajamos-te a partilhá-los connosco. Para isso, podes submetê-los diretamente 
+						na mesma aba "Apontamentos". A partir daí, serão analisados por nós e posteriormente adicionados ao Banco de Apontamentos.
+					</p>
+				</li>
+				<!-- Questão -->
+				<li>
+					<input type="checkbox" checked/>
+					<i></i>
+					<h3 class="question">Tenho de estudar todos os dias?</h3>
+					<p class="answer">
+						Não é necessário estudar todos os dias, especialmente quando não há matéria nova para revisar. No entanto, é fundamental identificar 
+						as dificuldades em cada unidade curricular e trabalhar para superá-las, pois algumas pessoas podem precisar de mais tempo de estudo 
+						do que outras. É crucial manter-se atualizado com o conteúdo e evitar que dúvidas se acumulem. É de notar que os professores 
+						costumam recomendar exercícios para apoiar o nosso estudo e ajudar na compreensão da matéria. Todos os professores têm um 
+						horário de atendimento, durante o qual estão disponíveis nos seus gabinetes para esclarecer dúvidas dos alunos.
+					</p>
+				</li>
+				<!-- Questão -->
+				<li>
+					<input type="checkbox" checked/>
+					<i></i>
+					<h3 class="question">Vou ter tempo livre?</h3>
+					<p class="answer">
+						Quanto melhor for a gestão do teu tempo, mais tempo livre terás. É importante aprender a estudar de forma eficiente. 
+						Além disso, é crucial prestar atenção nas aulas, especialmente nas aulas práticas, para reduzir a necessidade de estudo autónomo.
+					</p>
+				</li>
+				<!-- Questão -->
+				<li>
+					<input type="checkbox" checked/>
+					<i></i>
+					<h3 class="question">O curso é difícil?</h3>
+					<p class="answer">
+						Tudo depende de cada pessoa, mas com um bom plano de estudo — que não precisa ser necessariamente intenso — 
+						é possível completar o curso com relativa facilidade.
+					</p>
+				</li>
+			  </ul>
+			</div>
+			<h2>Assuntos académicos</h2>
+			<div id="questions">
+			  <ul id="question-list">
+				<!-- Questão -->
+				<li>
+				  <input type="checkbox" checked/>
+				  <i></i>
+				  <h3 class="question">Contactos</h3>
+				  <p class="answer">
+					<b>Email:</b> sautad@utad.pt <br>
+					<b>Telefone:</b> +351 259350010
+				  </p>
+				</li>
+				<!-- Questão -->
+				<li>
+					<input type="checkbox" checked/>
+					<i></i>
+					<h3 class="question">Serviços académicos (onde fica)</h3>
+					<p class="answer">
+						Os serviços académicos da UTAD situam-se no edifício dos Serviços Comuns. Este edifício localiza-se junto 
+						do Largo do Pedrinhas, perto da entrada da UTAD.<br>
+						<b>Endereço Postal:</b><br>
+						Universidade de Trás-os-Montes e Alto Douro<br>
+						Serviços Académicos<br>
+						Centro de Serviços Comuns<br>
+						Quinta de Prados – Folhadela<br>
+						5000-801 Vila Real
+					</p>
+				</li>
+				<!-- Questão -->
+				<li>
+					<input type="checkbox" checked/>
+					<i></i>
+					<h3 class="question">Pagamento de propinas</h3>
+					<p class="answer">
+						As propinas deverão ser pagas através da Rede de Caixas Automáticas Multibanco (MB) 
+						ou processo equivalente através de Homebanking/Internet, sendo utilizadas, para o efeito,
+						as referências disponibilizadas pelos Serviços Académicos. <br>
+						<br>As referências do pagamento são disponibilizadas, em regra, na <b>última semana de cada mês</b>, 
+						período em que podem ser consultadas no SIDE.<br>
+						<br>O pagamento de cada propina poderá ser efetuado presencialmente no Balcão Espaço Estudante 
+						(situado nos Serviços Académicos da UTAD) através de numerário, cheque ou Multibanco (MB).<br>
+						<br>Após o término de validade das referências multibanco, o pagamento só poderá ser efetuado 
+						<b>presencialmente</b> no Balcão Espaço Estudante. O pagamento da propina para além do prazo 
+						definido importa o pagamento de juros de mora à taxa legal em vigor.<br>
+					</p>
+				</li>
+				<!-- Questão -->
+				<li>
+					<input type="checkbox" checked/>
+					<i></i>
+					<h3 class="question">Bolsas por mérito</h3>
+					<p class="answer">
+						As bolsas por mérito são uma prestação pecuniária, de valor fixo, a atribuir a estudantes que tenham 
+						demonstrado um aproveitamento escolar excecional, como estabelecido no Regulamento n.º 616/2018, de 
+						24 de setembro e são atribuídas pela Universidade de Trás-os-Montes e Alto Douro.<br>
+						<br>Para mais informações:<br>
+						Núcleo de 1.º e 2.º Ciclo dos Serviços Académicos da UTAD<br>
+						Universidade de Trás-os-Montes e Alto Douro<br>
+						Serviços Académicos<br>
+						Apartado 1013<br>
+						5001-801 Vila Real<br>
+						E-mail: sautad (at) utad.pt
+					</p>
+				</li>
+				<!-- Questão -->
+				<li>
+					<input type="checkbox" checked/>
+					<i></i>
+					<h3 class="question">Prémios de Mérito Desportivo aos Estudantes-Atletas</h3>
+					<p class="answer">
+						Prémios a atribuir aos Estudantes da UTAD que obtenham resultados desportivos de excelência. 
+						Por favor, consultar o Regulamento de Atribuição de Prémios de Mérito Desportivo aos Estudantes-Atletas.<br>
+					</p>
+				</li>
+				<!-- Questão -->
+				<li>
+					<input type="checkbox" checked/>
+					<i></i>
+					<h3 class="question">Justificação de faltas a aulas e elementos de avaliação</h3>
+					<p class="answer">
+						A justificação de faltas deve ser requerida através do formulário eletrónico disponibilizado no site: 
+						<a href="https://www.utad.pt/echs/inicio/apoio-ao-estudante/justificacao-de-faltas-a-aulas-e-elementos-de-avaliacao/">https://www.utad.pt/echs/inicio/apoio-ao-estudante/justificacao-de-faltas-a-aulas-e-elementos-de-avaliacao/</a>
+						, instruída com os respetivos documentos comprovativos, no prazo máximo de dez dias úteis após ter 
+						cessado o impedimento do estudante. Esta justificação deverá ser entregue na secretaria da ECT.<br>
+						Em situações de impedimento prolongado, com duração previsível superior a vinte dias, o estudante deve 
+						informar o Diretor de Curso ou a Estrutura de Apoio Pedagógico da Escola, por escrito email ou usando o 
+						mesmo requerimento eletrónico, e no prazo de cinco dias úteis após o início desse impedimento, sob pena 
+						de ser liminarmente rejeitada a justificação das faltas a que se refere o número anterior.
+						No caso de faltas a elementos de avaliação, desde que cumprido o disposto nos números anteriores, 
+						o estudante tem direito a requerer nova avaliação, cabendo ao Diretor de Curso, sob proposta do regente 
+						da Unidade Curricular (UC), a marcação de nova data, tendo em conta o calendário de avaliação do estudante.
+						O requerimento indicado no número anterior tem de ser apresentado pelo estudante no prazo máximo de dez 
+						dias úteis após o fim da condição de impedimento, devendo a nova avaliação, prevista nesse mesmo número, 
+						ocorrer dentro de um prazo máximo de dez dias úteis contados a partir da data de apresentação do referido requerimento.
+					</p>
+				</li>
+				<!-- Questão -->
+				<li>
+					<input type="checkbox" checked/>
+					<i></i>
+					<h3 class="question">Época Especial</h3>
+					<p class="answer">
+						Quem se pode inscrever?<br>
+						<b>1.</b> Estudantes inscritos no último ano dos cursos de 1º ciclo, mestrado integrado, 
+						preparatórios de licenciatura ou mestrado integrado e Curso de Técnico Superior Profissional (CTeSP); 
+						<b>2.</b> Estudantes inscritos em qualquer ano de um curso de 2º ciclo ou 3º ciclo; 
+						<b>3.</b> Estudantes inscritos no 3º ano de um curso de mestrado integrado, apenas podendo realizar exames às UC do 1º ao 3º ano do plano de estudos; 
+						<b>4.</b> Estudantes inscritos no 5º ano de um curso de mestrado integrado. <br>
+						Os estudantes abrangidos no estabelecido anteriormente, de acordo com os requisitos aí estabelecidos, têm acesso à época especial 
+						de exames independentemente de terem cumprido, ou não, os critérios mínimos definidos no artigo 17.º do Regulamento Pedagógico.
+						Podem, ainda, ter acesso à época especial de exames, os estudantes abrangidos por um regime especial que lhes permita usufruir dessa época de exames, 
+						nos termos do previsto no regulamento específico dos regimes especiais de frequência.
+						Realização de exames na época especial só pode ser no máximo até 24 ECTS ou 4 unidades curriculares.<br>
+						A inscrição na época especial de exames está sujeita ao pagamento dos seguintes emolumentos:
+						Bolseiros da Ação Social – 5,00€/UC
+						Não bolseiros da Ação Social – 10,00€/UC		
+					</p>
+				</li>
+				<!-- Questão -->
+				<li>
+					<input type="checkbox" checked/>
+					<i></i>
+					<h3 class="question">Bolsa de estudo DGES - Prazos</h3>
+					<p class="answer">
+						<b>PRAZOS DE CANDIDATURA</b><br>
+						.Entre 25 de junho e 30 setembro;<br>
+						.Nos 20 dias úteis subsequentes à inscrição quando esta ocorra após 30 de setembro;<br>
+						.Entre 1 de outubro e 31 de maio, sendo, nesse caso, o valor da bolsa de estudo a atribuir proporcional ao
+						valor calculado nos termos do presente regulamento, considerando o período que medeia entre o mês seguinte
+						ao da submissão do requerimento e o fim do período letivo;<br>
+						.Entre 25 de junho e 31 de outubro, os estudantes que pretendam requerer a atribuição de complemento de alojamento 
+						(Não Bolseiro) devem submeter requerimento de atribuição de bolsa indicando que pretendem a atribuição de complemento 
+						de alojamento não bolseiro. (NOVO)<br>
+					</p>
+				</li>
+				<!-- Questão -->
+				<li>
+					<input type="checkbox" checked/>
+					<i></i>
+					<h3 class="question">Bolsa de estudo DGES - Procedimentos de Candidatura</h3>
+					<p class="answer">
+						<b>PROCEDIMENTOS DE CANDIDATURA</b><br>
+						As candidaturas são efetuadas através da plataforma on-line da DGES (Direção-Geral do Ensino Superior), nas condições 
+						e procedimentos indicados: Candidatura DGES.<br>
+						<b>CREDENCIAIS DE ACESSO</b><br>
+						.Com credenciais de acesso: deverá utilizar as credenciais de anos anteriores; deverá “criar” o processo para 2024/2025,
+						preencher o formulário e submeter a candidatura no prazo estabelecido.<br>
+						.Sem credenciais de acesso: para obter as credenciais deverá preencher o Pré-Registo, eventualmente anexar cópia "traçada"
+						do Cartão de Cidadão (não é obrigatório mas é conveniente, para verificação, principalmente dos dígitos de controlo do CC)
+						e enviar para sasutad@utad.pt. Os estudantes que ingressam no ensino superior através do regime geral de acesso obtêm as
+						credenciais aquando da candidatura ao ensino superior; se não as obteve nessa altura pode pedi-las a partir da data da inscrição na UTAD,
+						seguindo os procedimentos descritos.
+					</p>
+				</li>
+				<!-- Questão -->
+				<li>
+					<input type="checkbox" checked/>
+					<i></i>
+					<h3 class="question">Bolsa de estudo DGES - Preenchimento</h3>
+					<p class="answer">
+						<b>PREENCHIMENTO DO FORMULÁRIO</b><br>
+						Antes de iniciar o preenchimento do formulário, deverá ler com atenção o Guia do Candidato e reunir os seguintes elementos: 
+						documentos de identificação de todos os elementos do agregado familiar (BI, CC, NIF e NISS), IBAN (International Bank Account Number) 
+						do candidato, IRS do agregado familiar referente ao ano de 2023, Extratos bancários integrados a 31 de Dezembro de 2023 
+						(património mobiliário) e Declaração de Bens Imóveis (património imobiliário). <br>
+						Tipologias de IRS para cada elemento do agregado: <br>
+						.Declaração Eletrónica: se IRS entregue pela internet, ver exemplo de NIF da Declaração e Código de Validação;<br>
+						.Não tem Declaração: quando não foi entregue IRS no ano civil em causa (2023); neste caso, não introduza na 
+						plataforma os códigos da certidão de não entrega de IRS.<br>
+					</p>
+				</li>
+				<!-- Questão -->
+				<li>
+					<input type="checkbox" checked/>
+					<i></i>
+					<h3 class="question">Informação das Residências</h3>
+					<p class="answer">
+						Atualmente as residências universitárias da Utad estão divididas em duas residências principais.<br>
+						A 1ª fase de candidaturas ao alojamento, irá realizar-se entre os dias 26 e 29 de Agosto. 
+						Posteriormente realizam-se também a 2ª e 3ª fase, com datas ainda por definir.<br>
+						Candidaturas às Residências - 
+						<a href="https://comunicacao.sas.utad.pt/candidatura_ao_alojamento_residencias_universitarias">aqui</a><br>
+						Para mais informações sobre as residências, critérios de admissão e o processo de candidatura, devem 
+						aceder ao seguinte <a href="https://comunicacao.sas.utad.pt/viver-a-utad/alojamento">link</a> 
+						
+					</p>
+				</li>
+				<!-- Questão -->
+				<li>
+					<input type="checkbox" checked/>
+					<i></i>
+					<h3 class="question">Residências - Localizações</h3>
+					<p class="answer">
+						<b>Residência de Codessais: (atualmente em obras)</b><br>
+						Morada - Rua Diogo Dias Ferreira, 5000-559 Vila Real (junto ao CIFOP e GNR)<br>
+						Contacto - 259 309 920<br>
+						Residência mista apenas com quartos duplos. Possui serviços como Lavandaria self-service, sala de estudo e convívio, etc.<br>
+						<b>Residencial Além-Rio:</b><br>
+						Morada - Rua Actor Ruy de Carvalho, 5000-542 Vila Real (junto ao Teatro Municipal e Nosso Shopping)<br>
+						Contacto - 259 309 925<br>
+						Residências mistas, dividida em 4 blocos (Bloco A,B,C,D), com quartos duplos e individuais. Contam com serviços como 
+						Lavandaria self-service, sala de estudo e convívio, etc. Cantina aberta para almoços e 
+						jantares, com o seguinte horário:<br>
+						.Almoços - das 12:00 às 14:30<br>
+						.Jantares - das 19:00 às 21:30
+					</p>
+				</li>
+			  </ul>
+			</div>
+			<h2>Semana de Receção</h2>
+			<div id="questions">
+			  <ul id="question-list">
+				<!-- Questão -->
+				<li>
+				  <input type="checkbox" checked/>
+				  <i></i>
+				  <h3 class="question">Descrição do Curso</h3>
+				  <p class="answer">
+					A Licenciatura em Engenharia Informática é um curso que visa a formação de técnicos com capacidades, conhecimentos e 
+					competências para o mercado de trabalho, com formação específica em diversas subáreas da engenharia informática. Tem por objetivos específicos:<br>
+					.Preparar técnicos com sólida formação de engenharia, com competências para o mercado de emprego e capacidade de iniciativa empresarial;<br>
+					.Contribuir para a difusão da Sociedade da Informação, com o consequente aumento de bem-estar e de riqueza daí esperados<br>
+					.Contribuir para a modernização do país e da região, ao disponibilizar formação numa área carenciada de oferta de formação qualificada;<br>
+					.Contribuir para a fixação de quadros qualificados no Interior Norte do país;<br>
+				  </p>
+				</li>
+				<!-- Questão -->
+				<li>
+					<input type="checkbox" checked/>
+					<i></i>
+					<h3 class="question">Descrição do Curso pt.2</h3>
+					<p class="answer">
+						Ao longo do curso, os estudantes têm uma formação sólida em disciplinas como análise, física, programação, algoritmos, 
+						estruturas de dados, redes de computadores, sistemas operativos, inteligência artificial e muitas mais. O curso desenvolve 
+						também competências transversais, como a capacidade de trabalhar em equipa, gestão de projetos, e comunicação, bem como uma 
+						compreensão das questões éticas e sociais relacionadas com a tecnologia. Estas competências são fundamentais para preparar os 
+						alunos para desafios reais no mercado de trabalho.<br>
+						Os diplomados a formar destinam-se a integrar os quadros de empresas, organizações e equipas na área da Informática e das 
+						Comunicações, nomeadamente se vocacionadas para o desenvolvimento de sistemas e redes informáticas, bem como para a produção, 
+						divulgação, comercialização e manutenção de soluções informáticas e de comunicações. Poderão vir a exercer funções em variados 
+						setores como é o caso do setor de serviços, do setor industrial, da administração pública, dos media, entre outros. A Engenharia 
+						Informática é uma área dinâmica, flexível e em constante evolução onde o desafio de inovar e acompanhar o progresso tecnológico é constante.
+					</p>
+				  </li>
+				<!-- Questão -->
+				<li>
+					<input type="checkbox" checked/>
+					<i></i>
+					<h3 class="question">O que é o NEEI?</h3>
+					<p class="answer">
+						O NEEI, Núcleo de Estudantes de Engenharia Informática, é uma organização formada por alunos do curso de 
+						Engenharia Informática que visa representar os estudantes e promover atividades associadas ao curso.<br>
+						No NEEI, além da Direção, existem vários departamentos responsáveis por diferentes áreas de atuação. 
+						Estes departamentos são responsáveis por organizar diversas atividades, desde eventos sociais, onde 
+						poderás conhecer melhor e conviver com os teus colegas de curso, até eventos desportivos, que estimulam as 
+						tuas habilidades físicas. Além disso, o núcleo promove também eventos académicos direcionados para te ajudar 
+						a aprofundar os conhecimentos na área de Engenharia Informática.<br>
+						Por último, o núcleo deverá ser o elo de ligação entre os estudantes e os professores/ direção de curso. 
+						Assim, caso seja necessário levantar sugestões, reclamações ou ideias sobre alguma unidade curricular, o 
+						NEEI encarrega-se de comunicar estas questões e colaborar na procura de soluções.
+					</p>
+				</li>
+				<!-- Questão -->
+				<li>
+					<input type="checkbox" checked/>
+					<i></i>
+					<h3 class="question">Sites de quartos, números de telemóvel e outros</h3>
+					<p class="answer">
+						Se estás à procura de um quarto, tens várias opções que te podem ajudar a encontrar o espaço ideal.<br>
+						Em primeiro lugar, dá uma vista de olhos nos cartazes que estão afixados à porta da Universidade de 
+						Trás-os-Montes e Alto Douro (UTAD). Frequentemente, estudantes e senhorios deixam informações sobre quartos 
+						disponíveis. Além disso, não hesites em perguntar aos locais se têm conhecimento de algum quarto para arrendar. 
+						A comunidade local pode ser uma excelente fonte de informação.<br>
+						Caso estas opções não resultem, podes sempre recorrer à internet. O Facebook é uma ferramenta eficaz para encontrar 
+						grupos e páginas dedicadas ao arrendamento de quartos em Vila Real. Recolhemos alguns sites e links que poderão ajudar:<br>
+						.<a href="https://comunicacao.sas.utad.pt/viver-a-utad/alojamento">Facebook - Quartos em Vila Real</a><br>
+						.<a href="https://comunicacao.sas.utad.pt/viver-a-utad/alojamento">Facebook - Quarto/apartamento Vila Real (arrendamento ou alojamento) Erasmus Vila Real</a><br>
+						.<a href="https://comunicacao.sas.utad.pt/viver-a-utad/alojamento">B quarto</a><br>
+						.<a href="https://comunicacao.sas.utad.pt/viver-a-utad/alojamento">Custo Justo</a><br>
+						.<a href="https://www.idealista.pt/arrendar-quarto/vila-real-distrito/">Idealista</a><br>
+					</p>
+				</li>
+			  </ul>
+			</div>
+		</section>
+	</section>
+	</main> 
+
+	<footer id="footer-large">
+		<div id="large-contact-area">
+		  <p>Contactos:</p>
+		  <div>
+			<a href="https://www.twitch.tv/neeiutad" target="_blank">
+			  <i class="bi bi-envelope-fill"></i>neei@utad.pt
+			</a>
+		  </div>
+		</div>
+		<div id="credits">
+			<p id="large-copyright">&copy;Copyright <b>2026 NEEI</b>. Todos os Direitos Reservados</p>
+			<p id="large-credits-main">Originalmente criado por <a href="https://www.linkedin.com/in/filipe-valadares/"
+			  target="_blank">Filipe Valadares</a></p>
+		  <p id="large-credits-secondary">Redesenhado por <a
+			  href="https://www.linkedin.com/in/patr%C3%ADcio-sim%C3%B5es-668219201/" target="_blank">Patrício Simões</a> e
+			Ricardo Inácio</p>
+		</div>
+		<div id="large-social-area">
+		  <p>Redes Sociais:</p>
+		  <div>
+			<a href="https://www.twitch.tv/neeiutad" target="_blank">
+			  <i class="bi bi-twitch"></i>
+			</a>
+			<a href="https://www.instagram.com/neei.utad/" target="_blank">
+			  <i class="bi bi-instagram"></i>
+			</a>
+			<a href="https://www.facebook.com/neei.utad" target="_blank">
+			  <i class="bi bi-facebook"></i>
+			</a>
+			<a href="https://www.youtube.com/@neeiutad" target="_blank">
+			  <i class="bi bi-youtube"></i>
+			</a>
+			<a href="https://www.linkedin.com/company/neei/about/" target="_blank">
+			  <i class="bi bi-linkedin"></i>
+			</a>
+		  </div>
+		</div>
+	  </footer>
+</body>
+</html>

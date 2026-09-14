@@ -1,0 +1,3 @@
+Cinza Principal -> #656565, rgba(101,101,101,255)
+Cinza Secundario -> #818181, rgba(129,129,129,255)
+verde Principal -> #00de59, rgba(0,222,89,255)

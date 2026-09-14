@@ -1,0 +1,60 @@
+main{
+    background-color: #35363A;
+}
+
+.main-section{
+    background-image: none !important;
+}
+
+.countdown{
+    margin-top: 50px !important;
+}
+
+#countdown-header{
+    margin-top: 150px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+#main-nav{
+    background-color: #86C047 !important;
+}
+
+.nav-link{
+    color: #000 !important;
+    font-weight: bold;
+}
+
+.nav-link:hover{
+    color: #FFF !important;
+}
+
+#header-event{
+    color: #86C047;
+}
+
+#header-second{
+    color: #727276
+}
+
+#btn-area{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+#register-btn{
+    display: inline-block;
+    color: #fff;
+    font-size: 3em;
+    background-color: #86C047;
+    padding: 0.5em 1em;
+    margin:  50px auto;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#register-btn:hover{
+    background-color: #75bb29;
+}

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-pt" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão de Sócio</title>
+    <!-- Page Icon -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/palette.css">
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="stylesheet" href="./CSS/card.css">
+    <!-- JS -->
+    <script src="./JS/menu.js" defer></script>
+</head>
+
+<body>
+    <!-- Begin Main Navigation Bar -->
+    <header>
+        <div class="hamburger-menu">
+            <input id="menu-toggle" type="checkbox" />
+            <label class="menu__btn" for="menu-toggle">
+                <span></span>
+            </label>
+            <ul class="menu-box">
+                <div id="menu-items">
+                    <li>
+                        <a href="./index.html">
+                            <img src="./assets/images/logos/logo-natal.png" alt="NEEI's Logo">
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <i class="bi bi-house-door-fill"></i>
+                        <a href="./index.html">Início</a>
+                    </li>
+                    <li class="line"></li>
+                    <li class="menu-item">
+                        <i class="bi bi-chat-left-text-fill"></i>
+                        <a href="https://forum.neei-utad.pt/" target="_blank">Fórum</a>
+                    </li>
+                    <li class="line"></li>
+                    <li class="menu-item">
+                        <i class="bi bi-calendar-fill"></i>
+                        <a href="./events.html">Eventos</a>
+                    </li>
+                    <li class="line"></li>
+                    <li class="menu-item">
+                        <i class="bi bi-cart-fill"></i>
+                        <a href="./merch.html">Merch</a>
+                    </li>
+                    <li class="line"></li>
+                    <li class="menu-item">
+                        <i class="bi bi-share-fill"></i>
+                        <a href="./links.html">Links</a>
+                    </li>
+                    <li class="line"></li>
+                    <li class="menu-item">
+                      <i class="bi bi-pencil-fill"></i>
+                      <a href="./notes.html">Apontamentos</a>
+                    </li>
+                    <li class="line"></li>
+                    <li class="menu-item">
+                        <i id="theme-toggle-icon" class="bi bi-brightness-high-fill"></i>
+                        <button class="theme-toggle">Modo Claro</button>
+                    </li>
+                    <li class="line"></li>
+                </div>
+                <li>
+
+                    <footer>
+                        <p>Redes Sociais:</p>
+                        <div id="social-icons">
+                            <a href="https://www.twitch.tv/neeiutad" target="_blank">
+                                <i class="bi bi-twitch"></i>
+                            </a>
+                            <a href="https://www.instagram.com/neei.utad/" target="_blank">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="https://www.facebook.com/neei.utad" target="_blank">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@neeiutad" target="_blank">
+                                <i class="bi bi-youtube"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/company/neei/about/" target="_blank">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                        <p id="copyright">&copy;Copyright <b>2022-2023 NEEI</b>. Todos os Direitos Reservados</p>
+                        <p id="credits-main">Originalmente criado por <a
+                                href="https://www.linkedin.com/in/filipe-valadares/" target="_blank">Filipe
+                                Valadares</a></p>
+                        <p id="credits-secondary">Redesenhado por <a
+                                href="https://www.linkedin.com/in/patr%C3%ADcio-sim%C3%B5es-668219201/"
+                                target="_blank">Patrício Simões</a> e Ricardo Inácio</p>
+                    </footer>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section id="top">
+            <div>
+                <img src="./assets/images/logos/neei-logo.png" alt="Logo do NEEI" />
+                <img src="./assets/images/cartao/card-front.png" alt="Cartão de Sócio">
+            </div>
+            <div>
+                <div>
+                    <h1>O nosso cartão de Sócio está de volta!<br><span>8€ (Anual)</span></h1>
+                </div>
+                <p>Ao aderires tens acesso às seguintes vantagens:</p>
+                <ul>
+                    <li>Descontos exclusivos em merch do NEEI;</li>
+                    <li>Descontos exclusivos em festas e torneios do NEEI;</li>
+                    <li>Descontos exclusivos em workshops pagos do NEEI</li>
+                </ul>
+                <p>Vais perder esta oportunidade?</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdS8ShEqCkruS3zj1WgbUMXSU37CS2ihWlC7qxK5hxMcEz2lQ/viewform" target="_blank">Inscreve-te já!</a>
+            </div>
+        </section>
+
+        <section id="partners">
+            <h2>Aqui estão os nossos parceiros</h2>
+
+            <article class="partner">
+                <div class="partner-info">
+                    <img src="./assets/images/cartao/Parceiros/logo-chip7.png" alt="Chip7 Vila Real">
+                    <div>
+                        <h3>Chip7</h3>
+                        <h4>Regalias:</h4>
+                        <ul>
+                            <li>20% desconto em <span>serviços</span> feitos na loja</li>
+                            <li><a href="./assets/documents/campanha-chip7.pdf" target="_blank">Ver campanha</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="partner">
+                <div class="partner-info">
+                    <img src="./assets/images/cartao/Parceiros/realvisao-logo.png" alt="Realvisão">
+                    <div>
+                        <h3>Realvisão</h3>
+                        <h4>Regalias:</h4>
+                        <ul style="padding-bottom: 8rem;">
+                            <li>100% nas consultas de <span>optometria e contactologia</span></li>
+                            <li>50% nos exames <span>complementares de diagonóstico</span></li>
+                            <li>20% em <span>lentes de contacto e produtos de manutenção</span></li>
+                            <li>20% em <span>armações e óculos de sol</span></li>
+                            <li>20% em <span>lentes oftálmicas e restantes produtos</span> </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="partner">
+                <div class="partner-info">
+                    <img src="./assets/images/cartao/Parceiros/maquifier-logo.png" alt="Maquifier">
+                    <div>
+                        <h3>Maquifier</h3>
+                        <h4>Regalias:</h4>
+                        <ul>
+                            <li>10% desconto em todos os <span>serviços</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="partner">
+                <div class="partner-info">
+                    <img src="./assets/images/cartao/Parceiros/metropolis-logo.png" alt="Metropolis">
+                    <div>
+                        <h3>Metropolis</h3>
+                        <h4>Regalias:</h4>
+                        <ul>
+                            <li>10% desconto em toda a <span>alimentação</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="partner">
+                <div class="partner-info">
+                    <img src="./assets/images/cartao/Parceiros/pop-clean-logo.png" alt="PopClean">
+                    <div>
+                        <h3>Pop Clean</h3>
+                        <h4>Regalias:</h4>
+                        <ul>
+                            <li>15% desconto em todos os <span>serviços</span>, (min. 2.5kg de roupa)</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="partner">
+                <div class="partner-info">
+                    <img src="./assets/images/cartao/Parceiros/kebab-world-logo.jpg" alt="Kebab World">
+                    <div>
+                        <h3>Kebab World</h3>
+                        <h4>Regalias:</h4>
+                        <ul>
+                            <li>10% desconto em toda a <span>ementa</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="partner">
+                <div class="partner-info">
+                    <img src="./assets/images/cartao/Parceiros/logo-tattoo-studio.jpg" alt="Tattoo Studio">
+                    <div>
+                        <h3>Tattoo Studio</h3>
+                        <h4>Regalias:</h4>
+                        <ul>
+                            <li>20% desconto em todos os <span>serviços</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="partner">
+                <div class="partner-info">
+                    <img src="./assets/images/cartao/Parceiros/toystore-logo.jpg" alt="Toystore">
+                    <div>
+                        <h3>Toy Store</h3>
+                        <h4>Regalias:</h4>
+                        <ul>
+                            <li>10% desconto em toda a <span>loja</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+    </main>
+    <footer id="footer-large">
+        <div id="large-contact-area">
+            <p>Contactos:</p>
+            <div>
+                <a href="https://www.twitch.tv/neeiutad" target="_blank">
+                    <i class="bi bi-envelope-fill"></i>neei@utad.pt
+                </a>
+            </div>
+        </div>
+        <div id="credits">
+            <p id="large-copyright">&copy;Copyright <b>2026 NEEI</b>. Todos os Direitos Reservados</p>
+            <p id="large-credits-main">Originalmente criado por <a href="https://www.linkedin.com/in/filipe-valadares/"
+                    target="_blank">Filipe Valadares</a></p>
+            <p id="large-credits-secondary">Redesenhado por <a
+                    href="https://www.linkedin.com/in/patr%C3%ADcio-sim%C3%B5es-668219201/" target="_blank">Patrício
+                    Simões</a> e Ricardo Inácio</p>
+        </div>
+        <div id="large-social-area">
+            <p>Redes Sociais:</p>
+            <div>
+                <a href="https://www.twitch.tv/neeiutad" target="_blank">
+                    <i class="bi bi-twitch"></i>
+                </a>
+                <a href="https://www.instagram.com/neei.utad/" target="_blank">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/neei.utad" target="_blank">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="https://www.youtube.com/@neeiutad" target="_blank">
+                    <i class="bi bi-youtube"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/neei/about/" target="_blank">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
