@@ -1,0 +1,146 @@
+main {
+    min-height: 100vh;
+    background-image: url("../assets/images/main-bg.png") !important;
+    background-size: cover;
+}
+
+#logo-neei{
+    width: 100%;
+    padding-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#links-section{
+    padding: 0 1em 2em 1em;
+}
+
+#logo-neei img{
+    padding: 20px;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 3em;
+    background-color: var(--links-logo-bg);
+    border: 1px solid var(--links-logo-border);
+    border-radius: 50%;
+    box-shadow: 0 0 5px var(--links-logo-bg);
+}
+
+.links-subsection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.links-subsection h2{
+    font-size: 2em;
+    font-weight: 900;
+    color: var(--links-header-text);
+    margin-bottom: 1em;
+}
+
+.links-subsection a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    box-sizing: border-box;
+    padding: 1em;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--links-link-text);
+    background-color: var(--links-link-bg);
+    border-radius: 12px;
+    border: 1px solid var(--links-link-border);
+    transition: all 0.5s ease-in-out;
+}
+
+.links-subsection i{
+    margin-right: 1em;
+}
+
+.links-subsection div+div{
+    margin-top: 1em;
+}
+
+.links-subsection+.links-subsection{
+    margin-top: 2em;
+}
+
+.links-subsection a:hover{
+    box-shadow: 2px 2px 4px var(--links-link-shadow);
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    #logo-neei img{
+        padding: 25px;
+        width: 200px;
+        height: 200px;
+        margin-bottom: 3.5em;
+    }
+
+    .links-subsection h2{
+        font-size: 2.5em;
+    }
+
+    .links-subsection a{
+        width: 500px;
+        font-size: 1.35em;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    #logo-neei img{
+        width: 250px;
+        height: 250px;
+    }
+
+    .links-subsection h2{
+        font-size: 3.5em;
+    }
+
+    .links-subsection a{
+        width: 600px;
+        font-size: 1.5em;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #links-section {
+        /* 65px = height do menu */
+        padding-top: 80px;
+    }
+
+    .links-subsection h2{
+        font-size: 4em;
+    }
+
+    .links-subsection a{
+        width: 750px;
+        font-size: 1.60em;
+    }
+
+    .links-subsection a:hover{
+        font-size: 1.75em;
+    }
+
+    .links-subsection+.links-subsection{
+        margin-top: 3em;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .links-subsection h2{
+        font-size: 4.5em;
+    }
+
+    .links-subsection+.links-subsection{
+        margin-top: 3.5em;
+    }
+}

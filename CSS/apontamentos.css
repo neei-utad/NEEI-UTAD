@@ -1,0 +1,286 @@
+/* Main Container */
+main {
+    min-height: 100vh;
+    background-image: url("../assets/images/main-bg.png") !important;
+    background-size: cover;
+}
+
+section{
+    margin-top: 75px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section h1 {
+    text-align: center;
+    font-weight: 700;
+}
+
+section h2 {
+    padding: 0.5em 0 0.5em 0;
+    color: var(--section-header);
+    text-align: center;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+/* Filter Section */
+#filter-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 1rem;
+    background: var(--carousel-section-bg);
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+#filter-section > h2 {
+    margin-bottom: 20px; 
+    text-align: center; 
+}
+
+.filter-group-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between the two filters */
+}
+
+
+/* Filter Groups */
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    color: var(--input-fg);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.filter-group span {
+    min-width: 120px; 
+    text-align: center;
+    display: inline-block;
+}
+
+/* Arrow Buttons */
+.arrow-btn {
+    background: var(--btn-bg);
+    color: var(--btn-fg);
+    border: none;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border-radius: 5px;
+}
+
+.arrow-btn:hover {
+    background-color: var(--active-page);
+    color: #fff;
+}
+
+.arrow-btn:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+/* Filter Button */
+#filter-btn {
+    font-weight: bold;
+    background-color: var(--btn-bg);
+    color: var(--btn-fg);
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: none;
+}
+
+#filter-btn:hover {
+    background-color: var(--active-page);
+    color: #fff;
+}
+
+/* Notes Section */
+#apontamentos-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.sem-column {
+    width: 48%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.sem-column h2 {
+    text-align: center;
+    color: var(--input-fg);
+    margin-bottom: 10px;
+}
+
+/* Note Cards */
+.note-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.note-card a {
+    flex-shrink: 0; 
+}
+
+.note-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Note Text */
+.note-text {
+    text-align: justify;
+    word-wrap: break-word;
+    font-size: 1rem;
+    color: var(--input-fg);
+}
+
+/* Download Button */
+.note-card button {
+    padding: 8px 12px;
+    background-color: var(--btn-bg);
+    color: var(--btn-fg);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.note-card button:hover {
+    background-color: var(--active-page);
+    color: #fff;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center; 
+    margin-top: 15px; 
+    width: 100%;
+}
+
+.button-container a.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: var(--btn-bg);
+    border-radius: 6px;
+    transition: background 0.3s ease;
+    border: none; 
+}
+
+.button-container a.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.button-container a.btn:hover {
+    background-color: var(--active-page); 
+    color: #fff;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    #filter-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .filter-group-container {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .filter-group {
+        width: 90%; 
+        justify-content: center;
+    }
+
+    #apontamentos-list {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .sem-column {
+        width: 90%; 
+        max-width: 500px;
+        margin-bottom: 15px;
+    }
+
+    .note-card {
+        display: flex;
+        flex-direction: row; 
+        align-items: center; 
+        justify-content: space-between; 
+        text-align: justify;
+        gap: 10px;
+        padding: 12px;
+        width: 100%;
+    }
+
+    .note-text {
+        flex: 1; 
+        text-align: left; 
+    }
+   
+    .note-card a {
+        flex-shrink: 0; 
+    }
+
+    .note-card button {
+        width: auto;
+        min-width: 80px;
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .button-container {
+        width: 100%;
+    }
+
+    .button-container a.btn {
+        width: 80%;
+        text-align: center;
+    }
+}

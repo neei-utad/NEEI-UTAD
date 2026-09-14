@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Confirmation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .container img {
+            margin-bottom: 20px;
+            width: 150px; /* Fixed width for the logo */
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+        }
+        p {
+            color: #555;
+            line-height: 1.5;
+            font-size: 16px;
+            margin-bottom: 18px;
+        }
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            color: #999;
+            padding: 20px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://neei-utad.pt/assets/images/logos/logo.png" alt="NEEI Logo">
+        <h1>Olá, {{name}}!</h1>
+        <p>Os seus apontamentos foram aceites!</p>
+        <p>Obrigado, NEEI-Apontamentos</p>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2023-2024 NEEI Todos os Direitos Reservados
+    </div>
+</body>
+</html>

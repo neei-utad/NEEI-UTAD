@@ -1,0 +1,207 @@
+/* Cores, estilos e media queries da página do Workshop de Linux */
+
+:root.dark {
+    --color-1: #FFF;
+    --color-2: #000;
+    --color-3: #FF5C00;
+    --color-4: #32AA32;
+    --color-5: #8582a8;
+}
+
+:root.light {
+    --color-1: #FFF;
+    --color-2: #000;
+    --color-3: #FF5C00;
+    --color-4: #32AA32;
+    --color-5: #8582a8;
+}
+
+
+@keyframes wave {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes sizeAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+#main-section {
+    height: 100vh;
+    background-image: url('../assets/images/workshop-linux-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#main-section img {
+    height: 35em;
+}
+
+#main-section h1 {
+    color: var(--color-1);
+    margin-top: 0.5em;
+    font-size: 3em;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    animation: wave 2s infinite linear;
+}
+
+#info-section {
+    background-color: var(--color-2);
+    color: var(--color-1);
+    text-align: center;
+    padding: 0 10em;
+}
+
+#info-section h2:first-child {
+    padding-bottom: 1em;
+}
+
+#info-section h2 {
+    font-size: 3.5em;
+}
+
+#info-section h2,
+#info-section h3 {
+    color: var(--color-3);
+}
+
+#info-section h3 {
+    font-size: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+}
+
+#info-section p,
+#info-section ul li {
+    padding: 0.5em 0;
+    font-size: 1.2em;
+}
+
+#info-section h3+ul li:first-child {
+    padding-top: 0;
+}
+
+#info-section h4 {
+    padding: 0.5em 0;
+    font-size: 2em;
+    font-weight: 900;
+    color: var(--color-3);
+    animation: sizeAnimation 2s infinite alternate;
+}
+
+#info-section a {
+    color: var(--color-4);
+}
+
+#info-section a:hover {
+    cursor: pointer;
+    color: var(--color-5);
+}
+
+a.register {
+    display: inline-block;
+    border-radius: 8px;
+    padding: 1em;
+    background-color: var(--color-3);
+    color: var(--color-1) !important;
+    border: 1px solid var(--color-1);
+    margin: 1em 0;
+}
+
+#info-section p:last-of-type {
+    font-size: 0.8em;
+    padding-bottom: 2.5rem;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and down) */
+@media only screen and (max-width: 1200px) {
+    #main-section img {
+        height: 25em;
+    }
+
+    #main-section h1 {
+        font-size: 2.5em;
+    }
+
+    #info-section {
+        padding: 0 7em;
+    }
+
+    #info-section h2 {
+        font-size: 3em;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and down) */
+@media only screen and (max-width: 992px) {
+
+    #main-section img {
+        height: 30em;
+    }
+
+    #main-section h1 {
+        font-size: 3em;
+    }
+
+    #info-section {
+        padding: 0 7em;
+    }
+
+    #info-section h2 {
+        font-size: 3em;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    #main-section img {
+        height: 20em;
+    }
+
+    #main-section h1 {
+        font-size: 2.5em;
+    }
+
+    #info-section {
+        padding: 0 2em;
+    }
+
+    #info-section h2 {
+        font-size: 2em;
+    }
+
+    #info-section h3 {
+        font-size: 1.5em;
+    }
+
+    #info-section p,
+    #info-section ul li {
+        font-size: 1.1em;
+    }
+
+    #info-section h4 {
+        font-size: 1.8em;
+    }
+}

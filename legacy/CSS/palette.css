@@ -1,0 +1,153 @@
+/*
+Ficheiro que contém as paletes de cores utilizadas em todo
+o site, tanto no modo claro, como no mode escuro.
+*/
+
+:root.dark{
+    /* Menu Hamburger */
+    --hamburger-menu-icon: #000;
+    --hamburger-menu-icon-shadow: #FFF;
+    --hamburger-menu-bg:  rgba(0, 0, 0, 0.8);
+    --hamburger-menu-shadow: rgba(0, 0, 0, 0.9);
+    --hamburger-menu-text: #FFF;
+    --hamburger-menu-item-hover: #D35D18;
+    --active-page: #FF5C00;
+    --footer-text: #FFF;
+    --footer-author-link: #FF5C00;
+    --footer-author-link-hover: #F5F8FD;
+    --footer-credits-text: #8582a8;
+    /* Home page */
+    --hero-header-text: #000;
+    --hero-header-one-text: #CCC;
+    --hero-header-two-text: #FF5C00;
+    --hero-text-shadow: #FFF;
+    --carousel-section-bg: #CCC;
+    --carousel-active-bullet: #D35D18;
+    --section-header: #413E66;
+    --theme-section-header: #FF5C00;
+    --card-section-bg: #000;
+    --card-description-bg: #F5F8FD;
+    --card-description-text: #000;
+    --card-description-btn-text: #FFF;
+    --card-description-btn-bg: #D35D18;
+    --calendar-section-bg: #CCC;
+    --calendar-section-btn-bg: #FF5C00;
+    --calendar-section-btn-text: #FFF;
+    --calendar-section-date-text: #000;
+    --calendar-border: transparent;
+    --calendar-section-legend: #413E66;
+    --faq-section-bg: #F5F8FD;
+    --faq-question-text: #413E66;
+    --faq-question-icon: #FF5C00;
+    --faq-question-bg: #FFF;
+    --faq-question-bg-shadow: rgba(0, 0, 0, 0.5);;
+    --faq-link-text: #FF5C00;
+    --faq-link-hover-text: #030303;
+    --footer-large-bg: #000;
+    /* Events page */
+    --year-btn-bg: #000;
+    --year-btn-text: #FFF;
+    --year-btn-shadow: #000;
+    --year-hover-text: #D35D18;
+    --active-year-text: #FF5C00;
+    --active-year-bg: #000;
+    --event-card-bg: #CCC;
+    --event-card-shadow: #000;
+    /* Merch Page */
+    --merch-bg-1: url('../assets/images/ei-background.png');
+    --merch-bg-2: url('../assets/images/ei-background2.png');
+    --merch-main-header-text: #FF5C00;
+    --merch-main-header-text-shadow: rgba(255, 255, 255, 1);
+    --merch-new-area-bg: #F5F8FD;
+    /* Links page */
+    --links-logo-bg: #000;
+    --links-logo-border: #FFF;
+    --links-header-text: #000;
+    --links-link-bg: #000;
+    --links-link-shadow: #000;
+    --links-link-text: #F5F8FD;
+    --links-link-border: transparent;
+    /* Card page */
+    --card-header-text: #FF5C00;
+    --card-text-color: #F5F8FD;
+    --card-btn-bg: #FF5C00;
+    --partners-header: #FF5C00;
+    --partners-bg: rgba(0, 0, 0, 1);
+    --partner-bg: #FFF;
+    --partner-text: #000;
+}
+
+:root.light{
+    /* Menu Hamburger */
+    --hamburger-menu-icon: #FFF;
+    --hamburger-menu-icon-shadow: #000;
+    --hamburger-menu-bg: rgba(255, 255, 255, 0.8);
+    --hamburger-menu-shadow: rgba(255, 255, 255, 0.9);
+    --hamburger-menu-text: #000;
+    --hamburger-menu-item-hover: #D35D18;
+    --active-page: #FF5C00;
+    --footer-text: #000;
+    --footer-author-link: #FF5C00;
+    --footer-author-link-hover: #413e66;
+    --footer-credits-text: #8582a8;
+    /* Home page */
+    --hero-header-text: #FFF;
+    --hero-header-one-text: #CCC;
+    --hero-header-two-text: #FF5C00;
+    --hero-text-shadow: #000;
+    --carousel-section-bg: #FFF;
+    --carousel-active-bullet: #D35D18;
+    --section-header: #413e66;
+    --card-section-bg: #CCC;
+    --theme-section-header: #FF5C00;
+    --card-section-bg: #000;
+    --card-description-bg: #F5F8FD;
+    --card-description-text: #000;
+    --card-description-btn-text: #FFF;
+    --card-description-btn-bg: #D35D18;
+    --calendar-section-bg: #F5F8FD;
+    --calendar-section-btn-bg: #FF5C00;
+    --calendar-section-btn-text: #FFF;
+    --calendar-section-date-text: #000;
+    --calendar-border: #000;
+    --calendar-section-legend: #413E66;
+    --faq-section-bg: #CCC;
+    --faq-question-text: #413E66;
+    --faq-question-icon: #FF5C00;
+    --faq-question-bg: #FFF;
+    --faq-question-bg-shadow: rgba(255, 255, 255, 1);;
+    --faq-link-text: #FF5C00;
+    --faq-link-hover-text: #030303;
+    --footer-large-bg: #F5F8FD;
+    /* Events page */
+    --year-btn-bg: #FFF;
+    --year-btn-text: #CCC;
+    --year-btn-shadow: transparent;
+    --event-card-bg: #F5F8FD;
+    --event-card-shadow: transparent;
+    --year-hover-text: #D35D18;
+    --active-year-text: #000;
+    --active-year-bg: #F5F8FD;
+    /* Merch page */
+    --merch-bg-1: url('../assets/images/ei-background.png');
+    --merch-bg-2: url('../assets/images/ei-background3.png');
+    --merch-main-header-text: #FFF;
+    --merch-main-header-text-shadow: rgba(0, 0, 0, .8);
+    --merch-new-area-bg: #F5F8FD;
+    /* Links page */
+    --links-logo-bg: #F5F8FD;
+    --links-logo-border: #000;
+    --links-header-text: #FFF;
+    --links-link-bg: #F5F8FD;
+    --links-link-shadow: #FFF;
+    --links-link-text: #000;
+    --links-link-border: transparent;
+    /* Card page */
+    --card-header-text: #FF5C00;
+    --card-text-color: #F5F8FD;
+    --card-btn-bg: #FF5C00;
+    --partners-header: #FF5C00;
+    --partners-bg: rgba(0, 0, 0, 1);
+    --partner-bg: #FFF;
+    --partner-text: #000;
+}

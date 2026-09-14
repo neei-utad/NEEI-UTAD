@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UTAD CODE AND CONQUER</title>
+  <!-- Page Icon -->
+  <link rel="icon" type="image/x-icon" href="./images/logos/favicon.ico" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+  <!-- CSS Files -->
+  <link href="./CSS/styles.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+</head>
+
+<body>
+  <header>
+    <!-- Início da Barra de Navegação Principal -->
+    <nav id="main-nav">
+      <div id="main-nav-content" class="container">
+        <div id="main-logo">
+          <p>UTAD CODE AND CONQUER</p>
+          <a href="">
+            <img src="./images/logos/logo-long.png" alt="Logo da UTAD CODE AND CONQUER" /></a>
+        </div>
+        <div id="nav-links">
+          <a href="https://www.neei-utad.pt" target="_blank">Site do NEEI &rarr;</a>
+        </div>
+      </div>
+    </nav>
+    <!-- Fim da Barra de Navegação Principal -->
+  </header>
+
+  <main>
+    <!-- Início da head section -->
+    <section id="head-section">
+
+      <div class="video-background">
+        <video controls autoplay muted loop id="video-background">
+          <source src="./images/background.mp4" type="video/mp4">
+        </video>
+        <svg id="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="#ffffff" fill-opacity="1"
+            d="M0,64L80,90.7C160,117,320,171,480,186.7C640,203,800,181,960,154.7C1120,128,1280,96,1360,80L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+          </path>
+        </svg>
+        <div id="head-section-content" class="container">
+          <h1 data-tilt data-tilt-full-page-listening data-tilt-reverse="true" data-tilt-reset-to-start="true">UTAD
+            <span style="color: #00de59 ">CODE
+              AND CONQUER</span>
+          </h1>
+          <h2>I Edição</h2>
+          <div id="tempos" style="display: flex;justify-content: space-evenly;">
+            <h3>05 / 10 / 2023</h3>
+            <h3 id="temporizador">Faltam &infin; Dias</h3>
+          </div>
+          <a id="popup-btn" onclick="openPopup()">Links Úteis</a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Fim da head section -->
+    <!-- Início da secção do popup -->
+    <section id="popup-section" onclick="closePopup()">
+
+      <article id="popup-section-content">
+        <div id="popup-header"></div>
+        <div id="popup-content">
+          <h3 class="popup-header">Regulamentos</h3>
+
+          <a href="downloads/regulamento.pdf" download="Regulamento" class="popup-link" target="_blank">Regulamento do
+            Hackathon</a>
+
+        </div>
+      </article>
+    </section>
+    <!-- Fim da secção do popup -->
+    <!-- Início da secção dos núcleos -->
+    <section data-tilt data-tilt-glare data-tilt-max-glare="2.0" data-tilt-speed="800" data-tilt-reset="false"
+      data-tilt-full-page-listening data-tilt-scale="1.1" id="organizadores">
+
+      <h5>Organizado Por:</h5>
+      <img src="images/logos/neei-b.png" alt="Logo Neei" />
+
+    </section>
+    <section id="organizadores-mobile">
+
+      <h5>Organizado Por:</h5>
+      <img src="images/logos/neei-b.png" alt="Logo Neei" />
+
+    </section>
+    <!-- Fim da secção dos núcleos -->
+    <!-- Início da secção dos títulos -->
+    <h2 id="titulos-header" class="section-header">Títulos</h2>
+
+    <section id="titulos-section" class="container">
+      <div class="titulos-box">
+        <div class="titulos-row">
+          <div class="titulos-item" style="background-color: var(--verde-primario);"><span class="t-desc"
+              style="font-size: 1.2em;">Primeiro
+              Lugar</span><br><span class="t-nome" style="color: #fff;">UTAD Code Masters
+              2023</span></div>
+        </div>
+        <div class="titulos-row">
+          <div class="titulos-item">
+            <span class="t-desc">Menção Honrosa</span>
+            <br>
+            <span class="t-nome">Código mais Exótico</spa>
+          </div>
+          <div class="titulos-item">
+            <span class="t-desc">Menção Honrosa</span>
+            <br>
+            <span class="t-nome">Melhor Abordagem</spa>
+          </div>
+          <div class="titulos-item">
+            <span class="t-desc">Menção Honrosa</span>
+            <br>
+            <span class="t-nome">Originalidade</span>
+          </div>
+        </div>
+    </section>
+    <!-- Fim da secção dos títulos -->
+    <!-- Início da secção dos premios -->
+
+    <section id="premios-section">
+      <h2 id="premios-header" class="section-header">Prémios</h2>
+
+      <div class="premios-section-content container">
+        <div class="premios-col">
+          <div class="premios-row">
+            <div class="premios-item"
+              style="background-image: url('images/premios/mochila.webp');  border-top-left-radius: 45px; ">Mochila
+            </div>
+          </div>
+          <div class="premios-row">
+            <div class="premios-item"
+              style="background-image: url('images/premios/esferografica.jpg'); border-bottom-left-radius: 45px;">
+              Esferográfica
+            </div>
+            <div class="premios-item" style="background-image: url('images/premios/esferografica.jpg'); ">
+              Esferográfica
+            </div>
+          </div>
+        </div>
+
+        <div class="premios-col">
+          <div class="premios-row">
+            <div class="premios-item"
+              style="background-image: url('images/premios/esferografica.jpg'); border-top-right-radius: 45px;">
+              Esferográfica
+            </div>
+          </div>
+          <div class="premios-row">
+            <div class="premios-item" style="background-image: url('images/premios/esferografica.jpg'); ">
+              Esferográfica
+            </div>
+          </div>
+          <div class="premios-row">
+            <div class="premios-item"
+              style="background-image: url('images/premios/mochila.webp'); border-bottom-right-radius: 45px;">Mochila
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- Fim da secção dos premios -->
+
+    <!-- Início da secção do mapa -->
+
+    <h2 id="mapa-header" class="section-header">Mapa do Evento</h2>
+    <section id="mapa-section" class="container">
+      <div id="map"></div>
+      <div id="pontos-referencia">
+        <h3>Pontos de Referência:</h3>
+        <ul>
+          <li>
+            <img style="width: 20px" src="images/markers/1.png" /> Entrada da
+            UTAD
+          </li>
+          <li>
+            <img style="width: 20px" src="images/markers/2.png" /> Polo I ECT
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- Fim da secção do mapa -->
+
+    <!-- Início da secção do calendário -->
+
+    <h2 id="calendario-header" class="section-header">Calendário do Evento</h2>
+    <section id="calendario-section" class="container">
+      <div id="calendario-section-content">
+        <div id="calendario">
+          <a id="down-calendario" href="downloads/calendario.pdf" download="calendario.pdf"
+            title="download do calendario">&darr;</a>
+          <img src="images/calendario.jpeg" alt="Calendário do Evento">
+        </div>
+      </div>
+    </section>
+    <!-- Fim da secção do calendário -->
+  </main>
+  <footer>
+    <!-- Início do rodapé -->
+    <!-- <h2 id="footer-header">Em Parceria com:</h2> -->
+    <section id="footer-content">
+      <img class="partner" src="images/logos/poch.png" alt="poch" />
+    </section>
+    <!-- Fim do rodapé -->
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/ukiyojs@4.1.1/dist/ukiyo.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/popup.js"></script>
+  <script src="js/timer.js"></script>
+  <script>
+    new Ukiyo("#video-background");
+
+  </script>
+</body>
+
+</html>
