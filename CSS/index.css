@@ -345,6 +345,7 @@ section h2 {
 */
 
 .gallery-container {
+  position: relative;
   padding: 80px 0;
   width: 100%;
   display: flex;
@@ -352,6 +353,11 @@ section h2 {
   align-items: center;
   overflow: hidden;
   background-color: #111111;
+  background-image: radial-gradient(
+    circle at 50% 0%,
+    rgba(235, 94, 20, 0.08) 0%,
+    transparent 60%
+  );
 }
 
 .gallery-header {
@@ -364,6 +370,21 @@ section h2 {
   font-size: 1.8rem;
   color: #ffffff;
   margin-bottom: 8px;
+  position: relative;
+  display: inline-block;
+}
+
+.gallery-header h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  translate: -50% 0;
+  width: 60px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--main-orange-color);
+  box-shadow: 0 0 12px var(--main-orange-color);
 }
 
 .gallery-header p {
@@ -407,16 +428,23 @@ section h2 {
 
 .gallery-item {
   height: 250px;
+  margin: 0 6px;
   position: relative;
   overflow: hidden;
-  border: 1px solid #111111;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
   background: #111317;
   flex-shrink: 0;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
-.gallery-item:hover { 
-  transform: translateY(-3px);
+.gallery-item:hover {
+  transform: translateY(-4px) scale(1.03);
+  border-color: rgba(235, 94, 20, 0.5);
+  box-shadow: 0 0 24px rgba(235, 94, 20, 0.35);
+  z-index: 2;
 }
 
 .gallery-item img {
@@ -424,6 +452,12 @@ section h2 {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+  filter: brightness(1.05);
 }
 
 /* Variação de Proporções */
@@ -442,9 +476,18 @@ section h2 {
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: #e5e7eb;
   padding: 4px 10px;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 11px;
   font-family: 'Space Mono', monospace;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.35s ease, transform 0.35s ease, border-color 0.35s ease;
+}
+
+.gallery-item:hover .gallery-tag {
+  opacity: 1;
+  transform: translateY(0);
+  border-color: rgba(235, 94, 20, 0.4);
 }
 
 /* Animação do scroll contínuo para a esquerda */
