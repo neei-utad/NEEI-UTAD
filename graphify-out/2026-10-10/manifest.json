@@ -1,0 +1,2222 @@
+{
+  ".claude/settings.json": {
+    "mtime": 1791595694.8163593,
+    "seen": 1791595794.5455785,
+    "ast_hash": "0b3b21ef2c608636924fd640f6bbd8ea",
+    "semantic_hash": ""
+  },
+  "Apontamentos/EmailTamplete/templateConf.php": {
+    "mtime": 1789085890.2851472,
+    "seen": 1791595794.5455842,
+    "ast_hash": "42b5ad82a85a40de2d67acb69d6a6ff9",
+    "semantic_hash": ""
+  },
+  "JS/apontamentos.js": {
+    "mtime": 1789085890.3713236,
+    "seen": 1791595794.5455863,
+    "ast_hash": "43415d0f6ec07a01d111dae927c27e79",
+    "semantic_hash": ""
+  },
+  "JS/calendar.js": {
+    "mtime": 1789085890.3829248,
+    "seen": 1791595794.5455875,
+    "ast_hash": "39ed799771119e4c3ca7af36bbe3cc11",
+    "semantic_hash": ""
+  },
+  "JS/events.js": {
+    "mtime": 1789085890.3869464,
+    "seen": 1791595794.5455885,
+    "ast_hash": "bd1277ffab77237304f606358cc55e89",
+    "semantic_hash": ""
+  },
+  "JS/menu.js": {
+    "mtime": 1789085890.3914738,
+    "seen": 1791595794.5455892,
+    "ast_hash": "a6a3eddeeb5278de93af029142133247",
+    "semantic_hash": ""
+  },
+  "JS/merch.js": {
+    "mtime": 1789085890.3956828,
+    "seen": 1791595794.5455902,
+    "ast_hash": "4e65adc41ac12750cdc0b0fac6a9160c",
+    "semantic_hash": ""
+  },
+  "JS/notes.js": {
+    "mtime": 1789085890.399422,
+    "seen": 1791595794.545591,
+    "ast_hash": "882f34ccd9e4da86b5b9ebe5371397e3",
+    "semantic_hash": ""
+  },
+  "JS/script.js": {
+    "mtime": 1789380903.3448856,
+    "seen": 1791595794.5455918,
+    "ast_hash": "21a7338fbf04acbba1648a282551a6f7",
+    "semantic_hash": ""
+  },
+  "apontamentos.php": {
+    "mtime": 1789085890.1392264,
+    "seen": 1791595794.5455925,
+    "ast_hash": "768bdcfaec514627979606c20bb5a459",
+    "semantic_hash": ""
+  },
+  "legacy/utad-code-and-conquer-mockup/js/map.js": {
+    "mtime": 1789085895.5374146,
+    "seen": 1791595794.5455933,
+    "ast_hash": "d91b22f1e59758b5e7a891828ace4dd2",
+    "semantic_hash": ""
+  },
+  "legacy/utad-code-and-conquer-mockup/js/popup.js": {
+    "mtime": 1789085895.5437024,
+    "seen": 1791595794.5455947,
+    "ast_hash": "741f32426069be79ca21a6a4d0800072",
+    "semantic_hash": ""
+  },
+  "legacy/utad-code-and-conquer-mockup/js/timer.js": {
+    "mtime": 1789085895.5467267,
+    "seen": 1791595794.5455954,
+    "ast_hash": "e3f49d35bd6dc7d44d93310949bba5a5",
+    "semantic_hash": ""
+  },
+  "legacy/utad-code-and-conquer-mockup/js/vanilla-tilt.min.js": {
+    "mtime": 1789085895.5540395,
+    "seen": 1791595794.5455964,
+    "ast_hash": "1ced3e3eb507e10488ab33071e1485e4",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/.vscode/settings.json": {
+    "mtime": 1789085895.5834682,
+    "seen": 1791595794.5455968,
+    "ast_hash": "8ab8729084acaaa571a2c5e90f13a6ef",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/js/map.js": {
+    "mtime": 1789085896.1613004,
+    "seen": 1791595794.5455978,
+    "ast_hash": "2e139fc636c1d4253484eb47d18cc4af",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/js/popup.js": {
+    "mtime": 1789085896.163832,
+    "seen": 1791595794.5455985,
+    "ast_hash": "741f32426069be79ca21a6a4d0800072",
+    "semantic_hash": ""
+  },
+  "php/SendEmail.php": {
+    "mtime": 1789085896.1739004,
+    "seen": 1791595794.5455992,
+    "ast_hash": "fdddd5e3f582dd96c90e237c4014a345",
+    "semantic_hash": ""
+  },
+  "php/confirm.php": {
+    "mtime": 1789085896.1813393,
+    "seen": 1791595794.5456,
+    "ast_hash": "bf70bd473749165c663b0341073be89e",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/composer.json": {
+    "mtime": 1789085896.232491,
+    "seen": 1791595794.5456007,
+    "ast_hash": "170fd66b4a34e88c9d0946c97049584a",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/get_oauth_token.php": {
+    "mtime": 1789085896.238515,
+    "seen": 1791595794.5456018,
+    "ast_hash": "c3476fca44328c54f4f9782b8314976d",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-af.php": {
+    "mtime": 1789085896.2526672,
+    "seen": 1791595794.5456023,
+    "ast_hash": "7941a78d274605ae2e3caf320b78a687",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-ar.php": {
+    "mtime": 1789085896.2633398,
+    "seen": 1791595794.5456035,
+    "ast_hash": "b4b8bb573df63969ef6fc53c5c60a611",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-as.php": {
+    "mtime": 1789085896.2726312,
+    "seen": 1791595794.5456047,
+    "ast_hash": "ce6a6156f7075c82d6b72c758c2c69b9",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-az.php": {
+    "mtime": 1789085896.2825024,
+    "seen": 1791595794.5456054,
+    "ast_hash": "74f02d99fee297a3bcb83608f087769b",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-ba.php": {
+    "mtime": 1789085896.2925131,
+    "seen": 1791595794.5456061,
+    "ast_hash": "b002912448dd2f25b5069daeb79bfb31",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-be.php": {
+    "mtime": 1789085896.3023777,
+    "seen": 1791595794.5456069,
+    "ast_hash": "a34eaaa02c21ea4abfaba2ad9818f1c0",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-bg.php": {
+    "mtime": 1789085896.3121219,
+    "seen": 1791595794.5456073,
+    "ast_hash": "9aa86adbd82a847efb273ac6efff2c64",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-bn.php": {
+    "mtime": 1789085896.3232412,
+    "seen": 1791595794.5456083,
+    "ast_hash": "497c3fa69f460eb01e67df1a5105ea7b",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-ca.php": {
+    "mtime": 1789085896.3329716,
+    "seen": 1791595794.5456088,
+    "ast_hash": "6a332f400db88a50dd4cd8fa8699b245",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-cs.php": {
+    "mtime": 1789085896.342833,
+    "seen": 1791595794.5456095,
+    "ast_hash": "fc4c9b063cda1814edfe6e0ad16c7d3b",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-da.php": {
+    "mtime": 1789085896.3543515,
+    "seen": 1791595794.54561,
+    "ast_hash": "3a9b2e56c66994fe36e8852d01e19424",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-de.php": {
+    "mtime": 1789085896.358,
+    "seen": 1791595794.5456104,
+    "ast_hash": "de470fc25bbaae789bb886bf539a6bc6",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-el.php": {
+    "mtime": 1789085896.3636487,
+    "seen": 1791595794.5456114,
+    "ast_hash": "db811be5a8de108dbb3f84a893a22052",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-eo.php": {
+    "mtime": 1789085896.3683884,
+    "seen": 1791595794.5456119,
+    "ast_hash": "b05085bf17dc2350d4974c90c2927cc6",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-es.php": {
+    "mtime": 1789085896.3739326,
+    "seen": 1791595794.5456126,
+    "ast_hash": "51a0a6d5c0edbae734d18a05dae190c4",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-et.php": {
+    "mtime": 1789085896.3815455,
+    "seen": 1791595794.5456133,
+    "ast_hash": "55cfa54c2c3e034b9e50b9199b68a0b9",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-fa.php": {
+    "mtime": 1789085896.3867192,
+    "seen": 1791595794.5456138,
+    "ast_hash": "ee323ce1ce6547b45ff18d21754925c7",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-fi.php": {
+    "mtime": 1789085896.3912876,
+    "seen": 1791595794.5456145,
+    "ast_hash": "1577295b85a95ebc31e6d5548aa4d0d5",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-fo.php": {
+    "mtime": 1789085896.3964727,
+    "seen": 1791595794.5456154,
+    "ast_hash": "0f4c3dd73b3dc53f116174886ca663a3",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-fr.php": {
+    "mtime": 1789085896.4027433,
+    "seen": 1791595794.5456161,
+    "ast_hash": "73301d4c8b9f104d3537788f1e5e5d0f",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-gl.php": {
+    "mtime": 1789085896.4085174,
+    "seen": 1791595794.5456166,
+    "ast_hash": "0e5d759a67cc55ea905313bf5f9360e6",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-he.php": {
+    "mtime": 1789085896.413594,
+    "seen": 1791595794.545617,
+    "ast_hash": "cb25a67cf175aca511c9f0e0cbb6c915",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-hi.php": {
+    "mtime": 1789085896.418535,
+    "seen": 1791595794.5456188,
+    "ast_hash": "a60ac60dbfe6aae838dd378234f52be2",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-hr.php": {
+    "mtime": 1789085896.4244547,
+    "seen": 1791595794.5456192,
+    "ast_hash": "c7bf676ddc14d768c6be95c603dc4cbb",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-hu.php": {
+    "mtime": 1789085896.4289703,
+    "seen": 1791595794.54562,
+    "ast_hash": "781de42221ea82a8d04ebe4eae469ffe",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-hy.php": {
+    "mtime": 1789085896.43459,
+    "seen": 1791595794.5456204,
+    "ast_hash": "57c3d4308def6467eec54e9550316b3e",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-id.php": {
+    "mtime": 1789085896.4395735,
+    "seen": 1791595794.545621,
+    "ast_hash": "c5e697c6e5f7ed417013ed30b3144453",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-it.php": {
+    "mtime": 1789085896.4451442,
+    "seen": 1791595794.5456214,
+    "ast_hash": "15a1fdbd970fccac0f03765e5702a6c6",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-ja.php": {
+    "mtime": 1789085896.4506633,
+    "seen": 1791595794.5456223,
+    "ast_hash": "47bc2e74a6a0de906e46fdc3f05335ad",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-ka.php": {
+    "mtime": 1789085896.4557757,
+    "seen": 1791595794.5456228,
+    "ast_hash": "693af2da3a7837d6c2ce877a6296c9fa",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-ko.php": {
+    "mtime": 1789085896.461405,
+    "seen": 1791595794.5456238,
+    "ast_hash": "c95e8ca9669773f869b54ad91f2df771",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-lt.php": {
+    "mtime": 1789085896.4664674,
+    "seen": 1791595794.5456245,
+    "ast_hash": "a1db8ce612b6a47aaa32635d66aa6147",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-lv.php": {
+    "mtime": 1789085896.4715366,
+    "seen": 1791595794.5456254,
+    "ast_hash": "a9a3d00075ac3e83c74e43a394dfba54",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-mg.php": {
+    "mtime": 1789085896.4756894,
+    "seen": 1791595794.5456262,
+    "ast_hash": "6c8fe8f190a0ccc9f750851ba0d65585",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-mn.php": {
+    "mtime": 1789085896.4815888,
+    "seen": 1791595794.5456269,
+    "ast_hash": "48e3d73f30dd24026f7a16d0db90c016",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-ms.php": {
+    "mtime": 1789085896.4875884,
+    "seen": 1791595794.5456274,
+    "ast_hash": "b6f645dcc927bf4cc12f2db7b108be0c",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-nb.php": {
+    "mtime": 1789085896.49274,
+    "seen": 1791595794.5456283,
+    "ast_hash": "d66dbb50c7f20ac69cfbf72e977c5257",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-nl.php": {
+    "mtime": 1789085896.4962745,
+    "seen": 1791595794.545629,
+    "ast_hash": "64ebeec65b9d7a508b1922bcf1c4f342",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-pl.php": {
+    "mtime": 1789085896.5019045,
+    "seen": 1791595794.5456297,
+    "ast_hash": "5e151c1efa89f2ea68c78d6bbf25167a",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-pt.php": {
+    "mtime": 1789085896.5055425,
+    "seen": 1791595794.5456305,
+    "ast_hash": "1d404a5c7e7c76962289e2ee67a825af",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-pt_br.php": {
+    "mtime": 1789085896.5116377,
+    "seen": 1791595794.545631,
+    "ast_hash": "6ad4b4cb098d6cbdb5f81141b7d021fd",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-ro.php": {
+    "mtime": 1789085896.2582915,
+    "seen": 1791595794.5456314,
+    "ast_hash": "5a7250cc3225f316ebd1d975e2d60a1d",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-ru.php": {
+    "mtime": 1789085896.246791,
+    "seen": 1791595794.5456324,
+    "ast_hash": "c7007738ef7c186bf189c451e25baa0d",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-si.php": {
+    "mtime": 1789085896.2679837,
+    "seen": 1791595794.545633,
+    "ast_hash": "60cfa4d8f675b15f975d11b5da77a44a",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-sk.php": {
+    "mtime": 1789085896.276044,
+    "seen": 1791595794.5456336,
+    "ast_hash": "7614ab16cd7a50a85b34d910b0f5e466",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-sl.php": {
+    "mtime": 1789085896.5150356,
+    "seen": 1791595794.5456343,
+    "ast_hash": "61da032ff1013433e51ff17a922644d3",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-sr.php": {
+    "mtime": 1789085896.5227902,
+    "seen": 1791595794.5456347,
+    "ast_hash": "de2480c0d69392481b31819faa367aa2",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-sr_latn.php": {
+    "mtime": 1789085896.5273807,
+    "seen": 1791595794.5456357,
+    "ast_hash": "8499f7e63ecd9855d165afe10b4b64a3",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-sv.php": {
+    "mtime": 1789085896.5324662,
+    "seen": 1791595794.5456362,
+    "ast_hash": "8cf5b8932ed804db48768075f1950e57",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-tl.php": {
+    "mtime": 1789085896.2869196,
+    "seen": 1791595794.545637,
+    "ast_hash": "ea1ce8d9353133c43fb3f14ad663454b",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-tr.php": {
+    "mtime": 1789085896.2971573,
+    "seen": 1791595794.5456374,
+    "ast_hash": "af90792796806d25cc4893d335b70fc1",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-uk.php": {
+    "mtime": 1789085896.3070636,
+    "seen": 1791595794.545638,
+    "ast_hash": "dd92241bba4087a70ce50c99ef16dd4a",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-ur.php": {
+    "mtime": 1789085896.3178923,
+    "seen": 1791595794.5456388,
+    "ast_hash": "017186f1054213e892d27ab5be64cc33",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-vi.php": {
+    "mtime": 1789085896.3289218,
+    "seen": 1791595794.5456395,
+    "ast_hash": "b98d51c1f17b610fed45013e58bd1701",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-zh.php": {
+    "mtime": 1789085896.336039,
+    "seen": 1791595794.54564,
+    "ast_hash": "05274f5c2fc2da491392f5b9e3f859e6",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/language/phpmailer.lang-zh_cn.php": {
+    "mtime": 1789085896.3477974,
+    "seen": 1791595794.5456407,
+    "ast_hash": "fd539432a2254bb959d54a7010001574",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/src/DSNConfigurator.php": {
+    "mtime": 1789085896.5413227,
+    "seen": 1791595794.5456414,
+    "ast_hash": "f60618b132442ddadb5d78cc3a26b473",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/src/Exception.php": {
+    "mtime": 1789085896.5464015,
+    "seen": 1791595794.545642,
+    "ast_hash": "31a957f1d74aaad734db3a781fe3de05",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/src/OAuth.php": {
+    "mtime": 1789085896.5514765,
+    "seen": 1791595794.5456429,
+    "ast_hash": "0402ed8bb8bad3c9a283ecb0b91de127",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/src/OAuthTokenProvider.php": {
+    "mtime": 1789085896.55675,
+    "seen": 1791595794.5456436,
+    "ast_hash": "d62145b0e6665435d0b973a1e72d5cc5",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/src/PHPMailer.php": {
+    "mtime": 1789085896.5622344,
+    "seen": 1791595794.5456445,
+    "ast_hash": "4b3257466d1da51be3992dd9401d128f",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/src/POP3.php": {
+    "mtime": 1789085896.5677683,
+    "seen": 1791595794.5456455,
+    "ast_hash": "43f9d51252d2aabaea28f0c72bb9dc75",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/src/SMTP.php": {
+    "mtime": 1789085896.5724347,
+    "seen": 1791595794.5456462,
+    "ast_hash": "3452ebf85f89c1cfd6e3802f1c9a11df",
+    "semantic_hash": ""
+  },
+  "php/python/Google.py": {
+    "mtime": 1789085896.5812254,
+    "seen": 1791595794.5456467,
+    "ast_hash": "075a596739f5c074d92081e2f7754e39",
+    "semantic_hash": ""
+  },
+  "php/python/SendEmailFail.py": {
+    "mtime": 1789085896.5896819,
+    "seen": 1791595794.5456474,
+    "ast_hash": "13be84ad60e32277bd20374c5738403b",
+    "semantic_hash": ""
+  },
+  "php/python/SendEmailOK.py": {
+    "mtime": 1789085896.5951934,
+    "seen": 1791595794.5456488,
+    "ast_hash": "727d0d7194697de12e8de93bee45158c",
+    "semantic_hash": ""
+  },
+  "php/python/Submit.py": {
+    "mtime": 1789085896.6019945,
+    "seen": 1791595794.5456493,
+    "ast_hash": "a3e60e8f0a7cfb8ee733637e5f150853",
+    "semantic_hash": ""
+  },
+  "php/python/celery_config.py": {
+    "mtime": 1789085896.6079,
+    "seen": 1791595794.54565,
+    "ast_hash": "52653d0fb0f3cd15ba762ba3cea6f2de",
+    "semantic_hash": ""
+  },
+  "php/python/passenger_wsgi.py": {
+    "mtime": 1789085896.6215968,
+    "seen": 1791595794.5456507,
+    "ast_hash": "b82a6c00cbea922ce0b66b2370f7aaa9",
+    "semantic_hash": ""
+  },
+  "403.html": {
+    "mtime": 1789085890.1123996,
+    "seen": 1791595794.5456512,
+    "ast_hash": "316cccdc2e60fbda01bba7d920d1d855",
+    "semantic_hash": ""
+  },
+  "404.html": {
+    "mtime": 1789085890.128006,
+    "seen": 1791595794.545652,
+    "ast_hash": "d3f22098ecc813df532ae57b0dbc6adc",
+    "semantic_hash": ""
+  },
+  "Apontamentos/ConfirmacionFail.html": {
+    "mtime": 1789085890.2435932,
+    "seen": 1791595794.5456524,
+    "ast_hash": "f619ce01a1da24342299601303f129a4",
+    "semantic_hash": ""
+  },
+  "Apontamentos/ConfirmacionSuccesfully.html": {
+    "mtime": 1789085890.2496636,
+    "seen": 1791595794.5456533,
+    "ast_hash": "f3db88c7e55bc850248bd8ecfa28c8ff",
+    "semantic_hash": ""
+  },
+  "Apontamentos/ConfirmacionWait.html": {
+    "mtime": 1789085890.2545116,
+    "seen": 1791595794.545654,
+    "ast_hash": "938b2302cdafd1fd5acc98299e4a086f",
+    "semantic_hash": ""
+  },
+  "Apontamentos/EmaiSendedFail.html": {
+    "mtime": 1789085890.2605317,
+    "seen": 1791595794.5456545,
+    "ast_hash": "579d532aa8ab06d0f3e020880953422d",
+    "semantic_hash": ""
+  },
+  "Apontamentos/EmaiSendedSuccessfully.html": {
+    "mtime": 1789085890.266239,
+    "seen": 1791595794.5456553,
+    "ast_hash": "31efd60536541293be8400ab8fc97c2b",
+    "semantic_hash": ""
+  },
+  "Apontamentos/EmailTamplete/tamplateFail.html": {
+    "mtime": 1789085890.2750645,
+    "seen": 1791595794.5456557,
+    "ast_hash": "88085572a05e23cbd08932bd14be1362",
+    "semantic_hash": ""
+  },
+  "Apontamentos/EmailTamplete/tamplateOK.html": {
+    "mtime": 1789085890.2803612,
+    "seen": 1791595794.5456567,
+    "ast_hash": "2fea045163f5639bfa552bc9d7ebd25c",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1791595694.8108346,
+    "seen": 1791595794.5456572,
+    "ast_hash": "8a6643a420fdad6bfb583523bc6cef16",
+    "semantic_hash": ""
+  },
+  "card.html": {
+    "mtime": 1789916902.565617,
+    "seen": 1791595794.5456576,
+    "ast_hash": "9f8e25320a80d9f8ae66e2f545774ef8",
+    "semantic_hash": ""
+  },
+  "events.html": {
+    "mtime": 1790246225.8626711,
+    "seen": 1791595794.545658,
+    "ast_hash": "9ad3e4ad2e7942399d29990c74c2d9b0",
+    "semantic_hash": ""
+  },
+  "guia.html": {
+    "mtime": 1789916843.1672094,
+    "seen": 1791595794.5456588,
+    "ast_hash": "8d4b5a65ee17f2d36a8b1fe6c15906bf",
+    "semantic_hash": ""
+  },
+  "index.html": {
+    "mtime": 1791596721.494324,
+    "seen": 1791596790.4551528,
+    "ast_hash": "bdecd965f4ffb87e6aebed94f83105e3",
+    "semantic_hash": ""
+  },
+  "legacy/code-n-bila.html": {
+    "mtime": 1789085895.1404471,
+    "seen": 1791595794.5456603,
+    "ast_hash": "e2b1960c403f8bbbc20aeefc20f81844",
+    "semantic_hash": ""
+  },
+  "legacy/utad-code-and-conquer-mockup/cores.txt": {
+    "mtime": 1789085895.3483348,
+    "seen": 1791595794.545661,
+    "ast_hash": "9c7897a39ba3aa108d78d2932132110f",
+    "semantic_hash": ""
+  },
+  "legacy/utad-code-and-conquer-mockup/index.html": {
+    "mtime": 1789085895.3554568,
+    "seen": 1791595794.5456614,
+    "ast_hash": "bc942cb7d08bff8117c5036ebc0236d6",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/cores.txt": {
+    "mtime": 1789085895.5670154,
+    "seen": 1791595794.5456622,
+    "ast_hash": "abf934c30c60e517b71848e3bbfc3af2",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/index.html": {
+    "mtime": 1789085895.5712714,
+    "seen": 1791595794.5456626,
+    "ast_hash": "5695fc989bedd3312ae99eccdc52b2bf",
+    "semantic_hash": ""
+  },
+  "legacy/workshop-linux.html": {
+    "mtime": 1789085895.1478953,
+    "seen": 1791595794.545663,
+    "ast_hash": "7c1666e41f3f6ce5d87c88e9cf7f6dd8",
+    "semantic_hash": ""
+  },
+  "links.html": {
+    "mtime": 1789916958.4657009,
+    "seen": 1791595794.545664,
+    "ast_hash": "bd950bc71bfae1ba134ef1a65c672e74",
+    "semantic_hash": ""
+  },
+  "merch.html": {
+    "mtime": 1789916974.460628,
+    "seen": 1791595794.5456645,
+    "ast_hash": "62a201df34f47d168026b7ce4f108fac",
+    "semantic_hash": ""
+  },
+  "notes.html": {
+    "mtime": 1789916991.4894297,
+    "seen": 1791595794.545665,
+    "ast_hash": "8048e699ec89fd537ad4315e788ff913",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/README.md": {
+    "mtime": 1789085896.2124414,
+    "seen": 1791595794.5456655,
+    "ast_hash": "aced0641140c12b1f824cd6f94d345bf",
+    "semantic_hash": ""
+  },
+  "php/phpmailer/SECURITY.md": {
+    "mtime": 1789085896.2205796,
+    "seen": 1791595794.545666,
+    "ast_hash": "d2341cdf3a4ae9629ccd8b707173fd70",
+    "semantic_hash": ""
+  },
+  "php/python/info.txt": {
+    "mtime": 1789085896.6154618,
+    "seen": 1791595794.545667,
+    "ast_hash": "3110198cd1fbd4cfe5513e79af71e501",
+    "semantic_hash": ""
+  },
+  "politica.html": {
+    "mtime": 1789916999.8462408,
+    "seen": 1791595794.5456674,
+    "ast_hash": "0afe5cc1c1b194b5655cb8d067f0ce73",
+    "semantic_hash": ""
+  },
+  "servicos.html": {
+    "mtime": 1789085890.2222033,
+    "seen": 1791595794.545668,
+    "ast_hash": "b1277320c3107371e92491f06092f602",
+    "semantic_hash": ""
+  },
+  "workshop-linux.html": {
+    "mtime": 1789085890.229324,
+    "seen": 1791595794.5456686,
+    "ast_hash": "7c1666e41f3f6ce5d87c88e9cf7f6dd8",
+    "semantic_hash": ""
+  },
+  "assets/Downloads/Elei\u00e7\u00f5es Anexos/Anexo I.pdf": {
+    "mtime": 1789085890.416099,
+    "seen": 1791595794.54567,
+    "ast_hash": "bc011be5e3d707667fe81f5b4d340e81",
+    "semantic_hash": ""
+  },
+  "assets/Downloads/Elei\u00e7\u00f5es Anexos/Anexo II.pdf": {
+    "mtime": 1789085890.4213724,
+    "seen": 1791595794.545671,
+    "ast_hash": "ce055d3fd6f1021a6b505e364276d392",
+    "semantic_hash": ""
+  },
+  "assets/Downloads/Elei\u00e7\u00f5es Anexos/Anexo III.pdf": {
+    "mtime": 1789085890.4253995,
+    "seen": 1791595794.5456717,
+    "ast_hash": "9ad7b3866009581656943161e3bd2c2f",
+    "semantic_hash": ""
+  },
+  "assets/Downloads/Elei\u00e7\u00f5es Anexos/Anexo IV.pdf": {
+    "mtime": 1789085890.4305613,
+    "seen": 1791595794.5456727,
+    "ast_hash": "97013e28c109629cea5011d2fba05b6b",
+    "semantic_hash": ""
+  },
+  "assets/Downloads/Elei\u00e7\u00f5es Anexos/Anexo V.pdf": {
+    "mtime": 1789085890.4351492,
+    "seen": 1791595794.5456734,
+    "ast_hash": "aaeef4a49a4097db17f8731561cabf3b",
+    "semantic_hash": ""
+  },
+  "assets/Downloads/Elei\u00e7\u00f5es Anexos/Regulamento Eleitoral.pdf": {
+    "mtime": 1789085890.4412425,
+    "seen": 1791595794.5456743,
+    "ast_hash": "19cd86915eaa61f188173732b5dc1bec",
+    "semantic_hash": ""
+  },
+  "assets/Downloads/Planos_Atividades/Plano-de-Atividades-Lista-P-23-24.pdf": {
+    "mtime": 1789085890.4513535,
+    "seen": 1791595794.545675,
+    "ast_hash": "1e3d935a6abeb100b391c03be499b971",
+    "semantic_hash": ""
+  },
+  "assets/Downloads/Planos_Atividades/PlanoAtividadesListaM_NEEI_22_23.pdf": {
+    "mtime": 1789085890.456098,
+    "seen": 1791595794.5456755,
+    "ast_hash": "c6b5b5af41c227565584821f0557ed49",
+    "semantic_hash": ""
+  },
+  "assets/documents/campanha-chip7.pdf": {
+    "mtime": 1789085890.4726949,
+    "seen": 1791595794.5456762,
+    "ast_hash": "e204c4674b1c126e7edde628e857e274",
+    "semantic_hash": ""
+  },
+  "legacy/utad-code-and-conquer-mockup/downloads/calendario.pdf": {
+    "mtime": 1789085895.3748922,
+    "seen": 1791595794.5456767,
+    "ast_hash": "7f6de92550c2eaa89cb4d6a2ab47f561",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/downloads/US_Regulamento_Concurso_de_Fotografia.pdf": {
+    "mtime": 1789085895.6283948,
+    "seen": 1791595794.5456774,
+    "ast_hash": "bba45984a73087ef7333556304258c31",
+    "semantic_hash": ""
+  },
+  "assets/images/blobrot.png": {
+    "mtime": 1789085890.5715127,
+    "seen": 1791595794.5456781,
+    "ast_hash": "c1ec30bc7ed5fd76607456f5be130cc8",
+    "semantic_hash": ""
+  },
+  "assets/images/caroussel/cartao-socio.png": {
+    "mtime": 1789085890.7016704,
+    "seen": 1791595794.5456786,
+    "ast_hash": "0884259319ae9032e901640b4124e4b5",
+    "semantic_hash": ""
+  },
+  "assets/images/caroussel/jantar-curso-2025-2026.jpg": {
+    "mtime": 1789085890.7125068,
+    "seen": 1791595794.5456793,
+    "ast_hash": "4d601e178dd415a1c9f5c6d2d5ea9685",
+    "semantic_hash": ""
+  },
+  "assets/images/caroussel/jantar-de-curso.jpeg": {
+    "mtime": 1789085890.7226489,
+    "seen": 1791595794.5456798,
+    "ast_hash": "43ce2351bf23a11e5b1cfdb3025320aa",
+    "semantic_hash": ""
+  },
+  "assets/images/caroussel/kit-finalista.png": {
+    "mtime": 1789085890.7416694,
+    "seen": 1791595794.5456805,
+    "ast_hash": "a6b74b9697d57de6e496697e46d8fa45",
+    "semantic_hash": ""
+  },
+  "assets/images/caroussel/kit-latada-2025-2026.jpg": {
+    "mtime": 1789085890.7498097,
+    "seen": 1791595794.5456812,
+    "ast_hash": "110eace801f83fbb8c9652dbed41ad15",
+    "semantic_hash": ""
+  },
+  "assets/images/caroussel/merch-slide.png": {
+    "mtime": 1789085890.7728777,
+    "seen": 1791595794.545682,
+    "ast_hash": "93f15da903fd17a2b53ca5f61c72f17d",
+    "semantic_hash": ""
+  },
+  "assets/images/caroussel/neei-os.jpg": {
+    "mtime": 1789085890.7913542,
+    "seen": 1791595794.5456824,
+    "ast_hash": "3b1b600bd169ff0077be09bee03bc786",
+    "semantic_hash": ""
+  },
+  "assets/images/caroussel/rally.jpeg": {
+    "mtime": 1789085890.8006513,
+    "seen": 1791595794.5456831,
+    "ast_hash": "f11b1c15324b2daac5317b439cf60ca0",
+    "semantic_hash": ""
+  },
+  "assets/images/caroussel/team-neei-2022-2023.jpeg": {
+    "mtime": 1789085890.8106334,
+    "seen": 1791595794.5456836,
+    "ast_hash": "5432e9371e96dfb3f6de391de4f64ea3",
+    "semantic_hash": ""
+  },
+  "assets/images/caroussel/team-neei-2023-2024.jpg": {
+    "mtime": 1789085890.8163455,
+    "seen": 1791595794.5456843,
+    "ast_hash": "1194fb4026f1d472a6354ae4d3f5d336",
+    "semantic_hash": ""
+  },
+  "assets/images/caroussel/team-neei-2024-2025.jpg": {
+    "mtime": 1789085890.9251952,
+    "seen": 1791595794.545685,
+    "ast_hash": "2cff3c811287512535076095d37a5996",
+    "semantic_hash": ""
+  },
+  "assets/images/caroussel/team-neei-2025-2026.jpg": {
+    "mtime": 1789085890.9329987,
+    "seen": 1791595794.5456855,
+    "ast_hash": "5ef1b6a24fbdf5cc40ae51dd233a373f",
+    "semantic_hash": ""
+  },
+  "assets/images/caroussel/torneio-matraquilhos-setas.jpeg": {
+    "mtime": 1789085890.9425142,
+    "seen": 1791595794.545686,
+    "ast_hash": "e2ffe743797bbd5a64208418d2533cc6",
+    "semantic_hash": ""
+  },
+  "assets/images/caroussel/torneio-sueca.png": {
+    "mtime": 1789085890.9516008,
+    "seen": 1791595794.5456865,
+    "ast_hash": "0b6a75de7a40bdc73b9a7093939d9735",
+    "semantic_hash": ""
+  },
+  "assets/images/caroussel/video-neeios.jpg": {
+    "mtime": 1789085890.9684985,
+    "seen": 1791595794.5456872,
+    "ast_hash": "c79f5b42461f7a42bd078c0d07d68018",
+    "semantic_hash": ""
+  },
+  "assets/images/caroussel/workshop-cloud.png": {
+    "mtime": 1789085890.9815903,
+    "seen": 1791595794.545688,
+    "ast_hash": "f9c705734016858ebea8f9d66c833a4d",
+    "semantic_hash": ""
+  },
+  "assets/images/caroussel/workshop-linux-bg.jpg": {
+    "mtime": 1789085890.9913607,
+    "seen": 1791595794.5456886,
+    "ast_hash": "9adfa4f4cdda17e245f1187e37d41eb3",
+    "semantic_hash": ""
+  },
+  "assets/images/cartao/Parceiros/kebab-world-logo.jpg": {
+    "mtime": 1789085891.0528743,
+    "seen": 1791595794.545689,
+    "ast_hash": "cc5199290e8828a94b70e7a18e0aed54",
+    "semantic_hash": ""
+  },
+  "assets/images/cartao/Parceiros/logo-chip7.png": {
+    "mtime": 1789085891.0616624,
+    "seen": 1791595794.5456898,
+    "ast_hash": "f783d4928c2510c45cc11f0d2b26a782",
+    "semantic_hash": ""
+  },
+  "assets/images/cartao/Parceiros/logo-tattoo-studio.jpg": {
+    "mtime": 1789085891.072511,
+    "seen": 1791595794.5456903,
+    "ast_hash": "2a8c2418b5d0466ca4909db8577cec9b",
+    "semantic_hash": ""
+  },
+  "assets/images/cartao/Parceiros/maquifier-logo.png": {
+    "mtime": 1789085891.0916784,
+    "seen": 1791595794.5456908,
+    "ast_hash": "1e8df6f493a89b8e93f03ac603b34c7a",
+    "semantic_hash": ""
+  },
+  "assets/images/cartao/Parceiros/metropolis-logo.png": {
+    "mtime": 1789085891.105304,
+    "seen": 1791595794.5456917,
+    "ast_hash": "8ba8c158d99838745e5eb1b63012177b",
+    "semantic_hash": ""
+  },
+  "assets/images/cartao/Parceiros/pop-clean-logo.png": {
+    "mtime": 1789085891.1191895,
+    "seen": 1791595794.5456924,
+    "ast_hash": "1d9ceec2a0a3a85bbc2e30c44f7fc735",
+    "semantic_hash": ""
+  },
+  "assets/images/cartao/Parceiros/realvisao-logo.png": {
+    "mtime": 1789085891.1413002,
+    "seen": 1791595794.545693,
+    "ast_hash": "eead45cf2cbf971b8e12854b98cb5c77",
+    "semantic_hash": ""
+  },
+  "assets/images/cartao/Parceiros/toystore-logo.jpg": {
+    "mtime": 1789085891.147399,
+    "seen": 1791595794.5456936,
+    "ast_hash": "4d841d452613d85e7a07dd0c40f09668",
+    "semantic_hash": ""
+  },
+  "assets/images/cartao/card-back.png": {
+    "mtime": 1789085891.0057325,
+    "seen": 1791595794.545694,
+    "ast_hash": "b20b3c98166275c94481728d2cccd609",
+    "semantic_hash": ""
+  },
+  "assets/images/cartao/card-bg.jpg": {
+    "mtime": 1789085891.0304294,
+    "seen": 1791595794.5456948,
+    "ast_hash": "46214a41ff995e0b92b07d91489e9dc5",
+    "semantic_hash": ""
+  },
+  "assets/images/cartao/card-front.png": {
+    "mtime": 1789085891.037209,
+    "seen": 1791595794.5456955,
+    "ast_hash": "659a19aa1b982ef99b887be8eefc8bf8",
+    "semantic_hash": ""
+  },
+  "assets/images/cartao/chip7.png": {
+    "mtime": 1789085891.0416174,
+    "seen": 1791595794.545696,
+    "ast_hash": "78d7a857eeb96fbaee6e481fa3d9f1c3",
+    "semantic_hash": ""
+  },
+  "assets/images/ei-background.png": {
+    "mtime": 1789085890.59136,
+    "seen": 1791595794.5456965,
+    "ast_hash": "deb6b4cf412e8f8e6a300389a7194ce5",
+    "semantic_hash": ""
+  },
+  "assets/images/ei-background2.png": {
+    "mtime": 1789085890.6026614,
+    "seen": 1791595794.5456972,
+    "ast_hash": "873adeaf12811c876daccb8e5661ad79",
+    "semantic_hash": ""
+  },
+  "assets/images/ei-background3.png": {
+    "mtime": 1789085890.6115446,
+    "seen": 1791595794.5456977,
+    "ast_hash": "fc5fa298d81ca3d1acfc299cd0092a85",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2022-2023/event-1.png": {
+    "mtime": 1789085891.1688185,
+    "seen": 1791595794.5456984,
+    "ast_hash": "216dbb4e7e4c13d102f999d9dee7d94c",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2022-2023/event-10.png": {
+    "mtime": 1789085891.1717567,
+    "seen": 1791595794.5456991,
+    "ast_hash": "af86fce798f1570e1ff62b4314882a4b",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2022-2023/event-11.png": {
+    "mtime": 1789085891.1859417,
+    "seen": 1791595794.5456996,
+    "ast_hash": "ab48af3d00b6c79cd51c3dab1b4f61ac",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2022-2023/event-12.jpg": {
+    "mtime": 1789085891.191663,
+    "seen": 1791595794.5457,
+    "ast_hash": "bad922e042cfed9224dc35eec1adaf23",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2022-2023/event-13.jpg": {
+    "mtime": 1789085891.203991,
+    "seen": 1791595794.5457008,
+    "ast_hash": "6397c380312a73d6b5609edc148ac235",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2022-2023/event-14.png": {
+    "mtime": 1789085891.214225,
+    "seen": 1791595794.5457013,
+    "ast_hash": "a6512bb259c956bd573a381f24ebeebe",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2022-2023/event-15.png": {
+    "mtime": 1789085891.222471,
+    "seen": 1791595794.545702,
+    "ast_hash": "b5edc3b997ea78a3b67dbe7a049c50c6",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2022-2023/event-16.jpg": {
+    "mtime": 1789085891.2369878,
+    "seen": 1791595794.5457025,
+    "ast_hash": "e5e4dccec27e618ba9c172cb389df848",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2022-2023/event-17.jpg": {
+    "mtime": 1789085891.2427497,
+    "seen": 1791595794.5457046,
+    "ast_hash": "47830495a5445a35017ef46545108011",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2022-2023/event-18.jpg": {
+    "mtime": 1789085891.253039,
+    "seen": 1791595794.5457056,
+    "ast_hash": "974d65a271f4022aaff2b74bd1e88c09",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2022-2023/event-19.jpeg": {
+    "mtime": 1789085891.2535622,
+    "seen": 1791595794.5457063,
+    "ast_hash": "a7a25089151fe45736014b07b8258259",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2022-2023/event-2.png": {
+    "mtime": 1789085891.2624278,
+    "seen": 1791595794.5457067,
+    "ast_hash": "1420a3991f14795840e5c82b151dab7e",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2022-2023/event-20.jpeg": {
+    "mtime": 1789085891.2733793,
+    "seen": 1791595794.5457075,
+    "ast_hash": "dee7ae3354f2ddd9bb402da7064f6112",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2022-2023/event-3.png": {
+    "mtime": 1789085891.2871811,
+    "seen": 1791595794.545708,
+    "ast_hash": "54c9beb053816f20414c8c423023a83e",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2022-2023/event-4.png": {
+    "mtime": 1789085891.2958398,
+    "seen": 1791595794.5457087,
+    "ast_hash": "c5c8be6c1886e5002a349841f9f6b64f",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2022-2023/event-5.jpg": {
+    "mtime": 1789085891.302667,
+    "seen": 1791595794.5457094,
+    "ast_hash": "7f17a6e13618a3b6e0483782df67725c",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2022-2023/event-6.jpg": {
+    "mtime": 1789085891.3080242,
+    "seen": 1791595794.5457098,
+    "ast_hash": "af32b8c14d8e3a90cd6a2ce45c6c952e",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2022-2023/event-7.jpg": {
+    "mtime": 1789085891.314664,
+    "seen": 1791595794.5457103,
+    "ast_hash": "04208a4fa8b5b6ea0f3069e68edd39d4",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2022-2023/event-8.jpeg": {
+    "mtime": 1789085891.3224628,
+    "seen": 1791595794.5457108,
+    "ast_hash": "c40b16707902d4acccfbf5320c8a20ef",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2022-2023/event-9.png": {
+    "mtime": 1789085891.3379748,
+    "seen": 1791595794.5457113,
+    "ast_hash": "bb64a564e38a75b749e560c0aa8f4781",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2023-2024/event-21.jpeg": {
+    "mtime": 1789085891.351344,
+    "seen": 1791595794.5457122,
+    "ast_hash": "a87438180b82b4c40e8204079c2ea4bd",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2023-2024/event-22.jpeg": {
+    "mtime": 1789085891.3590775,
+    "seen": 1791595794.5457125,
+    "ast_hash": "1b67586b22e647909239b4670ab045c2",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2023-2024/event-23.jpeg": {
+    "mtime": 1789085891.368095,
+    "seen": 1791595794.5457132,
+    "ast_hash": "e1cff298d8511b421deeea501c1cf58c",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2023-2024/event-24.png": {
+    "mtime": 1789085891.3814666,
+    "seen": 1791595794.5457137,
+    "ast_hash": "914ab5ee138c136ff44559ad6abee7c3",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2023-2024/event-25.jpg": {
+    "mtime": 1789085891.3874297,
+    "seen": 1791595794.5457141,
+    "ast_hash": "6be1e6e486e868a66b826d6d3ae2f5d2",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2023-2024/event-26.png": {
+    "mtime": 1789085891.3998916,
+    "seen": 1791595794.5457146,
+    "ast_hash": "a94e87767a59b22aeb04d68834b55212",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2023-2024/event-27.jpg": {
+    "mtime": 1789085891.4066758,
+    "seen": 1791595794.5457156,
+    "ast_hash": "2af48b731343003f87ab7be0f4e6c6a5",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2023-2024/event-28.jpg": {
+    "mtime": 1789085891.412659,
+    "seen": 1791595794.545716,
+    "ast_hash": "bbdff2b1a3c0154822a32c0ca7ac146c",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2023-2024/event-29.jpg": {
+    "mtime": 1789085891.4213295,
+    "seen": 1791595794.5457165,
+    "ast_hash": "d8427ed93dcb3527adfcc001747c8e4d",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2023-2024/event-30.jpg": {
+    "mtime": 1789085891.4307666,
+    "seen": 1791595794.5457172,
+    "ast_hash": "3dc6291e35b310a577344fd1aa54df14",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2023-2024/event-31.jpg": {
+    "mtime": 1789085891.4371762,
+    "seen": 1791595794.5457177,
+    "ast_hash": "ef3606f1c4c29bc30e30c8ee76d8b870",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2023-2024/event-32.jpg": {
+    "mtime": 1789085891.4472125,
+    "seen": 1791595794.5457182,
+    "ast_hash": "1940655bd9bcf27b999e8b93f9f3df7c",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2023-2024/event-33.jpg": {
+    "mtime": 1789085891.4542928,
+    "seen": 1791595794.5457187,
+    "ast_hash": "a1d0bf12a01f404ab5ea27ac8d8e356c",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2023-2024/event-34.jpg": {
+    "mtime": 1789085891.461237,
+    "seen": 1791595794.5457194,
+    "ast_hash": "c0277afaacb26a75c45fc031c7a97f80",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2023-2024/event-35.jpg": {
+    "mtime": 1789085891.4690983,
+    "seen": 1791595794.54572,
+    "ast_hash": "533d51f4f43897064a035e5a452216a9",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2024-2025/event-36.png": {
+    "mtime": 1789085891.481625,
+    "seen": 1791595794.5457206,
+    "ast_hash": "2d4a4bb72d907822536161a091e4d580",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2024-2025/event-37.png": {
+    "mtime": 1789085891.4956727,
+    "seen": 1791595794.545721,
+    "ast_hash": "6759482fd845a89c17dee524487dc6ad",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2024-2025/event-38.png": {
+    "mtime": 1789085891.505701,
+    "seen": 1791595794.5457215,
+    "ast_hash": "59394f21a41ac287c078dfc4def7bfba",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2024-2025/event-39.png": {
+    "mtime": 1789085891.5515907,
+    "seen": 1791595794.5457225,
+    "ast_hash": "a3bcce81728538049e2d1d428da435c5",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2024-2025/event-40.png": {
+    "mtime": 1789085891.5667448,
+    "seen": 1791595794.545723,
+    "ast_hash": "99e031d895b3fef0efa36c4a51521669",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2024-2025/event-41.png": {
+    "mtime": 1789085891.7837195,
+    "seen": 1791595794.5457237,
+    "ast_hash": "83b23d7cd8cab6cb6985071d97e6d93f",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2024-2025/event-42.jpeg": {
+    "mtime": 1789085891.7904482,
+    "seen": 1791595794.5457242,
+    "ast_hash": "5ba50703ecbb2c6276ace219a2355476",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2024-2025/event-43.jpeg": {
+    "mtime": 1789085891.7978837,
+    "seen": 1791595794.5457249,
+    "ast_hash": "19d3ccfc6d8315391a14fc44e93115cc",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2024-2025/event-44.png": {
+    "mtime": 1789085891.8037696,
+    "seen": 1791595794.5457253,
+    "ast_hash": "d655c3ad4d2897539512a3a466bd1ae8",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2024-2025/event-45.png": {
+    "mtime": 1789085891.9905775,
+    "seen": 1791595794.5457263,
+    "ast_hash": "6489087fcbc9f05be7f89f170a0628a9",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2024-2025/event-46.png": {
+    "mtime": 1789085892.010106,
+    "seen": 1791595794.5457268,
+    "ast_hash": "a6b74b9697d57de6e496697e46d8fa45",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2024-2025/event-47.png": {
+    "mtime": 1789085892.0322585,
+    "seen": 1791595794.5457275,
+    "ast_hash": "f9c705734016858ebea8f9d66c833a4d",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2024-2025/event-48.jpeg": {
+    "mtime": 1789085892.0389557,
+    "seen": 1791595794.545728,
+    "ast_hash": "e2ffe743797bbd5a64208418d2533cc6",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2024-2025/event-49.jpeg": {
+    "mtime": 1789085892.0461278,
+    "seen": 1791595794.5457287,
+    "ast_hash": "50f9b7642f5c342e5767cfefc5fd336b",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2024-2025/event-50.jpeg": {
+    "mtime": 1789085892.0537758,
+    "seen": 1791595794.5457294,
+    "ast_hash": "f11b1c15324b2daac5317b439cf60ca0",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2024-2025/event-51.jpeg": {
+    "mtime": 1789085892.063318,
+    "seen": 1791595794.54573,
+    "ast_hash": "43ce2351bf23a11e5b1cfdb3025320aa",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2024-2025/event-52.png": {
+    "mtime": 1789085892.0785408,
+    "seen": 1791595794.5457306,
+    "ast_hash": "f6c35333960c9e39c3cb8e80b898ea54",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2024-2025/event-53.jpeg": {
+    "mtime": 1789085892.0856357,
+    "seen": 1791595794.545731,
+    "ast_hash": "2a1bb79a9f16c168072de9a742281705",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2025-2026/event-49.jpg": {
+    "mtime": 1789085892.0962799,
+    "seen": 1791595794.5457318,
+    "ast_hash": "4d601e178dd415a1c9f5c6d2d5ea9685",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2025-2026/event-50.jpg": {
+    "mtime": 1789085892.1038957,
+    "seen": 1791595794.5457323,
+    "ast_hash": "110eace801f83fbb8c9652dbed41ad15",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2025-2026/event-51.jpg": {
+    "mtime": 1789085892.113707,
+    "seen": 1791595794.5457332,
+    "ast_hash": "fd9da2e82a8c288bcb72f19baf131387",
+    "semantic_hash": ""
+  },
+  "assets/images/eventos/2025-2026/event-52.jpg": {
+    "mtime": 1789085892.120601,
+    "seen": 1791595794.5457337,
+    "ast_hash": "60a8880d8ac99cf940a7657c3ac19860",
+    "semantic_hash": ""
+  },
+  "assets/images/guia/appstore.svg": {
+    "mtime": 1789085892.1285338,
+    "seen": 1791595794.5457344,
+    "ast_hash": "d24145d60c5b3a3aec7132d64c9e0e11",
+    "semantic_hash": ""
+  },
+  "assets/images/guia/mapa.svg": {
+    "mtime": 1789085892.1537914,
+    "seen": 1791595794.545735,
+    "ast_hash": "44dd02ead4ca70ad2e03ae901f180b16",
+    "semantic_hash": ""
+  },
+  "assets/images/guia/playstore.svg": {
+    "mtime": 1789085892.1647868,
+    "seen": 1791595794.5457354,
+    "ast_hash": "81b1c90e39b3bb2551ac4c47c7a77e46",
+    "semantic_hash": ""
+  },
+  "assets/images/guia/urbvr.jpg": {
+    "mtime": 1789085892.1712315,
+    "seen": 1791595794.545736,
+    "ast_hash": "f4051cd7b846ed20abdb807a5edffb86",
+    "semantic_hash": ""
+  },
+  "assets/images/logos/logo-natal.png": {
+    "mtime": 1789085892.1825676,
+    "seen": 1791595794.5457368,
+    "ast_hash": "9cd7eb06b2417cbaa61996eef4b3191d",
+    "semantic_hash": ""
+  },
+  "assets/images/logos/logo-outline.png": {
+    "mtime": 1789085892.1896205,
+    "seen": 1791595794.5457375,
+    "ast_hash": "960878b367b357af1a881317797f8a5c",
+    "semantic_hash": ""
+  },
+  "assets/images/logos/logo.png": {
+    "mtime": 1789085892.1982298,
+    "seen": 1791595794.545738,
+    "ast_hash": "44f3a5ab3f1711526f0148757c32fee1",
+    "semantic_hash": ""
+  },
+  "assets/images/logos/neei-logo.png": {
+    "mtime": 1789085892.2058904,
+    "seen": 1791595794.545739,
+    "ast_hash": "7d2dbd70fcb61e5a712752fcb12084a7",
+    "semantic_hash": ""
+  },
+  "assets/images/main-bg.png": {
+    "mtime": 1789085890.6331687,
+    "seen": 1791595794.5457394,
+    "ast_hash": "6aa813e9317401310b250a7daa964498",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2022-2023/HoodieBranco.png": {
+    "mtime": 1789085892.2507327,
+    "seen": 1791595794.5457401,
+    "ast_hash": "c7828eef08ceb3deb9b81af19b4c6569",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2022-2023/HoodieBrancoback.png": {
+    "mtime": 1789085892.2964036,
+    "seen": 1791595794.5457406,
+    "ast_hash": "b6c91abe3039ce964cdc0258b7b9134e",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2022-2023/HoodiePreto.png": {
+    "mtime": 1789085892.332788,
+    "seen": 1791595794.5457413,
+    "ast_hash": "4ded248790af94ae14d13420eda8ad15",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2022-2023/HoodiePretoback.png": {
+    "mtime": 1789085892.3828788,
+    "seen": 1791595794.5457418,
+    "ast_hash": "d3ae7b4f912a218bd136acf0a5f2ddba",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2022-2023/Lighter.png": {
+    "mtime": 1789085892.3904827,
+    "seen": 1791595794.5457423,
+    "ast_hash": "83f08a369008cec66dd93e2a6c37643d",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2022-2023/bottle.png": {
+    "mtime": 1789085892.4140701,
+    "seen": 1791595794.5457428,
+    "ast_hash": "37ba0860d192eba9ac3f9c34da1366c0",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2022-2023/bucket-hat.png": {
+    "mtime": 1789085892.4412785,
+    "seen": 1791595794.5457437,
+    "ast_hash": "edbb0c0a50264fddb79f197f9b321ddc",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2022-2023/casaco_1.png": {
+    "mtime": 1789085892.4763594,
+    "seen": 1791595794.5457442,
+    "ast_hash": "e80d47f089313b08519c15b93816ec3e",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2022-2023/casaco_2.png": {
+    "mtime": 1789085892.4964523,
+    "seen": 1791595794.5457447,
+    "ast_hash": "683d80ed122241f0070b7bc68e515ee2",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2022-2023/emblema.jpg": {
+    "mtime": 1789085892.5057666,
+    "seen": 1791595794.5457451,
+    "ast_hash": "14d25ee217516772c75ae63adcdc89f6",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2022-2023/hoodie_1.png": {
+    "mtime": 1789085892.5373862,
+    "seen": 1791595794.5457458,
+    "ast_hash": "41c47738a833d38ce508de98f7be0fd4",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2022-2023/hoodie_3.png": {
+    "mtime": 1789085892.581538,
+    "seen": 1791595794.5457463,
+    "ast_hash": "370aef2773958ec924114b4514204f72",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2023-2024/boxers.png": {
+    "mtime": 1789085892.6283467,
+    "seen": 1791595794.5457473,
+    "ast_hash": "9e58cdf9934f72c85b0f5afe9a9b9440",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2023-2024/caneca.png": {
+    "mtime": 1789085892.6728425,
+    "seen": 1791595794.5457478,
+    "ast_hash": "1db044a222358a63644527fa36af1465",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2023-2024/casaco-back.png": {
+    "mtime": 1789085892.7079878,
+    "seen": 1791595794.5457485,
+    "ast_hash": "bee88b031ce6ba3f25c56c0ea993d059",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2023-2024/casaco-front.png": {
+    "mtime": 1789085892.72536,
+    "seen": 1791595794.545749,
+    "ast_hash": "23219001153bd84b378bab58bb8c0a98",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2023-2024/emblema.png": {
+    "mtime": 1789085892.7444587,
+    "seen": 1791595794.5457494,
+    "ast_hash": "e0653e46de9c9e0ec59cbfcfca304735",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2023-2024/gorro.png": {
+    "mtime": 1789085892.7574582,
+    "seen": 1791595794.54575,
+    "ast_hash": "40de285eab1232f2ce965da6eb4c2a81",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2023-2024/hoodie-branco-back.png": {
+    "mtime": 1789085892.8037593,
+    "seen": 1791595794.5457509,
+    "ast_hash": "45eafda32eaba95cbfc634c6f95fc041",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2023-2024/hoodie-branco-front.png": {
+    "mtime": 1789085892.8415945,
+    "seen": 1791595794.5457513,
+    "ast_hash": "81b36b64fb135bdc91e3502476dbcfcc",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2023-2024/hoodie-curso-back.png": {
+    "mtime": 1789085892.9253242,
+    "seen": 1791595794.5457518,
+    "ast_hash": "d90d991b2ad1fdaba35ec0a2cf3638c5",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2023-2024/hoodie-curso-front.png": {
+    "mtime": 1789085892.9971347,
+    "seen": 1791595794.5457525,
+    "ast_hash": "31223ed67a142f7b3a96d6984e07e9ca",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2023-2024/hoodie-preto-back.png": {
+    "mtime": 1789085893.0527525,
+    "seen": 1791595794.545753,
+    "ast_hash": "aba2c488f8518345bb6e8763b964274a",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2023-2024/hoodie-preto-front.png": {
+    "mtime": 1789085893.0912087,
+    "seen": 1791595794.545754,
+    "ast_hash": "58cdce421fa8b3a12d7dffce0cbb80ca",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2023-2024/isqueiro.png": {
+    "mtime": 1789085893.1126819,
+    "seen": 1791595794.5457544,
+    "ast_hash": "5652c1908726de062744db291d6ebc42",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2023-2024/tapete.png": {
+    "mtime": 1789085893.2006683,
+    "seen": 1791595794.545755,
+    "ast_hash": "d87161f6ac09d7454f1ac8d0f841b30d",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2024-2025/CB-frente.png": {
+    "mtime": 1789085893.2613733,
+    "seen": 1791595794.5457554,
+    "ast_hash": "669403b8a7103a2c709027144c969120",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2024-2025/CB-tras.png": {
+    "mtime": 1789085893.32618,
+    "seen": 1791595794.545756,
+    "ast_hash": "609477d3ff26f123284cc84b4b944b52",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2024-2025/CP-frente.png": {
+    "mtime": 1789085893.3737943,
+    "seen": 1791595794.5457566,
+    "ast_hash": "9efabbdca76e9af8f2ab7b02b51a66f6",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2024-2025/CP-tras.png": {
+    "mtime": 1789085893.4375029,
+    "seen": 1791595794.5457573,
+    "ast_hash": "a6c7d7523a3945268726c13f66d7fab9",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2024-2025/Emblema.png": {
+    "mtime": 1789085893.4646966,
+    "seen": 1791595794.5457578,
+    "ast_hash": "aac3b7c34228e8a73392589cd811c80f",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2024-2025/HBPP-frente.png": {
+    "mtime": 1789085893.5235276,
+    "seen": 1791595794.5457585,
+    "ast_hash": "215de9e06d62b14ea2c27d0e5c8314c7",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2024-2025/HBPP-tras.png": {
+    "mtime": 1789085893.6087523,
+    "seen": 1791595794.545759,
+    "ast_hash": "f6559682876e7d3517970e8f514d0f29",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2024-2025/HPE-frente.png": {
+    "mtime": 1789085893.6554663,
+    "seen": 1791595794.5457594,
+    "ast_hash": "64b4f3e147f6e85ef62236e69e38e428",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2024-2025/HPE-tras.png": {
+    "mtime": 1789085893.7128282,
+    "seen": 1791595794.54576,
+    "ast_hash": "7d6c5af47ede12d7723c7408871f2919",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2024-2025/HPPP-frente.png": {
+    "mtime": 1789085893.7637444,
+    "seen": 1791595794.5457609,
+    "ast_hash": "6849674316cabe175dc160224f30ec4e",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2024-2025/HPPP-tras.png": {
+    "mtime": 1789085893.8288634,
+    "seen": 1791595794.5457613,
+    "ast_hash": "0f381df1125f1bac88702ba441c06f8a",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2024-2025/Isqueiro1.png": {
+    "mtime": 1789085893.8412588,
+    "seen": 1791595794.5457618,
+    "ast_hash": "d9e631d6c2b8ff4993cbd179f32793f5",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2024-2025/Isqueiro2.png": {
+    "mtime": 1789085893.8536909,
+    "seen": 1791595794.5457623,
+    "ast_hash": "65c07a66a2d5b1ce1f1ba50372fcd6ec",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2024-2025/Isqueiro3.png": {
+    "mtime": 1789085893.8656764,
+    "seen": 1791595794.545763,
+    "ast_hash": "2545a9e29d12e0e411a5873047c2534e",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2024-2025/Isqueiro4.png": {
+    "mtime": 1789085893.8779426,
+    "seen": 1791595794.5457635,
+    "ast_hash": "087a3209994e910112935e72a3111eca",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2024-2025/Isqueiro5.png": {
+    "mtime": 1789085893.8934822,
+    "seen": 1791595794.5457642,
+    "ast_hash": "f367860f3061a055efdb3114e121b598",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2024-2025/Meias.png": {
+    "mtime": 1789085893.9060173,
+    "seen": 1791595794.5457647,
+    "ast_hash": "7ce5458ca8976c3f448fc8e62b9a9bc2",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2024-2025/Parka-frente.png": {
+    "mtime": 1789085893.9858847,
+    "seen": 1791595794.5457654,
+    "ast_hash": "4f81a06d764d474827108f2865045e76",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2024-2025/Parka-tras.png": {
+    "mtime": 1789085894.074337,
+    "seen": 1791595794.5457659,
+    "ast_hash": "879cf228b56063241de50ecc9e3b3ba8",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2024-2025/Tapete-de-rato.png": {
+    "mtime": 1789085894.101381,
+    "seen": 1791595794.5457666,
+    "ast_hash": "20b65f6515b33603088392a6029ae6c9",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2024-2025/chapeu.png": {
+    "mtime": 1789085894.1126544,
+    "seen": 1791595794.5457673,
+    "ast_hash": "3a13a30aea7f070f7aebf9869732c135",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2024-2025/guarda-chuva.png": {
+    "mtime": 1789085894.1268241,
+    "seen": 1791595794.545768,
+    "ast_hash": "d7df21684f99d296ee116bfce4f9b5f7",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2025-2026/Casaco-frente.png": {
+    "mtime": 1789085894.1641264,
+    "seen": 1791595794.5457687,
+    "ast_hash": "388bdee9c0a7d426abb33b9044e53e2a",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2025-2026/Casaco-tras.png": {
+    "mtime": 1789085894.2103498,
+    "seen": 1791595794.5457692,
+    "ast_hash": "25e59e82a29469b61e34b827db854d7b",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2025-2026/HoodieBIP-frente.png": {
+    "mtime": 1789085894.274608,
+    "seen": 1791595794.5457697,
+    "ast_hash": "61d4db641667ba9732e174426667a8b2",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2025-2026/HoodieBIP-tras.png": {
+    "mtime": 1789085894.4188206,
+    "seen": 1791595794.5457702,
+    "ast_hash": "203046ea8759187edc4034f2ed8fd342",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2025-2026/HoodieBranca-frente.png": {
+    "mtime": 1789085894.4746697,
+    "seen": 1791595794.5457711,
+    "ast_hash": "9569065f5a8b59b324807cf0bebad7f7",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2025-2026/HoodieBranca-tras.png": {
+    "mtime": 1789085894.6080253,
+    "seen": 1791595794.5457716,
+    "ast_hash": "54361ea2176d2d42c64452c1b264f308",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2025-2026/HoodieClassico-frente.png": {
+    "mtime": 1789085894.6388981,
+    "seen": 1791595794.5457723,
+    "ast_hash": "486685fc920b30a02a68285474519186",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2025-2026/HoodieClassico-tras.png": {
+    "mtime": 1789085894.6912024,
+    "seen": 1791595794.5457728,
+    "ast_hash": "bb6de126f6627e8a21df0b448a0b5fa0",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2025-2026/HoodieCloud-frente.png": {
+    "mtime": 1789085894.7714605,
+    "seen": 1791595794.5457733,
+    "ast_hash": "971800f693fed0fea4293bfa441f4b6c",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2025-2026/HoodieCloud-tras.png": {
+    "mtime": 1789085894.8873842,
+    "seen": 1791595794.545774,
+    "ast_hash": "22827d73ffe94c1f27b5b55d3d5a4518",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2025-2026/HoodieWeb-frente.png": {
+    "mtime": 1789085894.9438162,
+    "seen": 1791595794.5457747,
+    "ast_hash": "e8e1f7e65ea51e2cce5dd704273f0f25",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2025-2026/HoodieWeb-tras.png": {
+    "mtime": 1789085895.0248642,
+    "seen": 1791595794.5457752,
+    "ast_hash": "0d8728acd3c09cd52528b4caf12433be",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2025-2026/Isqueiro.png": {
+    "mtime": 1789085895.0353343,
+    "seen": 1791595794.545776,
+    "ast_hash": "59204075af6ae6e2b72c3a3b8ad4c738",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2025-2026/Meias.png": {
+    "mtime": 1789085895.0454466,
+    "seen": 1791595794.5457764,
+    "ast_hash": "557967e66b323243c4dd4254e7fcc45b",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2025-2026/Parka-frente.png": {
+    "mtime": 1789085895.078558,
+    "seen": 1791595794.5457768,
+    "ast_hash": "f9ef86c187a7d41691cfe34358b4ccfa",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2025-2026/Parka-tras.png": {
+    "mtime": 1789085895.0915556,
+    "seen": 1791595794.5457773,
+    "ast_hash": "9ff4a9945d896af1ac7a76434871af4c",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2025-2026/Tapete-de-rato.png": {
+    "mtime": 1789085895.1196055,
+    "seen": 1791595794.5457783,
+    "ast_hash": "20b65f6515b33603088392a6029ae6c9",
+    "semantic_hash": ""
+  },
+  "assets/images/merch/2025-2026/Tshirt.png": {
+    "mtime": 1789085895.130489,
+    "seen": 1791595794.5457788,
+    "ast_hash": "1da342b79068bdc274c1762d6e4e4eec",
+    "semantic_hash": ""
+  },
+  "assets/images/team-neei-2022-2023-blur.jpg": {
+    "mtime": 1789085890.64267,
+    "seen": 1791595794.5457792,
+    "ast_hash": "07ea61e0b948c5bfff4af661afa8921e",
+    "semantic_hash": ""
+  },
+  "assets/images/team-neei-2023-2024-blur.jpg": {
+    "mtime": 1789085890.6496434,
+    "seen": 1791595794.5457797,
+    "ast_hash": "9a16c457bf6f5c9bd75245ac0f55bfaa",
+    "semantic_hash": ""
+  },
+  "assets/images/team-neei-2024-2025-blur.jpg": {
+    "mtime": 1789085890.6625197,
+    "seen": 1791595794.5457804,
+    "ast_hash": "90d5ad3c272e5b38f4085365a5561ef6",
+    "semantic_hash": ""
+  },
+  "assets/images/team-neei-2025-2026-blur.jpg": {
+    "mtime": 1789085890.668054,
+    "seen": 1791595794.545781,
+    "ast_hash": "db91be7ef4f747eb0e090f2a2efb0366",
+    "semantic_hash": ""
+  },
+  "assets/images/team-neei-2026-2027(1).jpg": {
+    "mtime": 1789301517.6493309,
+    "seen": 1791595794.5457816,
+    "ast_hash": "6869e8abd42c98dd7e923b316c86c24c",
+    "semantic_hash": ""
+  },
+  "assets/images/team-neei-2026-2027.jpg": {
+    "mtime": 1789301261.0137777,
+    "seen": 1791595794.5457823,
+    "ast_hash": "46056209a919bf5136b2f46bc24c2f21",
+    "semantic_hash": ""
+  },
+  "assets/images/tux.png": {
+    "mtime": 1789085890.6764622,
+    "seen": 1791595794.5457828,
+    "ast_hash": "28398d0970bfafc62a4280d5b2b9baf0",
+    "semantic_hash": ""
+  },
+  "assets/images/workshop-linux-bg.jpg": {
+    "mtime": 1789085890.6906035,
+    "seen": 1791595794.5457833,
+    "ast_hash": "8085abaa652d6f3542b5381ac28d8d3d",
+    "semantic_hash": ""
+  },
+  "legacy/assets/images/logos/logo-outline.png": {
+    "mtime": 1789085895.321329,
+    "seen": 1791595794.5457838,
+    "ast_hash": "960878b367b357af1a881317797f8a5c",
+    "semantic_hash": ""
+  },
+  "legacy/assets/images/logos/logo.png": {
+    "mtime": 1789085895.3262188,
+    "seen": 1791595794.5457845,
+    "ast_hash": "44f3a5ab3f1711526f0148757c32fee1",
+    "semantic_hash": ""
+  },
+  "legacy/assets/images/logos/neei-logo.png": {
+    "mtime": 1789085895.3315122,
+    "seen": 1791595794.5457852,
+    "ast_hash": "7d2dbd70fcb61e5a712752fcb12084a7",
+    "semantic_hash": ""
+  },
+  "legacy/assets/images/tux.png": {
+    "mtime": 1789085895.3006532,
+    "seen": 1791595794.545786,
+    "ast_hash": "28398d0970bfafc62a4280d5b2b9baf0",
+    "semantic_hash": ""
+  },
+  "legacy/assets/images/workshop-linux-bg.jpg": {
+    "mtime": 1789085895.3116367,
+    "seen": 1791595794.5457866,
+    "ast_hash": "8085abaa652d6f3542b5381ac28d8d3d",
+    "semantic_hash": ""
+  },
+  "legacy/utad-code-and-conquer-mockup/images/background.jpg": {
+    "mtime": 1789085895.397065,
+    "seen": 1791595794.5457869,
+    "ast_hash": "2e4d23e7aee7a8ff584d7d7a5a85f3f0",
+    "semantic_hash": ""
+  },
+  "legacy/utad-code-and-conquer-mockup/images/calendario.jpeg": {
+    "mtime": 1789085895.4245944,
+    "seen": 1791595794.5457876,
+    "ast_hash": "636f64c5286a997503157a8d2a7c7c9e",
+    "semantic_hash": ""
+  },
+  "legacy/utad-code-and-conquer-mockup/images/calendario.jpg": {
+    "mtime": 1789085895.4316401,
+    "seen": 1791595794.545788,
+    "ast_hash": "2655419438ca0e5d31a3f59e0995d9ae",
+    "semantic_hash": ""
+  },
+  "legacy/utad-code-and-conquer-mockup/images/close-cross.png": {
+    "mtime": 1789085895.4356616,
+    "seen": 1791595794.5457888,
+    "ast_hash": "6fb374412a957159df96a8f7057c6896",
+    "semantic_hash": ""
+  },
+  "legacy/utad-code-and-conquer-mockup/images/logos/logo-long.png": {
+    "mtime": 1789085895.4543889,
+    "seen": 1791595794.5457892,
+    "ast_hash": "b76050f5c25706d552e30e2374e3d381",
+    "semantic_hash": ""
+  },
+  "legacy/utad-code-and-conquer-mockup/images/logos/logo.png": {
+    "mtime": 1789085895.4604435,
+    "seen": 1791595794.54579,
+    "ast_hash": "f24d946b8bcf653a7a81a7dc79abb4bd",
+    "semantic_hash": ""
+  },
+  "legacy/utad-code-and-conquer-mockup/images/logos/neei-b.png": {
+    "mtime": 1789085895.466259,
+    "seen": 1791595794.5457904,
+    "ast_hash": "63ecb281ef3ea14cec30d125b5702546",
+    "semantic_hash": ""
+  },
+  "legacy/utad-code-and-conquer-mockup/images/logos/neei.png": {
+    "mtime": 1789085895.4723427,
+    "seen": 1791595794.545791,
+    "ast_hash": "a127eae5874301506abb5e66bcc1fdb2",
+    "semantic_hash": ""
+  },
+  "legacy/utad-code-and-conquer-mockup/images/logos/poch.png": {
+    "mtime": 1789085895.480628,
+    "seen": 1791595794.5457914,
+    "ast_hash": "6a8e60f7a3a203a075b9d31feee0ae3e",
+    "semantic_hash": ""
+  },
+  "legacy/utad-code-and-conquer-mockup/images/markers/1.png": {
+    "mtime": 1789085895.4906783,
+    "seen": 1791595794.545792,
+    "ast_hash": "54b285d50012656b9634ca5e5f5a49ef",
+    "semantic_hash": ""
+  },
+  "legacy/utad-code-and-conquer-mockup/images/markers/2.png": {
+    "mtime": 1789085895.4968512,
+    "seen": 1791595794.5457928,
+    "ast_hash": "a0b36b11857e60aa410a2ed45ccf8e07",
+    "semantic_hash": ""
+  },
+  "legacy/utad-code-and-conquer-mockup/images/markers/3.png": {
+    "mtime": 1789085895.5014217,
+    "seen": 1791595794.5457933,
+    "ast_hash": "fccde970daf2c4c25f798aa9fb908006",
+    "semantic_hash": ""
+  },
+  "legacy/utad-code-and-conquer-mockup/images/markers/numbers.jpg": {
+    "mtime": 1789085895.5078917,
+    "seen": 1791595794.5457938,
+    "ast_hash": "b64b02cd49567f99bf7b6c2c2672921e",
+    "semantic_hash": ""
+  },
+  "legacy/utad-code-and-conquer-mockup/images/premios/esferografica.jpg": {
+    "mtime": 1789085895.5205173,
+    "seen": 1791595794.5457945,
+    "ast_hash": "2d0db32092d33c25a4a94595e139b35b",
+    "semantic_hash": ""
+  },
+  "legacy/utad-code-and-conquer-mockup/images/premios/mochila.webp": {
+    "mtime": 1789085895.5312152,
+    "seen": 1791595794.545795,
+    "ast_hash": "1abb69e696521894fed08c1d96213dd5",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/background.jpg": {
+    "mtime": 1789085895.6688755,
+    "seen": 1791595794.5457957,
+    "ast_hash": "2e4d23e7aee7a8ff584d7d7a5a85f3f0",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/calendario.jpeg": {
+    "mtime": 1789085895.673476,
+    "seen": 1791595794.5457962,
+    "ast_hash": "f5b4bea27a6b1629d5be9c944ef9b67d",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/calendario.jpg": {
+    "mtime": 1789085895.6834376,
+    "seen": 1791595794.5457969,
+    "ast_hash": "2655419438ca0e5d31a3f59e0995d9ae",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/close-cross.png": {
+    "mtime": 1789085895.691372,
+    "seen": 1791595794.5457973,
+    "ast_hash": "6fb374412a957159df96a8f7057c6896",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/giveaways/airpods.png": {
+    "mtime": 1789085895.7016182,
+    "seen": 1791595794.5457978,
+    "ast_hash": "3b99ea94262f7e353f3ceecbedaef9e4",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/giveaways/huawei_watch.png": {
+    "mtime": 1789085895.7105777,
+    "seen": 1791595794.5457985,
+    "ast_hash": "a39036a5c83e58ef76913140d9bbb7ad",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/giveaways/item-1.png": {
+    "mtime": 1789085895.7121046,
+    "seen": 1791595794.5457993,
+    "ast_hash": "151f7546e3e15a8b18e489ec981c8d92",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/giveaways/item-2.png": {
+    "mtime": 1789085895.723169,
+    "seen": 1791595794.5457997,
+    "ast_hash": "22554adc2032639786b4bc161f093a88",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/giveaways/item-3.png": {
+    "mtime": 1789085895.7313437,
+    "seen": 1791595794.5458002,
+    "ast_hash": "228ecc0b1313408b9665ed4f5417e8f1",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/giveaways/pulseira_acad\u00e9mica.png": {
+    "mtime": 1789085895.7338545,
+    "seen": 1791595794.5458012,
+    "ast_hash": "d16e2b803d4aab3e3db0f0ad353c80a8",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/giveaways/surprise_box.png": {
+    "mtime": 1789085895.74539,
+    "seen": 1791595794.5458016,
+    "ast_hash": "62d1585c03a54e5f7f221fcdcd8953fd",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/giveaways/urbanglide_troti.png": {
+    "mtime": 1789085895.7512813,
+    "seen": 1791595794.5458026,
+    "ast_hash": "dc05191eb28e2d8d0cea557a18b7f3eb",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/logos/logo.png": {
+    "mtime": 1789085895.7707787,
+    "seen": 1791595794.545803,
+    "ast_hash": "4841743aed7cb80cf3806dce965f4ce7",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/logos/logos-parceiros/aautad/logo.png": {
+    "mtime": 1789085895.7975807,
+    "seen": 1791595794.5458035,
+    "ast_hash": "d16e2b803d4aab3e3db0f0ad353c80a8",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/logos/logos-parceiros/camara-municipal/logo.png": {
+    "mtime": 1789085895.8068156,
+    "seen": 1791595794.5458043,
+    "ast_hash": "ece4a76b08084e78455dc0dfeeb9ed8b",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/logos/logos-parceiros/camara_municipal.png": {
+    "mtime": 1789085895.7888412,
+    "seen": 1791595794.5458047,
+    "ast_hash": "ece4a76b08084e78455dc0dfeeb9ed8b",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/logos/logos-parceiros/fnac/logo.png": {
+    "mtime": 1789085895.820676,
+    "seen": 1791595794.5458055,
+    "ast_hash": "8ad945a70700d74de08b3a0bc8b7a12c",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/logos/logos-parceiros/licor-beirao/logo.png": {
+    "mtime": 1789085895.8327353,
+    "seen": 1791595794.5458062,
+    "ast_hash": "b154e677f2e1b21065e7791a34410e8c",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/logos/logos_empresas/bronze/inova-ria/logo.png": {
+    "mtime": 1789085895.8506162,
+    "seen": 1791595794.5458066,
+    "ast_hash": "bb6bf9706d15312cd17be5f5f0bf6f44",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/logos/logos_empresas/bronze/toggas/logo.png": {
+    "mtime": 1789085895.862337,
+    "seen": 1791595794.5458102,
+    "ast_hash": "151e626566cecd63e673d26c836fd34b",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/logos/logos_empresas/diamond/activesys/logo.png": {
+    "mtime": 1789085895.8793576,
+    "seen": 1791595794.545811,
+    "ast_hash": "81c1cf398706c8797423edfee31c9725",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/logos/logos_empresas/diamond/continental/logo.png": {
+    "mtime": 1789085895.8904302,
+    "seen": 1791595794.5458114,
+    "ast_hash": "4613f2d6c4933643101c593ecb54117f",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/logos/logos_empresas/diamond/goldenergy/logo.png": {
+    "mtime": 1789085895.9015758,
+    "seen": 1791595794.5458121,
+    "ast_hash": "7f65c2ef4b570b037ef555e573be0d33",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/logos/logos_empresas/diamond/openvia/logo.png": {
+    "mtime": 1789085895.9159536,
+    "seen": 1791595794.5458128,
+    "ast_hash": "d0998d1ad3cbe85a4f118834ae50965a",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/logos/logos_empresas/gold/arquiconsult/logo.png": {
+    "mtime": 1789085895.933771,
+    "seen": 1791595794.5458133,
+    "ast_hash": "4975eba4067e285e835ee384f8d402e9",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/logos/logos_empresas/gold/delloite/logo.png": {
+    "mtime": 1789085895.9414423,
+    "seen": 1791595794.545814,
+    "ast_hash": "7bdf544c0e4fc5e77a1ded47f6ed58e2",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/logos/logos_empresas/gold/neoception/logo.png": {
+    "mtime": 1789085895.9606009,
+    "seen": 1791595794.5458145,
+    "ast_hash": "4b24f3fb85c953d1b058cba129788543",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/logos/logos_empresas/gold/outsmartis/logo.png": {
+    "mtime": 1789085895.9716673,
+    "seen": 1791595794.545815,
+    "ast_hash": "075abe267bcc9a27d909b005dc700b33",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/logos/logos_empresas/gold/softinsa/logo.png": {
+    "mtime": 1789085895.9823978,
+    "seen": 1791595794.5458157,
+    "ast_hash": "fb28f0c1b51ea2881924911c688c1c76",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/logos/logos_empresas/main/optare.png": {
+    "mtime": 1789085895.9958413,
+    "seen": 1791595794.5458164,
+    "ast_hash": "a1d6396d768b2b4d469d798490f25af8",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/logos/logos_empresas/silver/sti/logo.png": {
+    "mtime": 1789085896.0119815,
+    "seen": 1791595794.545817,
+    "ast_hash": "517fd9f34f755132703550d9975333bd",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/logos/logos_empresas/sponsor/natixis/logo.png": {
+    "mtime": 1789085896.0315146,
+    "seen": 1791595794.5458174,
+    "ast_hash": "01f43433f27b2294022a04eb4ad03a04",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/logos/logos_empresas/sponsor/tlantic/logo.png": {
+    "mtime": 1789085896.0464678,
+    "seen": 1791595794.545818,
+    "ast_hash": "7c3924a33ef1fd52c648bcec297dd30b",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/logos/logos_nucleos/cm.png": {
+    "mtime": 1789085896.0541103,
+    "seen": 1791595794.5458186,
+    "ast_hash": "fabddf23cf22a3697924b18565983019",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/logos/logos_nucleos/legi.png": {
+    "mtime": 1789085896.0668406,
+    "seen": 1791595794.5458188,
+    "ast_hash": "e54369c9fadf2e4e4acee25295b39ca4",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/logos/logos_nucleos/neei.png": {
+    "mtime": 1789085896.0740094,
+    "seen": 1791595794.5458198,
+    "ast_hash": "a127eae5874301506abb5e66bcc1fdb2",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/logos/logos_nucleos/neutad.png": {
+    "mtime": 1789085896.0814042,
+    "seen": 1791595794.5458202,
+    "ast_hash": "f4c4698439ddd16acbfc10756d721755",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/logos/outsmartis_logo.png": {
+    "mtime": 1789085895.7750473,
+    "seen": 1791595794.5458207,
+    "ast_hash": "075abe267bcc9a27d909b005dc700b33",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/markers/1.png": {
+    "mtime": 1789085896.0914907,
+    "seen": 1791595794.5458212,
+    "ast_hash": "e97c16127d9a3cee92a39ddd615c7026",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/markers/2.png": {
+    "mtime": 1789085896.099815,
+    "seen": 1791595794.545822,
+    "ast_hash": "c9d356626988d3a7eff161b7cd00fb3b",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/markers/3.png": {
+    "mtime": 1789085896.1079395,
+    "seen": 1791595794.5458224,
+    "ast_hash": "27e22c3fa521fd3dce222585800a0e0d",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/markers/4.png": {
+    "mtime": 1789085896.1123111,
+    "seen": 1791595794.5458229,
+    "ast_hash": "4c36aa06e51376770a2d6d8660e6326f",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/markers/5.png": {
+    "mtime": 1789085896.123011,
+    "seen": 1791595794.5458238,
+    "ast_hash": "0e4b0accb5331b6383f5e0fbf6130a24",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/markers/6.png": {
+    "mtime": 1789085896.1315496,
+    "seen": 1791595794.5458245,
+    "ast_hash": "fca1d841398c8bcb242444c4c94f61ec",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/markers/7.png": {
+    "mtime": 1789085896.1378415,
+    "seen": 1791595794.545825,
+    "ast_hash": "8ced5a84ffd3199444a278ad290343d8",
+    "semantic_hash": ""
+  },
+  "legacy/utadsummit2022-inativo-backup/images/oradores/andre.png": {
+    "mtime": 1789085896.152506,
+    "seen": 1791595794.5458255,
+    "ast_hash": "8c5184680d89909f29cde20a50ffe6a2",
+    "semantic_hash": ""
+  },
+  "legacy/utad-code-and-conquer-mockup/images/background.mp4": {
+    "mtime": 1789085895.4063892,
+    "seen": 1791595794.545826,
+    "ast_hash": "1d538b047459181ff70e6f54fdb76131",
+    "semantic_hash": ""
+  }
+}

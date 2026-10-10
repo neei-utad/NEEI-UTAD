@@ -26,6 +26,7 @@
   <!-- scripts -->
   <script src="./JS/menu.js" defer></script>
   <script src="./JS/script.js" defer></script>
+  <script src="./JS/footer.js" defer></script>
 </head>
 
 <body>
@@ -44,6 +45,7 @@
           </a>
         </div>
 
+        <div class="menu-scroll">
         <ul id="menu-items">
           <li class="menu-item"><a href="./guia.html">Guia</a></li>
           <li class="line"></li>
@@ -64,10 +66,10 @@
             <i id="theme-toggle-icon" class="bi bi-brightness-high-fill"></i>
           </button>
         </div>
-      </nav>
+        </div>
 
-      <!-- mobile footer -->
-      <footer>
+        <!-- mobile footer -->
+        <footer>
         <p>Redes Sociais:</p>
         <div id="social-icons">
           <a href="https://www.twitch.tv/neeiutad" target="_blank">
@@ -92,7 +94,8 @@
         <p id="credits-secondary">Redesenhado por <a
             href="https://www.linkedin.com/in/patr%C3%ADcio-sim%C3%B5es-668219201/" target="_blank">Patrício
             Simões</a> e Ricardo Inácio</p>
-      </footer>
+        </footer>
+      </nav>
     </div>
   </header>
 
@@ -119,92 +122,33 @@
         <h2>Galeria</h2>
       </div>
 
-      <div class="gallery-wrapper">
-        <div class="gallery-track">
-          
-          <div class="gallery-item w-wide">
-            <img src="./assets/images/caroussel/team-neei-2025-2026.jpg" alt="Equipa NEEI" />
-            <span class="gallery-tag">Tomada de Posse 2025/2026</span>
+      <div class="expanding-gallery" id="expanding-gallery">
+        <div class="expand-card active" style="background-image: url('./assets/images/caroussel/team-neei-2026-2027.jpg');">
+          <div class="expand-card-caption">
+            <span class="expand-card-title">Tomada de Posse</span>
+            <span class="expand-card-date">2026/2027</span>
           </div>
+        </div> 
 
-          <div class="gallery-item w-portrait">
-            <img src="./assets/images/caroussel/kit-latada-2025-2026.jpg" alt="Kit Latada" />
-            <span class="gallery-tag">Latada</span>
+        <div class="expand-card" style="background-image: url('./assets/images/caroussel/team-neei-2025-2026.jpg');">
+          <div class="expand-card-caption">
+            <span class="expand-card-title">Tomada de Posse</span>
+            <span class="expand-card-date">2025/2026</span>
           </div>
-
-          <div class="gallery-item w-medium">
-            <img src="./assets/images/caroussel/jantar-curso-2025-2026.jpg" alt="Jantar de Curso" />
-            <span class="gallery-tag">Jantar de Curso</span>
-          </div>
-
-          <div class="gallery-item w-panoramic">
-            <img src="./assets/images/caroussel/team-neei-2023-2024.jpg" alt="Histórico" />
-            <span class="gallery-tag">Arquivo Histórico</span>
-          </div>
-
-          <div class="gallery-item w-wide" aria-hidden="true">
-            <img src="./assets/images/caroussel/team-neei-2025-2026.jpg" alt="Equipa NEEI" />
-            <span class="gallery-tag">Tomada de Posse 2025/2026</span>
-          </div>
-
-          <div class="gallery-item w-portrait" aria-hidden="true">
-            <img src="./assets/images/caroussel/kit-latada-2025-2026.jpg" alt="Kit Latada" />
-            <span class="gallery-tag">Latada</span>
-          </div>
-
-          <div class="gallery-item w-medium" aria-hidden="true">
-            <img src="./assets/images/caroussel/jantar-curso-2025-2026.jpg" alt="Jantar de Curso" />
-            <span class="gallery-tag">Jantar de Curso</span>
-          </div>
-
-          <div class="gallery-item w-panoramic" aria-hidden="true">
-            <img src="./assets/images/caroussel/team-neei-2023-2024.jpg" alt="Histórico" />
-            <span class="gallery-tag">Arquivo Histórico</span>
-          </div>
-
         </div>
-        <div class="gallery-track-2">
-          
-          <div class="gallery-item w-wide">
-            <img src="./assets/images/caroussel/team-neei-2025-2026.jpg" alt="Equipa NEEI" />
-            <span class="gallery-tag">Tomada de Posse 2025/2026</span>
-          </div>
 
-          <div class="gallery-item w-portrait">
-            <img src="./assets/images/caroussel/kit-latada-2025-2026.jpg" alt="Kit Latada" />
-            <span class="gallery-tag">Latada</span>
+        <div class="expand-card" style="background-image: url('./assets/images/caroussel/team-neei-2024-2025.jpg');">
+          <div class="expand-card-caption">
+            <span class="expand-card-title">Tomada de Posse</span>
+            <span class="expand-card-date">2024/2025</span>
           </div>
+        </div>
 
-          <div class="gallery-item w-medium">
-            <img src="./assets/images/caroussel/jantar-curso-2025-2026.jpg" alt="Jantar de Curso" />
-            <span class="gallery-tag">Jantar de Curso</span>
+        <div class="expand-card" style="background-image: url('./assets/images/caroussel/team-neei-2023-2024.jpg');">
+          <div class="expand-card-caption">
+            <span class="expand-card-title">Tomada de Posse</span>
+            <span class="expand-card-date">2023/2024</span>
           </div>
-
-          <div class="gallery-item w-panoramic">
-            <img src="./assets/images/caroussel/team-neei-2023-2024.jpg" alt="Histórico" />
-            <span class="gallery-tag">Arquivo Histórico</span>
-          </div>
-
-          <div class="gallery-item w-wide" aria-hidden="true">
-            <img src="./assets/images/caroussel/team-neei-2025-2026.jpg" alt="Equipa NEEI" />
-            <span class="gallery-tag">Tomada de Posse 2025/2026</span>
-          </div>
-
-          <div class="gallery-item w-portrait" aria-hidden="true">
-            <img src="./assets/images/caroussel/kit-latada-2025-2026.jpg" alt="Kit Latada" />
-            <span class="gallery-tag">Latada</span>
-          </div>
-
-          <div class="gallery-item w-medium" aria-hidden="true">
-            <img src="./assets/images/caroussel/jantar-curso-2025-2026.jpg" alt="Jantar de Curso" />
-            <span class="gallery-tag">Jantar de Curso</span>
-          </div>
-
-          <div class="gallery-item w-panoramic" aria-hidden="true">
-            <img src="./assets/images/caroussel/team-neei-2023-2024.jpg" alt="Histórico" />
-            <span class="gallery-tag">Arquivo Histórico</span>
-          </div>
-
         </div>
       </div>
     </section>
@@ -323,60 +267,7 @@
   </main>
 
   <!-- desktop footer -->
-  <footer id="footer-large">
-    <div id="footer-large-top">
-      <div id="large-contact-area">
-        <p>Contactos:</p>
-        <div>
-          <a href="https://www.twitch.tv/neeiutad" target="_blank">
-            <i class="bi bi-envelope-fill"></i>neei@utad.pt
-          </a>
-        </div>
-      </div>
-
-      <nav id="large-nav-area">
-        <p>Navegação:</p>
-        <ul>
-          <li><a href="./guia.html">Guia</a></li>
-          <li><a href="https://forum.neei-utad.pt/" target="_blank">Fórum</a></li>
-          <li><a href="./events.html">Eventos</a></li>
-          <li><a href="./merch.html">Merch</a></li>
-          <li><a href="./links.html">Links</a></li>
-          <li><a href="./notes.html">Apontamentos</a></li>
-        </ul>
-      </nav>
-
-      <div id="large-social-area">
-        <p>Redes Sociais:</p>
-        <div>
-          <a href="https://www.twitch.tv/neeiutad" target="_blank">
-            <i class="bi bi-twitch"></i>
-          </a>
-          <a href="https://www.instagram.com/neei.utad/" target="_blank">
-            <i class="bi bi-instagram"></i>
-          </a>
-          <a href="https://www.facebook.com/neei.utad" target="_blank">
-            <i class="bi bi-facebook"></i>
-          </a>
-          <a href="https://www.youtube.com/@neeiutad" target="_blank">
-            <i class="bi bi-youtube"></i>
-          </a>
-          <a href="https://www.linkedin.com/company/neei/about/" target="_blank">
-            <i class="bi bi-linkedin"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div id="credits">
-      <p id="large-copyright">&copy;Copyright <b>2026 NEEI</b>. Todos os Direitos Reservados</p>
-      <p id="large-credits-main">Originalmente criado por <a href="https://www.linkedin.com/in/filipe-valadares/"
-          target="_blank">Filipe Valadares</a></p>
-      <p id="large-credits-secondary">Redesenhado por <a
-          href="https://www.linkedin.com/in/patr%C3%ADcio-sim%C3%B5es-668219201/" target="_blank">Patrício Simões</a> e
-        Ricardo Inácio</p>
-    </div>
-  </footer>
+  <neei-footer id="footer-large"></neei-footer>
 
   <!-- plugins scripts -->
   <script src="https://uicdn.toast.com/calendar/latest/toastui-calendar.min.js"></script>

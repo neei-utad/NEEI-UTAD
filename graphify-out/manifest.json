@@ -48,9 +48,9 @@
     "semantic_hash": ""
   },
   "JS/script.js": {
-    "mtime": 1789380903.3448856,
-    "seen": 1791595794.5455918,
-    "ast_hash": "21a7338fbf04acbba1648a282551a6f7",
+    "mtime": 1791650439.4560015,
+    "seen": 1791655589.3326628,
+    "ast_hash": "e371436650711fa8026947d7e37ca522",
     "semantic_hash": ""
   },
   "apontamentos.php": {
@@ -600,27 +600,27 @@
     "semantic_hash": ""
   },
   "card.html": {
-    "mtime": 1789916902.565617,
-    "seen": 1791595794.5456576,
-    "ast_hash": "9f8e25320a80d9f8ae66e2f545774ef8",
+    "mtime": 1791656144.6798167,
+    "seen": 1791656312.1452487,
+    "ast_hash": "ceb1b875a5a6fac6c1fc31ace2598928",
     "semantic_hash": ""
   },
   "events.html": {
-    "mtime": 1790246225.8626711,
-    "seen": 1791595794.545658,
-    "ast_hash": "9ad3e4ad2e7942399d29990c74c2d9b0",
+    "mtime": 1791656146.787889,
+    "seen": 1791656312.14525,
+    "ast_hash": "1c5198965c696bd0f8565149524267ce",
     "semantic_hash": ""
   },
   "guia.html": {
-    "mtime": 1789916843.1672094,
-    "seen": 1791595794.5456588,
-    "ast_hash": "8d4b5a65ee17f2d36a8b1fe6c15906bf",
+    "mtime": 1791656157.3179603,
+    "seen": 1791656312.1452508,
+    "ast_hash": "4c2296070785927df2254bbfc8025583",
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1791596721.494324,
-    "seen": 1791596790.4551528,
-    "ast_hash": "bdecd965f4ffb87e6aebed94f83105e3",
+    "mtime": 1791656142.6012409,
+    "seen": 1791656312.1452515,
+    "ast_hash": "c71ed3c1a8867819747e5cb084fe5b3b",
     "semantic_hash": ""
   },
   "legacy/code-n-bila.html": {
@@ -660,21 +660,21 @@
     "semantic_hash": ""
   },
   "links.html": {
-    "mtime": 1789916958.4657009,
-    "seen": 1791595794.545664,
-    "ast_hash": "bd950bc71bfae1ba134ef1a65c672e74",
+    "mtime": 1791656148.9058855,
+    "seen": 1791656312.1452575,
+    "ast_hash": "16de925d16d5820920c3351808a001b5",
     "semantic_hash": ""
   },
   "merch.html": {
-    "mtime": 1789916974.460628,
-    "seen": 1791595794.5456645,
-    "ast_hash": "62a201df34f47d168026b7ce4f108fac",
+    "mtime": 1791656151.0099583,
+    "seen": 1791656312.1452582,
+    "ast_hash": "b0f482cd767bb896c8f3b52ba21bbbe8",
     "semantic_hash": ""
   },
   "notes.html": {
-    "mtime": 1789916991.4894297,
-    "seen": 1791595794.545665,
-    "ast_hash": "8048e699ec89fd537ad4315e788ff913",
+    "mtime": 1791656153.1392581,
+    "seen": 1791656312.145259,
+    "ast_hash": "6e128b485f822cef176b64677a052d93",
     "semantic_hash": ""
   },
   "php/phpmailer/README.md": {
@@ -696,21 +696,21 @@
     "semantic_hash": ""
   },
   "politica.html": {
-    "mtime": 1789916999.8462408,
-    "seen": 1791595794.5456674,
-    "ast_hash": "0afe5cc1c1b194b5655cb8d067f0ce73",
+    "mtime": 1791656155.232311,
+    "seen": 1791656312.145263,
+    "ast_hash": "591f0696dd6dcd35f3df0b5bd080b8c5",
     "semantic_hash": ""
   },
   "servicos.html": {
-    "mtime": 1789085890.2222033,
-    "seen": 1791595794.545668,
-    "ast_hash": "b1277320c3107371e92491f06092f602",
+    "mtime": 1791656159.420722,
+    "seen": 1791656312.1452637,
+    "ast_hash": "7f0a61c34a36cdb4183618a5b67e29ce",
     "semantic_hash": ""
   },
   "workshop-linux.html": {
-    "mtime": 1789085890.229324,
-    "seen": 1791595794.5456686,
-    "ast_hash": "7c1666e41f3f6ce5d87c88e9cf7f6dd8",
+    "mtime": 1791656161.535218,
+    "seen": 1791656312.1452641,
+    "ast_hash": "6c808a5d2ae23b1697d357c2048e1080",
     "semantic_hash": ""
   },
   "assets/Downloads/Elei\u00e7\u00f5es Anexos/Anexo I.pdf": {
@@ -2217,6 +2217,18 @@
     "mtime": 1789085895.4063892,
     "seen": 1791595794.545826,
     "ast_hash": "1d538b047459181ff70e6f54fdb76131",
+    "semantic_hash": ""
+  },
+  "JS/footer.js": {
+    "mtime": 1791648374.2621324,
+    "seen": 1791655589.3326573,
+    "ast_hash": "7ed907ff8b9adf19b443290c7681970e",
+    "semantic_hash": ""
+  },
+  "assets/images/caroussel/team-neei-2026-2027.jpg": {
+    "mtime": 1789301517.6493309,
+    "seen": 1791655589.3327792,
+    "ast_hash": "6869e8abd42c98dd7e923b316c86c24c",
     "semantic_hash": ""
   }
 }

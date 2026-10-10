@@ -93,5 +93,7 @@
   "91": "phpmailer.lang-ur.php",
   "92": "phpmailer.lang-vi.php",
   "93": "phpmailer.lang-zh.php",
-  "94": "phpmailer.lang-zh_cn.php"
+  "94": "phpmailer.lang-zh_cn.php",
+  "95": "NeeiFooter",
+  "96": ".setBoundaries"
 }

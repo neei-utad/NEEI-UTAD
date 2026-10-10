@@ -25,6 +25,7 @@
 
   <!-- scripts -->
   <script src="./JS/menu.js" defer></script>
+  <script src="./JS/footer.js" defer></script>
   <script src="./JS/script.js" defer></script>
 </head>
 
@@ -44,6 +45,7 @@
           </a>
         </div>
 
+        <div class="menu-scroll">
         <ul id="menu-items">
           <li class="menu-item"><a href="./guia.html">Guia</a></li>
           <li class="line"></li>
@@ -64,10 +66,10 @@
             <i id="theme-toggle-icon" class="bi bi-brightness-high-fill"></i>
           </button>
         </div>
-      </nav>
+        </div>
 
-      <!-- mobile footer -->
-      <footer>
+        <!-- mobile footer -->
+        <footer>
         <p>Redes Sociais:</p>
         <div id="social-icons">
           <a href="https://www.twitch.tv/neeiutad" target="_blank">
@@ -92,7 +94,8 @@
         <p id="credits-secondary">Redesenhado por <a
             href="https://www.linkedin.com/in/patr%C3%ADcio-sim%C3%B5es-668219201/" target="_blank">Patrício
             Simões</a> e Ricardo Inácio</p>
-      </footer>
+        </footer>
+      </nav>
     </div>
   </header>
 
@@ -463,44 +466,7 @@
 
 </main>
 
-  <footer id="footer-large">
-    <div id="large-contact-area">
-      <p>Contactos:</p>
-      <div>
-        <a href="https://www.twitch.tv/neeiutad" target="_blank">
-          <i class="bi bi-envelope-fill"></i>neei@utad.pt
-        </a>
-      </div>
-    </div>
-    <div id="credits">
-      <p id="large-copyright">&copy;Copyright <b>2026 NEEI</b>. Todos os Direitos Reservados</p>
-      <p id="large-credits-main">Originalmente criado por <a href="https://www.linkedin.com/in/filipe-valadares/"
-          target="_blank">Filipe Valadares</a></p>
-      <p id="large-credits-secondary">Redesenhado por <a
-          href="https://www.linkedin.com/in/patr%C3%ADcio-sim%C3%B5es-668219201/" target="_blank">Patrício Simões</a> e
-        Ricardo Inácio</p>
-    </div>
-    <div id="large-social-area">
-      <p>Redes Sociais:</p>
-      <div>
-        <a href="https://www.twitch.tv/neeiutad" target="_blank">
-          <i class="bi bi-twitch"></i>
-        </a>
-        <a href="https://www.instagram.com/neei.utad/" target="_blank">
-          <i class="bi bi-instagram"></i>
-        </a>
-        <a href="https://www.facebook.com/neei.utad" target="_blank">
-          <i class="bi bi-facebook"></i>
-        </a>
-        <a href="https://www.youtube.com/@neeiutad" target="_blank">
-          <i class="bi bi-youtube"></i>
-        </a>
-        <a href="https://www.linkedin.com/company/neei/about/" target="_blank">
-          <i class="bi bi-linkedin"></i>
-        </a>
-      </div>
-    </div>
-  </footer>
+  <neei-footer id="footer-large"></neei-footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
