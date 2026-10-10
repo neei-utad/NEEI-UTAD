@@ -4,4 +4,4 @@ Website oficial do **Núcleo de Estudantes de Engenharia Informática da Univers
 
 ## Acesso
 
-[NEEI-UTAD](neei-utad.github.io/NEEI-UTAD/)
+[neei-utad.github.io/NEEI-UTAD/](https://neei-utad.github.io/NEEI-UTAD/)
