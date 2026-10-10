@@ -1,8 +1,10 @@
 // Código necessário para o funcionamento do carrossel.
-AOS.init();
-setTimeout(() => {
-	AOS.refresh();
-}, 100);
+if (typeof AOS !== "undefined") {
+	AOS.init();
+	setTimeout(() => {
+		AOS.refresh();
+	}, 100);
+}
 
 //carousel - glide.js
 var carousel = document.querySelector(".glide");
@@ -73,4 +75,25 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   setTimeout(typeTitle, 400);
+});
+
+/* expanding cards gallery */
+document.addEventListener("DOMContentLoaded", () => {
+  const gallery = document.getElementById("expanding-gallery");
+  if (!gallery) return;
+
+  const cards = gallery.querySelectorAll(".expand-card");
+  const hasHover = window.matchMedia("(hover: hover)").matches;
+
+  const setActive = (card) => {
+    cards.forEach((c) => c.classList.toggle("active", c === card));
+  };
+
+  cards.forEach((card) => {
+    if (hasHover) {
+      card.addEventListener("mouseenter", () => setActive(card));
+    } else {
+      card.addEventListener("click", () => setActive(card));
+    }
+  });
 });

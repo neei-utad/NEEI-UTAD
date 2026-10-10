@@ -124,6 +124,19 @@
       "source_location": "L34"
     },
     {
+      "id": "js_footer_neeifooter",
+      "label": "NeeiFooter",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 95,
+      "community_name": "NeeiFooter",
+      "file_type": "code",
+      "norm_label": "neeifooter",
+      "source_file": "JS/footer.js",
+      "source_location": "L4"
+    },
+    {
       "id": "php_phpmailer_src_phpmailer_phpmailer_setsmtpinstance",
       "label": ".setSMTPInstance()",
       "_callable": true,
@@ -832,6 +845,30 @@
       "source_location": "L2473"
     },
     {
+      "id": "php_phpmailer_src_phpmailer_phpmailer_alternativeexists",
+      "label": ".alternativeExists()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": ".preSend",
+      "file_type": "code",
+      "norm_label": ".alternativeexists()",
+      "source_file": "php/phpmailer/src/PHPMailer.php",
+      "source_location": "L4006"
+    },
+    {
+      "id": "php_phpmailer_src_phpmailer_phpmailer_attachmentexists",
+      "label": ".attachmentExists()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": ".preSend",
+      "file_type": "code",
+      "norm_label": ".attachmentexists()",
+      "source_file": "php/phpmailer/src/PHPMailer.php",
+      "source_location": "L3990"
+    },
+    {
       "id": "php_phpmailer_src_phpmailer_phpmailer_base64encodewrapmb",
       "label": ".base64EncodeWrapMB()",
       "_callable": true,
@@ -892,16 +929,16 @@
       "source_location": "L3606"
     },
     {
-      "id": "php_phpmailer_src_phpmailer_phpmailer_mailpassthru",
-      "label": ".mailPassthru()",
+      "id": "php_phpmailer_src_phpmailer_phpmailer_inlineimageexists",
+      "label": ".inlineImageExists()",
       "_callable": true,
       "_origin": "ast",
       "community": 12,
       "community_name": ".preSend",
       "file_type": "code",
-      "norm_label": ".mailpassthru()",
+      "norm_label": ".inlineimageexists()",
       "source_file": "php/phpmailer/src/PHPMailer.php",
-      "source_location": "L864"
+      "source_location": "L3974"
     },
     {
       "id": "php_phpmailer_src_phpmailer_phpmailer_presend",
@@ -928,16 +965,16 @@
       "source_location": "L4755"
     },
     {
-      "id": "php_phpmailer_src_smtp_smtp_mail",
-      "label": ".mail()",
+      "id": "php_phpmailer_src_phpmailer_phpmailer_setmessagetype",
+      "label": ".setMessageType()",
       "_callable": true,
       "_origin": "ast",
       "community": 12,
       "community_name": ".preSend",
       "file_type": "code",
-      "norm_label": ".mail()",
-      "source_file": "php/phpmailer/src/SMTP.php",
-      "source_location": "L916"
+      "norm_label": ".setmessagetype()",
+      "source_file": "php/phpmailer/src/PHPMailer.php",
+      "source_location": "L3196"
     },
     {
       "id": "php_python_google_criar_servico",
@@ -1132,6 +1169,18 @@
       "source_location": "L228"
     },
     {
+      "id": "php_phpmailer_src_phpmailer_phpmailer_attachall",
+      "label": ".attachAll()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 16,
+      "community_name": ".createBody",
+      "file_type": "code",
+      "norm_label": ".attachall()",
+      "source_file": "php/phpmailer/src/PHPMailer.php",
+      "source_location": "L3326"
+    },
+    {
       "id": "php_phpmailer_src_phpmailer_phpmailer_createbody",
       "label": ".createBody()",
       "_callable": true,
@@ -1144,6 +1193,42 @@
       "source_location": "L2858"
     },
     {
+      "id": "php_phpmailer_src_phpmailer_phpmailer_encodefile",
+      "label": ".encodeFile()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 16,
+      "community_name": ".createBody",
+      "file_type": "code",
+      "norm_label": ".encodefile()",
+      "source_file": "php/phpmailer/src/PHPMailer.php",
+      "source_location": "L3436"
+    },
+    {
+      "id": "php_phpmailer_src_phpmailer_phpmailer_encodeqp",
+      "label": ".encodeQP()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 16,
+      "community_name": ".createBody",
+      "file_type": "code",
+      "norm_label": ".encodeqp()",
+      "source_file": "php/phpmailer/src/PHPMailer.php",
+      "source_location": "L3681"
+    },
+    {
+      "id": "php_phpmailer_src_phpmailer_phpmailer_encodestring",
+      "label": ".encodeString()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 16,
+      "community_name": ".createBody",
+      "file_type": "code",
+      "norm_label": ".encodestring()",
+      "source_file": "php/phpmailer/src/PHPMailer.php",
+      "source_location": "L3471"
+    },
+    {
       "id": "php_phpmailer_src_phpmailer_phpmailer_endboundary",
       "label": ".endBoundary()",
       "_callable": true,
@@ -1154,30 +1239,6 @@
       "norm_label": ".endboundary()",
       "source_file": "php/phpmailer/src/PHPMailer.php",
       "source_location": "L3187"
-    },
-    {
-      "id": "php_phpmailer_src_phpmailer_phpmailer_generateid",
-      "label": ".generateId()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 16,
-      "community_name": ".createBody",
-      "file_type": "code",
-      "norm_label": ".generateid()",
-      "source_file": "php/phpmailer/src/PHPMailer.php",
-      "source_location": "L2826"
-    },
-    {
-      "id": "php_phpmailer_src_phpmailer_phpmailer_getboundaries",
-      "label": ".getBoundaries()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 16,
-      "community_name": ".createBody",
-      "file_type": "code",
-      "norm_label": ".getboundaries()",
-      "source_file": "php/phpmailer/src/PHPMailer.php",
-      "source_location": "L3138"
     },
     {
       "id": "php_phpmailer_src_phpmailer_phpmailer_getboundary",
@@ -1216,16 +1277,16 @@
       "source_location": "L3223"
     },
     {
-      "id": "php_phpmailer_src_phpmailer_phpmailer_setboundaries",
-      "label": ".setBoundaries()",
+      "id": "php_phpmailer_src_phpmailer_phpmailer_iserror",
+      "label": ".isError()",
       "_callable": true,
       "_origin": "ast",
       "community": 16,
       "community_name": ".createBody",
       "file_type": "code",
-      "norm_label": ".setboundaries()",
+      "norm_label": ".iserror()",
       "source_file": "php/phpmailer/src/PHPMailer.php",
-      "source_location": "L1141"
+      "source_location": "L4323"
     },
     {
       "id": "php_phpmailer_src_phpmailer_phpmailer_textline",
@@ -2173,7 +2234,7 @@
       "file_type": "code",
       "norm_label": "typecommand()",
       "source_file": "JS/script.js",
-      "source_location": "L64"
+      "source_location": "L66"
     },
     {
       "id": "js_script_typetitle",
@@ -2185,7 +2246,7 @@
       "file_type": "code",
       "norm_label": "typetitle()",
       "source_file": "JS/script.js",
-      "source_location": "L50"
+      "source_location": "L52"
     },
     {
       "id": "legacy_utad_code_and_conquer_mockup_js_timer_countdowntimer",
@@ -2380,18 +2441,6 @@
       "source_location": "L3887"
     },
     {
-      "id": "php_phpmailer_src_phpmailer_phpmailer_attachall",
-      "label": ".attachAll()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exception",
-      "file_type": "code",
-      "norm_label": ".attachall()",
-      "source_file": "php/phpmailer/src/PHPMailer.php",
-      "source_location": "L3326"
-    },
-    {
       "id": "php_phpmailer_src_phpmailer_phpmailer_docallback",
       "label": ".doCallback()",
       "_callable": true,
@@ -2416,42 +2465,6 @@
       "source_location": "L898"
     },
     {
-      "id": "php_phpmailer_src_phpmailer_phpmailer_encodefile",
-      "label": ".encodeFile()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exception",
-      "file_type": "code",
-      "norm_label": ".encodefile()",
-      "source_file": "php/phpmailer/src/PHPMailer.php",
-      "source_location": "L3436"
-    },
-    {
-      "id": "php_phpmailer_src_phpmailer_phpmailer_encodeqp",
-      "label": ".encodeQP()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exception",
-      "file_type": "code",
-      "norm_label": ".encodeqp()",
-      "source_file": "php/phpmailer/src/PHPMailer.php",
-      "source_location": "L3681"
-    },
-    {
-      "id": "php_phpmailer_src_phpmailer_phpmailer_encodestring",
-      "label": ".encodeString()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exception",
-      "file_type": "code",
-      "norm_label": ".encodestring()",
-      "source_file": "php/phpmailer/src/PHPMailer.php",
-      "source_location": "L3471"
-    },
-    {
       "id": "php_phpmailer_src_phpmailer_phpmailer_getsmtperrormessage",
       "label": ".getSmtpErrorMessage()",
       "_callable": true,
@@ -2474,18 +2487,6 @@
       "norm_label": ".getsmtpinstance()",
       "source_file": "php/phpmailer/src/PHPMailer.php",
       "source_location": "L1986"
-    },
-    {
-      "id": "php_phpmailer_src_phpmailer_phpmailer_iserror",
-      "label": ".isError()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exception",
-      "file_type": "code",
-      "norm_label": ".iserror()",
-      "source_file": "php/phpmailer/src/PHPMailer.php",
-      "source_location": "L4323"
     },
     {
       "id": "php_phpmailer_src_phpmailer_phpmailer_lang",
@@ -3160,6 +3161,30 @@
       "source_location": "L70"
     },
     {
+      "id": "php_phpmailer_src_phpmailer_phpmailer_mailpassthru",
+      "label": ".mailPassthru()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "PHPMailer \u2013 A full-featured email creation and transfer class for PHP",
+      "file_type": "code",
+      "norm_label": ".mailpassthru()",
+      "source_file": "php/phpmailer/src/PHPMailer.php",
+      "source_location": "L864"
+    },
+    {
+      "id": "php_phpmailer_src_smtp_smtp_mail",
+      "label": ".mail()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "PHPMailer \u2013 A full-featured email creation and transfer class for PHP",
+      "file_type": "code",
+      "norm_label": ".mail()",
+      "source_file": "php/phpmailer/src/SMTP.php",
+      "source_location": "L916"
+    },
+    {
       "id": "php_phpmailer_src_oauth_oauth_construct",
       "label": ".__construct()",
       "_callable": true,
@@ -3232,30 +3257,6 @@
       "source_location": "L5244"
     },
     {
-      "id": "php_phpmailer_src_phpmailer_phpmailer_alternativeexists",
-      "label": ".alternativeExists()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 9,
-      "community_name": ".msgHTML",
-      "file_type": "code",
-      "norm_label": ".alternativeexists()",
-      "source_file": "php/phpmailer/src/PHPMailer.php",
-      "source_location": "L4006"
-    },
-    {
-      "id": "php_phpmailer_src_phpmailer_phpmailer_attachmentexists",
-      "label": ".attachmentExists()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 9,
-      "community_name": ".msgHTML",
-      "file_type": "code",
-      "norm_label": ".attachmentexists()",
-      "source_file": "php/phpmailer/src/PHPMailer.php",
-      "source_location": "L3990"
-    },
-    {
       "id": "php_phpmailer_src_phpmailer_phpmailer_cidexists",
       "label": ".cidExists()",
       "_callable": true,
@@ -3290,18 +3291,6 @@
       "norm_label": ".html2text()",
       "source_file": "php/phpmailer/src/PHPMailer.php",
       "source_location": "L4509"
-    },
-    {
-      "id": "php_phpmailer_src_phpmailer_phpmailer_inlineimageexists",
-      "label": ".inlineImageExists()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 9,
-      "community_name": ".msgHTML",
-      "file_type": "code",
-      "norm_label": ".inlineimageexists()",
-      "source_file": "php/phpmailer/src/PHPMailer.php",
-      "source_location": "L3974"
     },
     {
       "id": "php_phpmailer_src_phpmailer_phpmailer_ishtml",
@@ -3340,18 +3329,6 @@
       "source_location": "L2311"
     },
     {
-      "id": "php_phpmailer_src_phpmailer_phpmailer_setmessagetype",
-      "label": ".setMessageType()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 9,
-      "community_name": ".msgHTML",
-      "file_type": "code",
-      "norm_label": ".setmessagetype()",
-      "source_file": "php/phpmailer/src/PHPMailer.php",
-      "source_location": "L3196"
-    },
-    {
       "id": "php_phpmailer_src_phpmailer_phpmailer_validateaddress",
       "label": ".validateAddress()",
       "_callable": true,
@@ -3362,6 +3339,54 @@
       "norm_label": ".validateaddress()",
       "source_file": "php/phpmailer/src/PHPMailer.php",
       "source_location": "L1381"
+    },
+    {
+      "id": "js_footer_neeifooter_connectedcallback",
+      "label": ".connectedCallback()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 95,
+      "community_name": "NeeiFooter",
+      "file_type": "code",
+      "norm_label": ".connectedcallback()",
+      "source_file": "JS/footer.js",
+      "source_location": "L5"
+    },
+    {
+      "id": "php_phpmailer_src_phpmailer_phpmailer_generateid",
+      "label": ".generateId()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 96,
+      "community_name": ".setBoundaries",
+      "file_type": "code",
+      "norm_label": ".generateid()",
+      "source_file": "php/phpmailer/src/PHPMailer.php",
+      "source_location": "L2826"
+    },
+    {
+      "id": "php_phpmailer_src_phpmailer_phpmailer_getboundaries",
+      "label": ".getBoundaries()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 96,
+      "community_name": ".setBoundaries",
+      "file_type": "code",
+      "norm_label": ".getboundaries()",
+      "source_file": "php/phpmailer/src/PHPMailer.php",
+      "source_location": "L3138"
+    },
+    {
+      "id": "php_phpmailer_src_phpmailer_phpmailer_setboundaries",
+      "label": ".setBoundaries()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 96,
+      "community_name": ".setBoundaries",
+      "file_type": "code",
+      "norm_label": ".setboundaries()",
+      "source_file": "php/phpmailer/src/PHPMailer.php",
+      "source_location": "L1141"
     },
     {
       "id": "php_phpmailer_composer",
@@ -3923,18 +3948,6 @@
       "norm_label": "verifica se a pasta tem mais de 5 arquivos e deleta todos se necessario.",
       "source_file": "php/python/Submit.py",
       "source_location": "L135"
-    },
-    {
-      "id": "php_phpmailer_readme_why_you_might_need_it",
-      "label": "Why you might need it",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": ".preSend",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "why you might need it",
-      "source_file": "php/phpmailer/README.md",
-      "source_location": "L32"
     },
     {
       "id": "php_python_google",
@@ -5168,6 +5181,18 @@
       "source_location": "L223"
     },
     {
+      "id": "php_phpmailer_readme_why_you_might_need_it",
+      "label": "Why you might need it",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "PHPMailer \u2013 A full-featured email creation and transfer class for PHP",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "why you might need it",
+      "source_file": "php/phpmailer/README.md",
+      "source_location": "L32"
+    },
+    {
       "id": "php_phpmailer_language_phpmailer_lang_lt",
       "label": "phpmailer.lang-lt.php",
       "_origin": "ast",
@@ -5522,6 +5547,17 @@
       "source_location": "L1"
     },
     {
+      "id": "js_footer",
+      "label": "footer.js",
+      "_origin": "ast",
+      "community": 95,
+      "community_name": "NeeiFooter",
+      "file_type": "code",
+      "norm_label": "footer.js",
+      "source_file": "JS/footer.js",
+      "source_location": "L1"
+    },
+    {
       "id": "imp",
       "label": "imp",
       "community": 11,
@@ -5846,7 +5882,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "JS/script.js",
-      "source_location": "L59",
+      "source_location": "L61",
       "weight": 1.0
     },
     {
@@ -9959,6 +9995,17 @@
       "weight": 1.0
     },
     {
+      "source": "js_footer",
+      "target": "js_footer_neeifooter",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "JS/footer.js",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
       "source": "js_menu",
       "target": "js_menu_breakpoints",
       "relation": "contains",
@@ -10076,7 +10123,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "JS/script.js",
-      "source_location": "L64",
+      "source_location": "L66",
       "weight": 1.0
     },
     {
@@ -11452,6 +11499,17 @@
       "confidence_score": 1.0,
       "source_file": "JS/calendar.js",
       "source_location": "L63",
+      "weight": 1.0
+    },
+    {
+      "source": "js_footer_neeifooter",
+      "target": "js_footer_neeifooter_connectedcallback",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "JS/footer.js",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -13952,7 +14010,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "JS/script.js",
-      "source_location": "L75",
+      "source_location": "L77",
       "weight": 1.0
     },
     {
@@ -14365,5 +14423,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "9b51dcaeb7bc32384e220200745ceacf3e6052ae"
+  "built_at_commit": "511af003641bf07eb05f81b02f23b068bf2781f8"
 }
