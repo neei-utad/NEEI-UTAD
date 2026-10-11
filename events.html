@@ -17,11 +17,10 @@
   <link rel="stylesheet" href="./CSS/palette.css">
   <link rel="stylesheet" href="./CSS/styles.css">
   <link rel="stylesheet" href="./CSS/index.css">
+  <link rel="stylesheet" href="./CSS/events.css">
 
   <!-- plugins css -->
-  <link rel="stylesheet" href="https://uicdn.toast.com/calendar/latest/toastui-calendar.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <link rel="stylesheet" href="https://unpkg.com/@glidejs/glide@3.5.2/dist/css/glide.core.min.css" />
 
   <!-- scripts -->
   <script src="./JS/menu.js" defer></script>
@@ -100,12 +99,39 @@
   </header>
 
   <main>
-    <section id="events-section">
+    <section id="topo" class="page sans">
 
-    <h1>Ainda não há eventos...</h1>
+      <!-- estado vazio -->
+      <section id="events-hero">
+        <i class="bi bi-calendar2-x"></i>
+        <h1>Ainda não há eventos</h1>
+        <p class="events-subtitle">Estamos a preparar as próximas atividades do núcleo. Fica atento às nossas redes sociais para não perderes nada!</p>
 
-      
-    <!-- template ex de eventos   
+        <!-- painel estilo terminal-->
+        <div class="terminal-panel events-terminal" aria-hidden="true">
+          <div class="terminal-panel-bar">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="terminal-panel-body">
+            <p><span class="terminal-path">~/neei/eventos &gt;</span> <span class="terminal-command">git log --oneline --all</span></p>
+            <p>a sincronizar calendário<span class="terminal-dots"></span></p>
+            <p>
+              status: <span class="terminal-status">a preparar próximos eventos</span>
+              <span class="terminal-progress"><span class="terminal-progress-bar"></span></span>
+              <span class="terminal-cursor fade-active">_</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="events-socials">
+          <a href="https://www.instagram.com/neei.utad/" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.facebook.com/neei.utad" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- template ex de eventos (mantido comentado para reativar quando houver eventos)
     <template id="tpl-2024-2025">
       <article id="events-2024-2025" class="events-row">
 
@@ -163,7 +189,7 @@
             <div class="event-card-back">
               <h1>Informações</h1>
               <p>
-                Pimba na beiça! O NEEI vai organizar de 10 a 15 de fevereiro o Torneio de 
+                Pimba na beiça! O NEEI vai organizar de 10 a 15 de fevereiro o Torneio de
                 Counter-Strike 2! Prepara-te para uma semana de pura adrenalina, competição e diversão!
               </p>
               <a href="https://forms.gle/TyGMJrvfdi3jt6zL9">Inscreve-te!</a>
@@ -178,8 +204,8 @@
             <div class="event-card-back">
               <h1>Informações</h1>
               <p>
-                Queres fazer parte de uma comunidade emergente que ajuda informática diariamente? 
-                Então junta-te ao Núcleo! O Núcleo de Estudantes de Engenharia Informática 
+                Queres fazer parte de uma comunidade emergente que ajuda informática diariamente?
+                Então junta-te ao Núcleo! O Núcleo de Estudantes de Engenharia Informática
                 está a recrutar alunos para os seus departamentos, e queremos que tu faças parte!
               </p>
               <a href="https://forms.gle/mgjt66ixYNFHZPQw9">Inscreve-te!</a>
@@ -194,7 +220,7 @@
             <div class="event-card-back">
               <h1>Informações</h1>
               <p>
-                Queres demonstrar os teus dotes de Sueca? Então participa no nosso torneio de Sueca! 
+                Queres demonstrar os teus dotes de Sueca? Então participa no nosso torneio de Sueca!
                 No dia 4 de Dezembro na metropolis!
               </p>
               <a href="https://forms.gle/FxJm61YQ13neKnnHA">Inscreve-te!</a>
@@ -209,7 +235,7 @@
             <div class="event-card-back">
               <h1>Informações</h1>
               <p>
-                O espírito natalício está no ar e o NEEI convida-te para uma noite especial! Junta-te a 
+                O espírito natalício está no ar e o NEEI convida-te para uma noite especial! Junta-te a
                 nós no dia 5 de dezembro às 20h na Metropolis para um Jantar de Natal cheio de sabor e solidariedade.
               </p>
               <a href="https://docs.google.com/forms/d/1DumrnPiWPtpvq2krfaGIT3c5YTyxGQTcpXoguhaDbRE/viewform">Inscreve-te!</a>
@@ -240,8 +266,8 @@
             <div class="event-card-back">
               <h1>Informações</h1>
               <p>
-                Estás preparado para uma futebolada? Então prepara-te, porque o teu núcleo tem o orgulho de 
-                apresentar o Torneio de EA FC de Informática! Inscreve-te para poderes competir contra os teus 
+                Estás preparado para uma futebolada? Então prepara-te, porque o teu núcleo tem o orgulho de
+                apresentar o Torneio de EA FC de Informática! Inscreve-te para poderes competir contra os teus
                 amigos e teres a chance de ganhar prémios!
               </p>
               <a href="https://docs.google.com/forms/d/1oL7qerHzHkElbBQ4A71StpBkRg-8IelWi60ayzqH2tk/viewform">Inscreve-te!</a>
@@ -256,7 +282,7 @@
             <div class="event-card-back">
               <h1>Informações</h1>
               <p>
-                Ding-ding, cheiras isto? É o cheiro de uma jantarada informática! Junta-te com os teus engenheiros no jantar de curso!    
+                Ding-ding, cheiras isto? É o cheiro de uma jantarada informática! Junta-te com os teus engenheiros no jantar de curso!
                 <br>
                 Por isso não esperes mais e reserva o teu lugar, se não a comida fica fria!
               </p>
@@ -272,7 +298,7 @@
             <div class="event-card-back">
               <h1>Informações</h1>
               <p>
-                O teu núcleo organizou uma palestra com o Rui Valente para explicar melhor as tuas saídas! Convidamos toda a comunidade de engenharia informática a ver esta Valente palestra! 
+                O teu núcleo organizou uma palestra com o Rui Valente para explicar melhor as tuas saídas! Convidamos toda a comunidade de engenharia informática a ver esta Valente palestra!
               </p>
             </div>
           </div>
@@ -298,18 +324,17 @@
             <div class="event-card-back">
               <h1>Informações</h1>
               <p>
-                Bem-vindo ao curso de Engenharia Informática na UTAD! Para te ajudar a assentar temos uma palestra para ti com o intuito de ficares informado de tudo que é LEI e AAUTAD. 
+                Bem-vindo ao curso de Engenharia Informática na UTAD! Para te ajudar a assentar temos uma palestra para ti com o intuito de ficares informado de tudo que é LEI e AAUTAD.
               </p>
             </div>
           </div>
-        </div>            
+        </div>
       </article>
     </template>-->
-    
-    </section>
 
   </main>
 
   <neei-footer id="footer-large"></neei-footer>
 
+</body>
 </html>

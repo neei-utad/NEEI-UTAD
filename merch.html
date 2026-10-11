@@ -17,11 +17,10 @@
   <link rel="stylesheet" href="./CSS/palette.css">
   <link rel="stylesheet" href="./CSS/styles.css">
   <link rel="stylesheet" href="./CSS/index.css">
+  <link rel="stylesheet" href="./CSS/merch.css">
 
   <!-- plugins css -->
-  <link rel="stylesheet" href="https://uicdn.toast.com/calendar/latest/toastui-calendar.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <link rel="stylesheet" href="https://unpkg.com/@glidejs/glide@3.5.2/dist/css/glide.core.min.css" />
 
   <!-- scripts -->
   <script src="./JS/menu.js" defer></script>
@@ -99,378 +98,37 @@
     </div>
   </header>
 
-<main>
-    <section class="main-merch-section">
-      <div class="container">
-        <div id="main-text">
-          <h1>Merch de<br>Inverno</h1>
-        </div>
-      </div>
-      <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#F5F8FD" fill-opacity="1" d="M0,288L1440,64L1440,320L0,320Z"></path>
-      </svg>
-    </section>
+  <main>
+    <section id="topo" class="page sans">
 
-    <!-- NOVAS NOVIDADES -->
-    <section id="new-section">
-      <div class="container">
-        <h2 id="new-header" class="section-header">Novidades</h2>
-        <div id="new-content">
-          <div data-aos="fade-in" data-aos-delay="300"><img class="new-image" src="./assets/images/merch/2025-2026/HoodieWeb-frente.png" /></div>
-          <div data-aos="fade-in" data-aos-delay="600"><img class="new-image" src="./assets/images/merch/2025-2026/HoodieBIP-frente.png" /></div>
-          <div data-aos="fade-in" data-aos-delay="900"><img class="new-image" src="./assets/images/merch/2025-2026/HoodieCloud-frente.png" /></div>
-        </div>
-      </div>
-    </section>
+      <!-- estado vazio -->
+      <section id="merch-hero">
+        <i class="bi bi-bag-heart"></i>
+        <h1>Merch Brevemente</h1>
+        <p class="merch-subtitle">A nova coleção de merch do NEEI está a ser preparada. Volta em breve para veres as novidades!</p>
 
-    <!-- PRODUTOS -->
-<section id="produtos-section">
-  <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path fill="#F5F8FD" fill-opacity="1" d="M0,256L1440,64L1440,0L0,0Z"></path>
-  </svg>
-  <h2 class="section-header">Produtos</h2>
-  <div class="container justify-content-center">
-    <div class="row" id="produtos-filtro">
-      <ul>
-        <li class="btn btn-light btn-dark" id="tudo">Tudo</li>
-        <li class="btn btn-light" id="roupa">Roupa</li>
-        <li class="btn btn-light" id="objetos">Objetos</li>
-      </ul>
-    </div>
-    <div class="produtos container">
-      <div class="row mx-auto">
-
-        <!-- Roupa -->
-        <div class="produto-card roupa">
-          <div style="background-image: url(./assets/images/merch/2025-2026/Parka-frente.png);background-size: contain;border-radius: 6%;"
-            class="produto-image">
-            <img src="./assets/images/merch/2025-2026/Parka-tras.png">
+        <!-- painel estilo terminal, decorativo, à imagem do hero da homepage -->
+        <div class="terminal-panel merch-terminal" aria-hidden="true">
+          <div class="terminal-panel-bar">
+            <span></span><span></span><span></span>
           </div>
-          <div class="produto-info">
-            <h5>Parka</h5>
-            <h3>30€</h3>
-          </div>
-        </div>
-
-        <div class="produto-card roupa">
-          <div style="background-image: url(./assets/images/merch/2025-2026/Casaco-frente.png);background-size: contain;border-radius: 6%;"
-            class="produto-image">
-            <img src="./assets/images/merch/2025-2026/Casaco-tras.png">
-          </div>
-          <div class="produto-info">
-            <h5>Casaco</h5>
-            <h3>25€</h3>
-          </div>
-        </div>
-
-        <div class="produto-card roupa">
-          <div style="background-image: url(./assets/images/merch/2025-2026/HoodieClassico-frente.png);background-size: contain;border-radius: 6%;"
-            class="produto-image">
-            <img src="./assets/images/merch/2025-2026/HoodieClassico-tras.png">
-          </div>
-          <div class="produto-info">
-            <h5>Hoodie Clássico</h5>
-            <h3>23€</h3>
-          </div>
-        </div>
-
-        <div class="produto-card roupa">
-          <div style="background-image: url(./assets/images/merch/2025-2026/HoodieWeb-frente.png);background-size: contain;border-radius: 6%;"
-            class="produto-image">
-            <img src="./assets/images/merch/2025-2026/HoodieWeb-tras.png">
-          </div>
-          <div class="produto-info">
-            <h5>Hoodie Web</h5>
-            <h3>22€</h3>
-          </div>
-        </div>
-
-        <div class="produto-card roupa">
-          <div style="background-image: url(./assets/images/merch/2025-2026/HoodieBIP-frente.png);background-size: contain;border-radius: 6%;"
-            class="produto-image">
-            <img src="./assets/images/merch/2025-2026/HoodieBIP-tras.png">
-          </div>
-          <div class="produto-info">
-            <h5>Hoodie Better In Pink</h5>
-            <h3>22€</h3>
-          </div>
-        </div>
-
-        <div class="produto-card roupa">
-          <div style="background-image: url(./assets/images/merch/2025-2026/HoodieCloud-frente.png);background-size: contain;border-radius: 6%;"
-            class="produto-image">
-            <img src="./assets/images/merch/2025-2026/HoodieCloud-tras.png">
-          </div>
-          <div class="produto-info">
-            <h5>Hoodie Cloud</h5>
-            <h3>22€</h3>
-          </div>
-        </div>
-
-        <div class="produto-card roupa">
-          <div style="background-image: url(./assets/images/merch/2025-2026/HoodieBranca-frente.png);background-size: contain;border-radius: 6%;"
-            class="produto-image">
-            <img src="./assets/images/merch/2025-2026/HoodieBranca-tras.png">
-          </div>
-          <div class="produto-info">
-            <h5>Hoodie Branca</h5>
-            <h3>22€</h3>
-          </div>
-        </div>
-
-        <div class="produto-card roupa">
-          <div style="background-image: url(./assets/images/merch/2025-2026/Tshirt.png);background-size: contain;border-radius: 6%;"
-            class="produto-image">
-            <img src="./assets/images/merch/2025-2026/Tshirt.png">
-          </div>
-          <div class="produto-info">
-            <h5>T-shirt</h5>
-            <h3>10€</h3>
-          </div>
-        </div>
-
-        <!-- Objetos -->
-        <div class="produto-card objetos">
-          <div style="background-image: url(./assets/images/merch/2025-2026/Isqueiro.png);background-size: contain;border-radius: 6%;"
-            class="produto-image">
-            <img src="./assets/images/merch/2025-2026/Isqueiro.png">
-          </div>
-          <div class="produto-info">
-            <h5>Isqueiro</h5>
-            <h3>1.5€</h3>
-          </div>
-        </div>
-
-        <div class="produto-card objetos">
-          <div style="background-image: url(./assets/images/merch/2025-2026/Tapete-de-rato.png);background-size: contain;border-radius: 6%;"
-            class="produto-image">
-            <img src="./assets/images/merch/2025-2026/Tapete-de-rato.png">
-          </div>
-          <div class="produto-info">
-            <h5>Tapete de Rato</h5>
-            <h3>4€</h3>
-          </div>
-        </div>
-
-        <div class="produto-card objetos">
-          <div style="background-image: url(./assets/images/merch/2025-2026/Meias.png);background-size: contain;border-radius: 6%;"
-            class="produto-image">
-            <img src="./assets/images/merch/2025-2026/Meias.png">
-          </div>
-          <div class="produto-info">
-            <h5>Meias</h5>
-            <h3>5€</h3>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-    <!-- PACKS -->
-<section id="packs-section">
-  <div class="container">
-    <h1 class="section-header" style="color:#000;">Packs</h1>
-    <div class="packs">
-
-      <!-- Pack C -->
-      <div data-aos="fade-up" data-aos-duration="1000" class="pack-row">
-        <h2 class="pack-header">Pack C</h2>
-        <p class="pack-description">Inclui Parka + Casaco</p>
-        <div class="row">
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/Parka-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/Casaco-frente.png"></div></div>
-        </div>
-        <h3>Preço</h3>
-        <div class="row justify-content-center">
-          <div class="pack-info"><h4 class="strikediag">53€</h4></div>
-          <div class="pack-discount"><h4>50€</h4></div>
-        </div>
-      </div>
-
-      <!-- Pack C++ -->
-      <div data-aos="fade-up" data-aos-duration="1000" class="pack-row">
-        <h2 class="pack-header">Pack C++</h2>
-        <p class="pack-description">Inclui Casaco + 2 Hoodies à escolha</p>
-        <div class="row">
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/Casaco-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/HoodieWeb-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/HoodieBIP-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/HoodieCloud-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/HoodieBranca-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/HoodieClassico-frente.png"></div></div>
-        </div>
-        <h3>Preço</h3>
-        <div class="row justify-content-center">
-          <div class="pack-info"><h4 class="strikediag">69€</h4></div>
-          <div class="pack-discount"><h4>58€</h4></div>
-        </div>
-      </div>
-
-      <!-- Pack Python -->
-      <div data-aos="fade-up" data-aos-duration="1000" class="pack-row">
-        <h2 class="pack-header">Pack Python</h2>
-        <p class="pack-description">Inclui Parka + 2 Hoodies à escolha</p>
-        <div class="row">
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/Parka-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/HoodieWeb-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/HoodieBIP-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/HoodieCloud-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/HoodieBranca-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/HoodieClassico-frente.png"></div></div>
-        </div>
-        <h3>Preço</h3>
-        <div class="row justify-content-center">
-          <div class="pack-info"><h4 class="strikediag">74€</h4></div>
-          <div class="pack-discount"><h4>66€</h4></div>
-        </div>
-      </div>
-
-      <!-- Pack C# -->
-      <div data-aos="fade-up" data-aos-duration="1000" class="pack-row">
-        <h2 class="pack-header">Pack C#</h2>
-        <p class="pack-description">Inclui 2 Hoodies à escolha</p>
-        <div class="row">
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/HoodieWeb-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/HoodieBIP-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/HoodieCloud-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/HoodieBranca-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/HoodieClassico-frente.png"></div></div>
-        </div>
-        <h3>Preço</h3>
-        <div class="row justify-content-center">
-          <div class="pack-info"><h4 class="strikediag">44€</h4></div>
-          <div class="pack-discount"><h4>40€</h4></div>
-        </div>
-      </div>
-
-      <!-- Pack Performance -->
-      <div data-aos="fade-up" data-aos-duration="1000" class="pack-row">
-        <h2 class="pack-header">Pack Performance</h2>
-        <p class="pack-description">Inclui Meias + Isqueiro + Tapete de rato</p>
-        <div class="row">
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/Meias.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/Isqueiro.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/Tapete-de-rato.png"></div></div>
-        </div>
-        <h3>Preço</h3>
-        <div class="row justify-content-center">
-          <div class="pack-info"><h4 class="strikediag">10.5€</h4></div>
-          <div class="pack-discount"><h4>10€</h4></div>
-        </div>
-      </div>
-
-      <!-- Pack HTML -->
-      <div data-aos="fade-up" data-aos-duration="1000" class="pack-row">
-        <h2 class="pack-header">Pack HTML</h2>
-        <p class="pack-description">Inclui Tapete de rato + T-shirt</p>
-        <div class="row">
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/Tapete-de-rato.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/Tshirt.png"></div></div>
-        </div>
-        <h3>Preço</h3>
-        <div class="row justify-content-center"><div class="pack-discount"><h4>14€</h4></div></div>
-      </div>
-
-      <!-- Pack Java -->
-      <div data-aos="fade-up" data-aos-duration="1000" class="pack-row">
-        <h2 class="pack-header">Pack Java</h2>
-        <p class="pack-description">Inclui Casaco + T-shirt</p>
-        <div class="row">
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/Casaco-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/Tshirt.png"></div></div>
-        </div>
-        <h3>Preço</h3>
-        <div class="row justify-content-center">
-          <div class="pack-info"><h4 class="strikediag">35€</h4></div>
-          <div class="pack-discount"><h4>30€</h4></div>
-        </div>
-      </div>
-
-      <!-- Pack Semi-Full -->
-      <div data-aos="fade-up" data-aos-duration="1000" class="pack-row">
-        <h2 class="pack-header">Pack Semi-Full</h2>
-        <p class="pack-description">Inclui Parka + Casaco + Hoodie Clássico + 2 Hoodies à escolha + Meias + Isqueiro + T-shirt + Tapete de rato</p>
-        <div class="row">
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/Parka-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/HoodieWeb-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/HoodieBIP-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/HoodieCloud-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/HoodieBranca-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/HoodieClassico-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/Casaco-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/Tshirt.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/Meias.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/Isqueiro.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/Tapete-de-rato.png"></div></div>
-        </div>
-        <h3>Preço</h3>
-        <div class="row justify-content-center">
-          <div class="pack-info"><h4 class="strikediag">142,50€</h4></div>
-          <div class="pack-discount"><h4>120€</h4></div>
-        </div>
-      </div>
-
-      <!-- Pack Full -->
-      <div data-aos="fade-up" data-aos-duration="1000" class="pack-row">
-        <h2 class="pack-header">Pack Full</h2>
-        <p class="pack-description">Inclui todos os artigos disponíveis</p>
-        <div class="row">
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/Parka-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/Casaco-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/HoodieClassico-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/HoodieWeb-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/HoodieBIP-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/HoodieCloud-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/HoodieBranca-frente.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/Tshirt.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/Isqueiro.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/Tapete-de-rato.png"></div></div>
-          <div class="pack-card"><div class="pack-image"><img src="./assets/images/merch/2025-2026/Meias.png"></div></div>
-        </div>
-        <h3>Preço</h3>
-        <div class="row justify-content-center">
-          <div class="pack-info"><h4 class="strikediag">186,50€</h4></div>
-          <div class="pack-discount"><h4>160€</h4></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <p style="text-align: center; background-color: transparent; padding: 1em 0 2em 0;">Fica atento/a, a merch de Verão chegará em breve :)</p>
-</section>
-<!-- Fim secção Packs -->
-
-
-    <!-- Inicio secção Order -->
-    <div style="background-color: #000">
-      <div class="container">
-        <h2 id="order-header" class="section-header">Fazer Encomenda</h2>
-        <section id="order-section">
-          <div data-aos="fade-right" data-aos-duration="1000" class="left-half">
+          <div class="terminal-panel-body">
+            <p><span class="terminal-path">~/neei/merch &gt;</span> <span class="terminal-command">git clone neei-merch-2026</span></p>
+            <p>a obter assets... <span class="terminal-ok">OK</span></p>
+            <p>a preparar nova coleção<span class="terminal-dots"></span></p>
             <p>
-              <ul>
-                  <li>Utiliza o formulário para realizar a encomenda da merch do curso</li>
-                  <li>Levanta a merch na sala do NEEI</li>
-              </ul>
+              status: <span class="terminal-status">em desenvolvimento</span>
+              <span class="terminal-progress"><span class="terminal-progress-bar"></span></span>
+              <span class="terminal-cursor fade-active">_</span>
             </p>
           </div>
-          <div data-aos="fade-left" data-aos-duration="1000" class="right-half">
-            <a class="btn btn-grad" href="https://forms.gle/9YjqfBtqJbJzyrLSA" target="_blank">
-              Encomenda</a>
-          </div>
-        </section>
-      </div>
-    </div>
-    <!-- Fim secção Order -->
+        </div>
+      </section>
 
-</main>
+    </section>
+  </main>
 
   <neei-footer id="footer-large"></neei-footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ once: true });
-  </script>
 </body>
 </html>

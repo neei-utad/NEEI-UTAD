@@ -30,9 +30,9 @@
     "semantic_hash": ""
   },
   "JS/menu.js": {
-    "mtime": 1789085890.3914738,
-    "seen": 1791595794.5455892,
-    "ast_hash": "a6a3eddeeb5278de93af029142133247",
+    "mtime": 1791677560.9419723,
+    "seen": 1791677697.2020414,
+    "ast_hash": "75e3e1379a2c0dedc4d4d6ffcc93314a",
     "semantic_hash": ""
   },
   "JS/merch.js": {
@@ -42,9 +42,9 @@
     "semantic_hash": ""
   },
   "JS/notes.js": {
-    "mtime": 1789085890.399422,
-    "seen": 1791595794.545591,
-    "ast_hash": "882f34ccd9e4da86b5b9ebe5371397e3",
+    "mtime": 1791675816.439794,
+    "seen": 1791677697.202044,
+    "ast_hash": "6cda804d42863001fe404d0b61b7730a",
     "semantic_hash": ""
   },
   "JS/script.js": {
@@ -606,9 +606,9 @@
     "semantic_hash": ""
   },
   "events.html": {
-    "mtime": 1791656146.787889,
-    "seen": 1791656312.14525,
-    "ast_hash": "1c5198965c696bd0f8565149524267ce",
+    "mtime": 1791678337.2177196,
+    "seen": 1791678353.4743235,
+    "ast_hash": "807cd60aae8738862a256a4c3f08284a",
     "semantic_hash": ""
   },
   "guia.html": {
@@ -660,21 +660,21 @@
     "semantic_hash": ""
   },
   "links.html": {
-    "mtime": 1791656148.9058855,
-    "seen": 1791656312.1452575,
-    "ast_hash": "16de925d16d5820920c3351808a001b5",
+    "mtime": 1791674577.2468596,
+    "seen": 1791677697.2021322,
+    "ast_hash": "fdbd49f38523335f2a250ca72d9c0f98",
     "semantic_hash": ""
   },
   "merch.html": {
-    "mtime": 1791656151.0099583,
-    "seen": 1791656312.1452582,
-    "ast_hash": "b0f482cd767bb896c8f3b52ba21bbbe8",
+    "mtime": 1791678328.7943404,
+    "seen": 1791678353.4743326,
+    "ast_hash": "8d82c288f62138ff7e9f3140302fbb83",
     "semantic_hash": ""
   },
   "notes.html": {
-    "mtime": 1791656153.1392581,
-    "seen": 1791656312.145259,
-    "ast_hash": "6e128b485f822cef176b64677a052d93",
+    "mtime": 1791675793.5989828,
+    "seen": 1791677697.2021334,
+    "ast_hash": "ccb28c4d9d25f69d78b7b7051bd6bb74",
     "semantic_hash": ""
   },
   "php/phpmailer/README.md": {
@@ -696,9 +696,9 @@
     "semantic_hash": ""
   },
   "politica.html": {
-    "mtime": 1791656155.232311,
-    "seen": 1791656312.145263,
-    "ast_hash": "591f0696dd6dcd35f3df0b5bd080b8c5",
+    "mtime": 1791677673.1581283,
+    "seen": 1791677697.2021365,
+    "ast_hash": "58469c245593af1da1d95f45f1234f7d",
     "semantic_hash": ""
   },
   "servicos.html": {
@@ -2229,6 +2229,12 @@
     "mtime": 1789301517.6493309,
     "seen": 1791655589.3327792,
     "ast_hash": "6869e8abd42c98dd7e923b316c86c24c",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1791662950.1892655,
+    "seen": 1791677697.2021224,
+    "ast_hash": "9ebd45eb3a1ff8a673a153db87a529cb",
     "semantic_hash": ""
   }
 }

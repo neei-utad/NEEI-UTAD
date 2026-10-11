@@ -17,16 +17,16 @@
   <link rel="stylesheet" href="./CSS/palette.css">
   <link rel="stylesheet" href="./CSS/styles.css">
   <link rel="stylesheet" href="./CSS/index.css">
+  <link rel="stylesheet" href="./CSS/apontamentos.css">
 
   <!-- plugins css -->
-  <link rel="stylesheet" href="https://uicdn.toast.com/calendar/latest/toastui-calendar.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <link rel="stylesheet" href="https://unpkg.com/@glidejs/glide@3.5.2/dist/css/glide.core.min.css" />
 
   <!-- scripts -->
   <script src="./JS/menu.js" defer></script>
   <script src="./JS/footer.js" defer></script>
   <script src="./JS/script.js" defer></script>
+  <script src="./JS/notes.js" defer></script>
 </head>
 
 <body>
@@ -100,19 +100,25 @@
   </header>
 
     <main>
+      <section id="topo" class="page sans">
+
+        <!-- hero -->
+        <section id="notes-hero">
+            <h1>Apontamentos</h1>
+            <p class="notes-subtitle">Resumos, exercícios e materiais de apoio partilhados pelos alunos do curso.</p>
+        </section>
+
         <section id="filter-section">
-            <h2>Apontamentos</h2>
-            <div class="filter-group-container">
-                <div class="filter-group">
-                    <button id="type-prev" class="arrow-btn">&lt;</button>
-                    <span id="type-display">Licenciatura</span>
-                    <button id="type-next" class="arrow-btn">&gt;</button>
+            <div class="filter-row">
+                <div class="filter-tabs" id="type-tabs">
+                    <button class="filter-tab active" data-type="lic">Licenciatura</button>
+                    <button class="filter-tab" data-type="mes">Mestrado</button>
                 </div>
-    
-                <div class="filter-group">
-                    <button id="year-prev" class="arrow-btn">&lt;</button>
-                    <span id="year-display">1º Ano</span>
-                    <button id="year-next" class="arrow-btn">&gt;</button>
+
+                <div class="filter-tabs" id="year-tabs">
+                    <button class="filter-tab active" data-year="1">1º Ano</button>
+                    <button class="filter-tab" data-year="2">2º Ano</button>
+                    <button class="filter-tab" data-year="3">3º Ano</button>
                 </div>
             </div>
             <div id="apontamentos-list">
@@ -130,7 +136,7 @@
             
         </section>
 
-
+      </section>
     </main>
 
     <neei-footer id="footer-large"></neei-footer>
