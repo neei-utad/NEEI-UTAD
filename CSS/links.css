@@ -1,146 +1,145 @@
-main {
-    min-height: 100vh;
-    background-image: url("../assets/images/main-bg.png") !important;
-    background-size: cover;
+/* estilos da página 'links.html', alinhado com guia.css */
+
+#topo {
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+  background-color: var(--page-top-bg);
 }
 
-#logo-neei{
-    width: 100%;
-    padding-top: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* hero */
+#links-hero {
+  text-align: center;
+  padding: 1rem 1.5rem 2.5rem;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-#links-section{
-    padding: 0 1em 2em 1em;
+#links-hero h1 {
+  margin: 0;
+  color: var(--text-heading);
+  font-weight: 800;
+  font-size: 3em;
 }
 
-#logo-neei img{
-    padding: 20px;
-    width: 150px;
-    height: 150px;
-    margin-bottom: 3em;
-    background-color: var(--links-logo-bg);
-    border: 1px solid var(--links-logo-border);
-    border-radius: 50%;
-    box-shadow: 0 0 5px var(--links-logo-bg);
+.links-page-subtitle {
+  margin: 1rem auto 0;
+  max-width: 560px;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.5;
 }
 
-.links-subsection{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    text-align: center;
+/* logo */
+#logo-neei {
+  width: 100%;
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.links-subsection h2{
-    font-size: 2em;
-    font-weight: 900;
-    color: var(--links-header-text);
-    margin-bottom: 1em;
+#logo-neei img {
+  padding: 20px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: var(--surface-bg);
+  border: 1px solid var(--surface-border);
+  box-shadow: 0 10px 30px var(--surface-shadow);
 }
 
-.links-subsection a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    box-sizing: border-box;
-    padding: 1em;
-    font-size: 1.2em;
-    font-weight: 700;
-    color: var(--links-link-text);
-    background-color: var(--links-link-bg);
-    border-radius: 12px;
-    border: 1px solid var(--links-link-border);
-    transition: all 0.5s ease-in-out;
+#links-section {
+  padding: 0 1.5rem 2rem;
 }
 
-.links-subsection i{
-    margin-right: 1em;
+/* cartões de secção */
+.links-subsection {
+  width: 95vw;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  background: var(--surface-bg);
+  border: 1px solid var(--surface-border);
+  box-shadow: 0 10px 30px var(--surface-shadow);
 }
 
-.links-subsection div+div{
-    margin-top: 1em;
+.links-subsection + .links-subsection {
+  margin-top: 1.5rem;
 }
 
-.links-subsection+.links-subsection{
-    margin-top: 2em;
+.links-subsection h2 {
+  position: relative;
+  margin: 0 0 1.4rem;
+  padding-bottom: 0.6rem;
+  color: var(--text-heading);
+  font-weight: 800;
+  font-size: 1.6em;
 }
 
-.links-subsection a:hover{
-    box-shadow: 2px 2px 4px var(--links-link-shadow);
+.links-subsection h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  translate: -50% 0;
+  width: 50px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--main-orange-color);
+  box-shadow: 0 0 12px var(--main-orange-color);
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    #logo-neei img{
-        padding: 25px;
-        width: 200px;
-        height: 200px;
-        margin-bottom: 3.5em;
-    }
-
-    .links-subsection h2{
-        font-size: 2.5em;
-    }
-
-    .links-subsection a{
-        width: 500px;
-        font-size: 1.35em;
-    }
+.links-subsection a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+  padding: 0.85em 1.4em;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  background: transparent;
+  border: 1px solid var(--surface-border-strong);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: border-color 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    #logo-neei img{
-        width: 250px;
-        height: 250px;
-    }
-
-    .links-subsection h2{
-        font-size: 3.5em;
-    }
-
-    .links-subsection a{
-        width: 600px;
-        font-size: 1.5em;
-    }
+.links-subsection i {
+  color: var(--main-orange-color);
+  font-size: 1.1em;
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    #links-section {
-        /* 65px = height do menu */
-        padding-top: 80px;
-    }
-
-    .links-subsection h2{
-        font-size: 4em;
-    }
-
-    .links-subsection a{
-        width: 750px;
-        font-size: 1.60em;
-    }
-
-    .links-subsection a:hover{
-        font-size: 1.75em;
-    }
-
-    .links-subsection+.links-subsection{
-        margin-top: 3em;
-    }
+.links-subsection div + div {
+  margin-top: 0.9rem;
 }
 
-@media only screen and (min-width: 1200px) {
-    .links-subsection h2{
-        font-size: 4.5em;
-    }
+.links-subsection a:hover {
+  border-color: var(--main-orange-color);
+  color: var(--main-orange-color);
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(235, 94, 20, 0.2);
+}
 
-    .links-subsection+.links-subsection{
-        margin-top: 3.5em;
-    }
+/* responsivo */
+@media (max-width: 768px) {
+  #links-hero h1 {
+    font-size: 2.2em;
+  }
+
+  .links-subsection {
+    padding: 1.6rem 1.2rem;
+  }
+
+  .links-subsection h2 {
+    font-size: 1.35em;
+  }
 }

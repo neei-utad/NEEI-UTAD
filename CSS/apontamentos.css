@@ -1,286 +1,254 @@
-/* Main Container */
-main {
-    min-height: 100vh;
-    background-image: url("../assets/images/main-bg.png") !important;
-    background-size: cover;
+/* estilos da página 'notes.html', alinhado com guia.css */
+
+/* substitui o anel azul de foco do Bootstrap (usado em notes.html e apontamentos.php) pela cor da marca */
+.btn:focus,
+.btn.focus {
+  box-shadow: 0 0 0 0.2rem rgba(235, 94, 20, 0.35);
 }
 
-section{
-    margin-top: 75px;
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+#topo {
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+  background-color: var(--page-top-bg);
 }
 
-section h1 {
-    text-align: center;
-    font-weight: 700;
+/* hero */
+#notes-hero {
+  text-align: center;
+  padding: 1rem 1.5rem 2.5rem;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-section h2 {
-    padding: 0.5em 0 0.5em 0;
-    color: var(--section-header);
-    text-align: center;
-    font-weight: 700;
-    font-size: 2em;
+#notes-hero h1 {
+  margin: 0;
+  color: var(--text-heading);
+  font-weight: 800;
+  font-size: 3em;
 }
 
-/* Filter Section */
+.notes-subtitle {
+  margin: 1rem auto 0;
+  max-width: 560px;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
 #filter-section {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 1rem;
-    background: var(--carousel-section-bg);
-    border-radius: 8px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 10px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  border-radius: 14px;
+  background: var(--surface-bg);
+  border: 1px solid var(--surface-border);
+  box-shadow: 0 10px 30px var(--surface-shadow);
 }
 
-#filter-section > h2 {
-    margin-bottom: 20px; 
-    text-align: center; 
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
 }
 
-.filter-group-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Space between the two filters */
+.filter-tabs {
+  display: flex;
+  gap: 0.3rem;
+  width: 300px;
+  padding: 0.3rem;
+  background: var(--control-bg);
+  border: 1px solid var(--surface-border);
+  border-radius: 12px;
+  transition: opacity 0.25s ease;
 }
 
-
-/* Filter Groups */
-.filter-group {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.2rem;
-    color: var(--input-fg);
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 10px 15px;
-    border-radius: 8px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+.filter-tabs.disabled {
+  opacity: 0.35;
+  pointer-events: none;
 }
 
-
-.filter-group span {
-    min-width: 120px; 
-    text-align: center;
-    display: inline-block;
+.filter-tab {
+  flex: 1;
+  text-align: center;
+  padding: 0.55em 1.1em;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-faint);
+  background: transparent;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease;
 }
 
-/* Arrow Buttons */
-.arrow-btn {
-    background: var(--btn-bg);
-    color: var(--btn-fg);
-    border: none;
-    font-size: 1.2rem;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    border-radius: 5px;
+.filter-tab:hover {
+  color: var(--text-heading);
 }
 
-.arrow-btn:hover {
-    background-color: var(--active-page);
-    color: #fff;
+.filter-tab.active {
+  background: var(--main-orange-color);
+  color: var(--text-heading);
+  box-shadow: 0 0 16px rgba(235, 94, 20, 0.35);
 }
 
-.arrow-btn:disabled {
-    background-color: #555;
-    cursor: not-allowed;
+.filter-tab:active {
+  transform: scale(0.95);
 }
 
-/* Filter Button */
-#filter-btn {
-    font-weight: bold;
-    background-color: var(--btn-bg);
-    color: var(--btn-fg);
-    padding: 10px 15px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    border: none;
-}
-
-#filter-btn:hover {
-    background-color: var(--active-page);
-    color: #fff;
-}
-
-/* Notes Section */
+/* listagem de apontamentos */
 #apontamentos-list {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    width: 100%;
-    margin-top: 20px;
+  width: 95vw;
+  max-width: 950px;
+  margin: 0 auto;
+  display: flex;
+  gap: 1.5rem;
 }
 
 .sem-column {
-    width: 48%;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  flex: 1;
+  padding: 1.5rem;
+  border-radius: 20px;
+  background: var(--surface-bg);
+  border: 1px solid var(--surface-border);
+  box-shadow: 0 10px 30px var(--surface-shadow);
 }
 
+.sem-column h1,
 .sem-column h2 {
-    text-align: center;
-    color: var(--input-fg);
-    margin-bottom: 10px;
+  position: relative;
+  margin: 0 0 1.4rem;
+  padding-bottom: 0.6rem;
+  text-align: center;
+  color: var(--text-heading);
+  font-weight: 800;
+  font-size: 1.3em;
 }
 
-/* Note Cards */
+.sem-column h1::after,
+.sem-column h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  translate: -50% 0;
+  width: 40px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--main-orange-color);
+  box-shadow: 0 0 12px var(--main-orange-color);
+}
+
 .note-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.note-card a {
-    flex-shrink: 0; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  background: var(--control-bg);
+  border: 1px solid var(--hairline);
+  padding: 0.9em 1.1em;
+  border-radius: 12px;
+  margin-top: 0.8rem;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .note-card:hover {
-    transform: scale(1.01);
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  border-color: rgba(235, 94, 20, 0.4);
+  box-shadow: 0 0 20px rgba(235, 94, 20, 0.15);
 }
 
-/* Note Text */
 .note-text {
-    text-align: justify;
-    word-wrap: break-word;
-    font-size: 1rem;
-    color: var(--input-fg);
+  text-align: left;
+  word-wrap: break-word;
+  font-size: 0.95rem;
+  color: var(--text-body);
 }
 
-/* Download Button */
+.note-card a {
+  flex-shrink: 0;
+}
+
 .note-card button {
-    padding: 8px 12px;
-    background-color: var(--btn-bg);
-    color: var(--btn-fg);
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s ease;
+  padding: 0.5em 1em;
+  background: var(--main-orange-color);
+  color: var(--text-heading);
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
 .note-card button:hover {
-    background-color: var(--active-page);
-    color: #fff;
+  background: var(--accent-hover);
+  transform: translateY(-2px);
 }
 
-/* Button Container */
+/* botão submeter */
 .button-container {
-    display: flex;
-    justify-content: center; 
-    margin-top: 15px; 
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .button-container a.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    background-color: var(--btn-bg);
-    border-radius: 6px;
-    transition: background 0.3s ease;
-    border: none; 
-}
-
-.button-container a.btn:focus {
-    outline: none;
-    box-shadow: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7em 1.4em;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-heading);
+  background: var(--main-orange-color);
+  border-radius: 10px;
+  transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
 .button-container a.btn:hover {
-    background-color: var(--active-page); 
-    color: #fff;
+  background: var(--accent-hover);
+  transform: translateY(-2px);
 }
 
-/* Responsive Adjustments */
-@media screen and (max-width: 768px) {
-    #filter-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        width: 100%;
-    }
+.button-container a.btn:focus {
+  outline: none;
+}
 
-    .filter-group-container {
-        display: flex;
-        flex-direction: column; 
-        align-items: center;
-        gap: 10px;
-        width: 100%;
-    }
+/* responsivo */
+@media (max-width: 768px) {
+  #notes-hero h1 {
+    font-size: 2.2em;
+  }
 
-    .filter-group {
-        width: 90%; 
-        justify-content: center;
-    }
+  .filter-row {
+    flex-direction: column;
+    width: 100%;
+  }
 
-    #apontamentos-list {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
+  .filter-tabs {
+    width: 90%;
+    justify-content: center;
+  }
 
-    .sem-column {
-        width: 90%; 
-        max-width: 500px;
-        margin-bottom: 15px;
-    }
+  .filter-tab {
+    flex: 1;
+  }
 
-    .note-card {
-        display: flex;
-        flex-direction: row; 
-        align-items: center; 
-        justify-content: space-between; 
-        text-align: justify;
-        gap: 10px;
-        padding: 12px;
-        width: 100%;
-    }
+  #apontamentos-list {
+    flex-direction: column;
+  }
 
-    .note-text {
-        flex: 1; 
-        text-align: left; 
-    }
-   
-    .note-card a {
-        flex-shrink: 0; 
-    }
-
-    .note-card button {
-        width: auto;
-        min-width: 80px;
-        padding: 8px 12px;
-        font-size: 0.9rem;
-    }
-
-    .button-container {
-        width: 100%;
-    }
-
-    .button-container a.btn {
-        width: 80%;
-        text-align: center;
-    }
+  .note-card {
+    flex-direction: row;
+    text-align: left;
+  }
 }

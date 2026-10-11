@@ -21,15 +21,14 @@
   "19": "calendar.js",
   "20": ".addOrEnqueueAnAddress",
   "21": "get_oauth_token.php",
-  "22": ".DKIM_Add",
+  "22": "confirm.php",
   "23": "events.js",
   "24": "utad-code-and-conquer-mockup/js/popup.js",
   "25": "utadsummit2022-inativo-backup/js/popup.js",
-  "26": ".clearQueuedAddresses",
+  "26": "NEEI-UTAD",
   "27": "celery_config.py",
   "28": "script.js",
   "29": "CountDownTimer",
-  "30": ".wrapText",
   "31": "CLAUDE.md",
   "32": "PHPMailer.php",
   "33": "apontamentos.php",
@@ -94,6 +93,5 @@
   "92": "phpmailer.lang-vi.php",
   "93": "phpmailer.lang-zh.php",
   "94": "phpmailer.lang-zh_cn.php",
-  "95": "NeeiFooter",
-  "96": ".setBoundaries"
+  "95": "NeeiFooter"
 }

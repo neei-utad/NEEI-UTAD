@@ -1,19 +1,21 @@
-/* Cores, estilos e media queries da página do Workshop de Linux */
+/* cores da página do Workshop de Linux */
 
-:root.dark {
+:root {
+    /* texto sobre a foto de fundo, fixo em ambos os temas */
     --color-1: #FFF;
-    --color-2: #000;
     --color-3: #FF5C00;
     --color-4: #32AA32;
     --color-5: #8582a8;
 }
 
+:root.dark {
+    --ws-section-bg: #000;
+    --ws-section-text: #FFF;
+}
+
 :root.light {
-    --color-1: #FFF;
-    --color-2: #000;
-    --color-3: #FF5C00;
-    --color-4: #32AA32;
-    --color-5: #8582a8;
+    --ws-section-bg: #F5F8FD;
+    --ws-section-text: #0d0d0d;
 }
 
 
@@ -67,8 +69,8 @@
 }
 
 #info-section {
-    background-color: var(--color-2);
-    color: var(--color-1);
+    background-color: var(--ws-section-bg);
+    color: var(--ws-section-text);
     text-align: center;
     padding: 0 10em;
 }

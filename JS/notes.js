@@ -1,79 +1,38 @@
+let currentType = "lic";
+let currentYear = "1";
+
+const typeTabs = document.querySelectorAll("#type-tabs .filter-tab");
+const yearTabsContainer = document.getElementById("year-tabs");
+const yearTabs = document.querySelectorAll("#year-tabs .filter-tab");
+
+typeTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+        if (tab.classList.contains("active")) return;
+        currentType = tab.dataset.type;
+        typeTabs.forEach((t) => t.classList.toggle("active", t === tab));
+        updateYearTabsState();
+        filterNotes();
+    });
+});
+
+yearTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+        if (currentType === "mes" || tab.classList.contains("active")) return;
+        currentYear = tab.dataset.year;
+        yearTabs.forEach((t) => t.classList.toggle("active", t === tab));
+        filterNotes();
+    });
+});
+
+function updateYearTabsState() {
+    const isMestrado = currentType === "mes";
+    yearTabsContainer.classList.toggle("disabled", isMestrado);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
-    currentTypeIndex = 0; 
-    currentYearIndex = 0; 
-
-    updateFilterUI(); 
+    updateYearTabsState();
     filterNotes();
 });
-
-// Event listeners for filtering
-document.getElementById("type-prev").addEventListener("click", () => {
-    changeType(-1);
-    filterNotes(); 
-});
-document.getElementById("type-next").addEventListener("click", () => {
-    changeType(1);
-    filterNotes();
-});
-document.getElementById("year-prev").addEventListener("click", () => {
-    changeYear(-1);
-    filterNotes();
-});
-document.getElementById("year-next").addEventListener("click", () => {
-    changeYear(1);
-    filterNotes();
-});
-
-const types = ["lic", "mes"];
-const years = ["1", "2", "3"];
-
-let currentTypeIndex = 0;
-let currentYearIndex = 0;
-
-const typeDisplay = document.getElementById("type-display");
-const yearDisplay = document.getElementById("year-display");
-
-function changeType(direction) {
-    currentTypeIndex = (currentTypeIndex + direction + types.length) % types.length;
-    updateFilterUI();
-    //updateYearButtons();
-    filterNotes();
-}
-
-function changeYear(direction) {
-    currentYearIndex = (currentYearIndex + direction + years.length) % years.length;
-    updateFilterUI();
-    filterNotes();
-}
-
-function updateFilterUI() {
-    typeDisplay.textContent = types[currentTypeIndex] === "lic" ? "Licenciatura" : "Mestrado";
-
-    if (types[currentTypeIndex] === "mes") {
-        yearDisplay.textContent = "—";
-        document.getElementById("year-prev").disabled = true;
-        document.getElementById("year-next").disabled = true;
-        yearDisplay.style.opacity = "0.5";
-    } else {
-        document.getElementById("year-prev").disabled = false;
-        document.getElementById("year-next").disabled = false;
-        yearDisplay.style.opacity = "1";
-        yearDisplay.textContent = `${years[currentYearIndex]}º Ano`;
-    }
-}
-
-/*function updateYearButtons() {
-    const isMestrado = types[currentTypeIndex] === "mes";
-    document.getElementById("year-prev").disabled = isMestrado;
-    document.getElementById("year-next").disabled = isMestrado;
-    yearDisplay.style.opacity = isMestrado ? "0.5" : "1";
-
-    if (isMestrado) {
-        yearDisplay.textContent = "—";
-    } else {
-        changeYear(0);
-    }
-}*/
 
 const notes = [
     //*****Licenciatura*****//
@@ -166,11 +125,8 @@ function displayNotes(filteredNotes = notes) {
 }
 
 function filterNotes() {
-    const type = types[currentTypeIndex];
-    const year = years[currentYearIndex];
-
     let filtered = notes.filter((note) =>
-        note.type === type && (type === "mes" || note.year === year)
+        note.type === currentType && (currentType === "mes" || note.year === currentYear)
     );
 
     displayNotes(filtered);
