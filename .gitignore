@@ -1,0 +1,15 @@
+# Claude Code / AI tooling (local, machine-specific)
+.claude/
+graphify-out/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Logs / temp
+*.log
+*.tmp
