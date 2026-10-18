@@ -211,7 +211,7 @@ if (empty($_SESSION['csrf_token'])) {
             fileExtension = fileName.split('.').slice(-2).join('.');
           }
   
-          if (fileSize > 150) { // se o arquivo for maior que 150 MB
+          if (fileSize > 75) { // se o arquivo for maior que 75 MB
             alert('O arquivo excede o limite máximo de 150MB.');
             fileInput.value = ''; // limpa o campo do arquivo
             fileLabel.textContent = 'Escolher ficheiros'; // reset para o texto original

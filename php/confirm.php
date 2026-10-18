@@ -17,7 +17,7 @@ define("DB_NAME", $config['DB_NAME']);
 $log_dir = '/home/neeiuta1/logs'; // Diretório para logs
 $log_file = $log_dir . '/confirm.log'; // Ficheiro de log específico para confirmações
 if (!is_dir($log_dir)) {
-    mkdir($log_dir, 0777, true); // Criar o diretório se não existir
+    mkdir($log_dir, 0700, true); // Criar o diretório se não existir
 }
 
 // Função para escrever no log
