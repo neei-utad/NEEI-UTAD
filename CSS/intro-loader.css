@@ -1,0 +1,119 @@
+html:has(#intro-loader) {
+  overflow: hidden;
+}
+
+.intro-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  animation: introLoaderSequence 1.6s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+.intro-loader__art {
+  width: min(38vw, 200px);
+  height: auto;
+  overflow: visible;
+}
+
+.intro-loader__glow,
+.intro-loader__core {
+  fill: none;
+  stroke: var(--active-page, #FF5C00);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 380;
+  stroke-dashoffset: 380;
+  animation: introDraw 0.7s cubic-bezier(0.65, 0, 0.35, 1) 0.1s forwards;
+}
+
+.intro-loader__glow {
+  stroke-width: 5.5;
+  opacity: 0.5;
+  filter: blur(7px);
+}
+
+.intro-loader__core {
+  stroke-width: 1.6;
+  filter: drop-shadow(0 0 3px #fff8f0) drop-shadow(0 0 10px var(--active-page, #FF5C00));
+}
+
+.intro-loader__spark {
+  fill: #fff8f0;
+  opacity: 0;
+  filter: drop-shadow(0 0 4px #fff) drop-shadow(0 0 9px var(--active-page, #FF5C00));
+  offset-path: path('M 0 0 L 39.48 27.31 L 78.97 0 L 78.97 10.89 L 63.84 21.4 L 63.84 71.77 L 64.58 71.77 L 78.97 61.62 L 78.97 72.69 L 39.48 100 L 0 72.69 L 0 0.19 Z');
+  offset-rotate: 0deg;
+  offset-distance: 0%;
+  animation: introSparkTravel 0.7s cubic-bezier(0.65, 0, 0.35, 1) 0.1s forwards,
+    introSparkFade 0.22s ease-in 0.72s forwards;
+}
+
+@keyframes introDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes introSparkTravel {
+  0% {
+    opacity: 1;
+    offset-distance: 0%;
+  }
+
+  100% {
+    opacity: 1;
+    offset-distance: 100%;
+  }
+}
+
+@keyframes introSparkFade {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes introLoaderSequence {
+  0%,
+  62.5% {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-loader {
+    animation: introLoaderReduced 0.4s ease forwards;
+  }
+
+  .intro-loader__glow,
+  .intro-loader__core {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+
+  .intro-loader__spark {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+@keyframes introLoaderReduced {
+  0% {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}

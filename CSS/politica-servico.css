@@ -1,35 +1,58 @@
-#politicaservico-section{
-    background-color: #CCC;
-    padding: 0 1em 2em 1em;
-    padding-top: 80px;
+#politicaservico-section {
+    background-color: var(--page-top-bg);
+    padding: 7rem 1.5rem 4rem;
 }
 
-#politicaservicotexto-section{
-    width: 95%;
-    margin: 0 2.5%;
-    position: relative;
-    top: 15px;
-    background-color: var(--card-description-bg);
-    border-radius: 8px;
-    color: var(--card-description-text);
-    z-index: 0;
-    text-align: justify;
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    font-size: 1.5em;
-    line-height: 1.5em;
+@media (min-width: 1024px) {
+    #politicaservico-section {
+        padding-top: 8rem;
+    }
 }
 
-section h2 {
-    padding: 1em 0 1.5em 0;
-    color: var(--section-header);
-    text-align: center;
-    font-weight: 700;
-    font-size: 2.5em;
+#politicaservicotexto-section {
+    max-width: 69rem;
+    margin: 0 auto;
+    color: var(--text-body);
+    font-size: 0.9375rem;
+    line-height: 1.75;
 }
 
-section h1 {
+/* primeiro h2 é o título */
+#politicaservicotexto-section > h2:first-child {
+    margin: 0 0 2.5rem;
+    padding: 0;
+    text-align: left;
+    font-size: 2.25rem;
     font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--text-heading);
 }
+
+#politicaservicotexto-section h3 {
+    margin: 2rem 0 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-heading);
+}
+
+#politicaservicotexto-section p,
+#politicaservicotexto-section ul {
+    max-width: 46rem;
+    margin: 0 0 1rem;
+}
+
+#politicaservicotexto-section a {
+    color: var(--main-orange-color);
+}
+
+@media (max-width: 640px) {
+    #politicaservico-section {
+        padding: 7rem 1rem 3rem;
+    }
+
+    #politicaservicotexto-section > h2:first-child {
+        font-size: 1.75rem;
+    }
+}
+

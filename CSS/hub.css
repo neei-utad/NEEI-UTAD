@@ -1,0 +1,79 @@
+/* triplets rgb para o tailwind */
+:root.dark {
+  --hub-surface: 20 20 22;
+  --hub-fg: 237 237 239;
+  --hub-muted: 138 143 152;
+  --hub-line: 255 255 255;
+}
+
+:root.light {
+  --hub-surface: 255 255 255;
+  --hub-fg: 17 17 19;
+  --hub-muted: 99 104 114;
+  --hub-line: 0 0 0;
+}
+
+/* substitui o reboot do bootstrap */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  background-color: var(--page-top-bg);
+  color: rgb(var(--hub-fg));
+  -webkit-font-smoothing: antialiased;
+}
+
+.hub-fade {
+  animation: page-fade-in 280ms cubic-bezier(0.2, 0, 0, 1) both;
+}
+
+/* tailwind corre sem preflight */
+.hub-root {
+  font-family: var(--font-sans);
+  line-height: 1.5;
+}
+
+.hub-root *,
+.hub-root *::before,
+.hub-root *::after {
+  box-sizing: border-box;
+  font-family: inherit;
+  border: 0 solid rgb(var(--hub-line) / 0.1);
+}
+
+:where(.hub-root) button {
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  background: transparent;
+  border-width: 0;
+}
+
+:where(.hub-root) a {
+  color: inherit;
+}
+
+:where(.hub-root) a:hover {
+  text-decoration: none;
+}
+
+:where(.hub-root) img {
+  display: block;
+  max-width: 100%;
+}
+
+.hub-root :focus-visible {
+  outline: 2px solid var(--main-orange-color);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hub-fade,
+  .hub-root * {
+    transition: none !important;
+  }
+}

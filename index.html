@@ -4,33 +4,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./JS/theme.js"></script>
   <title>NEEI - UTAD</title>
   <link rel="stylesheet" href="./CSS/reset.css">
   <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
 
-  <!-- bootstrap css -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
 
-  <!-- css -->
   <link rel="stylesheet" href="./CSS/palette.css">
   <link rel="stylesheet" href="./CSS/styles.css">
   <link rel="stylesheet" href="./CSS/index.css">
+  <link rel="stylesheet" href="./CSS/intro-loader.css">
 
-  <!-- plugins css -->
-  <link rel="stylesheet" href="https://uicdn.toast.com/calendar/latest/toastui-calendar.min.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <link rel="stylesheet" href="https://unpkg.com/@glidejs/glide@3.5.2/dist/css/glide.core.min.css" />
-
-  <!-- scripts -->
   <script src="./JS/menu.js" defer></script>
-  <script src="./JS/script.js" defer></script>
+  <script src="./JS/home.js" defer></script>
   <script src="./JS/footer.js" defer></script>
 </head>
 
 <body>
-  <!-- navigation -->
+  <div id="intro-loader" class="intro-loader" aria-hidden="true">
+    <svg class="intro-loader__art" viewBox="0 0 78.97 100" focusable="false">
+      <path class="intro-loader__glow"
+        d="M 0 0 L 39.48 27.31 L 78.97 0 L 78.97 10.89 L 63.84 21.4 L 63.84 71.77 L 64.58 71.77 L 78.97 61.62 L 78.97 72.69 L 39.48 100 L 0 72.69 L 0 0.19 Z" />
+      <path class="intro-loader__core"
+        d="M 0 0 L 39.48 27.31 L 78.97 0 L 78.97 10.89 L 63.84 21.4 L 63.84 71.77 L 64.58 71.77 L 78.97 61.62 L 78.97 72.69 L 39.48 100 L 0 72.69 L 0 0.19 Z" />
+      <circle class="intro-loader__spark" r="1.7" />
+    </svg>
+  </div>
+  <noscript>
+    <style>#intro-loader { display: none; }</style>
+  </noscript>
+  <script>
+    (function () {
+      var KEY = 'neeiIntroSeen';
+      var el = document.getElementById('intro-loader');
+      if (!el) return;
+      var seen = false;
+      try { seen = sessionStorage.getItem(KEY) === '1'; } catch (e) { }
+      if (seen) { el.remove(); return; }
+      try { sessionStorage.setItem(KEY, '1'); } catch (e) { }
+      el.addEventListener('animationend', function (e) {
+        if (e.target === el) el.remove();
+      });
+    })();
+  </script>
+
   <header>
     <div class="hamburger-menu">
       <input id="menu-toggle" type="checkbox" />
@@ -49,7 +69,7 @@
         <ul id="menu-items">
           <li class="menu-item"><a href="./guia.html">Guia</a></li>
           <li class="line"></li>
-          <li class="menu-item"><a href="https://forum.neei-utad.pt/" target="_blank">Fórum</a></li>
+          <li class="menu-item"><a href="https://forum.neei-utad.pt/" target="_blank" rel="noopener noreferrer">Fórum</a></li>
           <li class="line"></li>
           <li class="menu-item"><a href="./events.html">Eventos</a></li>
           <li class="line"></li>
@@ -68,31 +88,30 @@
         </div>
         </div>
 
-        <!-- mobile footer -->
         <footer>
         <p>Redes Sociais:</p>
         <div id="social-icons">
-          <a href="https://www.twitch.tv/neeiutad" target="_blank">
+          <a href="https://www.twitch.tv/neeiutad" target="_blank" rel="noopener noreferrer">
             <i class="bi bi-twitch"></i>
           </a>
-          <a href="https://www.instagram.com/neei.utad/" target="_blank">
+          <a href="https://www.instagram.com/neei.utad/" target="_blank" rel="noopener noreferrer">
             <i class="bi bi-instagram"></i>
           </a>
-          <a href="https://www.facebook.com/neei.utad" target="_blank">
+          <a href="https://www.facebook.com/neei.utad" target="_blank" rel="noopener noreferrer">
             <i class="bi bi-facebook"></i>
           </a>
-          <a href="https://www.youtube.com/@neeiutad" target="_blank">
+          <a href="https://www.youtube.com/@neeiutad" target="_blank" rel="noopener noreferrer">
             <i class="bi bi-youtube"></i>
           </a>
-          <a href="https://www.linkedin.com/company/neei/about/" target="_blank">
+          <a href="https://www.linkedin.com/company/neei/about/" target="_blank" rel="noopener noreferrer">
             <i class="bi bi-linkedin"></i>
           </a>
         </div>
         <p id="copyright">&copy;Copyright <b>2026 NEEI</b>. Todos os Direitos Reservados</p>
         <p id="credits-main">Originalmente criado por <a href="https://www.linkedin.com/in/filipe-valadares/"
-            target="_blank">Filipe Valadares</a></p>
+            target="_blank" rel="noopener noreferrer">Filipe Valadares</a></p>
         <p id="credits-secondary">Redesenhado por <a
-            href="https://www.linkedin.com/in/patr%C3%ADcio-sim%C3%B5es-668219201/" target="_blank">Patrício
+            href="https://www.linkedin.com/in/patr%C3%ADcio-sim%C3%B5es-668219201/" target="_blank" rel="noopener noreferrer">Patrício
             Simões</a> e Ricardo Inácio</p>
         </footer>
       </nav>
@@ -100,11 +119,8 @@
   </header>
 
   <main>
-    <!-- hero section -->
     <section id="hero-section">
       <div id="hero-section-content">
-       <!-- <img src="./assets/images/blobrot.png" id="blobrot" alt="" /> -->
-        <!-- <img src="./assets/images/blobrot.png" id="blobrot2" alt="" /> -->
 
         <h1 id="hero-header">
           <span id="type-title"></span>
@@ -117,171 +133,75 @@
       </div>
     </section>
 
-    <section id="gallery-section" class="gallery-container">
+    <section id="gallery-section" class="gallery-container" aria-roledescription="galeria">
       <div class="gallery-header">
-        <h2>Galeria</h2>
+        <div>
+          <h2>Galeria</h2>
+          <p>As equipas que fizeram o NEEI, mandato a mandato.</p>
+        </div>
+        <div class="gallery-controls">
+          <span class="gallery-counter" aria-live="polite"><span id="gallery-current">01</span> / 04</span>
+          <button type="button" class="gallery-nav" id="gallery-prev" aria-label="Foto anterior"><i class="bi bi-arrow-left"></i></button>
+          <button type="button" class="gallery-nav" id="gallery-next" aria-label="Foto seguinte"><i class="bi bi-arrow-right"></i></button>
+        </div>
       </div>
 
       <div class="expanding-gallery" id="expanding-gallery">
-        <div class="expand-card active" style="background-image: url('./assets/images/caroussel/team-neei-2026-2027.jpg');">
-          <div class="expand-card-caption">
-            <span class="expand-card-title">Tomada de Posse</span>
-            <span class="expand-card-date">2026/2027</span>
-          </div>
-        </div> 
-
-        <div class="expand-card" style="background-image: url('./assets/images/caroussel/team-neei-2025-2026.jpg');">
-          <div class="expand-card-caption">
-            <span class="expand-card-title">Tomada de Posse</span>
-            <span class="expand-card-date">2025/2026</span>
-          </div>
-        </div>
-
-        <div class="expand-card" style="background-image: url('./assets/images/caroussel/team-neei-2024-2025.jpg');">
-          <div class="expand-card-caption">
-            <span class="expand-card-title">Tomada de Posse</span>
-            <span class="expand-card-date">2024/2025</span>
-          </div>
-        </div>
-
-        <div class="expand-card" style="background-image: url('./assets/images/caroussel/team-neei-2023-2024.jpg');">
-          <div class="expand-card-caption">
-            <span class="expand-card-title">Tomada de Posse</span>
-            <span class="expand-card-date">2023/2024</span>
-          </div>
-        </div>
+        <button type="button" class="expand-card active" aria-pressed="true" aria-label="Tomada de Posse 2026/2027">
+          <img src="./assets/images/caroussel/web/team-neei-2026-2027-1600.webp"
+            srcset="./assets/images/caroussel/web/team-neei-2026-2027-900.webp 900w, ./assets/images/caroussel/web/team-neei-2026-2027-1600.webp 1600w"
+            sizes="(max-width: 768px) 100vw, 70vw" alt="Equipa do NEEI na tomada de posse de 2026/2027" loading="eager" decoding="async">
+          <span class="expand-card-index">01</span>
+          <span class="expand-card-label">2026/2027</span>
+          <span class="expand-card-caption">
+            <span class="expand-card-title"><span>Tomada de Posse</span></span>
+            <span class="expand-card-date">Mandato 2026/2027</span>
+          </span>
+          <span class="expand-card-progress" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="expand-card" aria-pressed="false" aria-label="Tomada de Posse 2025/2026">
+          <img src="./assets/images/caroussel/web/team-neei-2025-2026-1600.webp"
+            srcset="./assets/images/caroussel/web/team-neei-2025-2026-900.webp 900w, ./assets/images/caroussel/web/team-neei-2025-2026-1600.webp 1600w"
+            sizes="(max-width: 768px) 100vw, 70vw" alt="Equipa do NEEI na tomada de posse de 2025/2026" loading="lazy" decoding="async">
+          <span class="expand-card-index">02</span>
+          <span class="expand-card-label">2025/2026</span>
+          <span class="expand-card-caption">
+            <span class="expand-card-title"><span>Tomada de Posse</span></span>
+            <span class="expand-card-date">Mandato 2025/2026</span>
+          </span>
+          <span class="expand-card-progress" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="expand-card" aria-pressed="false" aria-label="Tomada de Posse 2024/2025">
+          <img src="./assets/images/caroussel/web/team-neei-2024-2025-1600.webp"
+            srcset="./assets/images/caroussel/web/team-neei-2024-2025-900.webp 900w, ./assets/images/caroussel/web/team-neei-2024-2025-1600.webp 1600w"
+            sizes="(max-width: 768px) 100vw, 70vw" alt="Equipa do NEEI na tomada de posse de 2024/2025" loading="lazy" decoding="async">
+          <span class="expand-card-index">03</span>
+          <span class="expand-card-label">2024/2025</span>
+          <span class="expand-card-caption">
+            <span class="expand-card-title"><span>Tomada de Posse</span></span>
+            <span class="expand-card-date">Mandato 2024/2025</span>
+          </span>
+          <span class="expand-card-progress" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="expand-card" aria-pressed="false" aria-label="Tomada de Posse 2023/2024">
+          <img src="./assets/images/caroussel/web/team-neei-2023-2024-1600.webp"
+            srcset="./assets/images/caroussel/web/team-neei-2023-2024-900.webp 900w, ./assets/images/caroussel/web/team-neei-2023-2024-1600.webp 1600w"
+            sizes="(max-width: 768px) 100vw, 70vw" alt="Equipa do NEEI na tomada de posse de 2023/2024" loading="lazy" decoding="async">
+          <span class="expand-card-index">04</span>
+          <span class="expand-card-label">2023/2024</span>
+          <span class="expand-card-caption">
+            <span class="expand-card-title"><span>Tomada de Posse</span></span>
+            <span class="expand-card-date">Mandato 2023/2024</span>
+          </span>
+          <span class="expand-card-progress" aria-hidden="true"></span>
+        </button>
       </div>
     </section>
 
-    <!-- carousel section 
-    <section id="carousel-section">
-      <div class="container">
-        <h2>Coloca-te a par das novidades!</h2>
-        <div id="caroussel">
-          <div class="glide">
-            <div class="glide__track" data-glide-el="track">
-              <ul class="glide__slides tiles">
-
-                <li>
-                  <a class="tile"><img class="glide__slide" src="./assets/images/caroussel/jantar-curso-2025-2026.jpg"
-                      alt="Workshop Cloud Computing" />
-                    <div class="details">
-                      <span class="title">Jantar de curso</span>
-                      <span class="info-no-ident">Está na hora de reunir a arena! <br />
-                        O tão esperado Jantar de Curso está a chegar, por isso prepara as tropas para uma noite épica!
-                      </span>
-                    </div>
-                  </a>
-                </li>
-
-                <li>
-                  <a class="tile"><img class="glide__slide" src="./assets/images/caroussel/kit-latada-2025-2026.jpg"
-                      alt="Kit Finalista" />
-                    <div class="details">
-                      <span class="title">Latada 2025/2026</span>
-                      <span class="info-no-ident">Garante já o teu lugar no evento mais épico da informática! <br />
-                        Compra o kit Latada no site do NEEI.
-                      </span>
-                    </div>
-                  </a>
-                </li>
-
-                <li>
-                  <a class="tile"><img class="glide__slide" src="./assets/images/caroussel/team-neei-2025-2026.jpg"
-                      alt="Tomada de Posse" />
-                    <div class="details">
-                      <span class="title">Tomada de Posse 2025/2026</span>
-                      <span class="info-no-ident">O legado do NEEI seguiu com a tomada de posse da lista P no passado dia 29 de Maio de 2025.<br />
-                        Esta lista promete programar o futuro e potencializar as conexões de todos os estudantes de Engenharia Informática!
-                      </span>
-                    </div>
-                  </a>
-                </li>
-
-                <li>
-                  <a class="tile"><img class="glide__slide" src="./assets/images/caroussel/team-neei-2023-2024.jpg"
-                      alt="Antiga Lista P" />
-                    <div class="details">
-                      <span class="title">Tomada de Posse 2023/2024</span>
-                      <span class="info-no-ident">Nesta data histórica, a antiga lista P, composta
-                        por vários elementos e 5 departamentos, tomou posse do NEEI.<br />
-                      </span>
-                    </div>
-                  </a>
-                </li>
-
-              </ul>
-              <div class="glide__bullets" data-glide-el="controls[nav]">
-                <button class="glide__bullet" data-glide-dir="=0"></button>
-                <button class="glide__bullet" data-glide-dir="=1"></button>
-                <button class="glide__bullet" data-glide-dir="=2"></button>
-                <button class="glide__bullet" data-glide-dir="=3"></button>
-                <button class="glide__bullet" data-glide-dir="=4"></button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    
-    <!-- calendar section 
-    <section id="calendar-section">
-      <h2>Aqui encontras as datas importantes do ano letivo!</h2>
-      <div id="button-box">
-        <div>
-          <button id="prev">Anterior</button>
-          <button id="now">Hoje</button>
-          <button id="next">Seguinte</button>
-        </div>
-        <span id="date"></span>
-      </div>
-
-      <div id="calendar"></div>
-
-      <div id="calendario-legenda">
-        <br />
-        <ul>
-          <li class="btn btn-dark" id="todos">Todos</li>
-          |
-          <li class="btn btn-light" id="pri-ano">1&deg; Ano</li>
-          |
-          <li class="btn btn-light" id="seg-ano">2&deg; Ano</li>
-          |
-          <li class="btn btn-light" id="ter-ano">3&deg; Ano</li>
-        </ul>
-        <br />
-        <ul>
-          <li>(R)ecursos</li>
-          |
-          <li>(E)xames</li>
-          |
-          <li>(F)requências</li>
-          |
-          <li>(T)rabalhos</li>
-          |
-          <li>(M)ini-Testes</li>
-        </ul>
-      </div>
-    </section>-->
   </main>
 
-  <!-- desktop footer -->
   <neei-footer id="footer-large"></neei-footer>
 
-  <!-- plugins scripts -->
-  <script src="https://uicdn.toast.com/calendar/latest/toastui-calendar.min.js"></script>
-  <script type="module" src="./JS/calendar.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://unpkg.com/@glidejs/glide"></script>
-
-  <!-- bootstrap scripts -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
 </body>
 
 </html>

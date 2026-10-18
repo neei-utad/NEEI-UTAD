@@ -13,3 +13,12 @@ Thumbs.db
 # Logs / temp
 *.log
 *.tmp
+
+# dados de utilizadores e logs do servidor
+php/error_log
+php/python/uploads/
+.htaccess
+!.htaccess.example
+start_process/.htaccess
+__pycache__/
+*.pyc

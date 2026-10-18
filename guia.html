@@ -4,32 +4,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./JS/theme.js"></script>
   <title>NEEI - UTAD</title>
   <link rel="stylesheet" href="./CSS/reset.css">
   <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
 
-  <!-- bootstrap css -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
 
-  <!-- css -->
   <link rel="stylesheet" href="./CSS/palette.css">
   <link rel="stylesheet" href="./CSS/styles.css">
   <link rel="stylesheet" href="./CSS/index.css">
   <link rel="stylesheet" href="./CSS/guia.css">
 
-  <!-- plugins css -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-
-  <!-- scripts -->
   <script src="./JS/menu.js" defer></script>
   <script src="./JS/footer.js" defer></script>
-  <script src="./JS/script.js" defer></script>
 </head>
 
   <body>
-	<!-- Begin Main Navigation Bar -->
 	<header>
     <div class="hamburger-menu">
       <input id="menu-toggle" type="checkbox" />
@@ -48,7 +41,7 @@
         <ul id="menu-items">
           <li class="menu-item"><a href="./guia.html">Guia</a></li>
           <li class="line"></li>
-          <li class="menu-item"><a href="https://forum.neei-utad.pt/" target="_blank">Fórum</a></li>
+          <li class="menu-item"><a href="https://forum.neei-utad.pt/" target="_blank" rel="noopener noreferrer">Fórum</a></li>
           <li class="line"></li>
           <li class="menu-item"><a href="./events.html">Eventos</a></li>
           <li class="line"></li>
@@ -67,31 +60,30 @@
         </div>
         </div>
 
-        <!-- mobile footer -->
         <footer>
         <p>Redes Sociais:</p>
         <div id="social-icons">
-          <a href="https://www.twitch.tv/neeiutad" target="_blank">
+          <a href="https://www.twitch.tv/neeiutad" target="_blank" rel="noopener noreferrer">
             <i class="bi bi-twitch"></i>
           </a>
-          <a href="https://www.instagram.com/neei.utad/" target="_blank">
+          <a href="https://www.instagram.com/neei.utad/" target="_blank" rel="noopener noreferrer">
             <i class="bi bi-instagram"></i>
           </a>
-          <a href="https://www.facebook.com/neei.utad" target="_blank">
+          <a href="https://www.facebook.com/neei.utad" target="_blank" rel="noopener noreferrer">
             <i class="bi bi-facebook"></i>
           </a>
-          <a href="https://www.youtube.com/@neeiutad" target="_blank">
+          <a href="https://www.youtube.com/@neeiutad" target="_blank" rel="noopener noreferrer">
             <i class="bi bi-youtube"></i>
           </a>
-          <a href="https://www.linkedin.com/company/neei/about/" target="_blank">
+          <a href="https://www.linkedin.com/company/neei/about/" target="_blank" rel="noopener noreferrer">
             <i class="bi bi-linkedin"></i>
           </a>
         </div>
         <p id="copyright">&copy;Copyright <b>2026 NEEI</b>. Todos os Direitos Reservados</p>
         <p id="credits-main">Originalmente criado por <a href="https://www.linkedin.com/in/filipe-valadares/"
-            target="_blank">Filipe Valadares</a></p>
+            target="_blank" rel="noopener noreferrer">Filipe Valadares</a></p>
         <p id="credits-secondary">Redesenhado por <a
-            href="https://www.linkedin.com/in/patr%C3%ADcio-sim%C3%B5es-668219201/" target="_blank">Patrício
+            href="https://www.linkedin.com/in/patr%C3%ADcio-sim%C3%B5es-668219201/" target="_blank" rel="noopener noreferrer">Patrício
             Simões</a> e Ricardo Inácio</p>
         </footer>
       </nav>
@@ -100,26 +92,24 @@
 
 	<main>
 	<section id="topo" class="page sans">
+      <div class="page-texture" aria-hidden="true"></div>
 
-		<!-- hero -->
-		<section id="guia-hero">
+		<section id="guia-hero" class="page-head">
 			<h1>Guia do Caloiro</h1>
 			<p class="guia-subtitle">Tudo o que precisas para te orientares no campus da UTAD e no curso de Engenharia Informática.</p>
 		</section>
 
-		<!-- onde nos encontrar -->
 		<section id="location-section">
 			<h2>Onde nos Encontrar</h2>
 			<div class="guia-card">
 				<img src="./assets/images/guia/mapa.svg" alt="Mapa do Campus da UTAD" class="guia-map-img">
 				<div class="guia-card-actions">
-					<a href="./assets/images/guia/mapa.svg" target="_blank" class="guia-btn guia-btn-primary">Abrir Mapa em Alta Resolução</a>
-					<a href="https://www.google.com/maps/search/?api=1&query=Escola+de+Ci%C3%AAncias+e+Tecnologia+UTAD" target="_blank" class="guia-btn guia-btn-outline">Localização da Sala do NEEI / ECT</a>
+					<a href="./assets/images/guia/mapa.svg" target="_blank" rel="noopener noreferrer" class="guia-btn guia-btn-primary">Abrir Mapa em Alta Resolução</a>
+					<a href="https://www.google.com/maps/search/?api=1&query=Escola+de+Ci%C3%AAncias+e+Tecnologia+UTAD" target="_blank" rel="noopener noreferrer" class="guia-btn guia-btn-outline">Localização da Sala do NEEI / ECT</a>
 				</div>
 			</div>
 		</section>
 
-		<!-- transportes -->
 		<section id="transport-section">
 			<h2>Transportes &amp; Autocarros</h2>
 			<div class="guia-card guia-transport-card">
@@ -128,11 +118,11 @@
 					<p>Os <b>Urbanos de Vila Real (TUVRII)</b> servem o campus da UTAD através das linhas <b>1 (Lordelo)</b>,
 						<b>3 (Flores)</b> e <b>4 (Urb. Montezelos)</b>, com paragem interna "UTAD - Engenharias".</p>
 					<div class="guia-transport-links">
-						<a href="https://www.urbanosvilareal.pt/pt/" target="_blank" class="guia-btn guia-btn-outline">Ver Horários Online</a>
-						<a href="https://play.google.com/store/apps/details?id=pt.eleven.tuvr" target="_blank" class="guia-btn guia-btn-icon">
+						<a href="https://www.urbanosvilareal.pt/pt/" target="_blank" rel="noopener noreferrer" class="guia-btn guia-btn-outline">Ver Horários Online</a>
+						<a href="https://play.google.com/store/apps/details?id=pt.eleven.tuvr" target="_blank" rel="noopener noreferrer" class="guia-btn guia-btn-icon">
 							<img src="./assets/images/guia/playstore.svg" alt="" width="18">Play Store
 						</a>
-						<a href="https://apps.apple.com/pt/app/urbvr/id1523273122" target="_blank" class="guia-btn guia-btn-icon">
+						<a href="https://apps.apple.com/pt/app/urbvr/id1523273122" target="_blank" rel="noopener noreferrer" class="guia-btn guia-btn-icon">
 							<img src="./assets/images/guia/appstore.svg" alt="" width="18">App Store
 						</a>
 					</div>
@@ -140,21 +130,20 @@
 			</div>
 		</section>
 
-		<!-- links rápidos -->
 		<section id="quicklinks-section">
 			<h2>Links Rápidos</h2>
 			<div class="guia-grid">
-				<a href="https://inforestudante.utad.pt/" target="_blank" class="guia-link-card">
+				<a href="https://inforestudante.utad.pt/" target="_blank" rel="noopener noreferrer" class="guia-link-card">
 					<i class="bi bi-person-badge"></i>
 					<h3>Inforestudante</h3>
 					<p>Inscrições, horário, notas e documentos académicos.</p>
 				</a>
-				<a href="https://moodle.utad.pt/" target="_blank" class="guia-link-card">
+				<a href="https://moodle.utad.pt/" target="_blank" rel="noopener noreferrer" class="guia-link-card">
 					<i class="bi bi-mortarboard"></i>
 					<h3>Moodle</h3>
 					<p>Materiais e atividades das unidades curriculares.</p>
 				</a>
-				<a href="https://www.utad.pt/espaco-estudante/" target="_blank" class="guia-link-card">
+				<a href="https://www.utad.pt/espaco-estudante/" target="_blank" rel="noopener noreferrer" class="guia-link-card">
 					<i class="bi bi-life-preserver"></i>
 					<h3>Apoio ao Aluno / Secretaria</h3>
 					<p>Serviços Académicos e Espaço Estudante.</p>
@@ -178,7 +167,6 @@
 			<h2>Questões Que podes ter</h2>
 			<div id="questions">
 			  <ul id="question-list">
-				<!-- Questão -->
 				<li>
 				  <input type="checkbox" checked/>
 				  <i></i>
@@ -191,7 +179,6 @@
 					e ajustarem os seus estudos em diferentes universidades.
 				  </p>
 				</li>
-				<!-- Questão -->
 				<li>
 					<input type="checkbox" checked/>
 					<i></i>
@@ -204,7 +191,6 @@
 						na mesma aba "Apontamentos". A partir daí, serão analisados por nós e posteriormente adicionados ao Banco de Apontamentos.
 					</p>
 				</li>
-				<!-- Questão -->
 				<li>
 					<input type="checkbox" checked/>
 					<i></i>
@@ -217,7 +203,6 @@
 						horário de atendimento, durante o qual estão disponíveis nos seus gabinetes para esclarecer dúvidas dos alunos.
 					</p>
 				</li>
-				<!-- Questão -->
 				<li>
 					<input type="checkbox" checked/>
 					<i></i>
@@ -227,7 +212,6 @@
 						Além disso, é crucial prestar atenção nas aulas, especialmente nas aulas práticas, para reduzir a necessidade de estudo autónomo.
 					</p>
 				</li>
-				<!-- Questão -->
 				<li>
 					<input type="checkbox" checked/>
 					<i></i>
@@ -242,7 +226,6 @@
 			<h2>Assuntos académicos</h2>
 			<div id="questions">
 			  <ul id="question-list">
-				<!-- Questão -->
 				<li>
 				  <input type="checkbox" checked/>
 				  <i></i>
@@ -252,7 +235,6 @@
 					<b>Telefone:</b> +351 259350010
 				  </p>
 				</li>
-				<!-- Questão -->
 				<li>
 					<input type="checkbox" checked/>
 					<i></i>
@@ -268,7 +250,6 @@
 						5000-801 Vila Real
 					</p>
 				</li>
-				<!-- Questão -->
 				<li>
 					<input type="checkbox" checked/>
 					<i></i>
@@ -286,7 +267,6 @@
 						definido importa o pagamento de juros de mora à taxa legal em vigor.<br>
 					</p>
 				</li>
-				<!-- Questão -->
 				<li>
 					<input type="checkbox" checked/>
 					<i></i>
@@ -304,7 +284,6 @@
 						E-mail: sautad (at) utad.pt
 					</p>
 				</li>
-				<!-- Questão -->
 				<li>
 					<input type="checkbox" checked/>
 					<i></i>
@@ -314,7 +293,6 @@
 						Por favor, consultar o Regulamento de Atribuição de Prémios de Mérito Desportivo aos Estudantes-Atletas.<br>
 					</p>
 				</li>
-				<!-- Questão -->
 				<li>
 					<input type="checkbox" checked/>
 					<i></i>
@@ -336,7 +314,6 @@
 						ocorrer dentro de um prazo máximo de dez dias úteis contados a partir da data de apresentação do referido requerimento.
 					</p>
 				</li>
-				<!-- Questão -->
 				<li>
 					<input type="checkbox" checked/>
 					<i></i>
@@ -358,7 +335,6 @@
 						Não bolseiros da Ação Social – 10,00€/UC
 					</p>
 				</li>
-				<!-- Questão -->
 				<li>
 					<input type="checkbox" checked/>
 					<i></i>
@@ -375,7 +351,6 @@
 						de alojamento não bolseiro. (NOVO)<br>
 					</p>
 				</li>
-				<!-- Questão -->
 				<li>
 					<input type="checkbox" checked/>
 					<i></i>
@@ -394,7 +369,6 @@
 						seguindo os procedimentos descritos.
 					</p>
 				</li>
-				<!-- Questão -->
 				<li>
 					<input type="checkbox" checked/>
 					<i></i>
@@ -411,7 +385,6 @@
 						plataforma os códigos da certidão de não entrega de IRS.<br>
 					</p>
 				</li>
-				<!-- Questão -->
 				<li>
 					<input type="checkbox" checked/>
 					<i></i>
@@ -427,7 +400,6 @@
 
 					</p>
 				</li>
-				<!-- Questão -->
 				<li>
 					<input type="checkbox" checked/>
 					<i></i>
@@ -452,7 +424,6 @@
 			<h2>Semana de Receção</h2>
 			<div id="questions">
 			  <ul id="question-list">
-				<!-- Questão -->
 				<li>
 				  <input type="checkbox" checked/>
 				  <i></i>
@@ -466,7 +437,6 @@
 					.Contribuir para a fixação de quadros qualificados no Interior Norte do país;<br>
 				  </p>
 				</li>
-				<!-- Questão -->
 				<li>
 					<input type="checkbox" checked/>
 					<i></i>
@@ -484,7 +454,6 @@
 						Informática é uma área dinâmica, flexível e em constante evolução onde o desafio de inovar e acompanhar o progresso tecnológico é constante.
 					</p>
 				  </li>
-				<!-- Questão -->
 				<li>
 					<input type="checkbox" checked/>
 					<i></i>
@@ -502,7 +471,6 @@
 						NEEI encarrega-se de comunicar estas questões e colaborar na procura de soluções.
 					</p>
 				</li>
-				<!-- Questão -->
 				<li>
 					<input type="checkbox" checked/>
 					<i></i>

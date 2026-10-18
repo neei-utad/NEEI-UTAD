@@ -1,145 +1,73 @@
-/* estilos da página 'links.html', alinhado com guia.css */
-
-#topo {
-  padding-top: 5rem;
-  padding-bottom: 4rem;
-  background-color: var(--page-top-bg);
-}
-
-/* hero */
-#links-hero {
-  text-align: center;
-  padding: 1rem 1.5rem 2.5rem;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-#links-hero h1 {
-  margin: 0;
-  color: var(--text-heading);
-  font-weight: 800;
-  font-size: 3em;
-}
-
-.links-page-subtitle {
-  margin: 1rem auto 0;
-  max-width: 560px;
-  color: var(--text-muted);
-  font-size: 1.1rem;
-  line-height: 1.5;
-}
-
-/* logo */
-#logo-neei {
-  width: 100%;
-  padding-bottom: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#logo-neei img {
-  padding: 20px;
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  background: var(--surface-bg);
-  border: 1px solid var(--surface-border);
-  box-shadow: 0 10px 30px var(--surface-shadow);
-}
-
 #links-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+  align-items: start;
+  gap: 1rem;
+  max-width: 72rem;
+  margin: 0 auto;
   padding: 0 1.5rem 2rem;
 }
 
-/* cartões de secção */
 .links-subsection {
-  width: 95vw;
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  border-radius: 20px;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
   background: var(--surface-bg);
   border: 1px solid var(--surface-border);
-  box-shadow: 0 10px 30px var(--surface-shadow);
-}
-
-.links-subsection + .links-subsection {
-  margin-top: 1.5rem;
 }
 
 .links-subsection h2 {
-  position: relative;
-  margin: 0 0 1.4rem;
-  padding-bottom: 0.6rem;
-  color: var(--text-heading);
-  font-weight: 800;
-  font-size: 1.6em;
+  margin: 0;
+  padding: 0.875rem 1.25rem;
+  border-bottom: 1px solid var(--surface-border);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
 }
 
-.links-subsection h2::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  translate: -50% 0;
-  width: 50px;
-  height: 3px;
-  border-radius: 3px;
-  background: var(--main-orange-color);
-  box-shadow: 0 0 12px var(--main-orange-color);
+.links-subsection div + div {
+  border-top: 1px solid var(--hairline);
 }
 
 .links-subsection a {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  width: 100%;
-  max-width: 420px;
-  box-sizing: border-box;
-  padding: 0.85em 1.4em;
-  font-size: 1rem;
-  font-weight: 600;
+  gap: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
   color: var(--text-heading);
-  background: transparent;
-  border: 1px solid var(--surface-border-strong);
-  border-radius: 10px;
   text-decoration: none;
-  transition: border-color 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.links-subsection a::after {
+  content: "\2197";
+  margin-left: auto;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
 .links-subsection i {
   color: var(--main-orange-color);
-  font-size: 1.1em;
-}
-
-.links-subsection div + div {
-  margin-top: 0.9rem;
+  font-size: 1rem;
 }
 
 .links-subsection a:hover {
-  border-color: var(--main-orange-color);
-  color: var(--main-orange-color);
-  transform: translateY(-2px);
-  box-shadow: 0 0 20px rgba(235, 94, 20, 0.2);
+  background: var(--control-bg);
+  color: var(--text-heading);
 }
 
-/* responsivo */
-@media (max-width: 768px) {
-  #links-hero h1 {
-    font-size: 2.2em;
-  }
+.links-subsection a:hover::after {
+  opacity: 1;
+}
 
-  .links-subsection {
-    padding: 1.6rem 1.2rem;
-  }
-
-  .links-subsection h2 {
-    font-size: 1.35em;
+@media (max-width: 640px) {
+  #links-section {
+    padding: 0 1rem 2rem;
   }
 }

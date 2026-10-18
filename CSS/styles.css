@@ -1,4 +1,5 @@
-/* base resets */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap");
+
 html,
 body {
   width: 100%;
@@ -15,35 +16,6 @@ main {
 
 img {
   -webkit-user-drag: none;
-  -khtml-user-drag: none;
-  -moz-user-drag: none;
-  -o-user-drag: none;
-}
-
-/* fonts */
-@font-face {
-  font-family: "Modernist";
-  src: url(../assets/fonts/modernist.otf);
-}
-
-@font-face {
-  font-family: "NeutralFace";
-  src: url(../assets/fonts/NeutralFace.otf);
-}
-
-@font-face {
-  font-family: "ChillaxRegular";
-  src: url(../assets/fonts/Chillax-Regular.otf);
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url(../assets/fonts/Roboto-Regular.ttf);
-}
-
-@font-face {
-  font-family: "0xProtoNerdFontMono-Regular";
-  src: url(../assets/fonts/0xProtoNerdFontMono-Regular.ttf);
 }
 
 h1,
@@ -52,14 +24,34 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "ChillaxRegular", sans-serif;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-sans);
 }
 
-/* hamburger menu */
+section h1 {
+  font-weight: 600;
+}
+
+section h2 {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1.5rem 1rem;
+  color: var(--text-heading);
+  text-align: left;
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
 header {
   height: 0vh;
 }
@@ -180,7 +172,11 @@ body {
   max-width: 70px;
 }
 
-/* mobile top bar: persistent logo + hamburger */
+/* criado pelo menu.js */
+.mobile-logo {
+  display: none;
+}
+
 @media only screen and (max-width: 991.98px) {
   .menu-actions {
     display: none;
@@ -202,14 +198,76 @@ body {
     z-index: 996;
   }
 
-  .hamburger-menu::before {
-    content: "";
+  .mobile-logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-right: 1rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .mobile-logo img {
     width: 32px;
     height: 32px;
-    background-image: url('../assets/images/logos/neei-logo.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left center;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+  }
+
+  .mobile-logo:active img {
+    transform: scale(0.92);
+  }
+
+  .menu-box {
+    left: 0;
+    transform: translateX(-105%);
+    visibility: hidden;
+    transition: transform 0.4s cubic-bezier(0.22, 0.9, 0.24, 1), visibility 0s linear 0.4s;
+  }
+
+  #menu-toggle:checked ~ .menu-box {
+    transform: none;
+    visibility: visible;
+    transition: transform 0.4s cubic-bezier(0.22, 0.9, 0.24, 1), visibility 0s;
+  }
+
+  .hamburger-menu::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 997;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .hamburger-menu:has(#menu-toggle:checked)::after {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .menu-item {
+    opacity: 0;
+    transform: translateX(-12px);
+    transition: opacity 0.3s ease, transform 0.4s cubic-bezier(0.22, 0.9, 0.24, 1);
+  }
+
+  #menu-toggle:checked ~ .menu-box .menu-item {
+    opacity: 1;
+    transform: none;
+  }
+
+  #menu-toggle:checked ~ .menu-box .menu-item:nth-child(3) { transition-delay: 0.04s; }
+  #menu-toggle:checked ~ .menu-box .menu-item:nth-child(5) { transition-delay: 0.08s; }
+  #menu-toggle:checked ~ .menu-box .menu-item:nth-child(7) { transition-delay: 0.12s; }
+  #menu-toggle:checked ~ .menu-box .menu-item:nth-child(9) { transition-delay: 0.16s; }
+  #menu-toggle:checked ~ .menu-box .menu-item:nth-child(11) { transition-delay: 0.2s; }
+}
+
+@media only screen and (max-width: 991.98px) and (prefers-reduced-motion: reduce) {
+  .menu-box,
+  .menu-item {
+    transition: none !important;
   }
 }
 
@@ -287,12 +345,10 @@ body {
   color: var(--main-orange-color);
 }
 
-/* footer embutido no menu mobile, desativado */
 header footer {
   display: none;
 }
 
-/* footer */
 #footer-large {
   font-family: "ChillaxRegular", monospace;
   position: relative;
@@ -390,7 +446,6 @@ header footer {
   color: var(--footer-credits-text);
 }
 
-/* media queries */
 @media only screen and (min-width: 600px) {
   .menu-item {
     padding: 12px 2em;
@@ -408,7 +463,6 @@ header footer {
   }
 }
 
-/* desktop navigation */
 @media only screen and (min-width: 992px) {
   .menu__btn {
     display: none !important;
@@ -447,13 +501,11 @@ header footer {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
-  /* unwrap the mobile scroll container so #menu-items and .menu-actions
-     go back to being direct flex children of .menu-box, as on desktop */
+  /* desembrulha o scroll do mobile */
   .menu-scroll {
     display: contents;
   }
 
-  /* left: logo */
   .menu-logo {
     flex: 1 !important;
     display: flex !important;
@@ -469,7 +521,6 @@ header footer {
     margin: 0;
   }
 
-  /* center: navigation items */
   #menu-items {
     flex: 0 0 auto;
     display: flex;
@@ -508,7 +559,6 @@ header footer {
     cursor: pointer;
   }
 
-  /* right: theme button */
   .menu-actions {
     flex: 1;
     display: flex;
@@ -539,7 +589,6 @@ header footer {
     visibility: hidden;
   }
 
-  /* desktop footer layout */
   #footer-large {
     padding: 1.8rem 3rem 1.2rem;
   }
@@ -643,5 +692,190 @@ header footer {
   }
   .menu-item {
     margin: 0 0.5em;
+  }
+}
+/* primeiro filho da secção de topo */
+:has(> .page-texture) {
+  position: relative;
+  isolation: isolate;
+}
+
+.page-texture {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: min(640px, 100%);
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    radial-gradient(600px 220px at 20% 0%, rgba(235, 94, 20, 0.10), transparent 70%),
+    linear-gradient(to right, var(--grid-line, rgba(255, 255, 255, 0.035)) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line, rgba(255, 255, 255, 0.035)) 1px, transparent 1px);
+  background-size: auto, 32px 32px, 32px 32px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+}
+
+.page-texture--soft {
+  height: 100%;
+  opacity: 0.45;
+}
+
+/* fade nativo entre páginas */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 280ms;
+  animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
+}
+
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@supports not (view-transition-name: none) {
+  body {
+    animation: page-fade-in 280ms cubic-bezier(0.2, 0, 0, 1) both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+
+  body {
+    animation: none !important;
+  }
+}
+
+#topo {
+  padding: 7rem 0 4rem;
+  background-color: var(--page-top-bg);
+}
+
+@media (min-width: 1024px) {
+  #topo {
+    padding-top: 8rem;
+  }
+}
+
+.page-head {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1.5rem 2.5rem;
+  text-align: left;
+}
+
+.page-head h1 {
+  margin: 0;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--text-heading);
+}
+
+.page-head p {
+  max-width: 36rem;
+  margin: 1rem 0 0;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+@media (max-width: 640px) {
+  .page-head {
+    padding: 0 1rem 2rem;
+  }
+
+  .page-head h1 {
+    font-size: 1.75rem;
+  }
+}
+
+#footer-large {
+  font-family: var(--font-sans);
+  background-color: var(--page-top-bg);
+  border-top: 1px solid var(--surface-border);
+  padding: 2rem 1.5rem 1.5rem;
+}
+
+#footer-large::before {
+  display: none;
+}
+
+#footer-large-top {
+  max-width: 72rem;
+}
+
+#large-contact-area p,
+#large-social-area p {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 0.6rem;
+}
+
+#large-contact-area a {
+  font-size: 0.875rem;
+  color: var(--text-heading);
+}
+
+#large-social-area div {
+  gap: 1rem;
+  font-size: 1.125rem;
+}
+
+#footer-large i {
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+#footer-large a:hover i {
+  color: var(--text-heading);
+}
+
+#large-copyright {
+  font-size: 0.8125rem;
+  color: var(--text-body);
+}
+
+#large-credits-main {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+#large-credits-main a {
+  color: var(--text-body);
+}
+
+@media only screen and (min-width: 992px) {
+  /* fundo claro para ler sobre fotos */
+  :root.light .menu-box,
+  :root.light .menu-box.scrolled {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  :root.light .menu-item a {
+    color: rgba(17, 17, 19, 0.75);
+  }
+
+  :root.light .menu-item a:hover {
+    color: #111113;
+  }
+
+  :root.light button.theme-toggle {
+    color: #111113;
   }
 }

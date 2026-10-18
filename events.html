@@ -4,32 +4,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NEEI - UTAD</title>
-  <link rel="stylesheet" href="./CSS/reset.css">
+  <script src="./JS/theme.js"></script>
+  <title>Eventos · NEEI - UTAD</title>
+  <meta name="description" content="Workshops, palestras, torneios e convívios organizados pelo NEEI-UTAD.">
   <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
 
-  <!-- bootstrap css -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
 
-  <!-- css -->
+  <link rel="stylesheet" href="./CSS/reset.css">
   <link rel="stylesheet" href="./CSS/palette.css">
   <link rel="stylesheet" href="./CSS/styles.css">
-  <link rel="stylesheet" href="./CSS/index.css">
-  <link rel="stylesheet" href="./CSS/events.css">
+  <link rel="stylesheet" href="./CSS/hub.css">
 
-  <!-- plugins css -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="./JS/hub/tailwind.config.js"></script>
 
-  <!-- scripts -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/htm@3.1.1/dist/htm.umd.js" crossorigin></script>
+
   <script src="./JS/menu.js" defer></script>
   <script src="./JS/footer.js" defer></script>
-  <script src="./JS/script.js" defer></script>
 </head>
 
-<body>
-  <!-- navigation -->
+<body class="flex min-h-screen flex-col">
   <header>
     <div class="hamburger-menu">
       <input id="menu-toggle" type="checkbox" />
@@ -48,7 +46,7 @@
         <ul id="menu-items">
           <li class="menu-item"><a href="./guia.html">Guia</a></li>
           <li class="line"></li>
-          <li class="menu-item"><a href="https://forum.neei-utad.pt/" target="_blank">Fórum</a></li>
+          <li class="menu-item"><a href="https://forum.neei-utad.pt/" target="_blank" rel="noopener noreferrer">Fórum</a></li>
           <li class="line"></li>
           <li class="menu-item"><a href="./events.html">Eventos</a></li>
           <li class="line"></li>
@@ -67,274 +65,47 @@
         </div>
         </div>
 
-        <!-- mobile footer -->
         <footer>
         <p>Redes Sociais:</p>
         <div id="social-icons">
-          <a href="https://www.twitch.tv/neeiutad" target="_blank">
+          <a href="https://www.twitch.tv/neeiutad" target="_blank" rel="noopener noreferrer">
             <i class="bi bi-twitch"></i>
           </a>
-          <a href="https://www.instagram.com/neei.utad/" target="_blank">
+          <a href="https://www.instagram.com/neei.utad/" target="_blank" rel="noopener noreferrer">
             <i class="bi bi-instagram"></i>
           </a>
-          <a href="https://www.facebook.com/neei.utad" target="_blank">
+          <a href="https://www.facebook.com/neei.utad" target="_blank" rel="noopener noreferrer">
             <i class="bi bi-facebook"></i>
           </a>
-          <a href="https://www.youtube.com/@neeiutad" target="_blank">
+          <a href="https://www.youtube.com/@neeiutad" target="_blank" rel="noopener noreferrer">
             <i class="bi bi-youtube"></i>
           </a>
-          <a href="https://www.linkedin.com/company/neei/about/" target="_blank">
+          <a href="https://www.linkedin.com/company/neei/about/" target="_blank" rel="noopener noreferrer">
             <i class="bi bi-linkedin"></i>
           </a>
         </div>
         <p id="copyright">&copy;Copyright <b>2026 NEEI</b>. Todos os Direitos Reservados</p>
         <p id="credits-main">Originalmente criado por <a href="https://www.linkedin.com/in/filipe-valadares/"
-            target="_blank">Filipe Valadares</a></p>
+            target="_blank" rel="noopener noreferrer">Filipe Valadares</a></p>
         <p id="credits-secondary">Redesenhado por <a
-            href="https://www.linkedin.com/in/patr%C3%ADcio-sim%C3%B5es-668219201/" target="_blank">Patrício
+            href="https://www.linkedin.com/in/patr%C3%ADcio-sim%C3%B5es-668219201/" target="_blank" rel="noopener noreferrer">Patrício
             Simões</a> e Ricardo Inácio</p>
         </footer>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section id="topo" class="page sans">
-
-      <!-- estado vazio -->
-      <section id="events-hero">
-        <i class="bi bi-calendar2-x"></i>
-        <h1>Ainda não há eventos</h1>
-        <p class="events-subtitle">Estamos a preparar as próximas atividades do núcleo. Fica atento às nossas redes sociais para não perderes nada!</p>
-
-        <!-- painel estilo terminal-->
-        <div class="terminal-panel events-terminal" aria-hidden="true">
-          <div class="terminal-panel-bar">
-            <span></span><span></span><span></span>
-          </div>
-          <div class="terminal-panel-body">
-            <p><span class="terminal-path">~/neei/eventos &gt;</span> <span class="terminal-command">git log --oneline --all</span></p>
-            <p>a sincronizar calendário<span class="terminal-dots"></span></p>
-            <p>
-              status: <span class="terminal-status">a preparar próximos eventos</span>
-              <span class="terminal-progress"><span class="terminal-progress-bar"></span></span>
-              <span class="terminal-cursor fade-active">_</span>
-            </p>
-          </div>
-        </div>
-
-        <div class="events-socials">
-          <a href="https://www.instagram.com/neei.utad/" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-          <a href="https://www.facebook.com/neei.utad" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-        </div>
-      </section>
-
-    </section>
-
-    <!-- template ex de eventos (mantido comentado para reativar quando houver eventos)
-    <template id="tpl-2024-2025">
-      <article id="events-2024-2025" class="events-row">
-
-        <div class="event-card">
-          <div class="event-card-inner">
-            <div class="event-card-front">
-              <img src="./assets/images/eventos/2024-2025/event-48.jpeg" alt="Torneio de matraquilhos e setas">
-            </div>
-            <div class="event-card-back">
-              <h1>Informações</h1>
-              <p>
-                Estás pronto para mostrar as tuas habilidades? Junta-te a nós no METROPOLIS no dia 24 de março para um torneio épico de setas e matrecos!
-              </p>
-              <a href="https://forms.gle/pSjQ87hYksSvcdd36">Inscreve-te!</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="event-card">
-          <div class="event-card-inner">
-            <div class="event-card-front">
-              <img src="./assets/images/eventos/2024-2025/event-47.png" alt="Workshop Cloud Computing">
-            </div>
-            <div class="event-card-back">
-              <h1>Informações</h1>
-              <p>
-                O NEEI e a Accenture trazem-te um workshop imperdível sobre Cloud Computing! Aprende com especialistas
-                do setor e descobre como esta tecnologia pode revolucionar o futuro da informática!
-              </p>
-              <a href="https://forms.gle/2BU72v8wphgM8YZ76">Inscreve-te!</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="event-card">
-          <div class="event-card-inner">
-            <div class="event-card-front">
-              <img src="./assets/images/eventos/2024-2025/event-46.png" alt="Kit Finalistas">
-            </div>
-            <div class="event-card-back">
-              <h1>Informações</h1>
-              <p>
-                Está na hora de garantires o teu Kit Finalista e tornares este momento ainda mais especial!
-              </p>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_lAFnQtDvKt0J0GXq3hv8RjgQFiPjjIJZ23xyvxtnlzWpAw/viewform?usp=sharing">Inscreve-te!</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="event-card">
-          <div class="event-card-inner">
-            <div class="event-card-front">
-              <img src="./assets/images/eventos/2024-2025/event-45.png" alt="Torneio CS">
-            </div>
-            <div class="event-card-back">
-              <h1>Informações</h1>
-              <p>
-                Pimba na beiça! O NEEI vai organizar de 10 a 15 de fevereiro o Torneio de
-                Counter-Strike 2! Prepara-te para uma semana de pura adrenalina, competição e diversão!
-              </p>
-              <a href="https://forms.gle/TyGMJrvfdi3jt6zL9">Inscreve-te!</a>
-            </div>
-          </div>
-        </div>
-        <div class="event-card">
-          <div class="event-card-inner">
-            <div class="event-card-front">
-              <img src="./assets/images/eventos/2024-2025/event-44.png" alt="Recrutamento NEEI">
-            </div>
-            <div class="event-card-back">
-              <h1>Informações</h1>
-              <p>
-                Queres fazer parte de uma comunidade emergente que ajuda informática diariamente?
-                Então junta-te ao Núcleo! O Núcleo de Estudantes de Engenharia Informática
-                está a recrutar alunos para os seus departamentos, e queremos que tu faças parte!
-              </p>
-              <a href="https://forms.gle/mgjt66ixYNFHZPQw9">Inscreve-te!</a>
-            </div>
-          </div>
-        </div>
-        <div class="event-card">
-          <div class="event-card-inner">
-            <div class="event-card-front">
-              <img src="./assets/images/eventos/2024-2025/event-43.jpeg" alt="Torneio de Sueca">
-            </div>
-            <div class="event-card-back">
-              <h1>Informações</h1>
-              <p>
-                Queres demonstrar os teus dotes de Sueca? Então participa no nosso torneio de Sueca!
-                No dia 4 de Dezembro na metropolis!
-              </p>
-              <a href="https://forms.gle/FxJm61YQ13neKnnHA">Inscreve-te!</a>
-            </div>
-          </div>
-        </div>
-        <div class="event-card">
-          <div class="event-card-inner">
-            <div class="event-card-front">
-              <img src="./assets/images/eventos/2024-2025/event-42.jpeg" alt="Jantar de Natal">
-            </div>
-            <div class="event-card-back">
-              <h1>Informações</h1>
-              <p>
-                O espírito natalício está no ar e o NEEI convida-te para uma noite especial! Junta-te a
-                nós no dia 5 de dezembro às 20h na Metropolis para um Jantar de Natal cheio de sabor e solidariedade.
-              </p>
-              <a href="https://docs.google.com/forms/d/1DumrnPiWPtpvq2krfaGIT3c5YTyxGQTcpXoguhaDbRE/viewform">Inscreve-te!</a>
-            </div>
-          </div>
-        </div>
-        <div class="event-card">
-          <div class="event-card-inner">
-            <div class="event-card-front">
-              <img src="./assets/images/eventos/2024-2025/event-41.png" alt="Latada 24/25">
-            </div>
-            <div class="event-card-back">
-              <h1>Informações</h1>
-              <p>
-                Preparado para tornares-te num Super Saiyan? Vai ao site do NEEI e compra o
-                kit latada! Este inclui uma t-shirt laranja para representares o teu curso, e
-                toda a cerveja que certamente irás utilizar (não disponibilizamos paracetamol para a ressaca).
-              </p>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSd8qoaKqskKXiCgpwIuH0buOOoVPi7R76L_5TrhEKMhD20HDA/viewform?usp=sharing">Inscreve-te!</a>
-            </div>
-          </div>
-        </div>
-        <div class="event-card">
-          <div class="event-card-inner">
-            <div class="event-card-front">
-              <img src="./assets/images/eventos/2024-2025/event-40.png" alt="Torneio de FIFA">
-            </div>
-            <div class="event-card-back">
-              <h1>Informações</h1>
-              <p>
-                Estás preparado para uma futebolada? Então prepara-te, porque o teu núcleo tem o orgulho de
-                apresentar o Torneio de EA FC de Informática! Inscreve-te para poderes competir contra os teus
-                amigos e teres a chance de ganhar prémios!
-              </p>
-              <a href="https://docs.google.com/forms/d/1oL7qerHzHkElbBQ4A71StpBkRg-8IelWi60ayzqH2tk/viewform">Inscreve-te!</a>
-            </div>
-          </div>
-        </div>
-        <div class="event-card">
-          <div class="event-card-inner">
-            <div class="event-card-front">
-              <img src="./assets/images/eventos/2024-2025/event-39.png" alt="Jantar de curso caloirada">
-            </div>
-            <div class="event-card-back">
-              <h1>Informações</h1>
-              <p>
-                Ding-ding, cheiras isto? É o cheiro de uma jantarada informática! Junta-te com os teus engenheiros no jantar de curso!
-                <br>
-                Por isso não esperes mais e reserva o teu lugar, se não a comida fica fria!
-              </p>
-              <a href="https://docs.google.com/forms/d/1qJVKHGjaSpgpp7I184N3ATKe9EbqO7avcfolAJQFyoc/viewform">Inscreve-te!</a>
-            </div>
-          </div>
-        </div>
-        <div class="event-card">
-          <div class="event-card-inner">
-            <div class="event-card-front">
-              <img src="./assets/images/eventos/2024-2025/event-38.png" alt="Veneravel Palestra">
-            </div>
-            <div class="event-card-back">
-              <h1>Informações</h1>
-              <p>
-                O teu núcleo organizou uma palestra com o Rui Valente para explicar melhor as tuas saídas! Convidamos toda a comunidade de engenharia informática a ver esta Valente palestra!
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="event-card">
-          <div class="event-card-inner">
-            <div class="event-card-front">
-              <img src="./assets/images/eventos/2024-2025/event-37.png" alt="Kit Caloiro">
-            </div>
-            <div class="event-card-back">
-              <h1>Informações</h1>
-              <p>
-                Mostra aos outro cursos a gloria de Informática, e demonstra aos teus praxadores que não são um caso perdido! Por isso vem para a UTAD cheio de convicção e compra o nosso kit, para não levares um sermão!
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="event-card">
-          <div class="event-card-inner">
-            <div class="event-card-front">
-              <img src="./assets/images/eventos/2024-2025/event-36.png" alt="Palestra 101">
-            </div>
-            <div class="event-card-back">
-              <h1>Informações</h1>
-              <p>
-                Bem-vindo ao curso de Engenharia Informática na UTAD! Para te ajudar a assentar temos uma palestra para ti com o intuito de ficares informado de tudo que é LEI e AAUTAD.
-              </p>
-            </div>
-          </div>
-        </div>
-      </article>
-    </template>-->
-
+  <main id="hub-app" class="hub-root flex-1">
+    <noscript>
+      <p style="padding: 8rem 1.5rem; text-align: center;">
+        Esta página precisa de JavaScript. Acompanha as novidades em
+        <a href="https://www.instagram.com/neei.utad/">@neei.utad</a>.
+      </p>
+    </noscript>
   </main>
 
   <neei-footer id="footer-large"></neei-footer>
 
+  <script type="module" src="./JS/hub/events-page.js"></script>
 </body>
 </html>

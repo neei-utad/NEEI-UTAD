@@ -11,6 +11,7 @@ if (empty($_SESSION['csrf_token'])) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./JS/theme.js"></script>
   <title>Apontamentos</title>
   <link rel="stylesheet" href="./CSS/reset.css">
   <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
@@ -21,7 +22,6 @@ if (empty($_SESSION['csrf_token'])) {
   <link rel="stylesheet" href="./CSS/styles.css">
   <link rel="stylesheet" href="./CSS/apontamentos.css">
   <script src="./JS/menu.js" defer></script>
-  <script src="./JS/script.js" defer></script>
 </head>
 
 <body>
@@ -43,7 +43,7 @@ if (empty($_SESSION['csrf_token'])) {
           <li class="line"></li>
           <li class="menu-item">
             <i class="bi bi-chat-left-text-fill"></i>
-            <a href="https://forum.neei-utad.pt/" target="_blank">Fórum</a>
+            <a href="https://forum.neei-utad.pt/" target="_blank" rel="noopener noreferrer">Fórum</a>
           </li>
           <li class="line"></li>
           <li class="menu-item">
@@ -76,19 +76,19 @@ if (empty($_SESSION['csrf_token'])) {
           <footer>
             <p>Redes Sociais:</p>
             <div id="social">
-              <a href="https://www.twitch.tv/neeiutad" target="_blank">
+              <a href="https://www.twitch.tv/neeiutad" target="_blank" rel="noopener noreferrer">
                 <i class="bi bi-twitch"></i>
               </a>
-              <a href="https://www.instagram.com/neei.utad/" target="_blank">
+              <a href="https://www.instagram.com/neei.utad/" target="_blank" rel="noopener noreferrer">
                 <i class="bi bi-instagram"></i>
               </a>
-              <a href="https://www.facebook.com/neei.utad" target="_blank">
+              <a href="https://www.facebook.com/neei.utad" target="_blank" rel="noopener noreferrer">
                 <i class="bi bi-facebook"></i>
               </a>
-              <a href="https://www.youtube.com/@neeiutad" target="_blank">
+              <a href="https://www.youtube.com/@neeiutad" target="_blank" rel="noopener noreferrer">
                 <i class="bi bi-youtube"></i>
               </a>
-              <a href="https://www.linkedin.com/company/neei/about/" target="_blank">
+              <a href="https://www.linkedin.com/company/neei/about/" target="_blank" rel="noopener noreferrer">
                 <i class="bi bi-linkedin"></i>
               </a>
               <br>
@@ -97,8 +97,7 @@ if (empty($_SESSION['csrf_token'])) {
              Versão 1.2.1
             </div>
             <p id="copyright">&copy;Copyright <b>2023-2024 NEEI</b>. Todos os Direitos Reservados</p>
-            <p id="credits-main"> Sistema de apontamentos: Arquitetado e construído por:<a href="https://www.linkedin.com/in/jos%C3%A9-pedro-meireles-alves-783a9994/" target="_blank">José Pedro Meireles</a> </p>
-            </div>
+            <p id="credits-main"> Sistema de apontamentos: Arquitetado e construído por:<a href="https://www.linkedin.com/in/jos%C3%A9-pedro-meireles-alves-783a9994/" target="_blank" rel="noopener noreferrer">José Pedro Meireles</a> </p>
           </footer>
         </li>
       </ul>
@@ -107,7 +106,7 @@ if (empty($_SESSION['csrf_token'])) {
   <main>
     <section>
       <div>
-        <a id="drive" class="btn" href="https://drive.google.com/drive/u/0/folders/1DTM6YgAH7x0IT3ligKDh2HEri4rHEEFZ" target="_blank">
+        <a id="drive" class="btn" href="https://drive.google.com/drive/u/0/folders/1DTM6YgAH7x0IT3ligKDh2HEri4rHEEFZ" target="_blank" rel="noopener noreferrer">
           Google Drive
         </a>
       </div>
@@ -139,11 +138,12 @@ if (empty($_SESSION['csrf_token'])) {
         </div>
       </form>
     </section>
-    <footer id="footer-large">
+  </main>
+  <footer id="footer-large">
       <div id="large-contact-area">
         <p>Contactos:</p>
         <div>
-          <a href="https://www.twitch.tv/neeiutad" target="_blank">
+          <a href="https://www.twitch.tv/neeiutad" target="_blank" rel="noopener noreferrer">
             <i class="bi bi-envelope-fill"></i>neei@utad.pt
           </a>
         </div>
@@ -155,33 +155,33 @@ if (empty($_SESSION['csrf_token'])) {
         </p>
         <p id="large-credits-main">
           Arquitetado e construído por:
-          <a href="https://www.linkedin.com/in/jos%C3%A9-pedro-meireles-alves-783a9994/" target="_blank">José Pedro Meireles</a>
+          <a href="https://www.linkedin.com/in/jos%C3%A9-pedro-meireles-alves-783a9994/" target="_blank" rel="noopener noreferrer">José Pedro Meireles</a>
         </p>
         <p id="large-credits-secondary">
           Front:
-          <a href="https://www.linkedin.com/in/rodrigo-ven%C3%A2ncio77" target="_blank">Rodrigo Venâncio,</a>
-          <a href="https://www.linkedin.com/in/patr%C3%ADcio-sim%C3%B5es-668219201/" target="_blank">Patrício Simões,</a>
-          <a href="https://www.linkedin.com/in/ana-p-330486268/" target="_blank">Ana Beatriz Pinto,</a>
-          <a href="https://www.linkedin.com/in/s%C3%A9rgio-magalh%C3%A3es-b46075309/" target="_blank">Sérgio Magalhães</a>
+          <a href="https://www.linkedin.com/in/rodrigo-ven%C3%A2ncio77" target="_blank" rel="noopener noreferrer">Rodrigo Venâncio,</a>
+          <a href="https://www.linkedin.com/in/patr%C3%ADcio-sim%C3%B5es-668219201/" target="_blank" rel="noopener noreferrer">Patrício Simões,</a>
+          <a href="https://www.linkedin.com/in/ana-p-330486268/" target="_blank" rel="noopener noreferrer">Ana Beatriz Pinto,</a>
+          <a href="https://www.linkedin.com/in/s%C3%A9rgio-magalh%C3%A3es-b46075309/" target="_blank" rel="noopener noreferrer">Sérgio Magalhães</a>
           <a> e Rui Vasconcelos</a>
         </p>
       </div>
       <div id="large-social-area">
         <p>Redes Sociais:</p>
         <div>
-          <a href="https://www.twitch.tv/neeiutad" target="_blank">
+          <a href="https://www.twitch.tv/neeiutad" target="_blank" rel="noopener noreferrer">
             <i class="bi bi-twitch"></i>
           </a>
-          <a href="https://www.instagram.com/neei.utad/" target="_blank">
+          <a href="https://www.instagram.com/neei.utad/" target="_blank" rel="noopener noreferrer">
             <i class="bi bi-instagram"></i>
           </a>
-          <a href="https://www.facebook.com/neei.utad" target="_blank">
+          <a href="https://www.facebook.com/neei.utad" target="_blank" rel="noopener noreferrer">
             <i class="bi bi-facebook"></i>
           </a>
-          <a href="https://www.youtube.com/@neeiutad" target="_blank">
+          <a href="https://www.youtube.com/@neeiutad" target="_blank" rel="noopener noreferrer">
             <i class="bi bi-youtube"></i>
           </a>
-          <a href="https://www.linkedin.com/company/neei/about/" target="_blank">
+          <a href="https://www.linkedin.com/company/neei/about/" target="_blank" rel="noopener noreferrer">
             <i class="bi bi-linkedin"></i>
           </a>
         </div>
@@ -190,56 +190,46 @@ if (empty($_SESSION['csrf_token'])) {
         </div>
       </div>
     </footer>
-    <script src="https://uicdn.toast.com/calendar/latest/toastui-calendar.min.js"></script>
-    <script type="module" src="./JS/calendar.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://unpkg.com/@glidejs/glide"></script>
-    <script src="https://uicdn.toast.com/calendar/latest/toastui-calendar.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var fileInput = document.getElementById('file');
+      var fileLabel = document.querySelector('label[for="file"]');
+      var submitBtn = document.getElementById('submitBtn');
+      var termsCheckbox = document.getElementById('termsCheckbox');
+  
+      var allowedExtensions = ['zip', 'rar', 'tar', 'tar.bz2', 'tar.gz', 'tar.zip'];
+  
+      fileInput.addEventListener('change', function(event) {
+        var file = event.target.files[0];
+        if (file) {
+          var fileSize = file.size / 1024 / 1024; // tamanho do arquivo em MB
+          var fileName = file.name;
+          var fileExtension = fileName.split('.').pop().toLowerCase();
+          
+          // Tratamento especial para extensões duplas como 'tar.bz2', 'tar.gz' e 'tar.zip'
+          if (fileName.match(/\.tar\.(bz2|gz|zip)$/)) {
+            fileExtension = fileName.split('.').slice(-2).join('.');
+          }
+  
+          if (fileSize > 150) { // se o arquivo for maior que 150 MB
+            alert('O arquivo excede o limite máximo de 150MB.');
+            fileInput.value = ''; // limpa o campo do arquivo
+            fileLabel.textContent = 'Escolher ficheiros'; // reset para o texto original
+          } else if (!allowedExtensions.includes(fileExtension)) {
+            alert('Tipo de arquivo inválido. Permitidos: ' + allowedExtensions.join(', '));
+            fileInput.value = ''; // limpa o campo do arquivo
+            fileLabel.textContent = 'Escolher ficheiros'; // reset para o texto original
+          } else {
+            fileLabel.textContent = fileName; // mostra o nome do arquivo
+          }
+        }
+      });
+  
+      termsCheckbox.addEventListener('change', function() {
+        submitBtn.disabled = !this.checked; // Habilita o botão somente se a checkbox estiver marcada
+      });
+    });
+  
+  </script>
   </body>
 </html>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var fileInput = document.getElementById('file');
-    var fileLabel = document.querySelector('label[for="file"]');
-    var submitBtn = document.getElementById('submitBtn');
-    var termsCheckbox = document.getElementById('termsCheckbox');
-
-    var allowedExtensions = ['zip', 'rar', 'tar', 'tar.bz2', 'tar.gz', 'tar.zip'];
-
-    fileInput.addEventListener('change', function(event) {
-      var file = event.target.files[0];
-      if (file) {
-        var fileSize = file.size / 1024 / 1024; // tamanho do arquivo em MB
-        var fileName = file.name;
-        var fileExtension = fileName.split('.').pop().toLowerCase();
-        
-        // Tratamento especial para extensões duplas como 'tar.bz2', 'tar.gz' e 'tar.zip'
-        if (fileName.match(/\.tar\.(bz2|gz|zip)$/)) {
-          fileExtension = fileName.split('.').slice(-2).join('.');
-        }
-
-        if (fileSize > 150) { // se o arquivo for maior que 150 MB
-          alert('O arquivo excede o limite máximo de 150MB.');
-          fileInput.value = ''; // limpa o campo do arquivo
-          fileLabel.textContent = 'Escolher ficheiros'; // reset para o texto original
-        } else if (!allowedExtensions.includes(fileExtension)) {
-          alert('Tipo de arquivo inválido. Permitidos: ' + allowedExtensions.join(', '));
-          fileInput.value = ''; // limpa o campo do arquivo
-          fileLabel.textContent = 'Escolher ficheiros'; // reset para o texto original
-        } else {
-          fileLabel.textContent = fileName; // mostra o nome do arquivo
-        }
-      }
-    });
-
-    termsCheckbox.addEventListener('change', function() {
-      submitBtn.disabled = !this.checked; // Habilita o botão somente se a checkbox estiver marcada
-    });
-  });
-
-</script>
-
-
