@@ -110,7 +110,7 @@ if (empty($_SESSION['csrf_token'])) {
           Google Drive
         </a>
       </div>
-      <form id="Formulario" action="php/SendEmail.php" method="POST" enctype="multipart/form-data">
+      <form id="Formulario" action="#" method="POST" enctype="multipart/form-data" onsubmit="return false;">
         <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
         <div class="input-group">
           <input type="text" class="form-control" id="name" name="name" placeholder="Nome" required>
