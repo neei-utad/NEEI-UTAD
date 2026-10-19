@@ -1,6 +1,7 @@
 # Claude Code / AI tooling (local, machine-specific)
 .claude/
 graphify-out/
+PRODUCT.md
 
 # OS
 .DS_Store
