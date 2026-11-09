@@ -17,7 +17,7 @@ define("DB_NAME", $config['DB_NAME']);
 $log_dir = '/home/neeiuta1/logs'; // Diretório para logs
 $log_file = $log_dir . '/confirm.log'; // Ficheiro de log específico para confirmações
 if (!is_dir($log_dir)) {
-    mkdir($log_dir, 0777, true); // Criar o diretório se não existir
+    mkdir($log_dir, 0700, true); // Criar o diretório se não existir
 }
 
 // Função para escrever no log
@@ -138,6 +138,14 @@ try {
     // Validar os parâmetros recebidos via GET
     validar_parametros([$_GET['token'], $_GET['target_file']]);
 
+    // Validar que target_file está dentro do diretório de uploads esperado
+    $target_file = $_GET['target_file'];
+    $real = realpath(dirname(__FILE__) . '/../' . $target_file);
+    $allowed_base = realpath(dirname(__FILE__) . '/../php/python/uploads');
+    if ($real === false || strpos($real, $allowed_base) !== 0) {
+        throw new Exception("Caminho de ficheiro inválido");
+    }
+
     // Obter conexão à base de dados
     $conn = obter_conexao_bd();
 
@@ -148,7 +156,7 @@ try {
     confirmar_submissao($conn, $_GET['token']);
 
     // Executar o script Python com os dados necessários
-    executar_script_python($_GET['target_file'], $id, $nome, $email);
+    executar_script_python($target_file, $id, $nome, $email);
 } catch (Exception $e) {
     // Registar o erro no log e redirecionar para a página de falha
     error_log($e->getMessage());

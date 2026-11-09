@@ -1,7 +1,4 @@
-/* cores da página do Workshop de Linux */
-
 :root {
-    /* texto sobre a foto de fundo, fixo em ambos os temas */
     --color-1: #FFF;
     --color-3: #FF5C00;
     --color-4: #32AA32;
@@ -17,7 +14,6 @@
     --ws-section-bg: #F5F8FD;
     --ws-section-text: #0d0d0d;
 }
-
 
 @keyframes wave {
     0% {
@@ -136,7 +132,6 @@ a.register {
     padding-bottom: 2.5rem;
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and down) */
 @media only screen and (max-width: 1200px) {
     #main-section img {
         height: 25em;
@@ -155,9 +150,7 @@ a.register {
     }
 }
 
-/* Large devices (laptops/desktops, 992px and down) */
 @media only screen and (max-width: 992px) {
-
     #main-section img {
         height: 30em;
     }
@@ -175,9 +168,7 @@ a.register {
     }
 }
 
-/* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-
     #main-section img {
         height: 20em;
     }

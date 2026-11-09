@@ -69,7 +69,6 @@ h1{
     font-weight: 900;
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     #blobrot,
     #blobrot2 {
@@ -77,9 +76,7 @@ h1{
     }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-
     #blobrot {
         right: -25%;
         top: -20%;
@@ -95,7 +92,6 @@ h1{
     }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     #blobrot,
     #blobrot2 {
@@ -117,7 +113,6 @@ h1{
     }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     #blobrot,
     #blobrot2 {
@@ -131,4 +126,19 @@ h1{
     #blobrot2 {
         top: -50%;
     }
+}
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 280ms;
+  animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
 }
