@@ -700,16 +700,6 @@ header footer {
   isolation: isolate;
 }
 
-@keyframes grid-drift {
-  from { transform: translate(0, 0); }
-  to   { transform: translate(32px, 32px); }
-}
-
-@keyframes grid-pulse {
-  0%, 100% { opacity: 0.2; }
-  50%       { opacity: 0.75; }
-}
-
 @keyframes cursor-blink {
   0%, 100% { opacity: 1; }
   50%       { opacity: 0; }
@@ -737,13 +727,11 @@ header footer {
 .page-texture::before {
   content: "";
   position: absolute;
-  inset: -40px;
+  inset: 0;
   background-image:
-    linear-gradient(to right, rgba(235, 94, 20, 0.22) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(235, 94, 20, 0.22) 1px, transparent 1px);
+    linear-gradient(to right, rgba(235, 94, 20, 0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(235, 94, 20, 0.055) 1px, transparent 1px);
   background-size: 32px 32px;
-  animation: grid-drift 10s linear infinite, grid-pulse 7s ease-in-out infinite;
-  will-change: transform, opacity;
 }
 
 .page-texture--soft {
@@ -751,18 +739,7 @@ header footer {
 }
 
 .page-texture--soft::before {
-  opacity: 0.45;
-  animation: none;
-}
-
-:root.light .page-texture::before {
-  background-image:
-    linear-gradient(to right, rgba(235, 94, 20, 0.14) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(235, 94, 20, 0.14) 1px, transparent 1px);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .page-texture::before { animation: none; opacity: 0.3; }
+  opacity: 0.6;
 }
 
 .page-title-cursor {
