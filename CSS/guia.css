@@ -13,6 +13,11 @@
   border-radius: var(--radius-lg);
   background: var(--surface-bg);
   border: 1px solid var(--surface-border);
+  transition: border-color 0.35s ease;
+}
+
+.guia-card:hover {
+  border-color: rgba(235, 94, 20, 0.28);
 }
 
 .guia-map-img {
@@ -117,11 +122,11 @@
   border: 1px solid var(--surface-border);
   color: var(--text-heading);
   text-decoration: none;
-  transition: border-color 0.2s ease;
+  transition: border-color 0.35s ease;
 }
 
 .guia-link-card:hover {
-  border-color: var(--surface-border-strong);
+  border-color: rgba(235, 94, 20, 0.35);
   color: var(--text-heading);
 }
 
@@ -195,6 +200,11 @@
   border-radius: var(--radius-lg);
   background-color: var(--surface-bg);
   border: 1px solid var(--surface-border);
+  transition: border-color 0.35s ease;
+}
+
+#question-list li:hover {
+  border-color: rgba(235, 94, 20, 0.22);
 }
 
 #question-list li+li {
