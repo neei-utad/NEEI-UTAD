@@ -110,7 +110,7 @@ if (empty($_SESSION['csrf_token'])) {
           Google Drive
         </a>
       </div>
-      <form id="Formulario" action="php/SendEmail.php" method="POST" enctype="multipart/form-data">
+      <form id="Formulario" action="#" method="POST" enctype="multipart/form-data" onsubmit="return false;">
         <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
         <div class="input-group">
           <input type="text" class="form-control" id="name" name="name" placeholder="Nome" required>
@@ -211,7 +211,7 @@ if (empty($_SESSION['csrf_token'])) {
             fileExtension = fileName.split('.').slice(-2).join('.');
           }
   
-          if (fileSize > 150) { // se o arquivo for maior que 150 MB
+          if (fileSize > 75) { // se o arquivo for maior que 75 MB
             alert('O arquivo excede o limite máximo de 150MB.');
             fileInput.value = ''; // limpa o campo do arquivo
             fileLabel.textContent = 'Escolher ficheiros'; // reset para o texto original
