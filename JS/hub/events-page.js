@@ -96,10 +96,7 @@ function EventsPage() {
 
   return html`
     <${PageCanvas}>
-      <${PageHeader}
-        title="Eventos & Atividades"
-        description="Workshops, palestras, torneios e convívios organizados pelo NEEI."
-      />
+      <${PageHeader} title="Eventos & Atividades" />
 
       <div className="mt-10">
         <${Tabs} label="Eventos" tabs=${TABS} value=${tab} onChange=${setTab} />

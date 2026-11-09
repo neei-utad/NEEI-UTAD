@@ -1,4 +1,4 @@
-import { html, useState } from "./react.js";
+import { html, useEffect, useState } from "./react.js";
 import { ALL_TAGS } from "./lib/archive.js";
 
 const cx = (...classes) => classes.filter(Boolean).join(" ");
@@ -17,11 +17,32 @@ export function PageCanvas({ children }) {
   `;
 }
 
-export function PageHeader({ title, description }) {
+const REDUCE_MOTION_HUB = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+export function PageHeader({ title }) {
+  const [displayed, setDisplayed] = useState(REDUCE_MOTION_HUB ? title : "");
+
+  useEffect(() => {
+    if (REDUCE_MOTION_HUB || !title) return;
+    let i = 0;
+    const delay = setTimeout(() => {
+      const id = setInterval(() => {
+        if (i < title.length) {
+          setDisplayed(title.slice(0, ++i));
+        } else {
+          clearInterval(id);
+        }
+      }, 55);
+      return () => clearInterval(id);
+    }, 300);
+    return () => clearTimeout(delay);
+  }, [title]);
+
   return html`
-    <div className="space-y-4">
-      <h1 className="text-[28px] font-semibold leading-tight tracking-[-0.02em] text-fg sm:text-4xl">${title}</h1>
-      ${description && html`<p className="max-w-xl text-[15px] leading-relaxed text-muted">${description}</p>`}
+    <div>
+      <h1 className="text-[28px] font-semibold leading-tight tracking-[-0.02em] text-fg sm:text-4xl">
+        ${displayed}<span className="page-title-cursor">_</span>
+      </h1>
     </div>
   `;
 }

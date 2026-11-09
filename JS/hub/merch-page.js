@@ -76,7 +76,7 @@ function MerchPage() {
 
   return html`
     <${PageCanvas}>
-      <${PageHeader} title="Merch" description="T-shirts, hoodies, casacos e acessórios oficiais do NEEI." />
+      <${PageHeader} title="Merch" />
 
       <div className="mt-10">
         <${Tabs} label="Merch" tabs=${TABS} value=${tab} onChange=${setTab} />
