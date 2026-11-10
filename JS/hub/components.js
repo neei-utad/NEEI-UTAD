@@ -191,9 +191,14 @@ export function SafeImage({ src, alt, className, ...rest }) {
   return html`<img src=${src} alt=${alt} className=${className} onError=${() => setFailed(true)} ...${rest} />`;
 }
 
-export function Card({ title, description, image, backImage, alt, meta, badge, dateTime, square = false }) {
+export function Card({ title, description, image, backImage, alt, meta, badge, dateTime, square = false, glow = false }) {
   return html`
-    <article className="group flex flex-col overflow-hidden rounded-xl border border-line/10 bg-surface/60 transition-colors hover:border-line/20">
+    <article className=${cx(
+      "group flex flex-col overflow-hidden rounded-xl border bg-surface/60 transition-colors",
+      glow
+        ? "border-orange-400/50 shadow-[0_0_10px_1px_rgba(249,115,22,0.22)] hover:shadow-[0_0_14px_2px_rgba(249,115,22,0.35)]"
+        : "border-line/10 hover:border-line/20"
+    )}>
       <div className=${cx("relative overflow-hidden border-b border-line/10 bg-line/[0.03]", square ? "aspect-square" : "aspect-[4/5]")}>
         <${SafeImage}
           src=${image}

@@ -39,6 +39,7 @@ function MerchCard({ item }) {
       alt=${item.tag === "Kits" ? `Cartaz: ${item.title}` : item.title}
       meta=${item.year}
       badge=${item.price || item.tag}
+      glow=${item.placeholder}
     />
   `;
 }
