@@ -2,7 +2,7 @@ html:has(#intro-loader) {
   overflow: hidden;
 }
 
-/* sequência (2.4 s): desenha + roda em 3D -> preenche e pulsa -> legenda -> fecha em íris */
+/* sequência (2.3 s): desenha + roda em 3D -> preenche e pulsa -> desvanece com blur */
 .intro-loader {
   --intro-ease: cubic-bezier(0.16, 1, 0.3, 1);
   position: fixed;
@@ -18,8 +18,7 @@ html:has(#intro-loader) {
     linear-gradient(to right, rgba(235, 94, 20, 0.05) 1px, transparent 1px) 50% 50% / 34px 34px,
     linear-gradient(to bottom, rgba(235, 94, 20, 0.05) 1px, transparent 1px) 50% 50% / 34px 34px,
     #050505;
-  clip-path: circle(150% at 50% 46%);
-  animation: introIris 0.85s cubic-bezier(0.7, 0, 0.2, 1) 1.55s forwards;
+  animation: introFade 0.75s ease 1.55s forwards;
 }
 
 .intro-loader__art {
@@ -71,49 +70,6 @@ html:has(#intro-loader) {
     introSparkFade 0.22s ease-in 0.9s forwards;
 }
 
-.intro-loader__label {
-  display: flex;
-  align-items: center;
-  gap: 0.7em;
-  font-family: "JetBrains Mono", "Space Mono", ui-monospace, monospace;
-  font-size: 0.8rem;
-  letter-spacing: 0.42em;
-  text-indent: 0.42em;
-  color: #ededef;
-  opacity: 0;
-  animation:
-    introLabel 0.7s var(--intro-ease) 0.6s forwards,
-    introLeave 0.45s ease 1.5s forwards;
-}
-
-.intro-loader__label i {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--active-page, #FF5C00);
-  box-shadow: 0 0 10px var(--active-page, #FF5C00);
-}
-
-.intro-loader__bar {
-  width: min(34vw, 170px);
-  height: 2px;
-  margin-top: -0.6rem;
-  border-radius: 2px;
-  background: rgba(255, 255, 255, 0.08);
-  overflow: hidden;
-  animation: introLeave 0.45s ease 1.5s forwards;
-}
-
-.intro-loader__bar::before {
-  content: "";
-  display: block;
-  height: 100%;
-  background: linear-gradient(90deg, rgba(235, 94, 20, 0.4), var(--active-page, #FF5C00));
-  transform: scaleX(0);
-  transform-origin: left;
-  animation: introBar 1.3s cubic-bezier(0.65, 0, 0.35, 1) 0.15s forwards;
-}
-
 @keyframes introTurn {
   from {
     opacity: 0;
@@ -162,27 +118,6 @@ html:has(#intro-loader) {
   }
 }
 
-@keyframes introLabel {
-  from {
-    opacity: 0;
-    letter-spacing: 0.9em;
-    transform: translateY(8px);
-    filter: blur(6px);
-  }
-  to {
-    opacity: 1;
-    letter-spacing: 0.42em;
-    transform: none;
-    filter: blur(0);
-  }
-}
-
-@keyframes introBar {
-  to {
-    transform: scaleX(1);
-  }
-}
-
 @keyframes introLeave {
   to {
     opacity: 0;
@@ -190,14 +125,15 @@ html:has(#intro-loader) {
   }
 }
 
-/* o ecrã preto fecha-se sobre o logo e revela a página de fora para dentro */
-@keyframes introIris {
+@keyframes introFade {
   0% {
-    clip-path: circle(150% at 50% 46%);
+    opacity: 1;
+    filter: blur(0);
     pointer-events: auto;
   }
   100% {
-    clip-path: circle(0% at 50% 46%);
+    opacity: 0;
+    filter: blur(16px);
     pointer-events: none;
   }
 }
