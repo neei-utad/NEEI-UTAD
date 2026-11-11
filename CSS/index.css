@@ -82,6 +82,16 @@
   will-change: transform, opacity;
 }
 
+/* grelha técnica desenhada pelo grid.js; mascarada para libertar o canto do texto */
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.55) 55%, transparent 88%);
+  mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.55) 55%, transparent 88%);
+}
 #hero-section-content {
   text-align: right;
   width: auto;
@@ -136,15 +146,9 @@
   animation: fade-smooth 2.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   will-change: opacity;
 }
-
-@media (prefers-reduced-motion: reduce) {
-  .terminal-cursor {
-    animation: none;
-  }
-}
-
 .gallery-container {
-  --gallery-ease: cubic-bezier(0.22, 0.9, 0.24, 1);
+  --gallery-ease: var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1));
+  --gallery-settle: var(--ease-out-quint, cubic-bezier(0.22, 1, 0.36, 1));
   --gallery-interval: 6s;
   position: relative;
   padding: 5rem 0;
@@ -277,11 +281,14 @@
   border: 1px solid var(--surface-border);
   border-radius: var(--radius-lg);
   cursor: pointer;
+  box-shadow: 0 22px 40px -26px rgba(0, 0, 0, 0.85);
   transition:
-    flex-grow 0.8s var(--gallery-ease),
-    border-color 0.4s ease,
+    flex-grow var(--dur-accordion, 1s) var(--gallery-ease),
+    transform var(--dur-accordion, 1s) var(--gallery-ease),
+    border-color var(--dur-slow, 0.6s) ease,
+    box-shadow var(--dur-slow, 0.6s) ease,
     opacity 0.8s ease var(--reveal-delay, 0s),
-    translate 1s var(--gallery-ease) var(--reveal-delay, 0s);
+    translate 1s var(--gallery-settle) var(--reveal-delay, 0s);
 }
 
 /* classes postas pelo home.js */
@@ -308,7 +315,29 @@
 .expand-card.active {
   flex-grow: 5;
   border-color: rgba(235, 94, 20, 0.35);
+  box-shadow: 0 46px 80px -34px rgba(0, 0, 0, 0.9), var(--glow-soft);
   cursor: default;
+}
+
+/* os cartões laterais viram-se para o ativo, como um carrossel em 3D */
+@media (min-width: 769px) {
+  .expanding-gallery {
+    perspective: 1600px;
+  }
+
+  .expand-card:has(~ .expand-card.active) {
+    transform: rotateY(14deg) scale(0.97);
+    transform-origin: right center;
+  }
+
+  .expand-card.active ~ .expand-card {
+    transform: rotateY(-14deg) scale(0.97);
+    transform-origin: left center;
+  }
+
+  .expand-card:not(.active):hover {
+    box-shadow: 0 30px 50px -28px rgba(0, 0, 0, 0.9), 0 0 0 1px rgb(var(--brand-rgb) / 0.3);
+  }
 }
 
 .expand-card img {
@@ -421,14 +450,12 @@
   gap: 0.35rem;
   padding: 1.75rem;
   opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity var(--dur-fast, 0.18s) ease;
 }
 
 .expand-card.active .expand-card-caption {
   opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.6s ease 0.35s, transform 0.6s var(--gallery-ease) 0.35s;
+  transition: opacity var(--dur-base, 0.32s) ease 0.2s;
 }
 
 .expand-card-title {
@@ -450,7 +477,7 @@
 
 .expand-card.active .expand-card-title > span {
   transform: none;
-  transition: transform 0.9s var(--gallery-ease) 0.3s;
+  transition: transform var(--dur-accordion, 1s) var(--gallery-ease) 0.22s;
 }
 
 .expand-card-date {
@@ -459,6 +486,17 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  translate: 0 10px;
+  transition: opacity var(--dur-fast, 0.18s) ease, translate var(--dur-fast, 0.18s) ease;
+}
+
+/* o segundo degrau do encadeamento: título entra, data segue */
+.expand-card.active .expand-card-date {
+  opacity: 1;
+  translate: 0 0;
+  transition: opacity var(--dur-slow, 0.62s) ease 0.42s,
+    translate var(--dur-slow, 0.62s) var(--gallery-settle) 0.42s;
 }
 
 .expand-card-progress {
@@ -539,27 +577,6 @@
     padding: 1.25rem;
   }
 }
-
-@media (prefers-reduced-motion: reduce) {
-  .expand-card,
-  .expand-card img,
-  .expand-card-caption,
-  .expand-card-title > span {
-    transition: none !important;
-    animation: none !important;
-  }
-
-  .expand-card img {
-    translate: none;
-  }
-
-  .gallery-container.will-reveal .gallery-header,
-  .gallery-container.will-reveal .expand-card {
-    opacity: 1;
-    translate: none;
-  }
-}
-
 @media only screen and (max-width: 375px) {
    #todos {
     width: auto;
@@ -641,5 +658,198 @@
   }
   #blobrot2 {
     top: -50%;
+  }
+}
+
+/* ================= home v2 ================= */
+
+/* hero em 3D: --hx/--hy (-1..1) vêm do home.js e seguem o rato com atraso suave */
+#hero-section {
+  perspective: 1200px;
+}
+
+#hero-section::before {
+  transform: scale(1.07);
+  translate: calc(var(--hx, 0) * 14px) calc(var(--hy, 0) * 10px);
+}
+
+#hero-section-content {
+  transform: rotateY(calc(var(--hx, 0) * -6deg)) rotateX(calc(var(--hy, 0) * 4deg))
+    translate3d(calc(var(--hx, 0) * -12px), calc(var(--hy, 0) * -8px), 0);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.hero-terminal {
+  transform: translateZ(46px);
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+#hero-header {
+  transform: translateZ(18px);
+}
+
+/* foco de luz laranja por baixo do rato */
+.hero-spot {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(460px circle at var(--sx, 70%) var(--sy, 60%), rgba(235, 94, 20, 0.2), transparent 65%);
+  opacity: var(--spot, 0);
+  transition: opacity 0.7s ease;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+  transform: translateZ(30px);
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 2.6rem;
+  padding: 0 1.1rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ededef;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 14px 30px -18px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  opacity: 0;
+  translate: 0 14px;
+  transition: opacity 0.7s ease, translate 0.9s var(--ease-out-expo), transform 0.4s var(--ease-spring),
+    border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.hero-actions.is-ready .hero-btn {
+  opacity: 1;
+  translate: 0 0;
+}
+
+.hero-actions.is-ready .hero-btn + .hero-btn {
+  transition-delay: 0.12s, 0.12s, 0s, 0s, 0s, 0s;
+}
+
+.hero-btn:hover,
+.hero-btn:focus-visible {
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-3px);
+  border-color: rgba(235, 94, 20, 0.6);
+  box-shadow: 0 20px 36px -16px rgba(235, 94, 20, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.hero-btn:active {
+  transform: translateY(0) scale(0.97);
+}
+
+.hero-btn--primary {
+  color: #fff;
+  background: linear-gradient(180deg, #f06a22, var(--main-orange-color));
+  border-color: transparent;
+  box-shadow: 0 14px 30px -12px rgba(235, 94, 20, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.hero-btn i {
+  font-size: 0.75rem;
+  transition: transform 0.4s var(--ease-out-expo);
+}
+
+.hero-btn:hover i {
+  transform: translate(2px, -2px);
+}
+
+.hero-scroll {
+  position: absolute;
+  left: 1.75rem;
+  bottom: 2.25rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.55);
+  transition: color 0.3s ease;
+}
+
+.hero-scroll span {
+  writing-mode: vertical-rl;
+}
+
+.hero-scroll i {
+  position: relative;
+  width: 1px;
+  height: 3.2rem;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.hero-scroll i::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--main-orange-color);
+  animation: hero-scroll-line 2s var(--ease-out-expo) infinite;
+}
+
+.hero-scroll:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+@keyframes hero-scroll-line {
+  0% { transform: translateY(-100%); }
+  60%, 100% { transform: translateY(100%); }
+}
+
+/* carrossel fluido: a foto tem sempre o tamanho do cartão aberto e o cartão só a recorta.
+   antes o object-fit era recalculado em cada frame da expansão, e era isso que engasgava */
+.expanding-gallery {
+  container-type: inline-size;
+}
+
+.expand-card img {
+  inset: auto;
+  top: 0;
+  left: 50%;
+  width: calc((100cqw - 1.5rem) * 0.625 + 2px);
+  max-width: none;
+  height: 100%;
+  translate: calc(-50% + var(--px, 0) * -16px) calc(var(--py, 0) * -12px);
+}
+
+@media (max-width: 768px) {
+  .expand-card img {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: calc((560px - 1.5rem) * 0.667 + 2px);
+    translate: 0 -50%;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+
+  .hero-btn {
+    height: 2.5rem;
+    padding: 0 0.95rem;
   }
 }

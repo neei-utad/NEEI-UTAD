@@ -10,6 +10,7 @@ import {
   InstagramNote,
   PageCanvas,
   PageHeader,
+  SectionHead,
   Tabs,
   TagFilter,
   YearSwitch,
@@ -29,10 +30,11 @@ const TABS = [
   { id: TAB_ARCHIVE, label: "Edições anteriores", count: pastItems.length },
 ];
 
-function MerchCard({ item }) {
+function MerchCard({ item, index }) {
   return html`
     <${Card}
       square
+      index=${index}
       title=${item.title}
       image=${item.image}
       backImage=${item.backImage}
@@ -79,18 +81,25 @@ function MerchPage() {
     <${PageCanvas}>
       <${PageHeader} title="Merch" />
 
-      <div className="mt-10">
+      <div className="mt-8 flex flex-wrap items-center gap-3">
         <${Tabs} label="Merch" tabs=${TABS} value=${tab} onChange=${setTab} />
-      </div>
-
-      <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <${TagFilter} tags=${TAGS} value=${activeTag} onChange=${setTag} counts=${counts} />
         ${isArchive && html`<${YearSwitch} years=${years} value=${year} onChange=${setYear} />`}
+        <div className="max-w-full sm:ml-auto">
+          <${TagFilter} tags=${TAGS} value=${activeTag} onChange=${setTag} counts=${counts} />
+        </div>
       </div>
 
-      <section id=${`panel-${tab}`} role="tabpanel" aria-labelledby=${`tab-${tab}`} className="mt-6">
+      <section id=${`panel-${tab}`} role="tabpanel" aria-labelledby=${`tab-${tab}`} className="mt-9">
+        <${SectionHead}
+          title=${isArchive ? `Edição ${toFullYear(year)}` : `Coleção ${CURRENT_YEAR}`}
+          count=${`${visible.length} ${visible.length === 1 ? "artigo" : "artigos"}`}
+        />
         ${visible.length
-          ? html`<${CardGrid}>${visible.map((item) => html`<${MerchCard} key=${item.id} item=${item} />`)}<//>`
+          ? html`
+              <${CardGrid} key=${`${tab}-${activeTag}-${year}`}>
+                ${visible.map((item, i) => html`<${MerchCard} key=${item.id} item=${item} index=${i} />`)}
+              <//>
+            `
           : emptyState}
       </section>
     <//>

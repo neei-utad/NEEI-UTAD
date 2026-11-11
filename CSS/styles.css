@@ -263,14 +263,6 @@ body {
   #menu-toggle:checked ~ .menu-box .menu-item:nth-child(9) { transition-delay: 0.16s; }
   #menu-toggle:checked ~ .menu-box .menu-item:nth-child(11) { transition-delay: 0.2s; }
 }
-
-@media only screen and (max-width: 991.98px) and (prefers-reduced-motion: reduce) {
-  .menu-box,
-  .menu-item {
-    transition: none !important;
-  }
-}
-
 .menu-scroll {
   display: flex;
   flex-direction: column;
@@ -705,15 +697,17 @@ header footer {
   50%       { opacity: 0; }
 }
 
+/* a grelha vive no topo e dissolve-se para baixo; o grid.js enfraquece o efeito do rato
+   ao mesmo ritmo, por isso não há um ponto onde o 3D "desliga" de repente */
 .page-texture {
   position: absolute;
   inset: 0 0 auto 0;
-  height: min(640px, 100%);
+  height: min(460px, 100%);
   z-index: -1;
   pointer-events: none;
   overflow: hidden;
-  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
-  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0.25) 65%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0.25) 65%, transparent 100%);
 }
 
 .page-texture::after {
@@ -729,13 +723,14 @@ header footer {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(to right, rgba(235, 94, 20, 0.055) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(235, 94, 20, 0.055) 1px, transparent 1px);
+    linear-gradient(to right, rgba(235, 94, 20, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(235, 94, 20, 0.025) 1px, transparent 1px);
   background-size: 32px 32px;
 }
 
-.page-texture--soft {
-  height: 100%;
+/* o grid.js injeta um canvas animado; sem isto ficavam duas grelhas sobrepostas */
+.page-texture:has(canvas)::before {
+  display: none;
 }
 
 .page-texture--soft::before {
@@ -772,17 +767,6 @@ header footer {
     animation: page-fade-in 280ms cubic-bezier(0.2, 0, 0, 1) both;
   }
 }
-
-@media (prefers-reduced-motion: reduce) {
-  @view-transition {
-    navigation: none;
-  }
-
-  body {
-    animation: none !important;
-  }
-}
-
 #topo {
   padding: 7rem 0 4rem;
   background-color: var(--page-top-bg);
@@ -907,5 +891,292 @@ header footer {
 
   :root.light button.theme-toggle {
     color: #111113;
+  }
+}
+
+/* ================= navegação v2 ================= */
+
+.menu-item a.is-current {
+  color: var(--main-orange-color);
+}
+
+@media only screen and (min-width: 992px) {
+  /* o vidro vive num pseudo-elemento para poder encolher e arredondar sem mexer nos links */
+  .menu-box,
+  .menu-box.scrolled,
+  :root.light .menu-box,
+  :root.light .menu-box.scrolled {
+    background: transparent !important;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom-color: transparent;
+    isolation: isolate;
+  }
+
+  .menu-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border: 1px solid transparent;
+    border-radius: 0;
+    transition: inset 0.6s var(--ease-out-expo), border-radius 0.6s var(--ease-out-expo),
+      background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .menu-box.scrolled::before {
+    inset: 8px 14px 4px;
+    border-radius: 22px;
+    background: rgba(18, 18, 20, 0.58);
+    backdrop-filter: blur(22px) saturate(1.3);
+    -webkit-backdrop-filter: blur(22px) saturate(1.3);
+    box-shadow: 0 24px 50px -28px rgba(0, 0, 0, 0.7);
+  }
+
+  :root.light .menu-box::before {
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  :root.light .menu-box.scrolled::before {
+    box-shadow: 0 18px 40px -22px rgba(0, 0, 0, 0.35);
+  }
+
+  .menu-logo img {
+    transition: transform 0.6s var(--ease-spring), filter 0.4s ease;
+  }
+
+  .menu-logo a:hover img {
+    transform: rotate(-8deg) scale(1.1);
+    filter: drop-shadow(0 6px 14px rgba(235, 94, 20, 0.55));
+  }
+
+  #menu-items {
+    position: relative;
+    gap: 0.2rem;
+  }
+
+  .menu-item {
+    margin: 0 !important;
+    animation: nav-drop 0.6s var(--ease-out-expo) both;
+  }
+
+  .menu-item:nth-child(3) { animation-delay: 0.05s; }
+  .menu-item:nth-child(5) { animation-delay: 0.1s; }
+  .menu-item:nth-child(7) { animation-delay: 0.15s; }
+  .menu-item:nth-child(9) { animation-delay: 0.2s; }
+  .menu-item:nth-child(11) { animation-delay: 0.25s; }
+
+  @keyframes nav-drop {
+    from {
+      opacity: 0;
+      transform: translateY(-12px);
+    }
+  }
+
+  .menu-item a {
+    position: relative;
+    z-index: 1;
+    display: block;
+    padding: 0.5rem 0.95rem;
+    border-radius: 999px;
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    /* --lens (0..1) vem do menu.js: os links incham perto do rato, como as linhas da grelha */
+    transform: perspective(500px) translateZ(calc(var(--lens, 0) * 70px)) translateY(calc(var(--lens, 0) * 1px));
+    text-shadow: 0 calc(var(--lens, 0) * 10px) calc(var(--lens, 0) * 18px) rgba(0, 0, 0, calc(var(--lens, 0) * 0.55));
+    transition: color 0.25s ease, transform 0.35s var(--ease-out-expo), text-shadow 0.35s ease;
+    will-change: transform;
+  }
+
+  .menu-item a.is-current,
+  :root.light .menu-item a.is-current {
+    color: var(--main-orange-color);
+  }
+
+  .menu-item a.is-current::before {
+    content: "//";
+    margin-right: 0.4em;
+    opacity: 0.8;
+  }
+
+  button.theme-toggle {
+    width: 2.3rem;
+    height: 2.3rem;
+    justify-content: center;
+    font-size: 1.05rem;
+    border-radius: 50%;
+    transition: transform 0.5s var(--ease-spring), background-color 0.3s ease, color 0.3s ease;
+  }
+
+  button.theme-toggle:hover {
+    transform: rotate(18deg);
+    color: var(--main-orange-color);
+    background: rgba(255, 255, 255, 0.07);
+  }
+
+  :root.light button.theme-toggle:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+}
+
+@media only screen and (max-width: 991.98px) {
+  html:has(#menu-toggle:checked) {
+    overflow: hidden;
+  }
+
+  .hamburger-menu {
+    backdrop-filter: blur(14px) saturate(1.3);
+    -webkit-backdrop-filter: blur(14px) saturate(1.3);
+  }
+
+  .menu__btn {
+    width: 1.75em;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* fechado: barras de larguras diferentes; aberto: viram um X laranja */
+  .menu__btn > span::before {
+    width: 70%;
+  }
+
+  .menu__btn > span::after {
+    width: 85%;
+  }
+
+  #menu-toggle:checked + .menu__btn > span::before,
+  #menu-toggle:checked + .menu__btn > span::after {
+    width: 100%;
+  }
+
+  .hamburger-menu::after {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: opacity 0.45s ease;
+  }
+
+  .menu-box {
+    width: min(84vw, 330px);
+    max-width: none;
+    padding-top: 5em;
+    border-radius: 0 26px 26px 0;
+    box-shadow: 30px 0 70px -24px rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(22px) saturate(1.3);
+    -webkit-backdrop-filter: blur(22px) saturate(1.3);
+    perspective: 900px;
+    transition: transform 0.6s var(--ease-out-expo), visibility 0s linear 0.6s;
+  }
+
+  #menu-toggle:checked ~ .menu-box {
+    transition: transform 0.6s var(--ease-out-expo), visibility 0s;
+  }
+
+  #menu-items {
+    counter-reset: nav;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-item {
+    counter-increment: nav;
+    padding: 0;
+    opacity: 0;
+    transform: translateX(-28px) rotateY(-28deg);
+    transform-origin: left center;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  #menu-toggle:checked ~ .menu-box .menu-item {
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.5s ease, transform 0.7s var(--ease-out-expo);
+  }
+
+  #menu-toggle:checked ~ .menu-box .menu-item:nth-child(1) { transition-delay: 0.1s; }
+  #menu-toggle:checked ~ .menu-box .menu-item:nth-child(3) { transition-delay: 0.16s; }
+  #menu-toggle:checked ~ .menu-box .menu-item:nth-child(5) { transition-delay: 0.22s; }
+  #menu-toggle:checked ~ .menu-box .menu-item:nth-child(7) { transition-delay: 0.28s; }
+  #menu-toggle:checked ~ .menu-box .menu-item:nth-child(9) { transition-delay: 0.34s; }
+  #menu-toggle:checked ~ .menu-box .menu-item:nth-child(11) { transition-delay: 0.4s; }
+
+  .menu-item a {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.95rem 1.75rem;
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
+    transition: color 0.25s ease, background-color 0.25s ease, padding-left 0.4s var(--ease-out-expo);
+  }
+
+  .menu-item a::before {
+    content: "0" counter(nav);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: var(--main-orange-color);
+    opacity: 0.85;
+  }
+
+  .menu-item a::after {
+    content: "\F138";
+    font-family: "bootstrap-icons";
+    margin-left: auto;
+    font-size: 0.85rem;
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: opacity 0.25s ease, transform 0.4s var(--ease-out-expo);
+  }
+
+  .menu-item a:hover,
+  .menu-item a:active,
+  .menu-item a.is-current {
+    padding-left: 2.1rem;
+    background: linear-gradient(90deg, rgba(235, 94, 20, 0.12), transparent 80%);
+  }
+
+  .menu-item a:hover::after,
+  .menu-item a:active::after,
+  .menu-item a.is-current::after {
+    opacity: 1;
+    transform: none;
+  }
+
+  .line {
+    width: auto;
+    margin: 0 1.75rem;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+  }
+
+  #menu-toggle:checked ~ .menu-box .line {
+    transform: scaleX(1);
+    transition: transform 0.8s var(--ease-out-expo) 0.25s;
+  }
+}
+
+/* a cor acompanha a lente: quanto mais perto do rato, mais laranja */
+@media only screen and (min-width: 992px) {
+  .menu-item a,
+  .menu-item a:hover {
+    --nav-ink: rgba(255, 255, 255, 0.85);
+    color: color-mix(in srgb, var(--main-orange-color) calc(var(--lens, 0) * 100%), var(--nav-ink));
+  }
+
+  :root.light .menu-item a,
+  :root.light .menu-item a:hover {
+    --nav-ink: rgba(17, 17, 19, 0.75);
+    color: color-mix(in srgb, var(--main-orange-color) calc(var(--lens, 0) * 100%), var(--nav-ink));
+  }
+
+  .menu-item a.is-current,
+  .menu-item a:focus-visible {
+    color: var(--main-orange-color);
   }
 }

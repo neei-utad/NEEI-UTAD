@@ -1,12 +1,13 @@
 import { html, useEffect, useState } from "./react.js";
+import { cardVariants, gridVariants, motion, useTilt } from "./motion.js";
 import { ALL_TAGS } from "./lib/archive.js";
 
 const cx = (...classes) => classes.filter(Boolean).join(" ");
 
-export const PRIMARY_BUTTON_CLASS =
-  "inline-flex h-9 items-center rounded-lg bg-brand px-4 text-sm font-medium text-white transition-colors hover:bg-brand-hover";
+export const PRIMARY_BUTTON_CLASS = "hub-cta";
 
 const INSTAGRAM_URL = "https://www.instagram.com/neei.utad/";
+const PILL_SPRING = { type: "spring", stiffness: 420, damping: 34, mass: 0.7 };
 
 export function PageCanvas({ children }) {
   return html`
@@ -17,33 +18,39 @@ export function PageCanvas({ children }) {
   `;
 }
 
-const REDUCE_MOTION_HUB = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
 export function PageHeader({ title }) {
-  const [displayed, setDisplayed] = useState(REDUCE_MOTION_HUB ? title : "");
+  const [displayed, setDisplayed] = useState("");
 
   useEffect(() => {
-    if (REDUCE_MOTION_HUB || !title) return;
+    if (!title) return;
     let i = 0;
+    let interval = null;
     const delay = setTimeout(() => {
-      const id = setInterval(() => {
-        if (i < title.length) {
-          setDisplayed(title.slice(0, ++i));
-        } else {
-          clearInterval(id);
-        }
+      interval = setInterval(() => {
+        if (i < title.length) setDisplayed(title.slice(0, ++i));
+        else clearInterval(interval);
       }, 55);
-      return () => clearInterval(id);
     }, 300);
-    return () => clearTimeout(delay);
+    return () => {
+      clearTimeout(delay);
+      clearInterval(interval);
+    };
   }, [title]);
 
   return html`
-    <div>
-      <h1 className="text-[28px] font-semibold leading-tight tracking-[-0.02em] text-fg sm:text-4xl">
-        ${displayed}<span className="page-title-cursor">_</span>
-      </h1>
-    </div>
+    <h1 className="text-[28px] font-semibold leading-tight tracking-[-0.02em] text-fg sm:text-4xl">
+      ${displayed}<span className="page-title-cursor">_</span>
+    </h1>
+  `;
+}
+
+// botão de um controlo segmentado; a pílula viaja entre botões pelo layoutId
+function SegButton({ active, pillId, children, ...rest }) {
+  return html`
+    <button type="button" className=${cx("hub-seg-btn", active && "is-active")} ...${rest}>
+      ${active && html`<${motion.span} layoutId=${pillId} className="hub-seg-pill" transition=${PILL_SPRING} />`}
+      ${children}
+    </button>
   `;
 }
 
@@ -58,29 +65,24 @@ export function Tabs({ tabs, value, onChange, label }) {
   };
 
   return html`
-    <div role="tablist" aria-label=${label} onKeyDown=${handleKeyDown} className="flex gap-6 border-b border-line/10">
+    <div role="tablist" aria-label=${label} onKeyDown=${handleKeyDown} className="hub-seg">
       ${tabs.map((tab) => {
         const active = tab.id === value;
         return html`
-          <button
+          <${SegButton}
             key=${tab.id}
+            pillId="hub-tabs-pill"
+            active=${active}
             id=${`tab-${tab.id}`}
             role="tab"
-            type="button"
             aria-selected=${active}
             aria-controls=${`panel-${tab.id}`}
             tabIndex=${active ? 0 : -1}
             onClick=${() => onChange(tab.id)}
-            className=${cx(
-              "-mb-px flex items-center gap-2 border-b-2 pb-3 text-sm font-medium transition-colors",
-              active ? "border-brand text-fg" : "border-transparent text-muted hover:text-fg"
-            )}
           >
             ${tab.label}
-            <span className="rounded bg-line/[0.06] px-1.5 py-px font-mono text-[10px] tabular-nums text-muted">
-              ${tab.count}
-            </span>
-          </button>
+            <span className="hub-seg-count">${tab.count}</span>
+          <//>
         `;
       })}
     </div>
@@ -89,24 +91,20 @@ export function Tabs({ tabs, value, onChange, label }) {
 
 export function TagFilter({ tags, value, onChange, counts }) {
   return html`
-    <div role="group" aria-label="Filtrar por tipo" className="flex flex-wrap gap-1.5">
+    <div role="group" aria-label="Filtrar por tipo" className="hub-seg">
       ${[ALL_TAGS, ...tags].map((tag) => {
         const active = tag === value;
         return html`
-          <button
+          <${SegButton}
             key=${tag}
-            type="button"
+            pillId="hub-tag-pill"
+            active=${active}
             aria-pressed=${active}
             disabled=${tag !== ALL_TAGS && !counts[tag]}
             onClick=${() => onChange(tag)}
-            className=${cx(
-              "rounded-full border px-3 py-1 font-mono text-[11px] uppercase tracking-[0.06em] transition-colors",
-              "disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-line/10 disabled:hover:text-muted",
-              active ? "border-line/20 bg-line/[0.08] text-fg" : "border-line/10 text-muted hover:border-line/20 hover:text-fg"
-            )}
           >
             ${tag}
-          </button>
+          <//>
         `;
       })}
     </div>
@@ -115,27 +113,29 @@ export function TagFilter({ tags, value, onChange, counts }) {
 
 export function YearSwitch({ years, value, onChange }) {
   return html`
-    <div
-      role="group"
-      aria-label="Ano letivo"
-      className="inline-flex max-w-full shrink-0 self-start overflow-x-auto rounded-lg border border-line/10 p-0.5 sm:self-auto"
-    >
+    <div role="group" aria-label="Ano letivo" className="hub-seg">
       ${years.map(
         (year) => html`
-          <button
+          <${SegButton}
             key=${year}
-            type="button"
+            pillId="hub-year-pill"
+            active=${year === value}
             aria-pressed=${year === value}
             onClick=${() => onChange(year)}
-            className=${cx(
-              "shrink-0 rounded-md px-2.5 py-1 font-mono text-[11px] tabular-nums transition-colors",
-              year === value ? "bg-line/[0.08] text-fg" : "text-muted hover:text-fg"
-            )}
           >
             ${year}
-          </button>
+          <//>
         `
       )}
+    </div>
+  `;
+}
+
+export function SectionHead({ title, count }) {
+  return html`
+    <div className="hub-section-head">
+      <h2>${title}</h2>
+      ${count !== undefined && html`<span className="hub-section-count">${count}</span>`}
     </div>
   `;
 }
@@ -144,14 +144,9 @@ export function Button({ children, onClick }) {
   return html`<button type="button" className=${PRIMARY_BUTTON_CLASS} onClick=${onClick}>${children}</button>`;
 }
 
-export function EmptyState({ title, description, action, footnote, compact = false }) {
+export function EmptyState({ title, description, action, footnote }) {
   return html`
-    <div
-      className=${cx(
-        "flex flex-col items-center rounded-xl border border-dashed border-line/10 bg-surface/40 px-6 text-center",
-        compact ? "py-12" : "py-16 sm:py-20"
-      )}
-    >
+    <div className="hub-empty">
       <h2 className="text-base font-semibold text-fg">${title}</h2>
       ${description && html`<p className="mt-2 max-w-sm text-sm leading-relaxed text-muted">${description}</p>`}
       ${action && html`<div className="mt-6">${action}</div>`}
@@ -177,11 +172,7 @@ export function InstagramNote() {
 }
 
 export function Badge({ children }) {
-  return html`
-    <span className="rounded border border-line/10 px-1.5 py-px font-mono text-[10px] uppercase tracking-[0.06em] text-muted">
-      ${children}
-    </span>
-  `;
+  return html`<span className="hub-badge">${children}</span>`;
 }
 
 // imagem que some se falhar
@@ -191,22 +182,28 @@ export function SafeImage({ src, alt, className, ...rest }) {
   return html`<img src=${src} alt=${alt} className=${className} onError=${() => setFailed(true)} ...${rest} />`;
 }
 
-export function Card({ title, description, image, backImage, alt, meta, badge, dateTime, square = false, glow = false }) {
+export const pad2 = (n) => String(n + 1).padStart(2, "0");
+
+export function Card({ index = 0, title, description, image, backImage, alt, meta, badge, dateTime, square = false, glow = false }) {
+  const tilt = useTilt();
+
   return html`
-    <article className=${cx(
-      "group flex flex-col overflow-hidden rounded-xl border bg-surface/60 transition-colors",
-      glow
-        ? "border-orange-400/50 shadow-[0_0_10px_1px_rgba(249,115,22,0.22)] hover:shadow-[0_0_14px_2px_rgba(249,115,22,0.35)]"
-        : "border-line/10 hover:border-line/20"
-    )}>
-      <div className=${cx("relative overflow-hidden border-b border-line/10 bg-line/[0.03]", square ? "aspect-square" : "aspect-[4/5]")}>
+    <${motion.article}
+      ref=${tilt.ref}
+      variants=${cardVariants}
+      style=${tilt.style}
+      whileHover=${tilt.enabled ? { y: -6 } : undefined}
+      ...${tilt.handlers}
+      className=${cx("hub-card group", glow && "hub-card--glow")}
+    >
+      <div className=${cx("hub-card-media", square ? "aspect-square" : "aspect-[4/5]")}>
         <${SafeImage}
           src=${image}
           alt=${alt || title}
           loading="lazy"
           decoding="async"
           className=${cx(
-            "h-full w-full object-cover object-top transition-[transform,opacity] duration-500 group-hover:scale-[1.02]",
+            "h-full w-full object-cover object-top transition-[transform,opacity] duration-700 group-hover:scale-[1.05]",
             backImage && "group-hover:opacity-0"
           )}
         />
@@ -222,18 +219,26 @@ export function Card({ title, description, image, backImage, alt, meta, badge, d
           />
         `}
       </div>
-      <div className="flex flex-1 flex-col gap-2 p-4">
-        <div className="flex items-center justify-between gap-2">
-          <time dateTime=${dateTime} className="font-mono text-[11px] uppercase tracking-[0.06em] text-muted">${meta}</time>
+      <div className="hub-card-body">
+        <div className="hub-card-meta">
+          <span>
+            <span className="hub-card-index" aria-hidden="true">${pad2(index)}</span>
+            <span aria-hidden="true"> · </span>
+            <time dateTime=${dateTime}>${meta}</time>
+          </span>
           ${badge && html`<${Badge}>${badge}<//>`}
         </div>
-        <h3 className="text-[15px] font-semibold leading-snug text-fg">${title}</h3>
-        ${description && html`<p className="text-sm leading-relaxed text-muted">${description}</p>`}
+        <h3 className="hub-card-title">${title}</h3>
+        ${description && html`<p className="hub-card-text">${description}</p>`}
       </div>
-    </article>
+    <//>
   `;
 }
 
 export function CardGrid({ children }) {
-  return html`<div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">${children}</div>`;
+  return html`
+    <${motion.div} variants=${gridVariants} initial="hide" animate="show" className="hub-grid">
+      ${children}
+    <//>
+  `;
 }
