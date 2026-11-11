@@ -9,10 +9,10 @@ const posterThumb = (folder, file) => `./assets/images/eventos/thumbs/${folder}/
 
 export const MERCH_ITEMS = [
   // 2026/27
-  { id: "26-placeholder-1", year: "2026/27", tag: "T-shirts", title: "Brevemente...", image: "./assets/images/merch/2026_2027/merch_preview_neei.png", available: true, placeholder: true },
-  { id: "26-placeholder-2", year: "2026/27", tag: "Hoodies", title: "Brevemente...", image: "./assets/images/merch/2026_2027/merch_preview_neei.png", available: true, placeholder: true },
-  { id: "26-placeholder-3", year: "2026/27", tag: "Casacos", title: "Brevemente...", image: "./assets/images/merch/2026_2027/merch_preview_neei.png", available: true, placeholder: true },
-  { id: "26-placeholder-4", year: "2026/27", tag: "Acessórios", title: "Brevemente...", image: "./assets/images/merch/2026_2027/merch_preview_neei.png", available: true, placeholder: true },
+  { id: "26-placeholder-1", year: "2026/27", tag: "T-shirts", title: "", image: "./assets/images/merch/2026_2027/neei_merch_brevemente.jpeg", available: true, placeholder: true },
+  { id: "26-placeholder-2", year: "2026/27", tag: "Hoodies", title: "", image: "./assets/images/merch/2026_2027/neei_merch_brevemente.jpeg", available: true, placeholder: true },
+  { id: "26-placeholder-3", year: "2026/27", tag: "Casacos", title: "", image: "./assets/images/merch/2026_2027/neei_merch_brevemente.jpeg", available: true, placeholder: true },
+  { id: "26-placeholder-4", year: "2026/27", tag: "Acessórios", title: "", image: "./assets/images/merch/2026_2027/neei_merch_brevemente.jpeg", available: true, placeholder: true },
 
   // 2025/26
   { id: "25-hoodie-classica", year: "2025/26", tag: "Hoodies", title: "Hoodie Clássica", image: merchThumb("2025-2026", "HoodieClassico-frente"), backImage: merchThumb("2025-2026", "HoodieClassico-tras") },
