@@ -67,5 +67,42 @@ window.addEventListener(
   { passive: true }
 );
 
+// marca o link da página atual para o utilizador saber onde está
+function markCurrentPage() {
+  const here = location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll("#menu-items .menu-item a").forEach((link) => {
+    const target = (link.getAttribute("href") || "").split("/").pop().split("#")[0];
+    if (target === here) {
+      link.classList.add("is-current");
+      link.setAttribute("aria-current", "page");
+    }
+  });
+}
+
+// efeito de lente no desktop: cada link avança em 3D conforme a distância ao rato
+function initNavLens() {
+  const list = document.getElementById("menu-items");
+  if (!list) return;
+
+  const links = [...list.querySelectorAll(".menu-item a")];
+  const REACH = 150;
+
+  links.forEach((link) => link.addEventListener("click", closeMenu));
+
+  list.addEventListener("pointermove", (event) => {
+    if (MOBILE_QUERY.matches || event.pointerType !== "mouse") return;
+    links.forEach((link) => {
+      const box = link.getBoundingClientRect();
+      const distance = Math.abs(event.clientX - (box.left + box.width / 2));
+      const near = Math.max(0, 1 - distance / REACH);
+      link.style.setProperty("--lens", (near * near * (3 - 2 * near)).toFixed(3));
+    });
+  });
+  list.addEventListener("pointerleave", () => links.forEach((link) => link.style.setProperty("--lens", "0")));
+}
+
 renderThemeToggle();
 addMobileLogo();
+markCurrentPage();
+initNavLens();
+menuBox?.classList.toggle("scrolled", window.scrollY > 40);

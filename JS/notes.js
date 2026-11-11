@@ -62,6 +62,48 @@ const normalize = (s) =>
 
 const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
 
+// entrada encadeada: corre de novo a cada filtro ou busca, ao contrário do stagger em css
+const HAS_HOVER = window.matchMedia("(hover: hover)").matches;
+const EASE_OUT_EXPO = "cubic-bezier(0.16, 1, 0.3, 1)";
+
+// tiles viram-se para cima em perspetiva, um de cada vez; recorre a cada filtro ou busca
+function revealRows(container, { step = 55, duration = 720, cap = 12 } = {}) {
+  const head = container.querySelector(".sem-head");
+  head?.animate(
+    [{ opacity: 0, transform: "translateX(-16px)" }, { opacity: 1, transform: "none" }],
+    { duration: 500, easing: EASE_OUT_EXPO, fill: "backwards" }
+  );
+  container.querySelectorAll(".note-card").forEach((tile, i) => {
+    tile.animate(
+      [
+        { opacity: 0, transform: "perspective(900px) rotateX(-22deg) translateY(28px) scale(0.94)", filter: "blur(4px)" },
+        { opacity: 1, transform: "perspective(900px) rotateX(0) translateY(0) scale(1)", filter: "blur(0)" },
+      ],
+      { duration, delay: 80 + Math.min(i, cap) * step, easing: EASE_OUT_EXPO, fill: "backwards" }
+    );
+  });
+}
+
+// inclinação 3D + reflexo; --tx/--ty alimentam a .tilt-surface do motion.css
+function attachTilt(tile) {
+  if (!HAS_HOVER) return;
+  tile.addEventListener("pointermove", (event) => {
+    const rect = tile.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    tile.classList.add("is-tilting");
+    tile.style.setProperty("--mx", `${x}px`);
+    tile.style.setProperty("--my", `${y}px`);
+    tile.style.setProperty("--tx", ((x / rect.width) * 2 - 1).toFixed(3));
+    tile.style.setProperty("--ty", ((y / rect.height) * 2 - 1).toFixed(3));
+  });
+  tile.addEventListener("pointerleave", () => {
+    tile.classList.remove("is-tilting");
+    tile.style.setProperty("--tx", "0");
+    tile.style.setProperty("--ty", "0");
+  });
+}
+
 // hash depois storage depois defeito
 function readInitialState() {
   const hash = location.hash.slice(1);
@@ -145,16 +187,26 @@ function highlighted(text, query) {
 
 function noteRow(note, index, { query = "", showMeta = false } = {}) {
   const row = document.createElement("a");
-  row.className = "note-card";
+  row.className = "note-card tilt-surface";
   row.href = note.link;
   row.target = "_blank";
   row.rel = "noopener noreferrer";
-  row.style.setProperty("--i", index);
+  attachTilt(row);
+
+  const top = document.createElement("span");
+  top.className = "note-top";
 
   const icon = document.createElement("span");
   icon.className = "note-icon";
   icon.setAttribute("aria-hidden", "true");
   icon.innerHTML = '<i class="bi bi-folder2"></i><i class="bi bi-folder2-open"></i>';
+
+  const number = document.createElement("span");
+  number.className = "note-index";
+  number.setAttribute("aria-hidden", "true");
+  number.textContent = String(index + 1).padStart(2, "0");
+
+  top.append(icon, number);
 
   const text = document.createElement("span");
   text.className = "note-text";
@@ -175,7 +227,7 @@ function noteRow(note, index, { query = "", showMeta = false } = {}) {
   go.className = "note-go";
   go.innerHTML = 'Abrir <i class="bi bi-arrow-up-right" aria-hidden="true"></i>';
 
-  row.append(icon, text, go);
+  row.append(top, text, go);
   return row;
 }
 
@@ -207,6 +259,7 @@ function renderSemesters() {
       columnHead(`${sem}º Semestre`, list.length),
       ...(rows.length ? rows : [emptyRow("Ainda sem apontamentos.")])
     );
+    revealRows(elements.sem[sem]);
   });
 }
 
@@ -219,6 +272,8 @@ function renderSearch() {
       ? found.map((n, i) => noteRow(n, i, { query: q, showMeta: true }))
       : [emptyRow("Nenhuma cadeira encontrada. Experimenta outro nome.")])
   );
+  // mais curto porque isto recorre a cada tecla premida
+  revealRows(elements.results, { step: 16, duration: 260, cap: 8 });
 }
 
 function update() {

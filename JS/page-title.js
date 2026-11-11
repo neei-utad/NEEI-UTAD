@@ -7,7 +7,7 @@
     "animation:_ptblink 1.1s step-end infinite}";
   document.head.appendChild(s);
 
-  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var reduceMotion = false;
 
   function run() {
     var h1 = document.querySelector(".page-head h1");

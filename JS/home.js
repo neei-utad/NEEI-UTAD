@@ -1,4 +1,3 @@
-const REDUCE_MOTION = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const HAS_HOVER = window.matchMedia("(hover: hover)").matches;
 
 const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
@@ -34,7 +33,7 @@ function initTypewriter() {
 
   titleEl.parentNode.appendChild(cursor);
 
-  setTimeout(() => {
+  const run = () =>
     type(titleEl, TITLE, TYPING_MS, () => {
       setTimeout(() => {
         pathEl.textContent = PATH;
@@ -42,10 +41,58 @@ function initTypewriter() {
         type(commandEl, COMMAND, TYPING_MS + 25, () => {
           commandEl.classList.add("fade-active");
           cursor.classList.add("fade-active");
+          document.getElementById("hero-actions")?.classList.add("is-ready");
         });
       }, 350);
     });
-  }, 400);
+
+  // com a intro no ecrã a escrita ficava escondida atrás dela; espera que saia
+  const intro = document.getElementById("intro-loader");
+  if (!intro) return setTimeout(run, 400);
+  const observer = new MutationObserver(() => {
+    if (intro.isConnected) return;
+    observer.disconnect();
+    setTimeout(run, 150);
+  });
+  observer.observe(document.body, { childList: true });
+}
+
+// o hero inclina em 3D e um foco de luz segue o rato
+function initHero() {
+  const hero = document.getElementById("hero-section");
+  if (!hero || !HAS_HOVER) return;
+
+  const target = { x: 0, y: 0 };
+  const position = { x: 0, y: 0 };
+  let frame = null;
+
+  const tick = () => {
+    position.x += (target.x - position.x) * 0.07;
+    position.y += (target.y - position.y) * 0.07;
+    hero.style.setProperty("--hx", position.x.toFixed(4));
+    hero.style.setProperty("--hy", position.y.toFixed(4));
+    const settled = Math.abs(target.x - position.x) < 0.001 && Math.abs(target.y - position.y) < 0.001;
+    frame = settled ? null : requestAnimationFrame(tick);
+  };
+
+  hero.addEventListener("pointermove", (event) => {
+    const rect = hero.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    hero.style.setProperty("--sx", `${x}px`);
+    hero.style.setProperty("--sy", `${y}px`);
+    hero.style.setProperty("--spot", "1");
+    target.x = clamp((x / rect.width) * 2 - 1, -1, 1);
+    target.y = clamp((y / rect.height) * 2 - 1, -1, 1);
+    if (!frame) frame = requestAnimationFrame(tick);
+  });
+
+  hero.addEventListener("pointerleave", () => {
+    hero.style.setProperty("--spot", "0");
+    target.x = 0;
+    target.y = 0;
+    if (!frame) frame = requestAnimationFrame(tick);
+  });
 }
 
 function initGallery() {
@@ -62,10 +109,11 @@ function initGallery() {
   let current = Math.max(0, cards.findIndex((card) => card.classList.contains("active")));
   let timer = null;
   let inView = false;
+  let hoverTimer = null;
 
   function schedule() {
     clearTimeout(timer);
-    const playing = !REDUCE_MOTION && inView && !document.hidden && !section.classList.contains("is-paused");
+    const playing = inView && !document.hidden && !section.classList.contains("is-paused");
     section.classList.toggle("is-playing", playing);
     if (playing) timer = setTimeout(() => show(current + 1), intervalMs);
   }
@@ -102,7 +150,14 @@ function initGallery() {
 
   cards.forEach((card, i) => {
     card.addEventListener("click", () => show(i));
-    if (HAS_HOVER) card.addEventListener("mouseenter", () => i !== current && show(i));
+    // pequena espera: atravessar a galeria com o rato já não dispara aberturas em cadeia
+    if (HAS_HOVER) {
+      card.addEventListener("mouseenter", () => {
+        clearTimeout(hoverTimer);
+        if (i !== current) hoverTimer = setTimeout(() => show(i), 110);
+      });
+      card.addEventListener("mouseleave", () => clearTimeout(hoverTimer));
+    }
   });
 
   document.getElementById("gallery-prev")?.addEventListener("click", () => show(current - 1));
@@ -132,9 +187,9 @@ function initGallery() {
     touchStartX = null;
   });
 
-  if (HAS_HOVER && !REDUCE_MOTION) initPointerParallax(gallery, () => cards[current]);
+  if (HAS_HOVER) initPointerParallax(gallery, () => cards[current]);
 
-  if (!REDUCE_MOTION) section.classList.add("will-reveal");
+  section.classList.add("will-reveal");
   new IntersectionObserver(
     ([entry]) => {
       inView = entry.isIntersecting;
@@ -192,4 +247,5 @@ function initPointerParallax(container, getActiveCard) {
 }
 
 initTypewriter();
+initHero();
 initGallery();

@@ -71,9 +71,374 @@ body {
   outline-offset: 2px;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .hub-fade,
-  .hub-root * {
-    transition: none !important;
+
+/* ---------- linguagem visual partilhada com os Apontamentos ---------- */
+
+/* controlo segmentado com pílula laranja (a pílula é um motion.span com layoutId) */
+.hub-seg {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 2px;
+  background: var(--surface-bg);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-md);
+  scrollbar-width: none;
+}
+
+.hub-seg::-webkit-scrollbar {
+  display: none;
+}
+
+.hub-seg-btn {
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.3rem 0.8rem;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  color: var(--text-muted);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: color var(--dur-base) ease;
+}
+
+.hub-seg-btn:hover {
+  color: var(--text-heading);
+}
+
+.hub-seg-btn.is-active {
+  color: #fff;
+}
+
+.hub-seg-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.35;
+}
+
+.hub-seg-pill {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 6px;
+  background: linear-gradient(180deg, rgba(235, 94, 20, 0.95), rgba(211, 93, 24, 0.95));
+  box-shadow: 0 6px 18px -6px rgba(235, 94, 20, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.hub-seg-count {
+  padding: 0 0.35rem;
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+  border-radius: 4px;
+  background: rgb(var(--hub-line) / 0.08);
+}
+
+.hub-seg-btn.is-active .hub-seg-count {
+  background: rgba(0, 0, 0, 0.18);
+}
+
+/* cabeçalho de secção  // TÍTULO ───────── N artigos */
+.hub-section-head {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1.1rem;
+}
+
+.hub-section-head h2 {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--text-heading);
+}
+
+.hub-section-head h2::before {
+  content: "// ";
+  color: var(--main-orange-color);
+}
+
+.hub-section-head::after {
+  content: "";
+  flex: 1;
+  order: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgba(235, 94, 20, 0.45), var(--hairline) 40%, transparent);
+}
+
+.hub-section-count {
+  order: 2;
+  padding: 0.2rem 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  white-space: nowrap;
+  color: var(--text-muted);
+  border: 1px solid var(--surface-border);
+  border-radius: 999px;
+}
+
+/* 3 por linha com a última centrada, igual aos Apontamentos */
+.hub-grid {
+  --cols: 3;
+  --gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--gap);
+  perspective: 1400px;
+}
+
+.hub-grid > * {
+  flex: 0 0 calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols));
+  min-width: 0;
+}
+
+@media (max-width: 1023px) {
+  .hub-grid {
+    --cols: 2;
   }
+}
+
+@media (max-width: 560px) {
+  .hub-grid {
+    --cols: 1;
+  }
+}
+
+/* tile: o mesmo material dos Apontamentos. borda própria em vez de utilities do
+   tailwind, porque a ordem de injeção do CDN face a este ficheiro não é garantida */
+.hub-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0.7rem;
+  overflow: hidden;
+  background: linear-gradient(160deg, var(--surface-bg-deep2), var(--surface-bg) 65%);
+  border: 1px solid var(--surface-border);
+  border-radius: 16px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 14px 30px -20px rgba(0, 0, 0, 0.85);
+  transition: border-color var(--dur-base) ease, box-shadow var(--dur-base) ease;
+  will-change: transform;
+}
+
+/* filete laranja no topo */
+.hub-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  right: 1rem;
+  z-index: 4;
+  height: 2px;
+  border-radius: 0 0 2px 2px;
+  background: linear-gradient(90deg, var(--main-orange-color), rgba(255, 160, 90, 0.9));
+  transform: scaleX(0.18);
+  transform-origin: left;
+  opacity: 0.55;
+  transition: transform var(--dur-slow) var(--ease-out-expo), opacity var(--dur-base) ease;
+}
+
+/* reflexo a seguir o ponteiro */
+.hub-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: radial-gradient(
+    260px circle at var(--mx, 50%) var(--my, 50%),
+    rgb(var(--brand-rgb) / 0.14),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity var(--dur-base) ease;
+  pointer-events: none;
+}
+
+.hub-card--glow {
+  border-color: rgb(var(--brand-rgb) / 0.45);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 18px 40px -20px rgb(var(--brand-rgb) / 0.5);
+}
+
+.hub-card--glow::before {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+@media (hover: hover) {
+  .hub-card:hover {
+    border-color: rgb(var(--brand-rgb) / 0.5);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 26px 50px -22px rgba(0, 0, 0, 0.9),
+      0 0 0 1px rgb(var(--brand-rgb) / 0.25), 0 18px 46px -18px rgb(var(--brand-rgb) / 0.45);
+  }
+
+  .hub-card:hover::before {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+
+  .hub-card:hover::after {
+    opacity: 1;
+  }
+}
+
+/* imagem em moldura interior, cantos próprios */
+.hub-card-media {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--hairline);
+  border-radius: 11px;
+  background: rgb(var(--hub-line) / 0.03);
+}
+
+.hub-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 0.95rem 0.4rem 0.35rem;
+}
+
+.hub-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.hub-card-index {
+  transition: color var(--dur-base) ease;
+}
+
+.hub-card:hover .hub-card-index {
+  color: var(--main-orange-color);
+}
+
+.hub-card-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: var(--text-heading);
+}
+
+.hub-card-text {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+.hub-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.12rem 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--main-orange-color);
+  background: rgba(235, 94, 20, 0.1);
+  border: 1px solid rgba(235, 94, 20, 0.25);
+  border-radius: 999px;
+}
+
+/* evento futuro: tile em linha, cartaz à esquerda */
+.hub-card--row {
+  padding: 0.7rem;
+}
+
+@media (min-width: 640px) {
+  .hub-card--row {
+    flex-direction: row;
+    gap: 0.4rem;
+  }
+
+  .hub-card--row .hub-card-media {
+    flex: 0 0 15rem;
+  }
+
+  .hub-card--row .hub-card-body {
+    padding: 1.1rem 1.25rem;
+  }
+}
+
+.hub-countdown {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.2rem 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(180deg, rgba(235, 94, 20, 0.95), rgba(211, 93, 24, 0.95));
+  border-radius: 999px;
+  box-shadow: 0 6px 18px -6px rgba(235, 94, 20, 0.7);
+}
+
+.hub-countdown::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  animation: hub-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes hub-pulse {
+  50% { opacity: 0.3; transform: scale(0.7); }
+}
+
+.hub-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 2.5rem;
+  padding: 0 1.15rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #fff;
+  background: linear-gradient(180deg, #f06a22, var(--main-orange-color));
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 24px -10px rgba(235, 94, 20, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  transition: transform var(--dur-base) var(--ease-spring), box-shadow var(--dur-base) ease;
+}
+
+.hub-cta:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px -12px rgba(235, 94, 20, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.hub-cta:active {
+  transform: translateY(0) scale(0.97);
+}
+
+.hub-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.5rem 1.5rem;
+  text-align: center;
+  border: 1px dashed var(--surface-border);
+  border-radius: 16px;
+  background: linear-gradient(160deg, var(--surface-bg-deep2), transparent 70%);
 }

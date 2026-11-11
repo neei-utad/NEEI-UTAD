@@ -1,6 +1,6 @@
 const { React, ReactDOM, htm } = window;
 
-export const { Fragment, useEffect, useMemo, useState } = React;
+export const { Fragment, useCallback, useEffect, useMemo, useRef, useState } = React;
 export const html = htm.bind(React.createElement);
 
 export function mount(elementId, Component) {

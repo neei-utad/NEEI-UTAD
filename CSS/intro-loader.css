@@ -2,21 +2,34 @@ html:has(#intro-loader) {
   overflow: hidden;
 }
 
+/* sequência (2.4 s): desenha + roda em 3D -> preenche e pulsa -> legenda -> fecha em íris */
 .intro-loader {
+  --intro-ease: cubic-bezier(0.16, 1, 0.3, 1);
   position: fixed;
   inset: 0;
   z-index: 10000;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #000;
-  animation: introLoaderSequence 1.6s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  gap: 1.6rem;
+  background:
+    radial-gradient(520px circle at 50% 46%, rgba(235, 94, 20, 0.16), transparent 70%),
+    linear-gradient(to right, rgba(235, 94, 20, 0.05) 1px, transparent 1px) 50% 50% / 34px 34px,
+    linear-gradient(to bottom, rgba(235, 94, 20, 0.05) 1px, transparent 1px) 50% 50% / 34px 34px,
+    #050505;
+  clip-path: circle(150% at 50% 46%);
+  animation: introIris 0.85s cubic-bezier(0.7, 0, 0.2, 1) 1.55s forwards;
 }
 
 .intro-loader__art {
-  width: min(38vw, 200px);
+  width: min(34vw, 170px);
   height: auto;
   overflow: visible;
+  animation:
+    introTurn 1.15s var(--intro-ease) both,
+    introPulse 0.55s var(--intro-ease) 0.95s,
+    introLeave 0.6s cubic-bezier(0.7, 0, 0.2, 1) 1.55s forwards;
 }
 
 .intro-loader__glow,
@@ -27,7 +40,7 @@ html:has(#intro-loader) {
   stroke-linejoin: round;
   stroke-dasharray: 380;
   stroke-dashoffset: 380;
-  animation: introDraw 0.7s cubic-bezier(0.65, 0, 0.35, 1) 0.1s forwards;
+  animation: introDraw 0.85s cubic-bezier(0.65, 0, 0.35, 1) 0.1s forwards;
 }
 
 .intro-loader__glow {
@@ -41,6 +54,12 @@ html:has(#intro-loader) {
   filter: drop-shadow(0 0 3px #fff8f0) drop-shadow(0 0 10px var(--active-page, #FF5C00));
 }
 
+.intro-loader__fill {
+  fill: var(--active-page, #FF5C00);
+  opacity: 0;
+  animation: introFill 0.6s ease 0.85s forwards;
+}
+
 .intro-loader__spark {
   fill: #fff8f0;
   opacity: 0;
@@ -48,13 +67,80 @@ html:has(#intro-loader) {
   offset-path: path('M 0 0 L 39.48 27.31 L 78.97 0 L 78.97 10.89 L 63.84 21.4 L 63.84 71.77 L 64.58 71.77 L 78.97 61.62 L 78.97 72.69 L 39.48 100 L 0 72.69 L 0 0.19 Z');
   offset-rotate: 0deg;
   offset-distance: 0%;
-  animation: introSparkTravel 0.7s cubic-bezier(0.65, 0, 0.35, 1) 0.1s forwards,
-    introSparkFade 0.22s ease-in 0.72s forwards;
+  animation: introSparkTravel 0.85s cubic-bezier(0.65, 0, 0.35, 1) 0.1s forwards,
+    introSparkFade 0.22s ease-in 0.9s forwards;
+}
+
+.intro-loader__label {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  font-family: "JetBrains Mono", "Space Mono", ui-monospace, monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.42em;
+  text-indent: 0.42em;
+  color: #ededef;
+  opacity: 0;
+  animation:
+    introLabel 0.7s var(--intro-ease) 0.6s forwards,
+    introLeave 0.45s ease 1.5s forwards;
+}
+
+.intro-loader__label i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--active-page, #FF5C00);
+  box-shadow: 0 0 10px var(--active-page, #FF5C00);
+}
+
+.intro-loader__bar {
+  width: min(34vw, 170px);
+  height: 2px;
+  margin-top: -0.6rem;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  animation: introLeave 0.45s ease 1.5s forwards;
+}
+
+.intro-loader__bar::before {
+  content: "";
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(235, 94, 20, 0.4), var(--active-page, #FF5C00));
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: introBar 1.3s cubic-bezier(0.65, 0, 0.35, 1) 0.15s forwards;
+}
+
+@keyframes introTurn {
+  from {
+    opacity: 0;
+    transform: perspective(700px) rotateY(-55deg) rotateX(18deg) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(700px) rotateY(0) rotateX(0) scale(1);
+  }
+}
+
+@keyframes introPulse {
+  50% {
+    transform: scale(1.09);
+    filter: drop-shadow(0 0 26px rgba(255, 92, 0, 0.75));
+  }
 }
 
 @keyframes introDraw {
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+@keyframes introFill {
+  to {
+    opacity: 0.2;
   }
 }
 
@@ -76,44 +162,42 @@ html:has(#intro-loader) {
   }
 }
 
-@keyframes introLoaderSequence {
-  0%,
-  62.5% {
+@keyframes introLabel {
+  from {
+    opacity: 0;
+    letter-spacing: 0.9em;
+    transform: translateY(8px);
+    filter: blur(6px);
+  }
+  to {
     opacity: 1;
-    pointer-events: auto;
-  }
-
-  100% {
-    opacity: 0;
-    pointer-events: none;
+    letter-spacing: 0.42em;
+    transform: none;
+    filter: blur(0);
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .intro-loader {
-    animation: introLoaderReduced 0.4s ease forwards;
-  }
-
-  .intro-loader__glow,
-  .intro-loader__core {
-    animation: none;
-    stroke-dashoffset: 0;
-  }
-
-  .intro-loader__spark {
-    animation: none;
-    opacity: 0;
+@keyframes introBar {
+  to {
+    transform: scaleX(1);
   }
 }
 
-@keyframes introLoaderReduced {
+@keyframes introLeave {
+  to {
+    opacity: 0;
+    transform: scale(0.82);
+  }
+}
+
+/* o ecrã preto fecha-se sobre o logo e revela a página de fora para dentro */
+@keyframes introIris {
   0% {
-    opacity: 1;
+    clip-path: circle(150% at 50% 46%);
     pointer-events: auto;
   }
-
   100% {
-    opacity: 0;
+    clip-path: circle(0% at 50% 46%);
     pointer-events: none;
   }
 }
