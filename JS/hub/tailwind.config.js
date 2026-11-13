@@ -1,5 +1,8 @@
+// config de build (já não corre no browser). depois de mexer em classes tailwind nas páginas hub:
+//   npx tailwindcss@3.4.16 -c JS/hub/tailwind.config.js -i JS/hub/tailwind.css -o CSS/hub-tw.css --minify
 // sem preflight para não partir o menu
-tailwind.config = {
+module.exports = {
+  content: ["./events.html", "./merch.html", "./JS/hub/**/*.js"],
   corePlugins: { preflight: false },
   theme: {
     extend: {

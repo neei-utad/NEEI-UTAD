@@ -50,13 +50,12 @@
       rgba(8, 8, 8, 0.95) 85%,
       #080808 100%
     ),
-    url("../assets/images/team-neei-2026-2027(1).jpg");
+    /* o desfoque já vem na imagem: filter: blur() + fixed repintava o hero a cada scroll */
+    url("../assets/images/hero-2026-2027.webp");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  filter: blur(2px);
-  transform: scale(1.03);
   z-index: -1;
 }
 
@@ -527,7 +526,247 @@
   }
 }
 
+.members-container {
+  padding: 5rem 1.5rem;
+  background-color: var(--page-top-bg);
+}
+
+.members-header {
+  max-width: 72rem;
+  margin: 0 auto 2rem;
+}
+
+.members-header h2 {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1.75rem;
+  letter-spacing: -0.02em;
+  color: var(--text-heading);
+}
+
+.members-header p {
+  margin: 0.5rem 0 0;
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+}
+
+/* 5 por linha; a última linha fica centrada */
+.members-grid {
+  --cols: 4;
+  --col-gap: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem var(--col-gap);
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.member-card {
+  flex: 0 0 calc((100% - (var(--cols) - 1) * var(--col-gap)) / var(--cols));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* medalhão 3D em três planos: aro atrás, foto a meio, aro de vidro à frente.
+   o fx.js dá --tx/--ty (via [data-fx]); sem hover fica na pose de repouso, já inclinada */
+.member-photo {
+  --tilt-max: 20deg;
+  --rest-x: 0deg;
+  --rest-y: 0deg;
+  position: relative;
+  display: block;
+  flex-shrink: 0;
+  width: min(10rem, 100%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform: perspective(560px)
+    rotateX(calc(var(--rest-x) - var(--ty, 0) * var(--tilt-max)))
+    rotateY(calc(var(--rest-y) + var(--tx, 0) * var(--tilt-max)))
+    scale(var(--pop, 1));
+  transform-style: preserve-3d;
+}
+
+.member-photo.fx-card,
+.member-photo.fx-card:hover {
+  box-shadow: none;
+}
+
+.member-photo:hover {
+  --pop: 1.07;
+}
+
+/* plano de trás: aro laranja + sombra no chão */
+.member-photo::before {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  border: 2px solid rgb(var(--brand-rgb) / 0.55);
+  background: radial-gradient(circle, rgb(var(--brand-rgb) / 0.22), transparent 70%);
+  box-shadow: 0 26px 34px -14px rgba(0, 0, 0, 0.85);
+  transform: translateZ(-38px);
+  transition: box-shadow var(--dur-base) ease, border-color var(--dur-base) ease;
+  pointer-events: none;
+}
+
+.member-photo:hover::before {
+  border-color: rgb(var(--brand-rgb) / 0.9);
+  box-shadow: 0 0 0 6px rgb(var(--brand-rgb) / 0.14), 0 34px 46px -14px rgb(var(--brand-rgb) / 0.55);
+}
+
+.member-photo-disc {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid var(--surface-border);
+  transform: translateZ(1px);
+}
+
+/* bisel: luz em cima, sombra em baixo */
+.member-photo-disc::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  box-shadow: inset 0 2px 3px rgba(255, 255, 255, 0.28), inset 0 -14px 22px -6px rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+}
+
+/* a foto desliza ao contrário do ponteiro dentro do aro, como vista por uma janela */
+.member-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.16) translate(calc(var(--tx, 0) * -5%), calc(var(--ty, 0) * -5%));
+  transition: transform var(--dur-slow) var(--ease-out-expo);
+}
+
+.member-photo.is-tilting img {
+  transition-duration: var(--dur-fast);
+  transition-timing-function: linear;
+}
+
+.member-photo > .fx-glare {
+  background: radial-gradient(
+    7rem circle at var(--mx, 50%) var(--my, 50%),
+    rgba(255, 255, 255, 0.3),
+    rgb(var(--brand-rgb) / 0.12) 45%,
+    transparent 70%
+  );
+  transform: translateZ(2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .member-photo,
+  .member-photo img {
+    transition: none;
+  }
+}
+
+.member-info {
+  margin-top: 1.125rem;
+}
+
+@media (max-width: 1024px) {
+  .members-grid { --cols: 3; }
+}
+
+.member-info h3 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: var(--text-heading);
+}
+
+.member-info p {
+  margin: 0.375rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--main-orange-color);
+}
+
 @media (max-width: 768px) {
+  .members-container {
+    padding: 3.5rem 1rem;
+  }
+
+  .members-grid {
+    --cols: 2;
+    --col-gap: 1rem;
+    gap: 1rem var(--col-gap);
+  }
+
+  .member-photo {
+    width: min(8rem, 100%);
+  }
+}
+
+/* mobile estreito: lista, foto à esquerda + nome/cargo à direita */
+@media (max-width: 480px) {
+  .members-grid {
+    --cols: 1;
+    gap: 0;
+  }
+
+  .member-card {
+    flex-direction: row;
+    gap: 1.25rem;
+    padding: 1rem 0;
+    text-align: left;
+    border-bottom: 1px solid var(--surface-border);
+  }
+
+  .member-photo {
+    width: 6rem;
+  }
+
+  .member-info {
+    flex: 1;
+    margin-top: 0;
+  }
+
+  .member-info h3,
+  .member-info p {
+    padding-top: 0.5rem;
+    border-top: 1px dashed rgba(255, 255, 255, 0.12);
+  }
+
+  .member-info p {
+    margin-top: 0.75rem;
+    font-family: inherit;
+    font-size: 0.9375rem;
+    letter-spacing: 0;
+    color: var(--text-heading);
+  }
+
+  .member-info h3::before,
+  .member-info p::before {
+    display: block;
+    margin-bottom: 0.125rem;
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--main-orange-color);
+  }
+
+  .member-info h3::before { content: "Nome"; }
+  .member-info p::before { content: "Cargo"; }
+}
+
+@media (max-width: 768px) {
+
   .gallery-container {
     padding: 3.5rem 0;
   }

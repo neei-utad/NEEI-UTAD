@@ -1,4 +1,4 @@
-// fade + subida + desfoque em cascata quando os blocos entram no ecrã
+// fade + subida em cascata (sem blur: animar filter obrigava a repintar cada bloco) quando os blocos entram no ecrã
 (function () {
   if (!("IntersectionObserver" in window) || !Element.prototype.animate) return;
 
@@ -49,8 +49,8 @@
           el.style.opacity = "";
           el.animate(
             [
-              { opacity: 0, transform: "translateY(26px) scale(0.985)", filter: "blur(6px)" },
-              { opacity: 1, transform: "none", filter: "blur(0)" },
+              { opacity: 0, transform: "translateY(26px) scale(0.985)" },
+              { opacity: 1, transform: "none" },
             ],
             { duration: 820, delay: Math.min(i, 8) * STEP, easing: EASE, fill: "backwards" }
           );

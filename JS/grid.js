@@ -6,6 +6,7 @@
   var RADIUS = 230;     // alcance do foco, em px css
   var BULGE = 16;       // quanto as linhas se afastam do ponteiro
   var SEGMENT = 10;     // resolução das linhas curvas
+  var IDLE_FRAME_MS = 30; // em repouso a grelha só deriva devagar: ~30 fps chegam
 
   // um só ponteiro para todas as grelhas da página
   var pointer = { x: -9999, y: -9999, active: false };
@@ -56,6 +57,7 @@
     var start = performance.now();
     var frame = null;
     var inView = true;
+    var lastDraw = 0;
     var spot = { x: 0, y: 0, power: 0, seeded: false };
 
     // empurra um ponto para fora do centro do foco; zero na orla para as linhas colarem
@@ -93,6 +95,9 @@
 
     function draw(now) {
       frame = null;
+
+      if (spot.power === 0 && now - lastDraw < IDLE_FRAME_MS) return schedule();
+      lastDraw = now;
 
       var w = canvas.width;
       var h = canvas.height;
