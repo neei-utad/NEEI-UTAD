@@ -11,6 +11,52 @@ RewriteEngine On
 </FilesMatch>
 # Desativar listagem de diretórios
 Options -Indexes
+# ---------------------------------------------------------------------------
+# Segurança: nunca servir repo, config, backend python, uploads nem docs internas
+# (.well-known fica de fora por causa do AutoSSL)
+RewriteRule (^|/)\.(?!well-known(/|$)) - [F,L]
+RewriteRule ^(graphify-out|php/python|Apontamentos/EmailTamplete)(/|$) - [F,L]
+RewriteRule (^|/)(composer\.(phar|json|lock)|error_log)$ - [F,L,NC]
+RewriteRule \.(ini|phar|py|pyc|log|sql|bak|sh|md|example|tmp|sig)$ - [F,L,NC]
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+  Header always set Strict-Transport-Security "max-age=31536000"
+  Header always unset X-Powered-By
+  # CSP: só as origens que o site usa. As páginas antigas em /legacy usam outras CDNs e ficam de fora.
+  # 'unsafe-inline' em script-src é por causa dos <script>/onclick inline (index, apontamentos.php, Apontamentos/*.html)
+  SetEnvIf Request_URI "^/legacy/" NO_CSP
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests" env=!NO_CSP
+</IfModule>
+
+# Desempenho: compressão de texto (o mapa.svg do guia tem 2,8 MB sem isto)
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/json application/xml image/svg+xml font/ttf font/otf
+</IfModule>
+
+# Desempenho: cache no browser. HTML revalida sempre; CSS/JS ficam 1 hora porque os
+# módulos em JS/hub (incl. os dados de eventos/merch) são importados sem ?v=
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 hour"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 hour"
+  ExpiresByType text/javascript "access plus 1 hour"
+  ExpiresByType application/javascript "access plus 1 hour"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType image/x-icon "access plus 30 days"
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/otf "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/pdf "access plus 7 days"
+</IfModule>
+# ---------------------------------------------------------------------------
 # Redirecionar para HTTPS (se necessário)
 # Descomente as linhas abaixo para forçar HTTPS
 # RewriteCond %{HTTPS} off
