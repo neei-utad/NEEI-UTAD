@@ -1,0 +1,139 @@
+html:has(#intro-loader) {
+  overflow: hidden;
+}
+
+/* sequência (2.3 s): desenha + roda em 3D -> preenche e pulsa -> desvanece com blur */
+.intro-loader {
+  --intro-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  background:
+    radial-gradient(520px circle at 50% 46%, rgba(235, 94, 20, 0.16), transparent 70%),
+    linear-gradient(to right, rgba(235, 94, 20, 0.05) 1px, transparent 1px) 50% 50% / 34px 34px,
+    linear-gradient(to bottom, rgba(235, 94, 20, 0.05) 1px, transparent 1px) 50% 50% / 34px 34px,
+    #050505;
+  animation: introFade 0.75s ease 1.55s forwards;
+}
+
+.intro-loader__art {
+  width: min(34vw, 170px);
+  height: auto;
+  overflow: visible;
+  animation:
+    introTurn 1.15s var(--intro-ease) both,
+    introPulse 0.55s var(--intro-ease) 0.95s,
+    introLeave 0.6s cubic-bezier(0.7, 0, 0.2, 1) 1.55s forwards;
+}
+
+.intro-loader__glow,
+.intro-loader__core {
+  fill: none;
+  stroke: var(--active-page, #FF5C00);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 380;
+  stroke-dashoffset: 380;
+  animation: introDraw 0.85s cubic-bezier(0.65, 0, 0.35, 1) 0.1s forwards;
+}
+
+.intro-loader__glow {
+  stroke-width: 5.5;
+  opacity: 0.5;
+  filter: blur(7px);
+}
+
+.intro-loader__core {
+  stroke-width: 1.6;
+  filter: drop-shadow(0 0 3px #fff8f0) drop-shadow(0 0 10px var(--active-page, #FF5C00));
+}
+
+.intro-loader__fill {
+  fill: var(--active-page, #FF5C00);
+  opacity: 0;
+  animation: introFill 0.6s ease 0.85s forwards;
+}
+
+.intro-loader__spark {
+  fill: #fff8f0;
+  opacity: 0;
+  filter: drop-shadow(0 0 4px #fff) drop-shadow(0 0 9px var(--active-page, #FF5C00));
+  offset-path: path('M 0 0 L 39.48 27.31 L 78.97 0 L 78.97 10.89 L 63.84 21.4 L 63.84 71.77 L 64.58 71.77 L 78.97 61.62 L 78.97 72.69 L 39.48 100 L 0 72.69 L 0 0.19 Z');
+  offset-rotate: 0deg;
+  offset-distance: 0%;
+  animation: introSparkTravel 0.85s cubic-bezier(0.65, 0, 0.35, 1) 0.1s forwards,
+    introSparkFade 0.22s ease-in 0.9s forwards;
+}
+
+@keyframes introTurn {
+  from {
+    opacity: 0;
+    transform: perspective(700px) rotateY(-55deg) rotateX(18deg) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(700px) rotateY(0) rotateX(0) scale(1);
+  }
+}
+
+@keyframes introPulse {
+  50% {
+    transform: scale(1.09);
+    filter: drop-shadow(0 0 26px rgba(255, 92, 0, 0.75));
+  }
+}
+
+@keyframes introDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes introFill {
+  to {
+    opacity: 0.2;
+  }
+}
+
+@keyframes introSparkTravel {
+  0% {
+    opacity: 1;
+    offset-distance: 0%;
+  }
+
+  100% {
+    opacity: 1;
+    offset-distance: 100%;
+  }
+}
+
+@keyframes introSparkFade {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes introLeave {
+  to {
+    opacity: 0;
+    transform: scale(0.82);
+  }
+}
+
+@keyframes introFade {
+  0% {
+    opacity: 1;
+    filter: blur(0);
+    pointer-events: auto;
+  }
+  100% {
+    opacity: 0;
+    filter: blur(16px);
+    pointer-events: none;
+  }
+}

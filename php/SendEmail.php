@@ -64,11 +64,20 @@ function validar_csrf($token) {
 function is_disposable_email($email) {
     global $config;
     $api_key = $config['HUNTER_API_KEY'];
-    $api_url = "https://api.hunter.io/v2/email-verifier?email=$email&api_key=$api_key";
-    
-    $response = file_get_contents($api_url);
+    $api_url = "https://api.hunter.io/v2/email-verifier?email=" . urlencode($email) . "&api_key=" . urlencode($api_key);
+
+    $context = stream_context_create([
+        'http' => [
+            'timeout' => 5,
+        ],
+    ]);
+
+    $response = @file_get_contents($api_url, false, $context);
+    if ($response === false) {
+        return false;
+    }
+
     $result = json_decode($response, true);
-    
     if (isset($result['data']['disposable']) && $result['data']['disposable'] == true) {
         return true;
     }

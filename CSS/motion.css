@@ -1,0 +1,88 @@
+/* tokens de movimento — fonte única para CSS e JS */
+:root {
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.4, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.22, 0.9, 0.24, 1);
+
+  --dur-fast: 180ms;
+  --dur-base: 320ms;
+  --dur-slow: 620ms;
+  --dur-accordion: 1000ms;
+
+  --stagger-step: 45ms;
+  --tilt-max: 7deg;
+  --lift: -4px;
+
+  --brand-rgb: 235 94 20;
+  --glow-soft: 0 0 0 1px rgb(var(--brand-rgb) / 0.3), 0 10px 32px -10px rgb(var(--brand-rgb) / 0.4);
+  --glow-strong: 0 0 0 1px rgb(var(--brand-rgb) / 0.55), 0 16px 46px -12px rgb(var(--brand-rgb) / 0.55);
+  --shadow-rest: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 14px 30px -20px rgba(0, 0, 0, 0.85);
+  --shadow-lift: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 26px 50px -22px rgba(0, 0, 0, 0.9),
+    0 0 0 1px rgb(var(--brand-rgb) / 0.25), 0 18px 46px -18px rgb(var(--brand-rgb) / 0.45);
+}
+
+/* entrada de página; só opacidade porque um transform no main partia o background fixo do hero */
+main {
+  animation: page-in 700ms var(--ease-out-expo) both;
+}
+
+@keyframes page-in {
+  from { opacity: 0; }
+}
+
+/* superfície que inclina com o ponteiro; --tx/--ty vindos do JS */
+.tilt-surface {
+  transform: perspective(900px) rotateX(calc(var(--ty, 0) * var(--tilt-max) * -1))
+    rotateY(calc(var(--tx, 0) * var(--tilt-max))) translateY(var(--tilt-lift, 0px));
+  transform-style: preserve-3d;
+  transition: transform var(--dur-slow) var(--ease-out-expo), box-shadow var(--dur-base) ease,
+    border-color var(--dur-base) ease, background-color var(--dur-base) ease, color var(--dur-base) ease;
+}
+
+.tilt-surface.is-tilting {
+  transition: transform var(--dur-fast) linear, box-shadow var(--dur-base) ease,
+    border-color var(--dur-base) ease, background-color var(--dur-base) ease, color var(--dur-base) ease;
+}
+
+/* cartão genérico: o fx.js aplica isto aos cartões das páginas estáticas */
+.fx-card {
+  position: relative;
+  box-shadow: var(--shadow-rest);
+}
+
+.fx-card:hover,
+.fx-card:focus-visible {
+  --tilt-lift: -5px;
+  border-color: rgb(var(--brand-rgb) / 0.5);
+  box-shadow: var(--shadow-lift);
+}
+
+/* reflexo laranja que segue o ponteiro (span injetado pelo fx.js) */
+.fx-glare {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    240px circle at var(--mx, 50%) var(--my, 50%),
+    rgb(var(--brand-rgb) / 0.16),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity var(--dur-base) ease;
+  pointer-events: none;
+}
+
+.fx-card:hover > .fx-glare {
+  opacity: 1;
+}
+
+/* resposta ao toque em ecrãs sem hover */
+@media (hover: none) {
+  .fx-card:active,
+  .note-card:active,
+  .hub-card:active {
+    scale: 0.975;
+    transition: scale 120ms ease;
+  }
+}
