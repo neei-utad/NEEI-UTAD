@@ -52,7 +52,7 @@ main {
 }
 
 h1 {
-    color: #FF5C00;
+    color: #c9cbcf;
     font-size: 5em;
     font-family: var(--font-mono);
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
