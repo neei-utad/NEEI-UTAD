@@ -3,17 +3,28 @@ const MOBILE_QUERY = window.matchMedia("(max-width: 991.98px)");
 
 const root = document.documentElement;
 const themeToggle = document.querySelector(".theme-toggle");
+const themeToggleMobile = document.querySelector(".theme-toggle-mobile");
+const themeToggleIconMobile = document.getElementById("theme-toggle-icon-mobile");
 const menuToggle = document.getElementById("menu-toggle");
 const menuBox = document.querySelector(".menu-box");
 
 function renderThemeToggle() {
-  if (!themeToggle) return;
   const isDark = root.className === "dark";
-  if (MOBILE_QUERY.matches) {
-    themeToggle.textContent = isDark ? "Modo Claro" : "Modo Escuro";
-  } else {
+
+  // Desktop toggle
+  if (themeToggle) {
+    if (MOBILE_QUERY.matches) {
+      themeToggle.textContent = isDark ? "Modo Claro" : "Modo Escuro";
+    } else {
+      const icon = isDark ? "bi-brightness-high-fill" : "bi-moon-stars-fill";
+      themeToggle.innerHTML = `<i id="theme-toggle-icon" class="bi ${icon}"></i>`;
+    }
+  }
+
+  // Mobile toggle icon (button stays visible next to logo)
+  if (themeToggleIconMobile) {
     const icon = isDark ? "bi-brightness-high-fill" : "bi-moon-stars-fill";
-    themeToggle.innerHTML = `<i id="theme-toggle-icon" class="bi ${icon}"></i>`;
+    themeToggleIconMobile.className = `bi ${icon}`;
   }
 }
 
@@ -51,6 +62,7 @@ function addMobileLogo() {
 }
 
 themeToggle?.addEventListener("click", toggleTheme);
+themeToggleMobile?.addEventListener("click", toggleTheme);
 MOBILE_QUERY.addEventListener("change", renderThemeToggle);
 
 document.addEventListener("click", (event) => {
