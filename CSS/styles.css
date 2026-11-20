@@ -914,8 +914,8 @@ header footer {
   }
 
 
-  .theme-toggle-mobile{
-    display: flex !important;
+  .theme-toggle-mobile {
+    display: none !important;
   }
 
   .menu-box::before {
