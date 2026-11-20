@@ -502,7 +502,7 @@ header footer {
     flex: 1 !important;
     display: flex !important;
     align-items: center !important;
-    justify-content: flex-start !important;
+    justify-content: space-between !important;
   }
 
   .menu-logo img {
@@ -913,6 +913,11 @@ header footer {
     isolation: isolate;
   }
 
+
+  .theme-toggle-mobile {
+    display: none !important;
+  }
+
   .menu-box::before {
     content: "";
     position: absolute;
@@ -1029,6 +1034,8 @@ header footer {
     overflow: hidden;
   }
 
+
+
   /* o blur fica no ::before: backdrop-filter na própria barra prendia o .menu-box (fixed) aos 58px dela */
   .hamburger-menu::before {
     content: "";
@@ -1080,10 +1087,45 @@ header footer {
     transition: transform 0.6s var(--ease-out-expo), visibility 0s;
   }
 
+  .menu-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 1.4rem 1rem;
+  }
+
+  .menu-logo a {
+    display: flex;
+    align-items: center;
+  }
+
   .menu-logo img,
   .menu-box .menu-logo img {
     width: 40px;
-    margin: 0 0 1rem 1.4rem;
+    height: 40px;
+    margin: 0;
+  }
+
+  .theme-toggle-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: var(--hamburger-menu-text);
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    transition: color 0.2s ease, background-color 0.2s ease;
+  }
+
+  .theme-toggle-mobile:hover {
+    color: var(--main-orange-color);
+    background: rgba(255, 255, 255, 0.05);
   }
 
   /* o tema troca-se só no desktop; a regra base mais abaixo voltava a mostrá-lo */
